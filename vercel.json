@@ -1,8 +1,9 @@
 {
-    "rewrites": [
+    "redirects": [
         {
             "source": "/((?!about|contact|pricing|how-it-works|blog|features|assets|_astro|favicon).*)",
-            "destination": "https://app.figmafolio.com/$1"
+            "destination": "https://app.figmafolio.com/$1",
+            "permanent": false
         }
     ],
     "headers": [
