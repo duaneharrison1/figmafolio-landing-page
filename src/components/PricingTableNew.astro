@@ -84,8 +84,8 @@ import '../styles/pricing-table.css';
     pro: `<svg width="42" height="42" viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="8" fill="#FEF3C7"/><path d="M21 12L28 16V26L21 30L14 26V16L21 12Z" stroke="#F59E0B" stroke-width="2"/><circle cx="21" cy="21" r="4" fill="#F59E0B"/><circle cx="21" cy="15" r="2" fill="#F59E0B"/><circle cx="21" cy="27" r="2" fill="#F59E0B"/></svg>`
   };
 
-  // Regional pricing data
-  const PRICING = {
+  // Fallback regional pricing data (used if Firestore fetch fails)
+  const FALLBACK_PRICING = {
     US: {
       basic: { monthly: '$3', yearly: '$2.33', yearlyTotal: '$28' },
       solo: { monthly: '$6', yearly: '$4.75', yearlyTotal: '$57' },
@@ -113,13 +113,20 @@ import '../styles/pricing-table.css';
     }
   };
 
-  // Country to pricing tier mapping
-  function getPricingTier(country) {
+  // Fallback country to tier mapping (used if Firestore fetch fails)
+  const FALLBACK_TIERS = {
+    JP: ['IE', 'GB', 'FR', 'JP', 'KR', 'IL', 'IT'],
+    TW: ['TW', 'ES', 'PT', 'PL'],
+    PH: ['PH', 'MY', 'CN', 'AR', 'BR'],
+    TH: ['TH', 'VN', 'ID', 'IN', 'NG']
+  };
+
+  // Get pricing tier from country using tiers data
+  function getPricingTier(country, tiers) {
     const c = (country || 'US').toUpperCase();
-    if (['PH', 'MY', 'CN', 'AR', 'BR'].includes(c)) return 'PH';
-    if (['IE', 'GB', 'FR', 'JP', 'KR', 'IL', 'IT'].includes(c)) return 'JP';
-    if (['TW', 'ES', 'PT', 'PL'].includes(c)) return 'TW';
-    if (['TH', 'VN', 'ID', 'IN', 'NG'].includes(c)) return 'TH';
+    for (const [tierName, countries] of Object.entries(tiers)) {
+      if (countries.includes(c)) return tierName;
+    }
     return 'US';
   }
 
@@ -162,23 +169,66 @@ import '../styles/pricing-table.css';
       isYearly: false,
       plans: [],
       tier: 'US',
+      pricing: FALLBACK_PRICING,
+      tiers: FALLBACK_TIERS,
       icons: PLAN_ICONS,
 
       async init() {
-        // Detect region
+        const projectId = 'figmafolio-prod';
+
+        // Fetch pricing data from Firestore (do this first so we can use tiers for region detection)
+        try {
+          const pricingUrl = `https://firestore.googleapis.com/v1/projects/${projectId}/databases/(default)/documents/config/pricing`;
+          const pricingRes = await fetch(pricingUrl);
+          const pricingDoc = await pricingRes.json();
+
+          if (pricingDoc.fields) {
+            // Parse tiers: { tierName: [country codes] }
+            const tiersField = pricingDoc.fields.tiers?.mapValue?.fields;
+            if (tiersField) {
+              this.tiers = {};
+              for (const [tierName, value] of Object.entries(tiersField)) {
+                const countries = value.arrayValue?.values || [];
+                this.tiers[tierName] = countries.map(c => c.stringValue);
+              }
+            }
+
+            // Parse prices: { tierName: { planKey: { monthly, yearly, yearlyTotal } } }
+            const pricesField = pricingDoc.fields.prices?.mapValue?.fields;
+            if (pricesField) {
+              this.pricing = {};
+              for (const [tierName, tierValue] of Object.entries(pricesField)) {
+                const tierPrices = tierValue.mapValue?.fields || {};
+                this.pricing[tierName] = {};
+                for (const [planKey, planValue] of Object.entries(tierPrices)) {
+                  const planFields = planValue.mapValue?.fields || {};
+                  this.pricing[tierName][planKey] = {
+                    monthly: planFields.monthly?.stringValue || '$0',
+                    yearly: planFields.yearly?.stringValue || '$0',
+                    yearlyTotal: planFields.yearlyTotal?.stringValue || '$0'
+                  };
+                }
+              }
+            }
+          }
+        } catch (e) {
+          console.error('Failed to fetch pricing:', e);
+          // Keep using fallback pricing and tiers
+        }
+
+        // Detect region using the fetched (or fallback) tiers
         try {
           const res = await fetch('https://ipinfo.io/json?token=b259d22dc84b2e');
           const data = await res.json();
-          this.tier = getPricingTier(data.country);
+          this.tier = getPricingTier(data.country, this.tiers);
         } catch (e) {
           this.tier = 'US';
         }
 
         // Fetch plans from Firestore REST API
         try {
-          const projectId = 'figmafolio-prod'; // Your Firebase project ID
-          const url = `https://firestore.googleapis.com/v1/projects/${projectId}/databases/(default)/documents/config/plans`;
-          const res = await fetch(url);
+          const plansUrl = `https://firestore.googleapis.com/v1/projects/${projectId}/databases/(default)/documents/config/plans`;
+          const res = await fetch(plansUrl);
           const doc = await res.json();
 
           if (doc.fields) {
@@ -211,13 +261,13 @@ import '../styles/pricing-table.css';
 
       getPrice(planKey) {
         if (planKey === 'free') return '$0';
-        const p = PRICING[this.tier]?.[planKey];
+        const p = this.pricing[this.tier]?.[planKey];
         return p ? (this.isYearly ? p.yearly : p.monthly) : '$0';
       },
 
       getBillingDesc(planKey) {
         if (planKey === 'free') return 'No bills :) Upgrade any time.';
-        const p = PRICING[this.tier]?.[planKey];
+        const p = this.pricing[this.tier]?.[planKey];
         if (!p) return '';
         return this.isYearly
           ? `Billed yearly at ${p.yearlyTotal} USD after trial.`
