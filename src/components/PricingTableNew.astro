@@ -1,0 +1,233 @@
+---
+// PricingTable Component - Fetches from Firestore, supports regional pricing
+import '../styles/pricing-table.css';
+---
+
+<div class="pricing-table" x-data="pricingTable()" x-init="init()">
+  <!-- Loading State -->
+  <div x-show="loading" class="pricing-loading">
+    <div class="pricing-loading-spinner"></div>
+    <p>Loading pricing...</p>
+  </div>
+
+  <!-- Content -->
+  <template x-if="!loading">
+    <div>
+      <!-- Toggle -->
+      <div class="pricing-toggle-container">
+        <button
+          class="pricing-toggle-btn"
+          :class="{ 'active': !isYearly }"
+          @click="isYearly = false"
+        >Monthly</button>
+        <button
+          class="pricing-toggle-btn"
+          :class="{ 'active': isYearly }"
+          @click="isYearly = true"
+        >
+          Yearly
+          <span class="pricing-toggle-badge">Save 20%</span>
+        </button>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="pricing-grid">
+        <template x-for="plan in plans" :key="plan.key">
+          <div
+            class="pricing-card"
+            :class="{ 'pricing-card-popular': plan.mostPopular }"
+          >
+            <div x-show="plan.mostPopular" class="pricing-badge">Most Popular</div>
+
+            <div class="pricing-plan-icon" x-html="icons[plan.key]"></div>
+
+            <h3 class="pricing-plan-name" x-text="plan.name"></h3>
+            <p class="pricing-plan-desc" x-text="plan.description"></p>
+
+            <div class="pricing-price-container">
+              <span class="pricing-amount" x-text="getPrice(plan.key)"></span>
+              <span class="pricing-suffix" x-text="plan.key === 'free' ? '' : '/month'"></span>
+            </div>
+            <p class="pricing-bill-desc" x-text="getBillingDesc(plan.key)"></p>
+
+            <a
+              :href="'https://app.figmafolio.com/signup'"
+              class="pricing-cta"
+              :class="{ 'pricing-cta-popular': plan.mostPopular }"
+              x-text="getButtonText(plan.key)"
+            ></a>
+
+            <ul class="pricing-features">
+              <template x-for="(feature, idx) in plan.features" :key="idx">
+                <li class="pricing-feature" :class="{ 'pricing-feature-disabled': !feature.enabled }">
+                  <span class="pricing-feature-icon">
+                    <span x-show="feature.enabled" class="pricing-check">✓</span>
+                    <span x-show="!feature.enabled" class="pricing-x">✗</span>
+                  </span>
+                  <span x-text="feature.text"></span>
+                </li>
+              </template>
+            </ul>
+          </div>
+        </template>
+      </div>
+    </div>
+  </template>
+</div>
+
+<script>
+  // Plan icons SVG
+  const PLAN_ICONS = {
+    free: `<svg width="42" height="42" viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="8" fill="#F1F5F9"/><path d="M21 12L28 16V26L21 30L14 26V16L21 12Z" stroke="#64748B" stroke-width="2"/></svg>`,
+    basic: `<svg width="42" height="42" viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="8" fill="#DBEAFE"/><path d="M21 12L28 16V26L21 30L14 26V16L21 12Z" stroke="#3B82F6" stroke-width="2"/><circle cx="21" cy="21" r="4" fill="#3B82F6"/></svg>`,
+    solo: `<svg width="42" height="42" viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="8" fill="#D1FAE5"/><path d="M21 12L28 16V26L21 30L14 26V16L21 12Z" stroke="#4D9F70" stroke-width="2"/><circle cx="21" cy="21" r="4" fill="#4D9F70"/><circle cx="21" cy="15" r="2" fill="#4D9F70"/></svg>`,
+    pro: `<svg width="42" height="42" viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="8" fill="#FEF3C7"/><path d="M21 12L28 16V26L21 30L14 26V16L21 12Z" stroke="#F59E0B" stroke-width="2"/><circle cx="21" cy="21" r="4" fill="#F59E0B"/><circle cx="21" cy="15" r="2" fill="#F59E0B"/><circle cx="21" cy="27" r="2" fill="#F59E0B"/></svg>`
+  };
+
+  // Regional pricing data
+  const PRICING = {
+    US: {
+      basic: { monthly: '$3', yearly: '$2.33', yearlyTotal: '$28' },
+      solo: { monthly: '$6', yearly: '$4.75', yearlyTotal: '$57' },
+      pro: { monthly: '$19', yearly: '$16.58', yearlyTotal: '$199' }
+    },
+    JP: {
+      basic: { monthly: '$2.50', yearly: '$2', yearlyTotal: '$24' },
+      solo: { monthly: '$5', yearly: '$4', yearlyTotal: '$48' },
+      pro: { monthly: '$16', yearly: '$14', yearlyTotal: '$168' }
+    },
+    TW: {
+      basic: { monthly: '$2', yearly: '$1.58', yearlyTotal: '$19' },
+      solo: { monthly: '$4', yearly: '$3.17', yearlyTotal: '$38' },
+      pro: { monthly: '$13', yearly: '$10.83', yearlyTotal: '$130' }
+    },
+    PH: {
+      basic: { monthly: '$1.50', yearly: '$1.17', yearlyTotal: '$14' },
+      solo: { monthly: '$3', yearly: '$2.33', yearlyTotal: '$28' },
+      pro: { monthly: '$9.50', yearly: '$7.58', yearlyTotal: '$91' }
+    },
+    TH: {
+      basic: { monthly: '$1', yearly: '$0.75', yearlyTotal: '$9' },
+      solo: { monthly: '$2', yearly: '$1.58', yearlyTotal: '$19' },
+      pro: { monthly: '$6', yearly: '$4.75', yearlyTotal: '$57' }
+    }
+  };
+
+  // Country to pricing tier mapping
+  function getPricingTier(country) {
+    const c = (country || 'US').toUpperCase();
+    if (['PH', 'MY', 'CN', 'AR', 'BR'].includes(c)) return 'PH';
+    if (['IE', 'GB', 'FR', 'JP', 'KR', 'IL', 'IT'].includes(c)) return 'JP';
+    if (['TW', 'ES', 'PT', 'PL'].includes(c)) return 'TW';
+    if (['TH', 'VN', 'ID', 'IN', 'NG'].includes(c)) return 'TH';
+    return 'US';
+  }
+
+  // Fallback plans if Firestore fails
+  const FALLBACK_PLANS = [
+    { key: 'free', name: 'Free', description: 'Get started with Figmafolio', order: 0, mostPopular: false, features: [
+      { text: '1 published folio', enabled: true },
+      { text: 'Figmafolio branding', enabled: true },
+      { text: 'Community support', enabled: true },
+      { text: 'Custom domain', enabled: false },
+      { text: 'Password protection', enabled: false }
+    ]},
+    { key: 'basic', name: 'Basic', description: 'For individuals starting out', order: 1, mostPopular: false, features: [
+      { text: '1 published folio', enabled: true },
+      { text: 'Remove Figmafolio branding', enabled: true },
+      { text: 'Custom favicon', enabled: true },
+      { text: 'Custom domain', enabled: false },
+      { text: 'Password protection', enabled: false }
+    ]},
+    { key: 'solo', name: 'Solo', description: 'For professionals who need more', order: 2, mostPopular: true, features: [
+      { text: '3 published folios', enabled: true },
+      { text: 'Remove Figmafolio branding', enabled: true },
+      { text: 'Custom favicon', enabled: true },
+      { text: 'Custom domain', enabled: true },
+      { text: 'Password protection', enabled: true }
+    ]},
+    { key: 'pro', name: 'Pro', description: 'For teams and agencies', order: 3, mostPopular: false, features: [
+      { text: 'Unlimited folios', enabled: true },
+      { text: 'Remove Figmafolio branding', enabled: true },
+      { text: 'Custom favicon', enabled: true },
+      { text: 'Custom domain', enabled: true },
+      { text: 'Password protection', enabled: true },
+      { text: 'Priority support', enabled: true }
+    ]}
+  ];
+
+  document.addEventListener('alpine:init', () => {
+    Alpine.data('pricingTable', () => ({
+      loading: true,
+      isYearly: false,
+      plans: [],
+      tier: 'US',
+      icons: PLAN_ICONS,
+
+      async init() {
+        // Detect region
+        try {
+          const res = await fetch('https://ipinfo.io/json?token=b259d22dc84b2e');
+          const data = await res.json();
+          this.tier = getPricingTier(data.country);
+        } catch (e) {
+          this.tier = 'US';
+        }
+
+        // Fetch plans from Firestore REST API
+        try {
+          const projectId = 'figmafolio-prod'; // Your Firebase project ID
+          const url = `https://firestore.googleapis.com/v1/projects/${projectId}/databases/(default)/documents/config/plans`;
+          const res = await fetch(url);
+          const doc = await res.json();
+
+          if (doc.fields) {
+            this.plans = Object.entries(doc.fields)
+              .map(([key, value]) => {
+                const fields = value.mapValue?.fields || {};
+                return {
+                  key,
+                  name: fields.name?.stringValue || key,
+                  description: fields.description?.stringValue || '',
+                  order: parseInt(fields.order?.integerValue || '0'),
+                  mostPopular: fields.mostPopular?.booleanValue || false,
+                  features: (fields.features?.arrayValue?.values || []).map(f => ({
+                    text: f.mapValue?.fields?.text?.stringValue || '',
+                    enabled: f.mapValue?.fields?.enabled?.booleanValue ?? true
+                  }))
+                };
+              })
+              .sort((a, b) => a.order - b.order);
+          } else {
+            this.plans = FALLBACK_PLANS;
+          }
+        } catch (e) {
+          console.error('Failed to fetch plans:', e);
+          this.plans = FALLBACK_PLANS;
+        }
+
+        this.loading = false;
+      },
+
+      getPrice(planKey) {
+        if (planKey === 'free') return '$0';
+        const p = PRICING[this.tier]?.[planKey];
+        return p ? (this.isYearly ? p.yearly : p.monthly) : '$0';
+      },
+
+      getBillingDesc(planKey) {
+        if (planKey === 'free') return 'No bills :) Upgrade any time.';
+        const p = PRICING[this.tier]?.[planKey];
+        if (!p) return '';
+        return this.isYearly
+          ? `Billed yearly at ${p.yearlyTotal} USD after trial.`
+          : `Billed monthly at ${p.monthly} USD after trial.`;
+      },
+
+      getButtonText(planKey) {
+        if (planKey === 'free') return 'Get started';
+        return this.isYearly ? 'Start free 15 day trial' : 'Start free 7 day trial';
+      }
+    }));
+  });
+</script>
