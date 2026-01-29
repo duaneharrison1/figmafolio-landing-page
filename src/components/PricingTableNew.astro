@@ -232,7 +232,10 @@ import '../styles/pricing-table.css';
           const doc = await res.json();
 
           if (doc.fields) {
+            // Only process valid plan keys, filter out metadata fields (updatedAt, version, etc.)
+            const validPlanKeys = ['free', 'basic', 'solo', 'pro'];
             this.plans = Object.entries(doc.fields)
+              .filter(([key]) => validPlanKeys.includes(key))
               .map(([key, value]) => {
                 const fields = value.mapValue?.fields || {};
                 return {
