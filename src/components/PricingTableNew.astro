@@ -1,9 +1,68 @@
 ---
 // PricingTable Component - Fetches from Firestore, supports regional pricing
-import '../styles/pricing-table.css';
+// CSS and icons are fetched from figmaApp at build time (single source of truth)
+
+const FIGMA_APP_BASE = 'https://raw.githubusercontent.com/duaneharrison1/figmaApp/main/src/components/PricingTable';
+
+// Fetch CSS from figmaApp at build time
+let css = '';
+let cssSource = 'local';
+try {
+  const cssUrl = `${FIGMA_APP_BASE}/PricingTable.css`;
+  const cssResponse = await fetch(cssUrl);
+  if (cssResponse.ok) {
+    css = await cssResponse.text();
+    cssSource = 'figmaApp';
+  }
+} catch (e) {
+  console.warn('Failed to fetch CSS from figmaApp, using local fallback');
+}
+
+// Fetch icons from figmaApp at build time
+let iconsFromFigmaApp: Record<string, string> | null = null;
+try {
+  const iconsUrl = `${FIGMA_APP_BASE}/icons.js`;
+  const iconsResponse = await fetch(iconsUrl);
+  if (iconsResponse.ok) {
+    const iconsText = await iconsResponse.text();
+    // Parse SVG strings from the icons file
+    // Expected format: export const FreePlanIcon = `<svg>...</svg>`;
+    // or: export const PLAN_ICONS = { free: `<svg>...</svg>`, ... }
+    const iconMatches = iconsText.matchAll(/(\w+):\s*`(<svg[^`]+)`/g);
+    const icons: Record<string, string> = {};
+    for (const match of iconMatches) {
+      icons[match[1]] = match[2];
+    }
+    if (Object.keys(icons).length > 0) {
+      iconsFromFigmaApp = icons;
+    }
+  }
+} catch (e) {
+  console.warn('Failed to fetch icons from figmaApp, using local fallback');
+}
+
+// Fallback icons (used if figmaApp fetch fails)
+const FALLBACK_ICONS = {
+  free: `<svg width="42" height="42" viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="8" fill="#F1F5F9"/><path d="M21 14v14M14 21h14M17 17l8 8M25 17l-8 8" stroke="#64748B" stroke-width="2" stroke-linecap="round"/></svg>`,
+  basic: `<svg width="42" height="42" viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="8" fill="#DBEAFE"/><circle cx="21" cy="16" r="5" stroke="#3B82F6" stroke-width="2"/><path d="M13 30c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/></svg>`,
+  solo: `<svg width="42" height="42" viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="8" fill="#D1FAE5"/><circle cx="21" cy="16" r="5" stroke="#10B981" stroke-width="2"/><path d="M13 30c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#10B981" stroke-width="2" stroke-linecap="round"/><path d="M28 12l2 2 4-4" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  pro: `<svg width="42" height="42" viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="8" fill="#FEF3C7"/><path d="M21 10l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8L21 10z" fill="#F59E0B"/><path d="M11 32c0-3.3 2.7-6 6-6h8c3.3 0 6 2.7 6 6" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/></svg>`
+};
+
+const planIcons = iconsFromFigmaApp || FALLBACK_ICONS;
+const planIconsJson = JSON.stringify(planIcons);
+
+// If CSS was not fetched from figmaApp, import local CSS
+// Note: We still import the local CSS file as a fallback
 ---
 
-<div class="pricing-table" x-data="pricingTable">
+{/* Import local CSS as fallback when figmaApp CSS is not available */}
+{cssSource === 'local' && <style>@import '../styles/pricing-table.css';</style>}
+
+{/* Embed CSS from figmaApp when available */}
+{cssSource === 'figmaApp' && <style set:html={css}></style>}
+
+<div class="pricing-table" x-data="pricingTable" data-plan-icons={planIconsJson}>
   <!-- Loading State -->
   <div x-show="loading" class="pricing-loading">
     <div class="pricing-loading-spinner"></div>
@@ -76,13 +135,32 @@ import '../styles/pricing-table.css';
 </div>
 
 <script is:inline>
-  // Plan icons SVG
-  const PLAN_ICONS = {
+  // Plan icons are loaded from data attribute (fetched from figmaApp at build time)
+  // Fallback icons in case parsing fails
+  const FALLBACK_ICONS = {
     free: `<svg width="42" height="42" viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="8" fill="#F1F5F9"/><path d="M21 14v14M14 21h14M17 17l8 8M25 17l-8 8" stroke="#64748B" stroke-width="2" stroke-linecap="round"/></svg>`,
     basic: `<svg width="42" height="42" viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="8" fill="#DBEAFE"/><circle cx="21" cy="16" r="5" stroke="#3B82F6" stroke-width="2"/><path d="M13 30c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/></svg>`,
     solo: `<svg width="42" height="42" viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="8" fill="#D1FAE5"/><circle cx="21" cy="16" r="5" stroke="#10B981" stroke-width="2"/><path d="M13 30c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#10B981" stroke-width="2" stroke-linecap="round"/><path d="M28 12l2 2 4-4" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
     pro: `<svg width="42" height="42" viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="8" fill="#FEF3C7"/><path d="M21 10l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8L21 10z" fill="#F59E0B"/><path d="M11 32c0-3.3 2.7-6 6-6h8c3.3 0 6 2.7 6 6" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/></svg>`
   };
+
+  // Get icons from data attribute (embedded at build time from figmaApp)
+  function getPlanIcons() {
+    const pricingTable = document.querySelector('.pricing-table[data-plan-icons]');
+    if (pricingTable) {
+      try {
+        const iconsData = pricingTable.getAttribute('data-plan-icons');
+        if (iconsData) {
+          return JSON.parse(iconsData);
+        }
+      } catch (e) {
+        console.warn('Failed to parse plan icons from data attribute:', e);
+      }
+    }
+    return FALLBACK_ICONS;
+  }
+
+  const PLAN_ICONS = getPlanIcons();
 
   // Fallback regional pricing data (used if Firestore fetch fails)
   const FALLBACK_PRICING = {
