@@ -21,7 +21,7 @@ try {
 // Fetch icons from figmaApp at build time
 let iconsFromFigmaApp: Record<string, string> | null = null;
 try {
-  const iconsUrl = `${FIGMA_APP_BASE}/icons.js`;
+  const iconsUrl = `${FIGMA_APP_BASE}/icons/plan-icons.js`;
   const iconsResponse = await fetch(iconsUrl);
   if (iconsResponse.ok) {
     const iconsText = await iconsResponse.text();
