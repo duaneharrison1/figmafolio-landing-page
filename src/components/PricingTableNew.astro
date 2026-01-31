@@ -1,24 +1,10 @@
 ---
 // PricingTable Component - Fetches from Firestore, supports regional pricing
-// CSS and icons are fetched from figmaApp at build time (single source of truth)
+// CSS loaded from Firebase (single source of truth)
+// Icons are fetched from figmaApp at build time
 
-import localCss from '../styles/pricing-table.css?raw';
-
-const FIGMA_APP_BASE = 'https://figmawebapp.web.app/shared';
-
-// Fetch CSS from figmaApp at build time
-let css = '';
-let cssSource = 'local';
-try {
-  const cssUrl = `${FIGMA_APP_BASE}/pricing-table.css`;
-  const cssResponse = await fetch(cssUrl);
-  if (cssResponse.ok) {
-    css = await cssResponse.text();
-    cssSource = 'figmaApp';
-  }
-} catch (e) {
-  console.warn('Failed to fetch CSS from figmaApp, using local fallback');
-}
+const FIGMA_APP_BASE = 'https://figmafolio-app.web.app/shared';
+const CSS_URL = `${FIGMA_APP_BASE}/pricing-table.css?v=2`;
 
 // Fetch icons from figmaApp at build time
 let iconsFromFigmaApp: Record<string, string> | null = null;
@@ -53,15 +39,9 @@ const FALLBACK_ICONS = {
 
 const planIcons = iconsFromFigmaApp || FALLBACK_ICONS;
 const planIconsJson = JSON.stringify(planIcons);
-
-// If CSS was not fetched from figmaApp, use local fallback
-if (!css) {
-  css = localCss;
-  cssSource = 'local';
-}
 ---
 
-<style set:html={css}></style>
+<link rel="stylesheet" href={CSS_URL} />
 
 <div class="pricing-table" x-data="pricingTable" data-plan-icons={planIconsJson}>
   <!-- Loading State -->
