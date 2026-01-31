@@ -4,121 +4,269 @@ import Tick from "../../ui/icons/tick.astro";
 import Container from "../../components/container.astro";
 ---
 
-<Layout title="User Testing for Portfolios">
+<Layout title="User Testing - Test Any Prototype | Figmafolio">
   <Container>
+    <!-- Hero Section -->
     <section class="bg-white pt-8 pb-4 md:pt-14 md:pb-6">
       <div class="text-center mt-14 mb-12">
-        <h1 class="text-5xl font-bold mb-4">User Testing for Portfolios</h1>
-        <p class="text-lg text-slate-600">
-          Collect real feedback on your portfolio with task-based testing and
-          AI-powered insights.
+        <div class="inline-block bg-[#4d9f70] text-white text-sm font-semibold px-3 py-1 rounded-full mb-4">
+          Pro Feature
+        </div>
+        <h1 class="text-5xl font-bold mb-4">Test Any Prototype. Get Real Feedback.</h1>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+          Turn your Figmafolio link into a user testing session. Whether you're validating a product design, testing an app flow, or getting feedback on your portfolio, set up guided tasks and capture real user insights in minutes.
         </p>
       </div>
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start mt-24">
-        <div class="flex flex-col items-start text-left">
-          <h2 class="text-2xl font-bold mb-4">
-            Get real feedback from real users
-          </h2>
-          <p class="text-slate-700 mb-4">
-            Understanding how visitors experience your portfolio is key to
-            making it more effective. With User Testing, testers complete
-            specific tasks while recording audio think-aloud feedback. Our AI
-            analyzes the transcripts to surface actionable insights
-            automatically.
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="py-16">
+      <h2 class="text-4xl font-bold text-center mb-4">One tool. Endless possibilities.</h2>
+      <p class="text-lg text-slate-600 text-center mb-12 max-w-2xl mx-auto">
+        User Testing works with any prototype you publish through Figmafolio.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-[#F8FAFC] rounded-2xl border border-[#E5EAF0] p-6">
+          <h3 class="font-bold text-xl mb-2">Product Validation</h3>
+          <p class="text-slate-700">
+            Testing a new feature or product concept? Get structured feedback from clients or stakeholders before you build.
           </p>
-          <div class="mb-4">
-            <h3 class="font-semibold text-lg mb-1">How it works</h3>
-            <ul class="space-y-1 text-base">
-              <li class="flex items-center gap-2">
-                <Tick class="text-green-600 w-5 h-5" /> Enable testing and define
-                tasks for testers to complete
-              </li>
-              <li class="flex items-center gap-2">
-                <Tick class="text-green-600 w-5 h-5" /> Share your portfolio link
-                with testers
-              </li>
-              <li class="flex items-center gap-2">
-                <Tick class="text-green-600 w-5 h-5" /> Testers record audio feedback
-                while navigating your site
-              </li>
-              <li class="flex items-center gap-2">
-                <Tick class="text-green-600 w-5 h-5" /> AI analyzes transcripts
-                and surfaces key insights
-              </li>
-              <li class="flex items-center gap-2">
-                <Tick class="text-green-600 w-5 h-5" /> View a Testing Summary across
-                all sessions
-              </li>
-            </ul>
-          </div>
-          <div class="mb-4">
-            <h3 class="font-semibold text-lg mb-1">Session limits by plan</h3>
-            <p class="text-slate-700 mb-2">
-              Free and Basic plans include 1 testing session. Solo plans get 5
-              sessions, and Pro plans get up to 20 sessions per project.
-            </p>
-          </div>
-          <div class="flex items-start mt-4">
-            <a
-              href="#"
-              id="user-testing-start-link"
-              class="inline-block rounded-full bg-[#4d9f70] text-white font-semibold px-6 py-2 text-base shadow hover:bg-[#388e5c] transition"
-              >Get started with user testing</a
-            >
+        </div>
+        <div class="bg-[#F8FAFC] rounded-2xl border border-[#E5EAF0] p-6">
+          <h3 class="font-bold text-xl mb-2">App Usability Testing</h3>
+          <p class="text-slate-700">
+            See if users can navigate your app prototype. Track where they succeed, where they get stuck, and how long tasks take.
+          </p>
+        </div>
+        <div class="bg-[#F8FAFC] rounded-2xl border border-[#E5EAF0] p-6">
+          <h3 class="font-bold text-xl mb-2">Website Review</h3>
+          <p class="text-slate-700">
+            Share your website mockup and gather feedback on the user journey. Perfect for client presentations.
+          </p>
+        </div>
+        <div class="bg-[#F8FAFC] rounded-2xl border border-[#E5EAF0] p-6">
+          <h3 class="font-bold text-xl mb-2">Portfolio Feedback</h3>
+          <p class="text-slate-700">
+            Get constructive feedback on your portfolio from peers, mentors, or potential employers before your next interview.
+          </p>
+        </div>
+        <div class="bg-[#F8FAFC] rounded-2xl border border-[#E5EAF0] p-6">
+          <h3 class="font-bold text-xl mb-2">Client Check-ins</h3>
+          <p class="text-slate-700">
+            Replace lengthy review meetings with async testing. Clients complete tasks on their own time, you get actionable data.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 bg-[#F8FAFC] rounded-3xl px-8 md:px-12">
+      <h2 class="text-4xl font-bold text-center mb-12">How It Works</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-12 h-12 bg-[#4d9f70] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+          <h3 class="font-bold text-lg mb-2">Enable User Testing</h3>
+          <p class="text-slate-700 text-sm">
+            Toggle on User Testing in your project settings. Your existing Figmafolio link stays the same.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 bg-[#4d9f70] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+          <h3 class="font-bold text-lg mb-2">Add Tasks</h3>
+          <p class="text-slate-700 text-sm">
+            Create simple tasks like "Find the pricing page" or "Complete the checkout flow." No complex setup, just describe what you want tested.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 bg-[#4d9f70] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+          <h3 class="font-bold text-lg mb-2">Share Your Link</h3>
+          <p class="text-slate-700 text-sm">
+            Send your regular Figmafolio link to testers. They'll see a task panel alongside your prototype.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 bg-[#4d9f70] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
+          <h3 class="font-bold text-lg mb-2">Review Results</h3>
+          <p class="text-slate-700 text-sm">
+            See completion rates, time per task, and watch session recordings. Understand exactly where users succeed or struggle.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="py-16">
+      <h2 class="text-4xl font-bold text-center mb-12">Key Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="flex items-start gap-3">
+          <Tick class="text-green-600 w-6 h-6 flex-shrink-0 mt-0.5" />
+          <div>
+            <h3 class="font-bold text-lg">Guided Tasks</h3>
+            <p class="text-slate-700">Walk testers through specific flows with clear instructions</p>
           </div>
         </div>
-        <div class="flex flex-col items-center">
-          <div
-            class="bg-[#F8FAFC] rounded-2xl border border-[#E5EAF0] w-[320px] h-[320px] md:w-[400px] md:h-[400px] lg:w-[440px] lg:h-[440px] flex flex-col items-center justify-center p-8">
-            <svg
-              width="80"
-              height="80"
-              fill="none"
-              viewBox="0 0 64 64"
-              class="mb-4"
-              ><circle cx="32" cy="20" r="12" fill="#e0e7ef"></circle><ellipse
-                cx="32"
-                cy="48"
-                rx="20"
-                ry="12"
-                fill="#cbd5e1"></ellipse><circle
-                cx="32"
-                cy="20"
-                r="8"
-                fill="#94a3b8"></circle><path
-                d="M26 52c0-1.1.9-2 2-2h8a2 2 0 012 2v4H26v-4z"
-                fill="#64748b"></path><circle
-                cx="44"
-                cy="16"
-                r="6"
-                fill="#4d9f70"></circle><path
-                d="M42 16l2 2 4-4"
-                stroke="#fff"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"></path></svg
-            >
-            <div class="text-center">
-              <div class="font-bold text-xl mb-1">AI-Powered Insights</div>
-              <div class="text-slate-600 text-base">
-                Collect audio feedback and let AI surface the insights that
-                matter most.
-              </div>
-            </div>
+        <div class="flex items-start gap-3">
+          <Tick class="text-green-600 w-6 h-6 flex-shrink-0 mt-0.5" />
+          <div>
+            <h3 class="font-bold text-lg">Session Recording</h3>
+            <p class="text-slate-700">Capture video of the entire testing session</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <Tick class="text-green-600 w-6 h-6 flex-shrink-0 mt-0.5" />
+          <div>
+            <h3 class="font-bold text-lg">Time Tracking</h3>
+            <p class="text-slate-700">See how long each task takes and spot friction points instantly</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <Tick class="text-green-600 w-6 h-6 flex-shrink-0 mt-0.5" />
+          <div>
+            <h3 class="font-bold text-lg">Completion Tracking</h3>
+            <p class="text-slate-700">Know exactly which tasks users complete vs. where they get stuck</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <Tick class="text-green-600 w-6 h-6 flex-shrink-0 mt-0.5" />
+          <div>
+            <h3 class="font-bold text-lg">Same Link, Two Modes</h3>
+            <p class="text-slate-700">Toggle testing on/off without changing your URL</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <Tick class="text-green-600 w-6 h-6 flex-shrink-0 mt-0.5" />
+          <div>
+            <h3 class="font-bold text-lg">Works with Password Protection</h3>
+            <p class="text-slate-700">Keep your prototype private while still running tests</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="mt-24 mb-16">
+    <!-- Who It's For Section -->
+    <section class="py-16 bg-[#F8FAFC] rounded-3xl px-8 md:px-12">
+      <h2 class="text-4xl font-bold text-center mb-12">Who It's For</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="bg-white rounded-2xl border border-[#E5EAF0] p-6">
+          <h3 class="font-bold text-xl mb-2">Freelance Designers</h3>
+          <p class="text-slate-700">
+            Get quick client feedback without scheduling another meeting. Send a link, get structured insights.
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl border border-[#E5EAF0] p-6">
+          <h3 class="font-bold text-xl mb-2">Product Designers</h3>
+          <p class="text-slate-700">
+            Validate your designs before handoff. Catch usability issues early when they're cheap to fix.
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl border border-[#E5EAF0] p-6">
+          <h3 class="font-bold text-xl mb-2">UX Designers</h3>
+          <p class="text-slate-700">
+            Run lightweight usability tests without enterprise tools or enterprise pricing.
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl border border-[#E5EAF0] p-6">
+          <h3 class="font-bold text-xl mb-2">Design Students</h3>
+          <p class="text-slate-700">
+            Get portfolio feedback from mentors and peers. Improve your work before applying for jobs.
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl border border-[#E5EAF0] p-6">
+          <h3 class="font-bold text-xl mb-2">Small Agencies</h3>
+          <p class="text-slate-700">
+            Impress clients with professional testing capabilities. No expensive tools required.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What Makes It Different Section -->
+    <section class="py-16">
+      <h2 class="text-4xl font-bold text-center mb-4">What Makes It Different</h2>
+      <p class="text-lg text-slate-600 text-center mb-12 max-w-2xl mx-auto">
+        Unlike enterprise testing platforms, Figmafolio's User Testing is designed for speed and simplicity.
+      </p>
+      <div class="max-w-3xl mx-auto">
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <Tick class="text-green-600 w-6 h-6 flex-shrink-0 mt-0.5" />
+            <div>
+              <span class="font-semibold">No importing prototypes:</span>
+              <span class="text-slate-700"> Test directly on your already-published Figmafolio site</span>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <Tick class="text-green-600 w-6 h-6 flex-shrink-0 mt-0.5" />
+            <div>
+              <span class="font-semibold">No separate tool:</span>
+              <span class="text-slate-700"> Everything lives in one place</span>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <Tick class="text-green-600 w-6 h-6 flex-shrink-0 mt-0.5" />
+            <div>
+              <span class="font-semibold">No learning curve:</span>
+              <span class="text-slate-700"> If you can write a task, you can run a test</span>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <Tick class="text-green-600 w-6 h-6 flex-shrink-0 mt-0.5" />
+            <div>
+              <span class="font-semibold">No complex reports:</span>
+              <span class="text-slate-700"> See what matters. Did they complete it? How long did it take?</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to get real feedback?</h2>
+      <p class="text-lg text-slate-600 mb-8">Start testing your prototypes with real users today.</p>
+      <a
+        href="#"
+        id="user-testing-start-link"
+        class="inline-block rounded-full bg-[#4d9f70] text-white font-semibold px-8 py-3 text-lg shadow hover:bg-[#388e5c] transition"
+        >Start Testing Your Prototypes</a
+      >
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mt-8 mb-16">
       <h2 class="text-4xl font-bold text-center mb-12">
         Frequently Asked Questions
       </h2>
-      <div class="space-y-6">
+      <div class="space-y-6 max-w-3xl mx-auto">
         <details
           class="bg-[#F8FAFC] rounded-2xl border border-[#E5EAF0] shadow p-4 md:p-8 mb-6 transition-all duration-300 group"
           open>
+          <summary
+            class="font-bold text-xl text-[#222] cursor-pointer flex items-center justify-between select-none text-left">
+            What types of prototypes can I test?
+            <span
+              class="ml-4 transition-transform duration-300 group-open:rotate-180">
+              <svg
+                width="28"
+                height="28"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path
+                  d="M8 10l4 4 4-4"
+                  stroke="#222"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </span>
+          </summary>
+          <div class="mt-4 text-slate-700 text-base leading-relaxed text-left">
+            You can test any Figma prototype published through Figmafolio—product designs, app prototypes, website mockups, portfolios, and more. If you can publish it to Figmafolio, you can run user tests on it.
+          </div>
+        </details>
+        <details
+          class="bg-[#F8FAFC] rounded-2xl border border-[#E5EAF0] shadow p-4 md:p-8 mb-6 transition-all duration-300 group">
           <summary
             class="font-bold text-xl text-[#222] cursor-pointer flex items-center justify-between select-none text-left">
             How many testing sessions can I record?
@@ -140,70 +288,7 @@ import Container from "../../components/container.astro";
             </span>
           </summary>
           <div class="mt-4 text-slate-700 text-base leading-relaxed text-left">
-            The number of testing sessions depends on your plan. Free and Basic
-            plans include 1 session per project. Solo plans get 5 sessions, and
-            Pro plans get up to 20 sessions. Sessions can be used for different
-            testers or for the same tester completing multiple rounds of
-            feedback.
-          </div>
-        </details>
-        <details
-          class="bg-[#F8FAFC] rounded-2xl border border-[#E5EAF0] shadow p-4 md:p-8 mb-6 transition-all duration-300 group">
-          <summary
-            class="font-bold text-xl text-[#222] cursor-pointer flex items-center justify-between select-none text-left">
-            How does the AI analysis work?
-            <span
-              class="ml-4 transition-transform duration-300 group-open:rotate-180">
-              <svg
-                width="28"
-                height="28"
-                fill="none"
-                viewBox="0 0 24 24"
-                aria-hidden="true">
-                <path
-                  d="M8 10l4 4 4-4"
-                  stroke="#222"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-              </svg>
-            </span>
-          </summary>
-          <div class="mt-4 text-slate-700 text-base leading-relaxed text-left">
-            When testers record their audio feedback, we automatically
-            transcribe it and use AI to analyze the content. The AI identifies
-            key themes, pain points, positive feedback, and actionable
-            suggestions. You'll see a summary for each session plus an
-            aggregated Testing Summary across all sessions.
-          </div>
-        </details>
-        <details
-          class="bg-[#F8FAFC] rounded-2xl border border-[#E5EAF0] shadow p-4 md:p-8 mb-6 transition-all duration-300 group">
-          <summary
-            class="font-bold text-xl text-[#222] cursor-pointer flex items-center justify-between select-none text-left">
-            Can testers skip tasks?
-            <span
-              class="ml-4 transition-transform duration-300 group-open:rotate-180">
-              <svg
-                width="28"
-                height="28"
-                fill="none"
-                viewBox="0 0 24 24"
-                aria-hidden="true">
-                <path
-                  d="M8 10l4 4 4-4"
-                  stroke="#222"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-              </svg>
-            </span>
-          </summary>
-          <div class="mt-4 text-slate-700 text-base leading-relaxed text-left">
-            Yes, testers can skip tasks if they get stuck or find them
-            confusing. This is actually valuable feedback—if multiple testers
-            skip the same task, it indicates an area of your portfolio that may
-            need improvement. The AI analysis will flag commonly skipped tasks.
+            User Testing is a Pro plan feature. Pro plans include up to 20 testing sessions per project. Sessions can be used for different testers or for the same tester completing multiple rounds of feedback.
           </div>
         </details>
         <details
@@ -229,11 +314,33 @@ import Container from "../../components/container.astro";
             </span>
           </summary>
           <div class="mt-4 text-slate-700 text-base leading-relaxed text-left">
-            Yes, you'll need to recruit your own testers. You can share your
-            testing link with friends, colleagues, or members of design
-            communities. Having testers from your target audience (like
-            recruiters or potential clients) will give you the most relevant
-            feedback.
+            Yes, you'll need to recruit your own testers. Share your testing link with colleagues, clients, friends, or members of design communities. Testing with people from your target audience gives you the most relevant insights.
+          </div>
+        </details>
+        <details
+          class="bg-[#F8FAFC] rounded-2xl border border-[#E5EAF0] shadow p-4 md:p-8 mb-6 transition-all duration-300 group">
+          <summary
+            class="font-bold text-xl text-[#222] cursor-pointer flex items-center justify-between select-none text-left">
+            Can I use User Testing with password-protected projects?
+            <span
+              class="ml-4 transition-transform duration-300 group-open:rotate-180">
+              <svg
+                width="28"
+                height="28"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path
+                  d="M8 10l4 4 4-4"
+                  stroke="#222"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </span>
+          </summary>
+          <div class="mt-4 text-slate-700 text-base leading-relaxed text-left">
+            Yes! User Testing works seamlessly with password protection. Testers enter the password first, then proceed with the testing session. This lets you keep your prototype private while still gathering feedback.
           </div>
         </details>
       </div>
