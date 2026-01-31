@@ -116,7 +116,7 @@ import Container from "../../components/container.astro";
           open>
           <summary
             class="font-bold text-xl text-[#222] cursor-pointer flex items-center justify-between select-none text-left">
-            Sorem ipsum dolor sit amet, consectetur adipiscing elit.
+            How do I connect my domain?
             <span
               class="ml-4 transition-transform duration-300 group-open:rotate-180">
               <svg
@@ -135,23 +135,14 @@ import Container from "../../components/container.astro";
             </span>
           </summary>
           <div class="mt-4 text-slate-700 text-base leading-relaxed text-left">
-            Porem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-            turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-            nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-            tellus elit sed risus. Maecenas eget condimentum velit, sit amet
-            feugiat lectus. Class aptent taciti sociosqu ad litora torquent per
-            conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus
-            enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex.
-            Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum
-            lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in
-            elementum tellus.
+            Connecting your domain is straightforward. In your Figmafolio dashboard, go to your project settings and enter your domain name. We'll provide you with a CNAME record to add to your domain registrar's DNS settings. Once added, your portfolio will be accessible at your custom domain. We provide step-by-step instructions for popular registrars like GoDaddy, Namecheap, and Cloudflare.
           </div>
         </details>
         <details
           class="bg-[#F8FAFC] rounded-2xl border border-[#E5EAF0] shadow p-4 md:p-8 mb-6 transition-all duration-300 group">
           <summary
             class="font-bold text-xl text-[#222] cursor-pointer flex items-center justify-between select-none text-left">
-            Sorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Do I need to buy a domain separately?
             <span
               class="ml-4 transition-transform duration-300 group-open:rotate-180">
               <svg
@@ -169,12 +160,15 @@ import Container from "../../components/container.astro";
               </svg>
             </span>
           </summary>
+          <div class="mt-4 text-slate-700 text-base leading-relaxed text-left">
+            Yes, you'll need to purchase your domain from a domain registrar like Namecheap, GoDaddy, Google Domains, or Cloudflare. Figmafolio doesn't sell domains directly, but we make it easy to connect any domain you own. Domain prices typically start around $10-15/year depending on the extension (.com, .design, .io, etc.).
+          </div>
         </details>
         <details
           class="bg-[#F8FAFC] rounded-2xl border border-[#E5EAF0] shadow p-4 md:p-8 mb-6 transition-all duration-300 group">
           <summary
             class="font-bold text-xl text-[#222] cursor-pointer flex items-center justify-between select-none text-left">
-            Sorem ipsum dolor sit amet, consectetur adipiscing elit.
+            How long does DNS propagation take?
             <span
               class="ml-4 transition-transform duration-300 group-open:rotate-180">
               <svg
@@ -192,12 +186,15 @@ import Container from "../../components/container.astro";
               </svg>
             </span>
           </summary>
+          <div class="mt-4 text-slate-700 text-base leading-relaxed text-left">
+            DNS propagation typically takes anywhere from a few minutes to 48 hours, though most changes are visible within 1-2 hours. The time varies based on your domain registrar and DNS provider. During propagation, some visitors may still see the old configuration. We recommend setting up your domain and waiting a few hours before sharing your new URL widely.
+          </div>
         </details>
         <details
           class="bg-[#F8FAFC] rounded-2xl border border-[#E5EAF0] shadow p-4 md:p-8 mb-6 transition-all duration-300 group">
           <summary
             class="font-bold text-xl text-[#222] cursor-pointer flex items-center justify-between select-none text-left">
-            Sorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Is SSL/HTTPS included?
             <span
               class="ml-4 transition-transform duration-300 group-open:rotate-180">
               <svg
@@ -215,6 +212,9 @@ import Container from "../../components/container.astro";
               </svg>
             </span>
           </summary>
+          <div class="mt-4 text-slate-700 text-base leading-relaxed text-left">
+            Yes, SSL certificates are automatically provisioned for all custom domains at no extra cost. Your portfolio will be served over HTTPS, ensuring a secure connection for all visitors. The SSL certificate is set up automatically after your DNS records propagate—no manual configuration needed.
+          </div>
         </details>
       </div>
     </section>
