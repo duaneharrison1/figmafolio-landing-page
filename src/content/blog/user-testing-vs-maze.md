@@ -11,6 +11,10 @@ category: "Comparison"
 tags: ["user testing", "maze", "prototype testing", "comparison"]
 ---
 
+<div class="mt-8 mb-6 rounded-xl border border-[#4d9f70] bg-[#f6fef9] px-6 py-4 text-center text-base">
+  <strong>User testing is now part of <a href="https://aeroapp.ai/features/user-testing" class="underline text-[#4d9f70] hover:text-[#388e5c]">Aero</a>, our new product.</strong>
+</div>
+
 <!-- Hero -->
 <div class="text-center max-w-2xl mx-auto mt-10 mb-8">
   <h1 class="text-4xl md:text-5xl font-extrabold mb-4">User Testing by Figmafolio vs Maze</h1>
