@@ -1,4 +1,8 @@
 {
+  "redirects": [
+    { "source": "/features/user-testing", "destination": "https://aeroapp.ai", "permanent": true },
+    { "source": "/blog/user-testing-vs-maze", "destination": "https://aeroapp.ai", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
