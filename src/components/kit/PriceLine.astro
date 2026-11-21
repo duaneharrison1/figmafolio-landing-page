@@ -1,0 +1,10 @@
+---
+import { PRICE_LINE, PRICE_FOOTNOTE } from "@/data/plans";
+interface Props {
+  footnote?: boolean;
+}
+const { footnote = true } = Astro.props;
+---
+
+<p class="font-medium text-ff-ink">{PRICE_LINE}</p>
+{footnote && <p class="mt-1 text-sm text-ff-muted">{PRICE_FOOTNOTE}</p>}

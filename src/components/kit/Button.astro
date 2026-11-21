@@ -1,0 +1,31 @@
+---
+// Kit button. Tokens only. Variants: primary (brand), secondary (outline), ghost (text).
+interface Props {
+  href: string;
+  variant?: "primary" | "secondary" | "ghost";
+  size?: "md" | "lg";
+  class?: string;
+  [x: string]: any;
+}
+const { href, variant = "primary", size = "lg", class: className, ...rest } = Astro.props;
+
+const sizes = { md: "px-4 py-2 text-sm", lg: "px-5 py-2.5" };
+const variants = {
+  primary: "bg-ff-brand text-ff-on-brand hover:bg-ff-brand-hover border-2 border-transparent",
+  secondary: "bg-ff-bg text-ff-brand-hover border-2 border-ff-brand-hover hover:bg-ff-surface",
+  ghost: "bg-transparent text-ff-brand-hover border-2 border-transparent hover:bg-ff-brand-soft",
+};
+---
+
+<a
+  href={href}
+  {...rest}
+  class:list={[
+    "inline-block rounded-ff-pill text-center font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ff-brand",
+    sizes[size],
+    variants[variant],
+    className,
+  ]}
+>
+  <slot />
+</a>

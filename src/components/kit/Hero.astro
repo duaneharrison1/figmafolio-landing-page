@@ -1,0 +1,18 @@
+---
+// Page hero. One H1, a short answer under it, actions in the default slot.
+interface Props {
+  title: string;
+  lede: string;
+  eyebrow?: string;
+}
+const { title, lede, eyebrow } = Astro.props;
+---
+
+<header class="bg-ff-brand-tint border-b border-ff-border">
+  <div class="mx-auto max-w-ff-measure px-5 py-14 md:py-20">
+    {eyebrow && <p class="text-sm font-medium text-ff-brand-hover mb-3">{eyebrow}</p>}
+    <h1 class="text-3xl md:text-5xl font-semibold tracking-tight text-ff-ink">{title}</h1>
+    <p class="mt-5 text-lg md:text-xl text-ff-muted">{lede}</p>
+    <div class="mt-8 flex flex-wrap gap-3"><slot /></div>
+  </div>
+</header>

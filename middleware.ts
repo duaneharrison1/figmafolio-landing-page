@@ -7,7 +7,7 @@ export default function middleware(request: Request) {
   const pathname = url.pathname;
 
   // Paths that should NOT redirect (stay on landing page)
-  const landingPagePaths = ["/", "/about", "/contact", "/pricing", "/how-it-works"];
+  const landingPagePaths = ["/", "/about", "/contact", "/pricing", "/how-it-works", "/style-guide"];
 
   if (landingPagePaths.includes(pathname)) {
     return;

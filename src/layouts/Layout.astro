@@ -8,6 +8,10 @@ import "@/styles/global.css";
 
 export interface Props {
   title: string;
+  /** Handwritten meta description, under 155 characters. Falls back to the site default. */
+  description?: string;
+  /** Keep a page out of search (the style guide, drafts). */
+  noindex?: boolean;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
@@ -17,7 +21,8 @@ const resolvedImageWithDomain = new URL(
   Astro.site
 ).toString();
 
-const { title } = Astro.props;
+const { title, description, noindex } = Astro.props;
+const defaultDescription = "Figmafolio: Convert Figma Designs to Websites Instantly";
 
 const makeTitle = title
   ? title + " | " + "FigmaFolio"
@@ -43,7 +48,8 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Figmafolio: Convert Figma Designs to Websites Instantly"
+      description={description ?? defaultDescription}
+      noindex={noindex}
       canonical={canonicalURL}
       twitter={{
         creator: "@surjithctly",
@@ -54,7 +60,7 @@ const makeTitle = title
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Figmafolio: Convert Figma Designs to Websites Instantly`,
+          title: description ? makeTitle : `Figmafolio: Convert Figma Designs to Websites Instantly`,
           image: resolvedImageWithDomain,
         },
         image: {
@@ -62,6 +68,7 @@ const makeTitle = title
         },
       }}
     />
+    <slot name="head" />
     <script
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
       defer></script>

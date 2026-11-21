@@ -1,0 +1,105 @@
+---
+// Living style guide for the SEO page kit. Not indexed, not in the sitemap.
+// Every kit component is shown here; a new kit component is not done until it is added.
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/kit/Hero.astro";
+import Section from "@/components/kit/Section.astro";
+import Button from "@/components/kit/Button.astro";
+import Card from "@/components/kit/Card.astro";
+import Steps from "@/components/kit/Steps.astro";
+import Faq from "@/components/kit/Faq.astro";
+import ComparisonTable from "@/components/kit/ComparisonTable.astro";
+import LastChecked from "@/components/kit/LastChecked.astro";
+import PriceLine from "@/components/kit/PriceLine.astro";
+import Cta from "@/components/kit/Cta.astro";
+
+// Token names only: the swatches read the live value, so this page never holds a colour.
+const colours = [
+  ["brand", "bg-ff-brand"],
+  ["brand-hover", "bg-ff-brand-hover"],
+  ["brand-soft", "bg-ff-brand-soft"],
+  ["brand-tint", "bg-ff-brand-tint"],
+  ["ink", "bg-ff-ink"],
+  ["muted", "bg-ff-muted"],
+  ["bg", "bg-ff-bg"],
+  ["surface", "bg-ff-surface"],
+  ["border", "bg-ff-border"],
+  ["success", "bg-ff-success"],
+  ["warning", "bg-ff-warning"],
+  ["warning-soft", "bg-ff-warning-soft"],
+  ["info", "bg-ff-info"],
+];
+---
+
+<Layout title="Style guide" noindex={true} description="Internal style guide for FigmaFolio SEO pages.">
+  <Hero eyebrow="Internal, not indexed" title="FigmaFolio page kit" lede="Every SEO page is built from these pieces and the tokens in src/styles/tokens.css. Change a value there and every page follows.">
+    <Button href="#buttons">Primary button</Button>
+    <Button href="#buttons" variant="secondary">Secondary</Button>
+  </Hero>
+
+  <Section width="wide" id="tokens">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Colour tokens</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      {colours.map(([name, cls]) => (
+        <div class="rounded-ff-md border border-ff-border overflow-hidden">
+          <div class:list={["h-16", cls]}></div>
+          <p class="p-2 text-sm text-ff-ink">--ff-color-{name}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <Section id="buttons" tone="surface">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Button</h2>
+    <div class="flex flex-wrap gap-3">
+      <Button href="#">Primary</Button>
+      <Button href="#" variant="secondary">Secondary</Button>
+      <Button href="#" variant="ghost">Ghost</Button>
+      <Button href="#" size="md">Small</Button>
+    </div>
+  </Section>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Card</h2>
+    <Card title="Example card">Cards hold one idea each. Example text only.</Card>
+  </Section>
+
+  <Section tone="surface">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Steps</h2>
+    <Steps items={[
+      { title: "Publish", text: "Example step one." },
+      { title: "Share", text: "Example step two." },
+    ]} />
+  </Section>
+
+  <Section width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Comparison table</h2>
+    <ComparisonTable
+      caption="Example comparison"
+      columns={["FigmaFolio", "Example tool"]}
+      rows={[
+        { label: "Custom domain", cells: ["Yes, on paid plans", "Not stated"] },
+        { label: "Price", cells: ["From $3 a month", null] },
+      ]}
+      sources={[{ label: "Example source", url: "https://example.com/" }]}
+    />
+  </Section>
+
+  <Section tone="surface">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">FAQ</h2>
+    <Faq items={[
+      { q: "Is this an example question?", a: "Yes. It also writes the FAQ structured data for the page." },
+      { q: "Is FigmaFolio free?", a: "Free for 7 days, then from $3 a month." },
+    ]} />
+  </Section>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Price line and last checked</h2>
+    <PriceLine />
+    <div class="mt-4"><LastChecked date="2026-11-21" /></div>
+  </Section>
+
+  <Section width="wide">
+    <Cta />
+  </Section>
+</Layout>

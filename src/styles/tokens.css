@@ -1,0 +1,46 @@
+/*
+  FigmaFolio design tokens: the ONLY place a brand colour, radius, shadow,
+  measure or font is set for SEO pages and the page kit (src/components/kit).
+  Names say what a value is for, not what it looks like, so a rebrand changes
+  values here and nothing else.
+
+  version: 2026-11-21.1
+  Mirrored by hand: figmaApp docs/figmafolio/tokens.css (keep the version line
+  the same in both). See docs/figmafolio/DESIGN_SYSTEM_PLAN.md.
+*/
+:root {
+  /* Brand */
+  --ff-color-brand: #4d9f70;
+  --ff-color-brand-hover: #3d8f60;
+  --ff-color-brand-soft: #e6f4ec;
+  --ff-color-brand-tint: #f6fef9;
+  --ff-color-on-brand: #ffffff;
+
+  /* Text and surfaces */
+  --ff-color-ink: #222222;
+  --ff-color-muted: #64748b;
+  --ff-color-bg: #ffffff;
+  --ff-color-surface: #f8fafc;
+  --ff-color-border: #e5eaf0;
+
+  /* Status */
+  --ff-color-success: #10b981;
+  --ff-color-warning: #f59e0b;
+  --ff-color-warning-soft: #fef3c7;
+  --ff-color-info: #3b82f6;
+
+  /* Shape and depth */
+  --ff-radius-sm: 0.375rem;
+  --ff-radius-md: 0.5rem;
+  --ff-radius-lg: 0.75rem;
+  --ff-radius-xl: 1rem;
+  --ff-radius-pill: 9999px;
+  --ff-shadow-card: 0 1px 2px rgb(0 0 0 / 0.04), 0 4px 16px rgb(0 0 0 / 0.06);
+
+  /* Type */
+  --ff-font-sans: Poppins, ui-sans-serif, system-ui, sans-serif;
+
+  /* Layout */
+  --ff-measure: 42rem;
+  --ff-container: 72rem;
+}

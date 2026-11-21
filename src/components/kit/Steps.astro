@@ -1,0 +1,23 @@
+---
+// Numbered steps. Keep to what FigmaFolio really does (docs/figmafolio/PRODUCT.md).
+interface Props {
+  items: { title: string; text: string }[];
+}
+const { items } = Astro.props;
+---
+
+<ol class="space-y-6">
+  {
+    items.map((item, i) => (
+      <li class="flex gap-4">
+        <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-ff-pill bg-ff-brand-soft font-semibold text-ff-brand-hover">
+          {i + 1}
+        </span>
+        <div>
+          <h3 class="font-semibold text-ff-ink">{item.title}</h3>
+          <p class="mt-1 text-ff-muted">{item.text}</p>
+        </div>
+      </li>
+    ))
+  }
+</ol>
