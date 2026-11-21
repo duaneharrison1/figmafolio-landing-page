@@ -10,8 +10,9 @@ import PasswordMini from "./PasswordMini.astro";
 import DomainMini from "./DomainMini.astro";
 import FaviconMini from "./FaviconMini.astro";
 import AnalyticsMini from "./AnalyticsMini.astro";
+import LinkCheckMini from "./LinkCheckMini.astro";
 
-export type StepMini = "publish" | "publish-desktop" | "publish-phone" | "plans" | "site-link" | "site-link-domain" | "period" | "breakpoint" | "password" | "domain" | "favicon" | "analytics" | "password-compact" | "favicon-panel" | "favicon-tab" | "analytics-totals";
+export type StepMini = "publish" | "publish-desktop" | "publish-phone" | "plans" | "site-link" | "site-link-domain" | "period" | "breakpoint" | "password" | "domain" | "favicon" | "analytics" | "password-compact" | "favicon-panel" | "favicon-tab" | "analytics-totals" | "link-ok" | "link-fail";
 interface Props {
   items: { title: string; text: string; mini?: StepMini }[];
 }
@@ -38,6 +39,8 @@ const hasMini = items.some((i) => i.mini);
             {item.mini === "publish-desktop" && <PublishMini focus="desktop" showPublish={false} />}
             {item.mini === "publish-phone" && <PublishMini focus="phone" showPublish={false} />}
             {item.mini === "plans" && <PlansMini />}
+            {item.mini === "link-ok" && <LinkCheckMini state="viewable" />}
+            {item.mini === "link-fail" && <LinkCheckMini state="notViewable" />}
             {item.mini === "site-link" && <SiteLinkMini />}
             {item.mini === "site-link-domain" && <SiteLinkMini address="yourname.com" />}
             {item.mini === "period" && <PeriodMini />}

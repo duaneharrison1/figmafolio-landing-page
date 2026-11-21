@@ -19,6 +19,7 @@ module.exports = {
           success: "var(--ff-color-success)",
           warning: "var(--ff-color-warning)",
           "warning-soft": "var(--ff-color-warning-soft)",
+          danger: "var(--ff-color-danger)",
           info: "var(--ff-color-info)",
         },
       },
