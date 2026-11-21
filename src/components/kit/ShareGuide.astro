@@ -1,0 +1,88 @@
+---
+// The animated "Share your prototype with everyone" guide, as it runs in the app.
+// Drawn in HTML and CSS (no screenshots, no logos), three steps on one 17 second loop.
+// Wording comes from the app (utils/figmaLinkCopy.js GUIDE_COPY). Example names are labelled.
+// CSS: src/styles/share-guide.css. Keep in step with figmaApp ViewportEditor/ShareDialogMock.
+import "@/styles/share-guide.css";
+
+const steps = [
+  ["1. Go back to your file and click Share", "Then click the row that says who can open it."],
+  ["2. Choose Anyone, then View", "Set Who can access to Anyone and What can they do to View. Save."],
+  ["3. Come back to Figmafolio", "It checks again by itself."],
+];
+const owner = "Example name";
+---
+
+<figure class="fgm" aria-label="How to share a Figma prototype so anyone can open it">
+  <div class="fgm-stage">
+    <div class="fgm-scene fgm-a">
+      <div class="fgm-shot fgm-zoom-a" style="width: 560px">
+        <div class="sdm sdm-dialog" aria-hidden="true">
+          <div class="sdm-bar sdm-d-bar"><b>Share “Example project”</b><span class="sdm-copy">Copy link</span><span class="sdm-x">×</span></div>
+          <div class="sdm-banner sdm-d-banner">This draft is only visible to you. Move it to share it.</div>
+          <div class="sdm-input sdm-d-input">Add emails to invite</div>
+          <div class="sdm-label sdm-d-who">Who has access</div>
+          <div class="sdm-row sdm-d-anyone"><i class="sdm-lock"></i><span>Only people you invite</span><em>›</em></div>
+          <div class="sdm-row sdm-d-owner"><span class="sdm-avatar">E</span><span>{owner} <small>(you)</small></span><em>owner</em></div>
+          <span class="sdm-cursor sdm-cursor-a"><i class="sdm-ripple"></i><svg width="16" height="20" viewBox="0 0 16 20" fill="none"><path d="M1.5 1.2v14.1l3.6-3.4 2.5 5.6 2.5-1.1-2.5-5.5h5.1L1.5 1.2z"></path></svg></span>
+        </div>
+        <span class="fgm-ring fgm-ring1" aria-hidden="true"><i></i></span>
+      </div>
+    </div>
+    <div class="fgm-scene fgm-b">
+      <div class="fgm-shot" style="width: 349px">
+        <div class="sdm sdm-settings" aria-hidden="true">
+          <div class="sdm-bar"><span class="sdm-back">‹</span><b>Share settings</b><span class="sdm-x">×</span></div>
+          <div class="sdm-label sdm-s-who">Who can access</div>
+          <div class="sdm-select sdm-s-select">
+            <span class="sdm-swap sdm-swap-old"><i class="sdm-lock"></i><b>Only people you invite</b></span>
+            <span class="sdm-swap sdm-swap-new"><span class="sdm-globe"></span><b>Anyone</b></span>
+            <span class="sdm-caret">⌄</span>
+          </div>
+          <div class="sdm-hint sdm-s-hint">
+            <span class="sdm-swap sdm-swap-old">Only people you add can open this file.</span>
+            <span class="sdm-swap sdm-swap-new">Anyone with the link can open this file.</span>
+          </div>
+          <div class="sdm-label sdm-muted sdm-s-what">What can they do</div>
+          <div class="sdm-radio sdm-s-view"><i class="sdm-dot"><i class="sdm-dot-on"></i></i><span>View</span></div>
+          <div class="sdm-radio sdm-s-edit"><i class="sdm-dot"></i><span>Edit</span></div>
+          <div class="sdm-rule sdm-s-rule1"></div>
+          <div class="sdm-label sdm-s-sec">Additional security</div>
+          <div class="sdm-radio sdm-s-pw"><i class="sdm-box"></i><span>Password required</span></div>
+          <div class="sdm-rule sdm-s-rule2"></div>
+          <div class="sdm-label sdm-s-adv">Advanced</div>
+          <div class="sdm-radio sdm-s-copy"><i class="sdm-box on"></i><span>Viewers can copy and export</span></div>
+          <div class="sdm-foot"><span class="sdm-btn">Cancel</span><span class="sdm-btn sdm-btn-save"><span class="sdm-btn-fill"></span><span class="sdm-btn-text">Save</span></span></div>
+          <span class="sdm-cursor sdm-cursor-b"><i class="sdm-ripple"></i><svg width="16" height="20" viewBox="0 0 16 20" fill="none"><path d="M1.5 1.2v14.1l3.6-3.4 2.5 5.6 2.5-1.1-2.5-5.5h5.1L1.5 1.2z"></path></svg></span>
+        </div>
+        <span class="fgm-ring fgm-ring2" aria-hidden="true"><i></i></span>
+        <span class="fgm-ring fgm-ring3" aria-hidden="true"><i></i></span>
+        <span class="fgm-ring fgm-ring4" aria-hidden="true"><i></i></span>
+      </div>
+    </div>
+    <div class="fgm-scene fgm-c">
+      <div class="fgm-shot fgm-zoom-c" style="width: 560px">
+        <div class="sdm sdm-dialog sdm-shared" aria-hidden="true">
+          <div class="sdm-bar sdm-d-bar"><b>Share “Example project”</b><span class="sdm-copy">Copy link</span><span class="sdm-x">×</span></div>
+          <div class="sdm-banner sdm-d-banner">This draft is only visible to you. Move it to share it.</div>
+          <div class="sdm-input sdm-d-input">Add emails to invite</div>
+          <div class="sdm-label sdm-d-who">Who has access</div>
+          <div class="sdm-row sdm-d-anyone"><span class="sdm-globe"></span><span>Anyone</span><em>can view ›</em></div>
+          <div class="sdm-row sdm-d-owner"><span class="sdm-avatar">E</span><span>{owner} <small>(you)</small></span><em>owner</em></div>
+          <span class="sdm-cursor sdm-cursor-c"><i class="sdm-ripple"></i><svg width="16" height="20" viewBox="0 0 16 20" fill="none"><path d="M1.5 1.2v14.1l3.6-3.4 2.5 5.6 2.5-1.1-2.5-5.5h5.1L1.5 1.2z"></path></svg></span>
+        </div>
+        <span class="fgm-ring fgm-ring5" aria-hidden="true"><i></i></span>
+      </div>
+    </div>
+    <div class="fgm-toast" aria-hidden="true">Now shared</div>
+  </div>
+  <figcaption class="fgm-caps">
+    {steps.map(([t, s], i) => (
+      <div class={`fgm-cap fgm-cap-${"abc"[i]}`}>
+        <div class="fgm-cap-title">{t}</div>
+        <div class="fgm-cap-sub">{s}</div>
+      </div>
+    ))}
+  </figcaption>
+  <p class="fgm-foot">Example screens, drawn for this guide. No Anyone option? Your Figma admin may have turned off public links.</p>
+</figure>

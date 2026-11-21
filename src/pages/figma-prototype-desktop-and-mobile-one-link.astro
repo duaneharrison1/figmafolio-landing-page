@@ -1,6 +1,8 @@
 ---
 // SEO page 7. Facts: docs/figmafolio/PRODUCT.md (Making a site; What Figmafolio does not do).
 import Layout from "@/layouts/Layout.astro";
+import { Image } from "astro:assets";
+import img from "@/assets/publish_as_responsive_landing.png";
 import Hero from "@/components/kit/Hero.astro";
 import Section from "@/components/kit/Section.astro";
 import Button from "@/components/kit/Button.astro";
@@ -47,6 +49,7 @@ const faq = [
   >
     <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
     <Button href="/figma-prototype-to-website" variant="secondary">How Figmafolio works</Button>
+    <Image slot="visual" src={img} alt="The same site on a laptop, tablet and phone" width={420} class="h-auto w-full max-w-sm" />
   </Hero>
 
   <Section>

@@ -10,7 +10,9 @@ const { width = "measure", tone = "plain", id, class: className } = Astro.props;
 ---
 
 <section id={id} class:list={[tone === "surface" && "bg-ff-surface", "py-12 md:py-16", className]}>
-  <div class:list={["mx-auto px-5", width === "measure" ? "max-w-ff-measure" : "max-w-ff-container"]}>
-    <slot />
+  <div class="mx-auto max-w-ff-container px-5">
+    <div class:list={[width === "measure" && "max-w-ff-measure"]}>
+      <slot />
+    </div>
   </div>
 </section>

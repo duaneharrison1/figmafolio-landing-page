@@ -1,0 +1,318 @@
+/* The animated "Share your prototype with everyone" guide, ported from the app
+   (ViewportEditor/ShareDialogMock + ShareGuideModal). It is an illustration of another tool's
+   screen, so it keeps its own neutral palette on purpose; the outline pulse uses the brand green.
+   Source version: figmaApp as of 21 Nov 2026. Re-check if the app guide changes. */
+/* The drawn share dialog (see ShareDialogMock.js). It is an illustration of another tool's screen,
+   so it keeps its own neutral palette on purpose and does not use Aero or Figmafolio tokens; that
+   also keeps it visibly separate from our own interface. Sizes are in container units so it scales
+   with the box it is placed in. */
+.sdm {
+  position: relative;
+  container-type: inline-size;
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 3.2cqw;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: #1F2328;
+  overflow: hidden;
+  line-height: 1;
+}
+.sdm-dialog { aspect-ratio: 960 / 485; }
+.sdm-settings { aspect-ratio: 916 / 865; }
+.sdm > * { position: absolute; left: 3%; right: 3%; display: flex; align-items: center; box-sizing: border-box; }
+.sdm b { font-weight: 600; }
+.sdm small { font-size: inherit; color: #8A919C; }
+
+.sdm-bar { left: 0; right: 0; top: 0; height: 12.5%; padding: 0 3%; border-bottom: 1px solid #E6E8EB; gap: 2.6cqw; font-size: 2.6cqw; }
+.sdm-dialog .sdm-bar { height: 15%; font-size: 2.1cqw; }
+.sdm-bar b { flex: 1; }
+.sdm-x, .sdm-back { font-size: 4cqw; color: #5B6472; font-weight: 300; }
+.sdm-copy { color: #2F6FDE; font-size: 1.9cqw; font-weight: 500; }
+.sdm-label { font-size: 2.3cqw; font-weight: 600; }
+.sdm-dialog .sdm-label { font-size: 1.9cqw; font-weight: 600; }
+.sdm-muted { color: #8A919C; font-weight: 500; }
+.sdm-hint { font-size: 2cqw; color: #8A919C; }
+.sdm-rule { height: 1px; background: #E6E8EB; }
+
+.sdm-globe { width: 2.6cqw; height: 2.6cqw; border: 0.22cqw solid currentColor; border-radius: 50%; margin-right: 1.6cqw; flex: none; box-sizing: border-box; position: relative; }
+.sdm-globe::after { content: ''; position: absolute; left: 50%; top: -0.1cqw; bottom: -0.1cqw; width: 0.9cqw; transform: translateX(-50%); border: 0.2cqw solid currentColor; border-radius: 50%; box-sizing: border-box; }
+
+/* dialog */
+.sdm-d-banner { top: 21%; height: 15%; padding: 0 2.4cqw; background: #E8F1FD; border-radius: 1.2cqw; font-size: 1.9cqw; color: #25518F; }
+.sdm-d-input { top: 42%; height: 13%; padding: 0 2.4cqw; border: 1px solid #E1E4E8; border-radius: 1.2cqw; font-size: 1.9cqw; color: #A0A6AF; }
+.sdm-d-who { top: 60%; height: 7%; }
+.sdm-d-anyone { top: 70%; height: 11%; padding: 0 1.4cqw; font-size: 2cqw; }
+.sdm-d-anyone span:nth-child(2) { flex: 1; }
+.sdm-d-owner { top: 84%; height: 11%; padding: 0 1.4cqw; font-size: 2cqw; }
+.sdm-d-owner span:nth-child(2) { flex: 1; }
+.sdm-row em { font-style: normal; color: #5B6472; }
+.sdm-avatar { width: 3.4cqw; height: 3.4cqw; border-radius: 50%; background: #6C63E8; color: #fff; display: grid; place-items: center; font-size: 1.7cqw; font-weight: 600; margin-right: 1.6cqw; flex: none; }
+
+/* settings (positions follow the guide outlines: access row, View, Save) */
+.sdm-settings .sdm-bar { height: 8.7%; }
+.sdm-s-who { top: 10.5%; height: 5%; }
+.sdm-s-select { top: 18.5%; height: 7%; padding: 0 3cqw; border: 1px solid #E1E4E8; border-radius: 1.6cqw; font-size: 2.6cqw; }
+.sdm-s-select b { flex: 1; font-weight: 500; }
+.sdm-caret { color: #5B6472; font-size: 2.4cqw; }
+.sdm-s-hint { top: 27.5%; height: 4%; }
+.sdm-s-what { top: 32.5%; height: 4%; }
+.sdm-s-view { top: 36.5%; height: 6.5%; }
+.sdm-s-edit { top: 43%; height: 6.5%; }
+.sdm-s-rule1 { top: 56.5%; }
+.sdm-s-sec { top: 58.5%; height: 5%; }
+.sdm-s-pw { top: 64.5%; height: 5.5%; }
+.sdm-s-rule2 { top: 72.6%; }
+.sdm-s-adv { top: 74.5%; height: 5%; }
+.sdm-s-copy { top: 80.5%; height: 5.5%; }
+.sdm-radio { gap: 2.2cqw; font-size: 2.5cqw; }
+.sdm-dot { width: 3.4cqw; height: 3.4cqw; border-radius: 50%; border: 0.3cqw solid #D3D7DD; background: #F4F5F7; box-sizing: border-box; flex: none; }
+.sdm-dot { position: relative; }
+.sdm-dot-on { position: absolute; inset: -0.3cqw; border-radius: 50%; border: 0.9cqw solid #2F7DF6; background: #fff; opacity: 0; animation: sdm-viewOn var(--sg-t, 12s) infinite; }
+.sdm-dot.on { border: 0.9cqw solid #2F7DF6; background: #fff; }
+.sdm-box.on { background: #2F7DF6; border-color: #2F7DF6; }
+.sdm-box { width: 3.2cqw; height: 3.2cqw; border-radius: 0.7cqw; border: 0.3cqw solid #D3D7DD; background: #F4F5F7; box-sizing: border-box; flex: none; }
+.sdm-foot { left: 0; right: 0; bottom: 0; top: 91.3%; padding: 0 3%; justify-content: flex-end; gap: 1.6cqw; border-top: 1px solid #E6E8EB; font-size: 2.4cqw; }
+.sdm-btn { padding: 1cqw 2.8cqw; border: 1px solid #D3D7DD; border-radius: 1.2cqw; font-weight: 500; }
+.sdm-btn-save { position: relative; background: #E4E6EA; border-color: #E4E6EA; color: #A0A6AF; overflow: hidden; }
+.sdm-btn-fill { position: absolute; inset: 0; background: #2F7DF6; opacity: 0; animation: sdm-saveOn var(--sg-t, 12s) infinite, sdm-press var(--sg-t, 12s) infinite; }
+.sdm-btn-save { animation: sdm-saveText var(--sg-t, 12s) infinite; }
+
+/* a lock for "only people you invite" */
+.sdm-lock { position: relative; width: 2.2cqw; height: 1.7cqw; margin: 0.5cqw 1.8cqw 0 0.2cqw; border-radius: 0.4cqw; background: currentColor; flex: none; }
+.sdm-lock::before { content: ''; position: absolute; left: 50%; bottom: 100%; width: 1.3cqw; height: 1.1cqw; transform: translateX(-50%); border: 0.28cqw solid currentColor; border-bottom: 0; border-radius: 1cqw 1cqw 0 0; box-sizing: border-box; }
+.sdm-select, .sdm-hint { position: absolute; }
+.sdm-select .sdm-swap, .sdm-hint .sdm-swap { position: absolute; left: 3cqw; top: 50%; transform: translateY(-50%); display: flex; align-items: center; white-space: nowrap; }
+.sdm-hint .sdm-swap { left: 0; }
+.sdm-select .sdm-swap b { font-weight: 500; }
+.sdm-caret { position: absolute; right: 3cqw; }
+
+/* The little state changes. Times are shares of the guide's loop (see ShareGuideModal.css). */
+.sdm-settings .sdm-swap-old { animation: sdm-oldOut var(--sg-t, 12s) infinite; }
+.sdm-settings .sdm-swap-new { opacity: 0; animation: sdm-newIn var(--sg-t, 12s) infinite; }
+@keyframes sdm-oldOut { 0%, 41% { opacity: 1; } 43%, 100% { opacity: 0; } }
+@keyframes sdm-newIn { 0%, 41% { opacity: 0; } 43%, 99% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes sdm-viewOn { 0%, 50% { opacity: 0; transform: scale(0.6); } 53%, 99% { opacity: 1; transform: scale(1); } 100% { opacity: 0; } }
+@keyframes sdm-saveOn { 0%, 51% { opacity: 0; } 54%, 99% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes sdm-saveText { 0%, 51% { color: #A0A6AF; } 54%, 99% { color: #fff; } 100% { color: #A0A6AF; } }
+@keyframes sdm-press { 0%, 59% { transform: none; } 60.5% { transform: scale(0.96); } 62%, 100% { transform: none; } }
+
+/* The cursor (a tutorial pointer, not a recording of anyone). Positions are shares of the box. */
+.sdm-cursor { position: absolute; z-index: 3; width: 16px; height: 20px; opacity: 0; pointer-events: none; left: 0; top: 0; transform-origin: 1.5px 1.2px; filter: drop-shadow(0 1px 2px rgba(31, 35, 40, 0.35)); animation-duration: var(--sg-t, 12s); animation-iteration-count: infinite; animation-timing-function: cubic-bezier(0.45, 0, 0.2, 1); }
+.sdm-cursor svg { display: block; }
+.sdm-ripple { position: absolute; left: -9px; top: -9px; width: 22px; height: 22px; border-radius: 50%; border: 2px solid #2F7DF6; opacity: 0; animation-duration: var(--sg-t, 12s); animation-iteration-count: infinite; }
+.sdm-cursor-a { animation-name: sdm-curA; } .sdm-cursor-a .sdm-ripple { animation-name: sdm-clickA; }
+.sdm-cursor-b { animation-name: sdm-curB; } .sdm-cursor-b .sdm-ripple { animation-name: sdm-clickB; }
+.sdm-cursor-c { animation-name: sdm-curC; } .sdm-cursor-c .sdm-ripple { animation-name: sdm-clickC; }
+@keyframes sdm-curA { 0%, 4% { opacity: 0; left: 82%; top: 44%; } 7% { opacity: 1; left: 82%; top: 44%; } 16% { left: 58%; top: 77%; } 17%, 27% { opacity: 1; left: 58%; top: 77%; } 17.8% { transform: scale(0.82); } 19% { transform: none; } 29%, 100% { opacity: 0; left: 58%; top: 77%; } }
+@keyframes sdm-clickA { 0%, 17% { opacity: 0; transform: scale(0.4); } 18% { opacity: 0.9; } 22%, 100% { opacity: 0; transform: scale(1.8); } }
+@keyframes sdm-curB { 0%, 32% { opacity: 0; left: 76%; top: 8%; } 34% { opacity: 1; left: 76%; top: 8%; } 39% { left: 58%; top: 23%; } 40%, 41% { left: 58%; top: 23%; transform: none; } 40.6% { transform: scale(0.82); } 44% { left: 58%; top: 23%; } 49.5% { left: 14%; top: 40%; } 50%, 51% { left: 14%; top: 40%; } 50.6% { transform: scale(0.82); } 56% { left: 92%; top: 95%; } 59.5%, 62% { left: 92%; top: 95%; } 60.2% { transform: scale(0.82); } 61.5% { transform: none; } 64%, 100% { opacity: 0; left: 92%; top: 95%; } }
+@keyframes sdm-clickB { 0%, 40% { opacity: 0; transform: scale(0.4); } 40.6% { opacity: 0.9; } 44%, 50% { opacity: 0; transform: scale(1.8); } 50.6% { opacity: 0.9; } 54%, 59.8% { opacity: 0; transform: scale(1.8); } 60.4% { opacity: 0.9; transform: scale(0.4); } 64%, 100% { opacity: 0; transform: scale(1.8); } }
+@keyframes sdm-curC { 0%, 66% { opacity: 0; left: 80%; top: 40%; } 68% { opacity: 1; left: 80%; top: 40%; } 74%, 90% { opacity: 1; left: 62%; top: 77%; } 96%, 100% { opacity: 0; left: 62%; top: 77%; } }
+@keyframes sdm-clickC { 0%, 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .sdm-cursor { display: none; }
+  .sdm-swap-old { animation: none !important; opacity: 0 !important; }
+  .sdm-swap-new { animation: none !important; opacity: 1 !important; }
+  .sdm-dot-on, .sdm-btn-fill { animation: none; opacity: 1; }
+  .sdm-btn-save { animation: none; color: #fff; }
+}
+
+.sdm-btn-text { position: relative; z-index: 1; }
+
+/* "Share your prototype with everyone" (Figmafolio styles; no Aero tokens).
+   One 17 second loop. Each scene, caption and outline has its own window in the loop,
+   the same way the Aero homepage loops are built (CSS keyframes on one clock). */
+
+.fgm {
+    --fgm-t: 17s;
+    --sg-t: var(--fgm-t);
+    padding-bottom: 6px;
+    font-family: inherit;
+    color: #1F2328;
+}
+
+.fgm-stage {
+    position: relative;
+    height: 350px;
+    margin: 0 28px;
+    border-radius: 16px;
+    background: #F3F4F6;
+    overflow: hidden;
+}
+
+.fgm-scene {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.fgm-shot {
+    position: relative;
+}
+
+.fgm-shot .sdm {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 8px 26px rgba(31, 35, 40, 0.16);
+}
+
+.fgm-a { animation: fgm-sA var(--fgm-t) infinite; }
+.fgm-b { animation: fgm-sB var(--fgm-t) infinite; }
+.fgm-c { animation: fgm-sC var(--fgm-t) infinite; }
+.fgm-zoom-a { animation: fgm-zoomA var(--fgm-t) ease-out infinite; }
+.fgm-zoom-c { animation: fgm-zoomC var(--fgm-t) ease-out infinite; }
+
+.fgm-ring {
+    position: absolute;
+    border-radius: 10px;
+    opacity: 0;
+    animation-duration: var(--fgm-t);
+    animation-iteration-count: infinite;
+}
+
+.fgm-ring i {
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    animation: fgm-pulse 1.4s ease-in-out infinite;
+}
+
+/* the share dialog: the access row; the copy link button */
+.fgm-ring1 { left: 3%; top: 70%; width: 94%; height: 11%; animation-name: fgm-ring1; }
+.fgm-ring5 { left: 3%; top: 70%; width: 94%; height: 11%; animation-name: fgm-ring5; }
+/* share settings: Who can access, View, Save */
+.fgm-ring2 { left: 3%; top: 17.5%; width: 94%; height: 9%; animation-name: fgm-ring2; }
+.fgm-ring3 { left: 2%; top: 37.4%; width: 22%; height: 5.6%; animation-name: fgm-ring3; }
+.fgm-ring4 { left: 87%; top: 92%; width: 11.5%; height: 6.4%; animation-name: fgm-ring4; }
+
+.fgm-toast {
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: #1F2328;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
+    opacity: 0;
+    transform: translate(-50%, 10px);
+    animation: fgm-toast var(--fgm-t) infinite;
+}
+
+.fgm-caps {
+    position: relative;
+    height: 92px;
+    margin: 0 28px;
+}
+
+.fgm-cap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 14px;
+    opacity: 0;
+}
+
+.fgm-cap-a { animation: fgm-cA var(--fgm-t) infinite; }
+.fgm-cap-b { animation: fgm-cB var(--fgm-t) infinite; }
+.fgm-cap-c { animation: fgm-cC var(--fgm-t) infinite; }
+
+.fgm-cap-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.fgm-cap-sub {
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #5B6472;
+}
+
+.fgm-foot {
+    padding: 16px 28px 22px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #5B6472;
+}
+
+@keyframes fgm-sA { 0%, 29% { opacity: 1; } 31%, 97% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes fgm-sB { 0%, 31% { opacity: 0; } 33%, 63% { opacity: 1; } 65%, 100% { opacity: 0; } }
+@keyframes fgm-sC { 0%, 65% { opacity: 0; } 67%, 95% { opacity: 1; } 97%, 100% { opacity: 0; } }
+@keyframes fgm-zoomA { 0% { transform: scale(1); } 29%, 100% { transform: scale(1.03); } }
+@keyframes fgm-zoomC { 0%, 65% { transform: scale(1); } 95%, 100% { transform: scale(1.03); } }
+@keyframes fgm-cA { 0%, 29% { opacity: 1; transform: none; } 31% { opacity: 0; transform: translateY(-6px); } 97% { opacity: 0; transform: translateY(6px); } 100% { opacity: 1; transform: none; } }
+@keyframes fgm-cB { 0%, 31% { opacity: 0; transform: translateY(6px); } 34%, 62% { opacity: 1; transform: none; } 64%, 100% { opacity: 0; transform: translateY(-6px); } }
+@keyframes fgm-cC { 0%, 65% { opacity: 0; transform: translateY(6px); } 68%, 94% { opacity: 1; transform: none; } 96%, 100% { opacity: 0; } }
+@keyframes fgm-ring1 { 0%, 8% { opacity: 0; } 12%, 28% { opacity: 1; } 30%, 100% { opacity: 0; } }
+@keyframes fgm-ring2 { 0%, 33% { opacity: 0; } 35%, 44% { opacity: 1; } 46%, 100% { opacity: 0; } }
+@keyframes fgm-ring3 { 0%, 45% { opacity: 0; } 47%, 54% { opacity: 1; } 56%, 100% { opacity: 0; } }
+@keyframes fgm-ring4 { 0%, 55% { opacity: 0; } 57%, 63% { opacity: 1; } 65%, 100% { opacity: 0; } }
+@keyframes fgm-ring5 { 0%, 67% { opacity: 0; } 69%, 83% { opacity: 1; } 85%, 100% { opacity: 0; } }
+@keyframes fgm-pulse {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(77, 159, 112, 0.95), 0 0 0 9px rgba(77, 159, 112, 0.18); }
+    50% { box-shadow: 0 0 0 3px rgba(77, 159, 112, 0.95), 0 0 0 14px rgba(77, 159, 112, 0); }
+}
+@keyframes fgm-toast { 0%, 81% { opacity: 0; transform: translate(-50%, 10px); } 85%, 94% { opacity: 1; transform: translate(-50%, 0); } 97%, 100% { opacity: 0; } }
+
+/* Reduced motion: no loop. The three steps sit one under the other, outlines drawn solid. */
+@media (prefers-reduced-motion: reduce) {
+    .fgm-stage {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        height: auto;
+        padding: 16px;
+    }
+    .fgm-scene {
+        position: relative;
+        inset: auto;
+        opacity: 1;
+        animation: none;
+    }
+    .fgm-zoom-a,
+    .fgm-zoom-c {
+        animation: none;
+    }
+    .fgm-ring {
+        opacity: 1;
+        animation: none;
+    }
+    .fgm-ring i {
+        animation: none;
+        box-shadow: 0 0 0 3px rgba(77, 159, 112, 0.95);
+    }
+    .fgm-toast {
+        display: none;
+    }
+    .fgm-caps {
+        height: auto;
+        padding: 14px 0 8px;
+    }
+    .fgm-cap {
+        position: relative;
+        top: auto;
+        opacity: 1;
+        animation: none;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 640px) {
+    .fgm-stage {
+        height: 260px;
+    }
+    .fgm-shot {
+        max-width: 90%;
+    }
+}
+.sdm-cursor path { fill: #1F2328; stroke: #fff; stroke-width: 1.3; stroke-linejoin: round; }

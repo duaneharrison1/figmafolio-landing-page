@@ -25,8 +25,43 @@ const { title, description, noindex } = Astro.props;
 const defaultDescription = "Figmafolio: Convert Figma Designs to Websites Instantly";
 
 const makeTitle = title
-  ? title + " | " + "FigmaFolio"
+  ? title + " | Figmafolio"
   : "Figmafolio: Convert Figma Designs to Websites Instantly";
+const siteUrl = new URL("/", Astro.site).toString();
+const path = Astro.url.pathname.replace(/\/+$/, "");
+const crumbs = path === "" ? [] : path.split("/").filter(Boolean);
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Figmafolio",
+    url: siteUrl,
+    logo: new URL("/figmafolio-favicon.png", Astro.site).toString(),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Figmafolio",
+    url: siteUrl,
+  },
+  ...(crumbs.length
+    ? [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+            ...crumbs.map((seg, i) => ({
+              "@type": "ListItem",
+              position: i + 2,
+              name: i === crumbs.length - 1 && title ? title : seg.replace(/-/g, " "),
+              item: new URL("/" + crumbs.slice(0, i + 1).join("/"), Astro.site).toString(),
+            })),
+          ],
+        },
+      ]
+    : []),
+];
 ---
 
 <!doctype html>
@@ -52,22 +87,29 @@ const makeTitle = title
       noindex={noindex}
       canonical={canonicalURL}
       twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
         card: "summary_large_image",
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: description ? makeTitle : `Figmafolio: Convert Figma Designs to Websites Instantly`,
+          title: makeTitle,
           image: resolvedImageWithDomain,
         },
+        optional: {
+          description: description ?? defaultDescription,
+          siteName: "Figmafolio",
+          locale: "en_US",
+        },
         image: {
-          alt: "Figmafolio: Convert Figma Designs to Websites Instantly",
+          alt: "Figmafolio: turn a Figma prototype into a live website",
+          width: 1200,
+          height: 630,
+          type: "image/jpeg",
         },
       }}
     />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <slot name="head" />
     <script
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"

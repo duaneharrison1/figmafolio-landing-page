@@ -1,6 +1,7 @@
 ---
 // SEO page 8. Figma facts: help.figma.com (UserTesting article and public link sharing article), read 21 Nov 2026. Figmafolio facts: docs/figmafolio/PRODUCT.md.
 import Layout from "@/layouts/Layout.astro";
+import ShareGuide from "@/components/kit/ShareGuide.astro";
 import Hero from "@/components/kit/Hero.astro";
 import Section from "@/components/kit/Section.astro";
 import Button from "@/components/kit/Button.astro";
@@ -48,6 +49,12 @@ const faq = [
     <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
     <Button href="/figma-prototype-to-website" variant="secondary">Put it on a live site</Button>
   </Hero>
+
+  <Section width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-2 text-center">See it step by step</h2>
+    <p class="text-ff-muted text-center mb-8">This is the guide Figmafolio shows when it finds a link that strangers cannot open.</p>
+    <div class="mx-auto max-w-2xl rounded-ff-xl border border-ff-border bg-ff-bg p-5 shadow-ff-card"><ShareGuide /></div>
+  </Section>
 
   <Section>
     <h2 class="text-2xl font-semibold text-ff-ink mb-6">Set it in Figma</h2>

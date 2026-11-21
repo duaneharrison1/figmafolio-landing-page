@@ -1,0 +1,38 @@
+---
+// A simplified picture of the Analytics screen. Labels are the app's own
+// (figmaApp src/components/Analytics/Analytics.js). Numbers are examples, not real data.
+const metrics = [
+  ["Unique visitors", "1,240"],
+  ["Total visits", "1,860"],
+  ["Pageviews", "3,410"],
+  ["Views per visit", "1.8"],
+  ["Bounce rate", "46%"],
+  ["Visit duration", "1m 52s"],
+];
+const bars = [30, 44, 38, 62, 55, 80, 68, 90, 72, 58, 76, 96];
+const lists = ["Sources", "Countries", "Devices"];
+---
+
+<figure class="w-full max-w-md" aria-label="Example of the Analytics screen">
+  <div class="rounded-ff-xl border border-ff-border bg-ff-bg p-5 shadow-ff-card">
+    <div class="flex items-center justify-between text-sm">
+      <span class="font-semibold text-ff-ink">Analytics</span>
+      <span class="rounded-ff-pill bg-ff-brand-soft px-3 py-0.5 text-ff-brand-hover">30 days</span>
+    </div>
+    <div class="mt-4 grid grid-cols-3 gap-3">
+      {metrics.map(([l, v]) => (
+        <div class="rounded-ff-md bg-ff-surface p-2.5">
+          <div class="text-[0.68rem] leading-tight text-ff-muted">{l}</div>
+          <div class="mt-1 text-base font-semibold text-ff-ink">{v}</div>
+        </div>
+      ))}
+    </div>
+    <div class="mt-4 flex h-24 items-end gap-1.5" aria-hidden="true">
+      {bars.map((h) => <span class="flex-1 rounded-t-ff-sm bg-ff-brand" style={`height:${h}%`}></span>)}
+    </div>
+    <div class="mt-4 grid grid-cols-3 gap-3 text-xs text-ff-muted">
+      {lists.map((l) => <div class="border-t border-ff-border pt-2 font-medium text-ff-ink">{l}</div>)}
+    </div>
+  </div>
+  <figcaption class="mt-2 text-center text-xs text-ff-muted">Example screen. Numbers are made up.</figcaption>
+</figure>

@@ -10,6 +10,8 @@ import Faq from "./Faq.astro";
 import LastChecked from "./LastChecked.astro";
 import PriceLine from "./PriceLine.astro";
 import Cta from "./Cta.astro";
+import AnalyticsMini from "./AnalyticsMini.astro";
+import { Image } from "astro:assets";
 import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
 
 interface Props {
@@ -23,20 +25,22 @@ interface Props {
   faq: { q: string; a: string }[];
   related: { href: string; label: string }[];
   checked: string;
+  /** A picture from src/assets (imported). */
+  image?: ImageMetadata;
+  imageAlt?: string;
+  /** "analytics" draws the Analytics screen mini instead of a picture. */
+  mini?: "analytics";
 }
-const { title, description, lede, plan, steps, cards, limits, faq, related, checked } = Astro.props;
+const { title, description, lede, plan, steps, cards, limits, faq, related, checked, image, imageAlt, mini } = Astro.props;
 ---
 
 <Layout title={title} description={description}>
-  <Hero eyebrow="Feature" title={title} lede={lede}>
+  <Hero eyebrow="Feature" title={title} lede={lede} plans={plan}>
     <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
     <Button href="/pricing" variant="secondary">See plans</Button>
+    {image && <Image slot="visual" src={image} alt={imageAlt ?? ""} width={420} class="h-auto w-full max-w-sm" />}
+    {mini === "analytics" && <AnalyticsMini slot="visual" />}
   </Hero>
-
-  <Section>
-    <h2 class="text-2xl font-semibold text-ff-ink mb-3">Which plans</h2>
-    <p class="text-ff-muted">{plan}</p>
-  </Section>
 
   <Section tone="surface">
     <h2 class="text-2xl font-semibold text-ff-ink mb-6">How it works</h2>

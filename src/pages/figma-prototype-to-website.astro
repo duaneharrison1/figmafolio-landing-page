@@ -2,6 +2,8 @@
 // SEO page 1. Facts: docs/figmafolio/PRODUCT.md. Words: docs/figmafolio/TONE_OF_VOICE.md.
 // Built only from kit parts and tokens (npm run check:style).
 import Layout from "@/layouts/Layout.astro";
+import { Image } from "astro:assets";
+import img from "@/assets/multiple_project_landing.png";
 import Hero from "@/components/kit/Hero.astro";
 import Section from "@/components/kit/Section.astro";
 import Button from "@/components/kit/Button.astro";
@@ -56,6 +58,7 @@ const faq = [
   >
     <Button href={APP_SIGNUP_URL}>Get started</Button>
     <Button href="/how-it-works" variant="secondary">See how it works</Button>
+    <Image slot="visual" src={img} alt="A library of published prototype sites" width={420} class="h-auto w-full max-w-sm" />
   </Hero>
 
   <Section>
