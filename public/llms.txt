@@ -34,6 +34,7 @@ It does not build real web pages, export code, or make a sitemap or RSS feed for
 - [Is Figmafolio free?](https://www.figmafolio.com/is-figmafolio-free)
 - [Figma Sites alternative](https://www.figmafolio.com/figma-sites-alternative)
 - [Features](https://www.figmafolio.com/features)
+- [The Figma plugin](https://www.figmafolio.com/features/figma-plugin)
 - [Link check](https://www.figmafolio.com/features/link-check)
 - [Edits show without republishing](https://www.figmafolio.com/features/live-updates)
 - [Siter alternative](https://www.figmafolio.com/siter-alternative)
