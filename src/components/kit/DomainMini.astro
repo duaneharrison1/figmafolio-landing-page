@@ -1,0 +1,20 @@
+---
+// Simplified picture of the site settings "Domain" panel with the DNS records.
+// Labels and records from figmaApp src/components/FormCustomDomain and CustomDomainInstruction. yourname.com is an example.
+const rows = [["A", "@", "76.76.21.21"], ["CNAME", "www", "cname.vercel-dns.com"]];
+---
+<figure class="w-full max-w-md" aria-label="Example of the Domain settings">
+  <div class="rounded-ff-xl border border-ff-border bg-ff-bg p-6 shadow-ff-card">
+    <p class="font-semibold text-ff-ink">Domain</p>
+    <p class="mt-3 text-sm font-medium text-ff-ink">Add domain</p>
+    <div class="mt-2 rounded-ff-md border border-ff-border px-3 py-2 text-sm text-ff-ink">yourname.com</div>
+    <p class="mt-4 text-xs text-ff-muted">Add new DNS records in your domain registrar's DNS manager. Add the following records:</p>
+    <div class="mt-2 overflow-hidden rounded-ff-md border border-ff-border text-xs">
+      <div class="grid grid-cols-[4rem_3rem_1fr] bg-ff-surface px-3 py-1.5 font-medium text-ff-ink"><span>Type</span><span>Name</span><span>Value</span></div>
+      {rows.map(([t, n, v]) => <div class="grid grid-cols-[4rem_3rem_1fr] border-t border-ff-border px-3 py-1.5 text-ff-muted"><span>{t}</span><span>{n}</span><span>{v}</span></div>)}
+    </div>
+    <p class="mt-2 text-xs text-ff-muted">Make sure you add an entry for both @ and www.</p>
+    <span class="mt-4 inline-block rounded-ff-pill bg-ff-brand px-4 py-2 text-sm font-medium text-ff-on-brand">Add domain</span>
+  </div>
+  <figcaption class="mt-2 text-center text-xs text-ff-muted">Simplified picture of the settings screen. yourname.com is an example.</figcaption>
+</figure>

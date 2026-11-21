@@ -11,6 +11,9 @@ import LastChecked from "./LastChecked.astro";
 import PriceLine from "./PriceLine.astro";
 import Cta from "./Cta.astro";
 import AnalyticsMini from "./AnalyticsMini.astro";
+import PasswordMini from "./PasswordMini.astro";
+import DomainMini from "./DomainMini.astro";
+import FaviconMini from "./FaviconMini.astro";
 import { Image } from "astro:assets";
 import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
 
@@ -29,7 +32,7 @@ interface Props {
   image?: ImageMetadata;
   imageAlt?: string;
   /** "analytics" draws the Analytics screen mini instead of a picture. */
-  mini?: "analytics";
+  mini?: "analytics" | "password" | "domain" | "favicon";
 }
 const { title, description, lede, plan, steps, cards, limits, faq, related, checked, image, imageAlt, mini } = Astro.props;
 ---
@@ -40,6 +43,9 @@ const { title, description, lede, plan, steps, cards, limits, faq, related, chec
     <Button href="/pricing" variant="secondary">See plans</Button>
     {image && <Image slot="visual" src={image} alt={imageAlt ?? ""} width={420} class="h-auto w-full max-w-sm" />}
     {mini === "analytics" && <AnalyticsMini slot="visual" />}
+    {mini === "password" && <PasswordMini slot="visual" />}
+    {mini === "domain" && <DomainMini slot="visual" />}
+    {mini === "favicon" && <FaviconMini slot="visual" />}
   </Hero>
 
   <Section tone="surface">
