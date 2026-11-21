@@ -2,15 +2,15 @@
 import FeaturePage from "@/components/kit/FeaturePage.astro";
 ---
 <FeaturePage
-  mini="domain"
+  mini="site-link-domain"
   title="Custom domain"
   description="Show your Figma prototype portfolio at your own domain, like yourname.com. Available on Solo and Pro."
   lede="Point your own domain at your Figmafolio site, so people open yourname.com instead of a figmafolio.com address."
   plan="Solo and Pro. The Basic plan and the 7-day trial use a figmafolio.com address."
   steps={[
-    { title: "Publish your prototype", text: "Paste your Figma prototype link into Figmafolio." },
-    { title: "Choose Solo or Pro", text: "A custom domain is not on the trial or the Basic plan." },
-    { title: "Connect your domain", text: "Add your domain to the site in Figmafolio. Your prototype then opens at your address." },
+    { title: "Publish your prototype", text: "Paste your Figma prototype link into Figmafolio.", mini: "publish" },
+    { title: "Choose Solo or Pro", text: "A custom domain is not on the trial or the Basic plan.", mini: "plans" },
+    { title: "Connect your domain", text: "Add your domain to the site in Figmafolio. Your prototype then opens at your address.", mini: "domain" },
   ]}
   cards={[
     { title: "A link that is yours", text: "A cleaner address to put on a CV or application." },

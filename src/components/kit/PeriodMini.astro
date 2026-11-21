@@ -1,0 +1,9 @@
+---
+// The period choices on the Analytics screen. Labels from figmaApp Analytics.js (periodOptions).
+const opts = ["Today", "Last 7 Days", "Last 30 Days", "This Month", "Last 12 Months"];
+---
+<figure class="w-full max-w-md" aria-label="The period choices in Analytics">
+  <div class="w-56 overflow-hidden rounded-ff-lg border border-ff-border bg-ff-bg shadow-ff-card">
+    {opts.map((o, i) => <div class:list={["px-4 py-2 text-sm", i === 2 ? "bg-ff-brand-soft font-medium text-ff-brand-hover" : "text-ff-ink"]}>{o}</div>)}
+  </div>
+</figure>

@@ -1,0 +1,17 @@
+---
+// Simplified picture of the site address row and "View site" button.
+// Labels from figmaApp translations (your-domain, this-will-be-assigned, custom-domain) and FolioForm.
+// Default addresses look like figmafolio.com/<slug> (utils/domainUtils.js). Addresses are examples.
+interface Props { address?: string; }
+const { address = "figmafolio.com/your-site" } = Astro.props;
+---
+<figure class="w-full max-w-md" aria-label="Example of a site address">
+  <div class="rounded-ff-xl border border-ff-border bg-ff-bg p-5 shadow-ff-card">
+    <p class="text-sm font-medium text-ff-ink">Your domain</p>
+    <div class="mt-2 flex items-center justify-between gap-3 rounded-ff-md bg-ff-surface px-3 py-2.5">
+      <span class="text-sm text-ff-ink">{address}</span>
+      <span class="rounded-ff-pill border border-ff-brand px-3 py-1 text-xs font-medium text-ff-brand-hover">View site</span>
+    </div>
+  </div>
+  <figcaption class="mt-2 text-center text-xs text-ff-muted">Simplified picture. The address is an example.</figcaption>
+</figure>

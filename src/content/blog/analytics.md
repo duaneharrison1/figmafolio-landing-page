@@ -15,7 +15,7 @@ Figmafolio now has an Analytics screen, so you can see who opens your site. It a
 
 ## What you see
 
-Pick a site, then a period: day, 7 days, 30 days or 12 months. At the top are six numbers:
+Pick a site, then a period: today, 7 days, 30 days, this month or 12 months. At the top are six numbers:
 
 - Unique visitors
 - Total visits

@@ -1,10 +1,12 @@
 ---
 // A simplified picture of the Analytics screen. Labels are the app's own
 // (figmaApp src/components/Analytics/Analytics.js). Numbers are examples, not real data.
+interface Props { part?: "full" | "totals"; }
+const { part = "full" } = Astro.props;
 const metrics = [
   ["Unique visitors", "1,240"],
   ["Total visits", "1,860"],
-  ["Pageviews", "3,410"],
+  ["Total pageviews", "3,410"],
   ["Views per visit", "1.8"],
   ["Bounce rate", "46%"],
   ["Visit duration", "1m 52s"],
@@ -17,7 +19,7 @@ const lists = ["Sources", "Countries", "Devices"];
   <div class="rounded-ff-xl border border-ff-border bg-ff-bg p-5 shadow-ff-card">
     <div class="flex items-center justify-between text-sm">
       <span class="font-semibold text-ff-ink">Analytics</span>
-      <span class="rounded-ff-pill bg-ff-brand-soft px-3 py-0.5 text-ff-brand-hover">30 days</span>
+      <span class="rounded-ff-pill bg-ff-brand-soft px-3 py-0.5 text-ff-brand-hover">Last 30 Days</span>
     </div>
     <div class="mt-4 grid grid-cols-3 gap-3">
       {metrics.map(([l, v]) => (
@@ -27,12 +29,14 @@ const lists = ["Sources", "Countries", "Devices"];
         </div>
       ))}
     </div>
+    {part === "full" && (<>
     <div class="mt-4 flex h-24 items-end gap-1.5" aria-hidden="true">
       {bars.map((h) => <span class="flex-1 rounded-t-ff-sm bg-ff-brand" style={`height:${h}%`}></span>)}
     </div>
     <div class="mt-4 grid grid-cols-3 gap-3 text-xs text-ff-muted">
       {lists.map((l) => <div class="border-t border-ff-border pt-2 font-medium text-ff-ink">{l}</div>)}
     </div>
+    </>)}
   </div>
   <figcaption class="mt-2 text-center text-xs text-ff-muted">Example screen. Numbers are made up.</figcaption>
 </figure>

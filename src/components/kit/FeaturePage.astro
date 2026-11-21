@@ -14,6 +14,7 @@ import AnalyticsMini from "./AnalyticsMini.astro";
 import PasswordMini from "./PasswordMini.astro";
 import DomainMini from "./DomainMini.astro";
 import FaviconMini from "./FaviconMini.astro";
+import SiteLinkMini from "./SiteLinkMini.astro";
 import { Image } from "astro:assets";
 import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
 
@@ -22,7 +23,7 @@ interface Props {
   description: string;
   lede: string;
   plan: string; // which plans have it, from PRODUCT.md
-  steps: { title: string; text: string }[];
+  steps: { title: string; text: string; mini?: string }[];
   cards: { title: string; text: string }[];
   limits: string; // what it does not do
   faq: { q: string; a: string }[];
@@ -32,7 +33,7 @@ interface Props {
   image?: ImageMetadata;
   imageAlt?: string;
   /** "analytics" draws the Analytics screen mini instead of a picture. */
-  mini?: "analytics" | "password" | "domain" | "favicon";
+  mini?: "analytics" | "password" | "domain" | "favicon" | "site-link-domain";
 }
 const { title, description, lede, plan, steps, cards, limits, faq, related, checked, image, imageAlt, mini } = Astro.props;
 ---
@@ -46,10 +47,11 @@ const { title, description, lede, plan, steps, cards, limits, faq, related, chec
     {mini === "password" && <PasswordMini slot="visual" />}
     {mini === "domain" && <DomainMini slot="visual" />}
     {mini === "favicon" && <FaviconMini slot="visual" />}
+    {mini === "site-link-domain" && <SiteLinkMini slot="visual" address="yourname.com" />}
   </Hero>
 
-  <Section tone="surface">
-    <h2 class="text-2xl font-semibold text-ff-ink mb-6">How it works</h2>
+  <Section tone="surface" width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-8">How it works</h2>
     <Steps items={steps} />
   </Section>
 

@@ -1,0 +1,24 @@
+---
+// Simplified picture of the link fields in the site form. Labels from figmaApp
+// src/components/ViewportEditor/ViewportEditor.js and utils/viewportUtils.js (displayViewportName).
+// focus: which row is active. Links are examples.
+interface Props { focus?: "desktop" | "phone" | "both"; showPublish?: boolean; }
+const { focus = "both", showPublish = true } = Astro.props;
+const rows = [
+  { id: "desktop", name: "Desktop", help: "" },
+  { id: "phone", name: "Phone", help: "Copy the link to your phone flow's starting frame in Figma." },
+];
+---
+<figure class="w-full max-w-md" aria-label="Example of the Figma link fields">
+  <div class="rounded-ff-xl border border-ff-border bg-ff-bg p-5 shadow-ff-card">
+    {rows.map((r) => (
+      <div class:list={["mb-4", focus !== "both" && focus !== r.id && "opacity-40"]}>
+        <p class="text-sm font-medium text-ff-ink">{r.name}</p>
+        <div class:list={["mt-1.5 rounded-ff-md border px-3 py-2 text-sm text-ff-muted", focus === r.id ? "border-ff-brand" : "border-ff-border"]}>https://www.figma.com/proto/...</div>
+        {r.help && <p class="mt-1 text-xs text-ff-muted">{r.help}</p>}
+      </div>
+    ))}
+    {showPublish && <span class="inline-block rounded-ff-pill bg-ff-brand px-5 py-2 text-sm font-medium text-ff-on-brand">Publish</span>}
+  </div>
+  <figcaption class="mt-2 text-center text-xs text-ff-muted">Simplified picture of the site form.</figcaption>
+</figure>
