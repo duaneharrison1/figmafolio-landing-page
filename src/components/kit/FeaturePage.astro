@@ -1,0 +1,74 @@
+---
+// One layout for every /features/* page. Facts: docs/figmafolio/PRODUCT.md only.
+import Layout from "@/layouts/Layout.astro";
+import Hero from "./Hero.astro";
+import Section from "./Section.astro";
+import Button from "./Button.astro";
+import Card from "./Card.astro";
+import Steps from "./Steps.astro";
+import Faq from "./Faq.astro";
+import LastChecked from "./LastChecked.astro";
+import PriceLine from "./PriceLine.astro";
+import Cta from "./Cta.astro";
+import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
+
+interface Props {
+  title: string;
+  description: string;
+  lede: string;
+  plan: string; // which plans have it, from PRODUCT.md
+  steps: { title: string; text: string }[];
+  cards: { title: string; text: string }[];
+  limits: string; // what it does not do
+  faq: { q: string; a: string }[];
+  related: { href: string; label: string }[];
+  checked: string;
+}
+const { title, description, lede, plan, steps, cards, limits, faq, related, checked } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <Hero eyebrow="Feature" title={title} lede={lede}>
+    <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
+    <Button href="/pricing" variant="secondary">See plans</Button>
+  </Hero>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-3">Which plans</h2>
+    <p class="text-ff-muted">{plan}</p>
+  </Section>
+
+  <Section tone="surface">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">How it works</h2>
+    <Steps items={steps} />
+  </Section>
+
+  <Section width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">What you get</h2>
+    <div class="grid gap-6 md:grid-cols-3">
+      {cards.map((c) => <Card title={c.title}>{c.text}</Card>)}
+    </div>
+  </Section>
+
+  <Section tone="surface">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-3">What it does not do</h2>
+    <p class="text-ff-muted">{limits}</p>
+  </Section>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Questions</h2>
+    <Faq items={faq} />
+  </Section>
+
+  <Section tone="surface">
+    <PriceLine />
+    <p class="mt-2 text-sm text-ff-muted">{PRICE_FOOTNOTE}</p>
+    <p class="mt-2 text-sm text-ff-muted">
+      Related:
+      {related.map((r, i) => (<>{i > 0 && ", "}<a class="text-ff-brand-hover underline" href={r.href}>{r.label}</a></>))}.
+    </p>
+    <div class="mt-4"><LastChecked date={checked} /></div>
+  </Section>
+
+  <Section width="wide"><Cta /></Section>
+</Layout>
