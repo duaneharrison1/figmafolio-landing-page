@@ -1,0 +1,95 @@
+---
+// SEO page 4. Facts: docs/figmafolio/PRODUCT.md. Words: docs/figmafolio/TONE_OF_VOICE.md.
+// "Free" is written honestly: FigmaFolio has a 7-day trial, not a permanent free plan (DECISIONS.md).
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/kit/Hero.astro";
+import Section from "@/components/kit/Section.astro";
+import Button from "@/components/kit/Button.astro";
+import Card from "@/components/kit/Card.astro";
+import Steps from "@/components/kit/Steps.astro";
+import Faq from "@/components/kit/Faq.astro";
+import LastChecked from "@/components/kit/LastChecked.astro";
+import PriceLine from "@/components/kit/PriceLine.astro";
+import Cta from "@/components/kit/Cta.astro";
+import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
+
+const faq = [
+  {
+    q: "Is there a free Figma portfolio website on FigmaFolio?",
+    a: "Free for 7 days, then from $3 a month. The 7 days are a trial, not a permanent free plan.",
+  },
+  {
+    q: "What happens to my site after the trial?",
+    a: "It goes offline for visitors until you choose a plan. The 7 days count from your first site, or from sign-up if you have not made one yet.",
+  },
+  {
+    q: "What can I do during the trial?",
+    a: "Publish 1 site from a Figma prototype link and share the address. Password protection, a custom favicon, a custom domain and analytics are on paid plans.",
+  },
+  {
+    q: "Is the site real web pages?",
+    a: "No. It shows your Figma prototype in a frame, so interactions and transitions are Figma's own.",
+  },
+  {
+    q: "Do changes in Figma show on the site?",
+    a: "Yes. The site embeds the live prototype, so changes show without publishing again.",
+  },
+];
+---
+
+<Layout
+  title="Free Figma portfolio website"
+  description="Try a Figma portfolio website free for 7 days, then from $3 a month. Paste your prototype link and get a live site to send to recruiters and clients."
+>
+  <Hero
+    eyebrow="Free Figma portfolio website"
+    title="A Figma portfolio website you can try free"
+    lede="Free for 7 days, then from $3 a month. Paste your Figma prototype link, get a live site, and send it this week. After 7 days your site goes offline until you choose a plan."
+  >
+    <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
+    <Button href="/pricing" variant="secondary">See pricing</Button>
+  </Hero>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Try it in three steps</h2>
+    <Steps
+      items={[
+        { title: "Share your prototype in Figma", text: "Set it so anyone with the link can view it." },
+        { title: "Paste the link into FigmaFolio", text: "The link is checked as you paste it. If a stranger cannot open it, you get a note and a share guide." },
+        { title: "Send the address", text: "Your site is live. Choose a plan before day 7 if you want it to stay online." },
+      ]}
+    />
+  </Section>
+
+  <Section tone="surface" width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">What the trial gives you</h2>
+    <div class="grid gap-6 md:grid-cols-3">
+      <Card title="1 live site">Made from your Figma prototype link, on a figmafolio.com address.</Card>
+      <Card title="Desktop and mobile on one link">Add a prototype for each. The site picks one by screen size.</Card>
+      <Card title="Edits show without republishing">The site embeds the live prototype, so an edit in Figma is on the site.</Card>
+    </div>
+  </Section>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-4">What is not free</h2>
+    <p class="text-ff-muted">
+      Keeping the site online after 7 days needs a plan. So do password protection, a custom favicon, removing the "Made with Figmafolio" label, a custom domain and analytics. The <a class="text-ff-brand-hover underline" href="/is-figmafolio-free">plan comparison</a> shows which plan has what.
+    </p>
+  </Section>
+
+  <Section tone="surface">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Questions</h2>
+    <Faq items={faq} />
+  </Section>
+
+  <Section>
+    <PriceLine />
+    <p class="mt-2 text-sm text-ff-muted">{PRICE_FOOTNOTE} See <a class="text-ff-brand-hover underline" href="/pricing">pricing</a> for each plan.</p>
+    <p class="mt-2 text-sm text-ff-muted">Related: <a class="text-ff-brand-hover underline" href="/figma-prototype-to-website">Figma prototype to website</a>.</p>
+    <div class="mt-4"><LastChecked date="2026-11-21" /></div>
+  </Section>
+
+  <Section width="wide">
+    <Cta />
+  </Section>
+</Layout>
