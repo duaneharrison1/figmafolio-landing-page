@@ -1,0 +1,142 @@
+---
+// SEO comparison page. FigmaFolio facts: docs/figmafolio/PRODUCT.md. Siter facts: siter.io/pricing, read 21 Nov 2026.
+// "Not stated" wherever their page is silent (TONE_OF_VOICE.md search page rules 3 to 5).
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/kit/Hero.astro";
+import Section from "@/components/kit/Section.astro";
+import Button from "@/components/kit/Button.astro";
+import Card from "@/components/kit/Card.astro";
+import ComparisonTable from "@/components/kit/ComparisonTable.astro";
+import Faq from "@/components/kit/Faq.astro";
+import LastChecked from "@/components/kit/LastChecked.astro";
+import PriceLine from "@/components/kit/PriceLine.astro";
+import Cta from "@/components/kit/Cta.astro";
+import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
+
+const sources = [{ label: "Siter pricing (siter.io)", url: "https://www.siter.io/pricing" }];
+
+const faq = [
+  {
+    "q": "What is the difference between Figmafolio and Siter?",
+    "a": "Siter is a website builder that can import Figma frames. Figmafolio publishes a Figma prototype as it is, with a link you can share."
+  },
+  {
+    "q": "Is Figmafolio a replacement for Siter?",
+    "a": "Only for sharing a prototype as a site. Figmafolio does not build real web pages, export code or offer a CMS."
+  },
+  {
+    "q": "Does Siter have a free plan?",
+    "a": "Siter's pricing page says there is no free plan for new accounts. It lists a 3-day trial on every plan, with a card added at signup."
+  },
+  {
+    "q": "Is Figmafolio free?",
+    "a": "Free for 7 days, then from $3 a month. After 7 days your site goes offline until you choose a plan."
+  }
+];
+---
+
+<Layout
+  title="Siter alternative"
+  description="Figmafolio vs Siter: one puts a Figma prototype online as a shareable site, the other is a full website builder with a Figma import. Prices and limits side by side."
+>
+  <Hero
+    eyebrow="Siter alternative"
+    title="A simpler alternative to Siter"
+    lede="Siter is a full website builder with a visual editor, AI builder, CMS and a Figma plugin that imports frames. Figmafolio does one smaller job: it puts the Figma prototype you already have online. Free for 7 days, then from $3 a month."
+  >
+    <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
+    <Button href="/figma-prototype-to-website" variant="secondary">How Figmafolio works</Button>
+  </Hero>
+
+  <Section width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Figmafolio and Siter side by side</h2>
+    <ComparisonTable
+      caption="Figmafolio compared with Siter"
+      columns={["Figmafolio", "Siter"]}
+      rows={[
+  {
+    "label": "What it is",
+    "cells": [
+      "A live site that publishes your Figma prototype as it is",
+      "A website builder with a visual editor, an AI builder, hosting and a CMS and blog"
+    ]
+  },
+  {
+    "label": "Figma",
+    "cells": [
+      "Takes a Figma prototype link",
+      "Has a Figma plugin that imports Figma frames into a Siter page"
+    ]
+  },
+  {
+    "label": "Real web pages you can edit",
+    "cells": [
+      "No",
+      "Yes"
+    ]
+  },
+  {
+    "label": "Free plan or trial",
+    "cells": [
+      "7-day trial",
+      "3-day trial on every plan, card added at signup. No free plan for new accounts"
+    ]
+  },
+  {
+    "label": "Price",
+    "cells": [
+      "Free for 7 days, then from $3 a month",
+      "$8, $14 or $28 a month, or $7, $12 or $24 a month billed yearly"
+    ]
+  },
+  {
+    "label": "Custom domain",
+    "cells": [
+      "Solo and Pro plans",
+      "Every plan"
+    ]
+  },
+  {
+    "label": "Password protection",
+    "cells": [
+      "Every paid plan",
+      null
+    ]
+  },
+  {
+    "label": "Remove the maker's badge",
+    "cells": [
+      "Every paid plan",
+      "Every plan"
+    ]
+  }
+]}
+      sources={sources}
+    />
+    <p class="mt-4 text-sm text-ff-muted">Prices and plans change. Check Siter's own pricing page for today's terms.</p>
+  </Section>
+
+  <Section tone="surface" width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Where each is the better choice</h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      <Card title="Choose Figmafolio when">You already have a Figma prototype and want a link for a recruiter or client today, with the prototype's own interactions, or a password for client work.</Card>
+      <Card title="Choose Siter when">You want to build and edit real web pages, add a CMS or forms, or run more than a portfolio. Figmafolio does not build real pages.</Card>
+    </div>
+  </Section>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Questions</h2>
+    <Faq items={faq} />
+  </Section>
+
+  <Section tone="surface">
+    <PriceLine />
+    <p class="mt-2 text-sm text-ff-muted">{PRICE_FOOTNOTE} See <a class="text-ff-brand-hover underline" href="/pricing">pricing</a> for each plan.</p>
+    <p class="mt-2 text-sm text-ff-muted">Related: <a class="text-ff-brand-hover underline" href="/figma-sites-alternative">Figma Sites alternative</a>, <a class="text-ff-brand-hover underline" href="/is-figmafolio-free">Is Figmafolio free?</a></p>
+    <div class="mt-4"><LastChecked date="2026-11-21" /></div>
+  </Section>
+
+  <Section width="wide">
+    <Cta />
+  </Section>
+</Layout>
