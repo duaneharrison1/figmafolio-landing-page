@@ -7,7 +7,7 @@ export default function middleware(request: Request) {
   const pathname = url.pathname;
 
   // Paths that should NOT redirect (stay on landing page)
-  const landingPagePaths = ["/", "/about", "/contact", "/pricing", "/how-it-works", "/style-guide", "/figma-prototype-to-website", "/figma-portfolio-own-domain", "/is-figmafolio-free", "/free-figma-portfolio-website", "/figma-sites-alternative", "/password-protect-figma-prototype", "/figma-prototype-desktop-and-mobile-one-link", "/share-figma-prototype-anyone-can-open", "/siter-alternative", "/framer-alternative", "/uxfolio-alternative"];
+  const landingPagePaths = ["/", "/about", "/contact", "/pricing", "/how-it-works", "/style-guide", "/figma-prototype-to-website", "/figma-portfolio-own-domain", "/is-figmafolio-free", "/free-figma-portfolio-website", "/figma-sites-alternative", "/password-protect-figma-prototype", "/figma-prototype-desktop-and-mobile-one-link", "/share-figma-prototype-anyone-can-open", "/siter-alternative", "/framer-alternative", "/uxfolio-alternative", "/carrd-alternative"];
 
   if (landingPagePaths.includes(pathname)) {
     return;
