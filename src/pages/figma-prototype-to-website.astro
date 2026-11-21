@@ -1,0 +1,102 @@
+---
+// SEO page 1. Facts: docs/figmafolio/PRODUCT.md. Words: docs/figmafolio/TONE_OF_VOICE.md.
+// Built only from kit parts and tokens (npm run check:style).
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/kit/Hero.astro";
+import Section from "@/components/kit/Section.astro";
+import Button from "@/components/kit/Button.astro";
+import Card from "@/components/kit/Card.astro";
+import Steps from "@/components/kit/Steps.astro";
+import Faq from "@/components/kit/Faq.astro";
+import LastChecked from "@/components/kit/LastChecked.astro";
+import PriceLine from "@/components/kit/PriceLine.astro";
+import Cta from "@/components/kit/Cta.astro";
+import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
+
+const faq = [
+  {
+    q: "Does FigmaFolio turn my prototype into real web pages?",
+    a: "No. The site shows your Figma prototype in a frame, so interactions and transitions are Figma's own. FigmaFolio does not convert a design to HTML and CSS.",
+  },
+  {
+    q: "Do changes in Figma show on the site?",
+    a: "Yes. The site embeds the live prototype, so changes made in Figma show without publishing again.",
+  },
+  {
+    q: "Can I use a different prototype on phones?",
+    a: "Yes. Add a desktop prototype and a mobile one. The site picks the right one by screen size, on one link.",
+  },
+  {
+    q: "Can I use my own domain?",
+    a: "Yes, on the Solo and Pro plans. See the pricing page for what each plan includes.",
+  },
+  {
+    q: "Can I put a password on it?",
+    a: "Yes, on every paid plan. This helps with client work and NDA projects.",
+  },
+  {
+    q: "What if people cannot open my prototype?",
+    a: "FigmaFolio checks the link as you paste it. If a stranger cannot open the prototype, a note and a share guide appear.",
+  },
+  {
+    q: "Is it free?",
+    a: "Free for 7 days, then from $3 a month. After 7 days your site goes offline until you choose a plan.",
+  },
+];
+---
+
+<Layout
+  title="Figma prototype to website"
+  description="Paste a Figma prototype link and get a live site you can share, with desktop and mobile versions. Free for 7 days, then from $3 a month."
+>
+  <Hero
+    eyebrow="Figma prototype to website"
+    title="Turn a Figma prototype into a website"
+    lede="Paste your Figma prototype link and FigmaFolio gives you a live site address. The site shows your prototype, so it looks and behaves as it does in Figma."
+  >
+    <Button href={APP_SIGNUP_URL}>Get started</Button>
+    <Button href="/how-it-works" variant="secondary">See how it works</Button>
+  </Hero>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">How to publish a prototype</h2>
+    <Steps
+      items={[
+        { title: "Copy your prototype link", text: "In Figma, share the prototype so anyone with the link can view it. Design, file and branch links are turned into prototype links when you paste them." },
+        { title: "Paste it into FigmaFolio", text: "FigmaFolio checks the link as you paste it. If a stranger cannot open the prototype, you get a note and a share guide." },
+        { title: "Share the address", text: "Your site is live. Send the link to a recruiter or client, or add your own domain on the Solo and Pro plans." },
+      ]}
+    />
+  </Section>
+
+  <Section tone="surface" width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">What you get</h2>
+    <div class="grid gap-6 md:grid-cols-3">
+      <Card title="Desktop and mobile on one link">Add a prototype for each. The site chooses by screen size, and you set where the switch happens.</Card>
+      <Card title="Changes show without republishing">The site embeds the live prototype, so an edit in Figma is on the site.</Card>
+      <Card title="Password for client work">Lock a site for NDA projects. Available on every paid plan.</Card>
+    </div>
+  </Section>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-4">What it does not do</h2>
+    <p class="text-ff-muted">
+      FigmaFolio does not build real web pages from your design. There is no exported code, sitemap or RSS feed, and the site does not reflow across screen sizes. Search engines see a frame around your prototype, so do not expect it to rank well on its own. If you need that, a Figma-to-code tool is the better choice.
+    </p>
+  </Section>
+
+  <Section tone="surface">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Questions</h2>
+    <Faq items={faq} />
+  </Section>
+
+  <Section>
+    <PriceLine />
+    <p class="mt-2 text-sm text-ff-muted">{PRICE_FOOTNOTE} See <a class="text-ff-brand-hover underline" href="/pricing">pricing</a> for each plan.</p>
+    <div class="mt-4"><LastChecked date="2026-11-21" /></div>
+  </Section>
+
+  <Section width="wide">
+    <Cta />
+  </Section>
+</Layout>
