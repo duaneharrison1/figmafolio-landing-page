@@ -1,10 +1,35 @@
 {
   "redirects": [
-    { "source": "/features/project-showcase", "destination": "/features/custom-domain", "permanent": true },
-    { "source": "/features/code-conversion", "destination": "/", "permanent": true },
-    { "source": "/pricing-test", "destination": "/pricing", "permanent": true },
-    { "source": "/features/user-testing", "destination": "https://aeroapp.ai", "permanent": true },
-    { "source": "/blog/user-testing-vs-maze", "destination": "https://aeroapp.ai", "permanent": true }
+    {
+      "source": "/features/project-showcase",
+      "destination": "/features/custom-domain",
+      "permanent": true
+    },
+    {
+      "source": "/features/code-conversion",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pricing-test",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/features/user-testing",
+      "destination": "https://aeroapp.ai",
+      "permanent": true
+    },
+    {
+      "source": "/blog/user-testing-vs-maze",
+      "destination": "https://aeroapp.ai",
+      "permanent": true
+    },
+    {
+      "source": "/blog/figmafolio-vs-figma-sites",
+      "destination": "/figma-sites-alternative",
+      "permanent": true
+    }
   ],
   "headers": [
     {

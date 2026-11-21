@@ -6,7 +6,7 @@ import Section from "@/components/kit/Section.astro";
 
 // Generate a new path for every collection entry
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("blog");
+  const blogEntries = await getCollection("blog", ({ data }) => !data.draft);
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
