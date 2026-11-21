@@ -1,0 +1,95 @@
+---
+// SEO page 8. Figma facts: help.figma.com (UserTesting article and public link sharing article), read 21 Nov 2026. FigmaFolio facts: docs/figmafolio/PRODUCT.md.
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/kit/Hero.astro";
+import Section from "@/components/kit/Section.astro";
+import Button from "@/components/kit/Button.astro";
+import Card from "@/components/kit/Card.astro";
+import Steps from "@/components/kit/Steps.astro";
+import Faq from "@/components/kit/Faq.astro";
+import LastChecked from "@/components/kit/LastChecked.astro";
+import PriceLine from "@/components/kit/PriceLine.astro";
+import Cta from "@/components/kit/Cta.astro";
+import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
+
+const faq = [
+  {
+    q: "Why can a recruiter not open my Figma prototype?",
+    a: "The most common cause is that the prototype is not shared with anyone with the link. Set the access to Anyone and the permission to Can view.",
+  },
+  {
+    q: "Where do I change this in Figma?",
+    a: "Open the file, select Present in the toolbar, then Share prototype, set the access to Anyone and choose Can view.",
+  },
+  {
+    q: "What if I cannot choose Anyone?",
+    a: "Figma lets organization admins manage public link sharing, so ask your admin if the option is missing.",
+  },
+  {
+    q: "Does FigmaFolio check the link?",
+    a: "Yes. FigmaFolio checks the link as you paste it. If a stranger cannot open the prototype, you get a note and a share guide.",
+  },
+  {
+    q: "Is FigmaFolio free?",
+    a: "Free for 7 days, then from $3 a month.",
+  },
+];
+---
+
+<Layout
+  title="Share a Figma prototype so anyone can open it"
+  description="Set a Figma prototype to Anyone with the link, Can view, so recruiters and clients can open it. Plus what to do if the option is missing."
+>
+  <Hero
+    eyebrow="Share a Figma prototype"
+    title="Share a Figma prototype so anyone can open it"
+    lede="If a recruiter or client cannot open your prototype, the sharing setting is usually the cause. Here is how to set it, and what to check if it will not change."
+  >
+    <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
+    <Button href="/figma-prototype-to-website" variant="secondary">Put it on a live site</Button>
+  </Hero>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Set it in Figma</h2>
+    <Steps
+      items={[
+        { title: "Open Present", text: "In your design file, select Present in the toolbar." },
+        { title: "Open Share prototype", text: "In presentation view, click Share prototype in the toolbar." },
+        { title: "Choose Anyone and Can view", text: "Set the access to Anyone, then set the permission to Can view." },
+      ]}
+    />
+  </Section>
+
+  <Section tone="surface">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-4">If the option is missing</h2>
+    <p class="text-ff-muted">Figma's help centre says organization admins can manage public link sharing. If you work in an organization and cannot choose Anyone, ask your admin whether public sharing is allowed.</p>
+  </Section>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-4">Check the link before you send it</h2>
+    <p class="text-ff-muted">FigmaFolio checks a prototype link as you paste it. If a stranger could not open it, you get a note and a share guide, before you send anything to a recruiter.</p>
+  </Section>
+
+  <Section tone="surface">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Questions</h2>
+    <Faq items={faq} />
+  </Section>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-3">Sources</h2>
+    <ul class="list-disc pl-5 text-sm text-ff-muted space-y-1">
+        <li><a class="text-ff-brand-hover underline" href="https://help.figma.com/hc/en-us/articles/19790203466263-Test-your-prototypes-with-UserTesting">Test your prototypes with UserTesting: Edit share settings for a prototype (Figma Help Center)</a></li>
+        <li><a class="text-ff-brand-hover underline" href="https://help.figma.com/hc/en-us/articles/5726756336791-Manage-public-link-sharing-and-open-sessions">Manage public link sharing and open sessions (Figma Help Center)</a></li>
+    </ul>
+  </Section>
+  <Section tone="surface">
+    <PriceLine />
+    <p class="mt-2 text-sm text-ff-muted">{PRICE_FOOTNOTE} See <a class="text-ff-brand-hover underline" href="/pricing">pricing</a> for each plan.</p>
+    <p class="mt-2 text-sm text-ff-muted">Related: <a class="text-ff-brand-hover underline" href="/figma-prototype-to-website">Figma prototype to website</a>.</p>
+    <div class="mt-4"><LastChecked date="2026-11-21" /></div>
+  </Section>
+
+  <Section width="wide">
+    <Cta />
+  </Section>
+</Layout>
