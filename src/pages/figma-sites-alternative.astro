@@ -1,0 +1,101 @@
+---
+// SEO page 5. FigmaFolio facts: docs/figmafolio/PRODUCT.md. Figma facts: Figma's own pages, read 21 Nov 2026.
+// "Not stated" wherever Figma's page is silent (TONE_OF_VOICE.md search page rules 3 to 5).
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/kit/Hero.astro";
+import Section from "@/components/kit/Section.astro";
+import Button from "@/components/kit/Button.astro";
+import Card from "@/components/kit/Card.astro";
+import ComparisonTable from "@/components/kit/ComparisonTable.astro";
+import Faq from "@/components/kit/Faq.astro";
+import LastChecked from "@/components/kit/LastChecked.astro";
+import PriceLine from "@/components/kit/PriceLine.astro";
+import Cta from "@/components/kit/Cta.astro";
+import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
+
+const sources = [
+  { label: "Figma Sites (figma.com)", url: "https://www.figma.com/sites/" },
+  { label: "Figma pricing FAQs", url: "https://www.figma.com/pricing-faq/" },
+  { label: "What Figma features are in beta? (Figma Help Center)", url: "https://help.figma.com/hc/en-us/articles/4406787442711-What-Figma-features-are-in-beta" },
+];
+
+const faq = [
+  {
+    q: "What is the difference between FigmaFolio and Figma Sites?",
+    a: "Figma Sites is a tool for designing and building responsive websites in Figma. FigmaFolio puts a Figma prototype you already made online, in a frame, with a link you can share.",
+  },
+  {
+    q: "Is FigmaFolio a replacement for Figma Sites?",
+    a: "Only for one job: sharing a prototype as a site. FigmaFolio does not build real web pages, export code or offer a CMS. If you need those, use Figma Sites or a similar tool.",
+  },
+  {
+    q: "Do I need a Figma Full seat for FigmaFolio?",
+    a: "FigmaFolio takes a Figma prototype link. You need to be able to share the prototype so anyone with the link can view it.",
+  },
+  {
+    q: "Is FigmaFolio free?",
+    a: "Free for 7 days, then from $3 a month. After 7 days your site goes offline until you choose a plan.",
+  },
+];
+---
+
+<Layout
+  title="Figma Sites alternative"
+  description="FigmaFolio vs Figma Sites: one puts a Figma prototype online as a shareable site, the other builds real web pages. See where each is the better choice."
+>
+  <Hero
+    eyebrow="Figma Sites alternative"
+    title="A simpler alternative to Figma Sites"
+    lede="Figma Sites builds real, responsive web pages. FigmaFolio does one smaller job: it puts the Figma prototype you already have online, with a link to share. Free for 7 days, then from $3 a month."
+  >
+    <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
+    <Button href="/figma-prototype-to-website" variant="secondary">How FigmaFolio works</Button>
+  </Hero>
+
+  <Section width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">FigmaFolio and Figma Sites side by side</h2>
+    <ComparisonTable
+      caption="FigmaFolio compared with Figma Sites"
+      columns={["FigmaFolio", "Figma Sites"]}
+      rows={[
+        { label: "What it makes", cells: ["A live site that shows your Figma prototype in a frame", "A responsive website built in Figma"] },
+        { label: "Real web pages and editable code", cells: ["No", "Yes, the page says you can edit code"] },
+        { label: "Starts from", cells: ["A Figma prototype link", "Frames pasted from a Figma Design file, or built in Sites"] },
+        { label: "Content management (CMS)", cells: ["No", "Yes (Sites CMS)"] },
+        { label: "Custom domain", cells: ["Solo and Pro plans", "Paid plans, with a Full seat"] },
+        { label: "Password protection", cells: ["Every paid plan", null] },
+        { label: "Price", cells: ["Free for 7 days, then from $3 a month", null] },
+      ]}
+      sources={sources}
+    />
+    <p class="mt-4 text-sm text-ff-muted">Figma's pages describe Sites as in open beta, and plans can change. Check Figma's own pages for today's terms.</p>
+  </Section>
+
+  <Section tone="surface" width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Where each is the better choice</h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      <Card title="Choose FigmaFolio when">
+        You already have a Figma prototype and want a link for a recruiter or client today. You want your prototype's own interactions, a password for client work, or a mobile prototype on the same link.
+      </Card>
+      <Card title="Choose Figma Sites when">
+        You want real web pages that you can edit, a CMS, or a site that search engines can read as pages. A FigmaFolio site is a frame around your prototype, so it is a weak SEO asset.
+      </Card>
+    </div>
+  </Section>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Questions</h2>
+    <Faq items={faq} />
+  </Section>
+
+  <Section tone="surface">
+    <PriceLine />
+    <p class="mt-2 text-sm text-ff-muted">{PRICE_FOOTNOTE} See <a class="text-ff-brand-hover underline" href="/pricing">pricing</a> for each plan.</p>
+    <p class="mt-2 text-sm text-ff-muted">Related: <a class="text-ff-brand-hover underline" href="/is-figmafolio-free">Is FigmaFolio free?</a></p>
+    <div class="mt-4"><LastChecked date="2026-11-21" /></div>
+  </Section>
+
+  <Section width="wide">
+    <Cta />
+  </Section>
+</Layout>
