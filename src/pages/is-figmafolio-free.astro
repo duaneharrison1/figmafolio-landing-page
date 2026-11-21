@@ -71,6 +71,23 @@ const faq = [
     <p class="mt-4 text-sm text-ff-muted">Older legacy plans have their own site counts and are not shown here.</p>
   </Section>
 
+  <Section width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-3">Prices by country</h2>
+    <p class="text-ff-muted mb-6">Figmafolio sets the price by the buyer's country. Basic, monthly, in US dollars. Any country not listed pays the first row.</p>
+    <ComparisonTable
+      caption="Basic plan price by country"
+      columns={["Countries"]}
+      rows={[
+        { label: "US$3", cells: ["US, Germany, Ukraine, Australia, Canada and all other countries", null] },
+        { label: "US$2.50", cells: ["Ireland, UK, France, Japan, South Korea, Israel, Italy", null] },
+        { label: "US$2", cells: ["Taiwan, Spain, Portugal, Poland", null] },
+        { label: "US$1.50", cells: ["Philippines, Malaysia, China, Argentina, Brazil", null] },
+        { label: "US$1", cells: ["Thailand, Vietnam, Indonesia, India, Nigeria", null] },
+      ]}
+    />
+    <p class="mt-4 text-sm text-ff-muted">Solo and Pro follow the same country groups. Yearly billing is cheaper. Read from our own price records on 4 November 2026; the price you see at checkout is the one that counts.</p>
+  </Section>
+
   <Section tone="surface">
     <h2 class="text-2xl font-semibold text-ff-ink mb-4">If you only need a quick link</h2>
     <p class="text-ff-muted">
