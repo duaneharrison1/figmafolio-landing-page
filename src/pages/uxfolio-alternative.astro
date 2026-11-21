@@ -1,0 +1,142 @@
+---
+// SEO comparison page. FigmaFolio facts: docs/figmafolio/PRODUCT.md. UXfolio facts: uxfol.io/pricing, read 21 Nov 2026.
+// "Not stated" wherever their page is silent (TONE_OF_VOICE.md search page rules 3 to 5).
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/kit/Hero.astro";
+import Section from "@/components/kit/Section.astro";
+import Button from "@/components/kit/Button.astro";
+import Card from "@/components/kit/Card.astro";
+import ComparisonTable from "@/components/kit/ComparisonTable.astro";
+import Faq from "@/components/kit/Faq.astro";
+import LastChecked from "@/components/kit/LastChecked.astro";
+import PriceLine from "@/components/kit/PriceLine.astro";
+import Cta from "@/components/kit/Cta.astro";
+import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
+
+const sources = [{ label: "UXfolio pricing (uxfol.io)", url: "https://uxfol.io/pricing" }];
+
+const faq = [
+  {
+    "q": "What is the difference between Figmafolio and UXfolio?",
+    "a": "UXfolio is a portfolio and case study tool. Figmafolio publishes a Figma prototype as it is, with a link you can share."
+  },
+  {
+    "q": "Does UXfolio have a free plan?",
+    "a": "UXfolio's pricing page lists a 7-day free trial with no credit card. Live portfolios and publishing are not included in the trial."
+  },
+  {
+    "q": "Does UXfolio support Figma prototypes?",
+    "a": "Its pricing page lists interactive prototype embedding but does not mention Figma."
+  },
+  {
+    "q": "Is Figmafolio free?",
+    "a": "Free for 7 days, then from $3 a month. After 7 days your site goes offline until you choose a plan."
+  }
+];
+---
+
+<Layout
+  title="UXfolio alternative"
+  description="Figmafolio vs UXfolio: one puts a Figma prototype online as a shareable site, the other is a portfolio and case study builder. Prices and limits side by side."
+>
+  <Hero
+    eyebrow="UXfolio alternative"
+    title="A simpler alternative to UXfolio"
+    lede="UXfolio is a portfolio and case study builder with a 7-day trial and paid plans from $9 a month billed yearly. Figmafolio does one smaller job: it puts the Figma prototype you already have online. Free for 7 days, then from $3 a month."
+  >
+    <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
+    <Button href="/figma-prototype-to-website" variant="secondary">How Figmafolio works</Button>
+  </Hero>
+
+  <Section width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Figmafolio and UXfolio side by side</h2>
+    <ComparisonTable
+      caption="Figmafolio compared with UXfolio"
+      columns={["Figmafolio", "UXfolio"]}
+      rows={[
+  {
+    "label": "What it is",
+    "cells": [
+      "A live site that publishes your Figma prototype as it is",
+      "A website builder with CMS collections and AI credits"
+    ]
+  },
+  {
+    "label": "Real web pages you can edit",
+    "cells": [
+      "No",
+      "Yes"
+    ]
+  },
+  {
+    "label": "Free plan or trial",
+    "cells": [
+      "7-day trial, then the site goes offline until you pick a plan",
+      "A free plan on a UXfolio domain, described as ideal for non-commercial use"
+    ]
+  },
+  {
+    "label": "Price",
+    "cells": [
+      "Free for 7 days, then from $3 a month",
+      "Free, then $10 or $30 a month, or custom"
+    ]
+  },
+  {
+    "label": "Custom domain",
+    "cells": [
+      "Solo and Pro plans",
+      "Paid plans"
+    ]
+  },
+  {
+    "label": "Analytics",
+    "cells": [
+      "Solo and Pro plans",
+      "30 days of history on Basic, 90 days on Pro"
+    ]
+  },
+  {
+    "label": "Password protection",
+    "cells": [
+      "Every paid plan",
+      null
+    ]
+  },
+  {
+    "label": "Figma import",
+    "cells": [
+      "Takes a Figma prototype link",
+      null
+    ]
+  }
+]}
+      sources={sources}
+    />
+    <p class="mt-4 text-sm text-ff-muted">Prices and plans change. Check UXfolio's own pricing page for today's terms.</p>
+  </Section>
+
+  <Section tone="surface" width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Where each is the better choice</h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      <Card title="Choose Figmafolio when">You already have a Figma prototype and want a link for a recruiter or client today, with the prototype's own interactions, or a password for client work.</Card>
+      <Card title="Choose UXfolio when">You want a portfolio with case studies, AI help and a job fit checker. Figmafolio does not write or structure case studies.</Card>
+    </div>
+  </Section>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Questions</h2>
+    <Faq items={faq} />
+  </Section>
+
+  <Section tone="surface">
+    <PriceLine />
+    <p class="mt-2 text-sm text-ff-muted">{PRICE_FOOTNOTE} See <a class="text-ff-brand-hover underline" href="/pricing">pricing</a> for each plan.</p>
+    <p class="mt-2 text-sm text-ff-muted">Related: <a class="text-ff-brand-hover underline" href="/figma-sites-alternative">Figma Sites alternative</a>, <a class="text-ff-brand-hover underline" href="/is-figmafolio-free">Is Figmafolio free?</a></p>
+    <div class="mt-4"><LastChecked date="2026-11-21" /></div>
+  </Section>
+
+  <Section width="wide">
+    <Cta />
+  </Section>
+</Layout>
