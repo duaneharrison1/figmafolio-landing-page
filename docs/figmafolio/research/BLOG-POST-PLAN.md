@@ -15,9 +15,9 @@ Source: 1,744 figmaApp commits (Aug 2023 to 17 Nov 2026) and 336 merged PRs. Dat
 | 6 | Password protection | Launch, password on custom domains, Basic plan fix | Jun to Jul 2024, 12 May 2026 | Fix part written |
 | 7 | Custom domains | Launch, remove or switch, www redirect | Sep 2024, 21 Sep 2026, 13 Nov 2026 | Two parts written |
 | 8 | Publish from the Figma plugin | Preview and sign-in from the plugin, plugin auth page, tests synced to the plugin | Sep 2024, Feb 2026 | New |
-| 9 | Plans and billing (grouped) | Trial days and promo codes, Lite plan, regional prices, one pricing system, subscription management, billing portal | May 2024, Aug 2024, Jan 2025, Jan 2026, Mar 2026 | New, needs care (regional pricing) |
+| 9 | Plans and billing (grouped) | Trial days and promo codes, Lite plan, regional prices, one pricing system, subscription management, billing portal | May 2024, Aug 2024, Jan 2025, Jan 2026, Mar 2026 | Billing page part written, no prices |
 | 10 | Sites, drafts and previews (grouped) | Rename, duplicate, drafts row, thumbnails, preview snapshots, Sites tabs and publish dialog | Jun to Nov 2026 | New |
-| 11 | The free trial and offline states (grouped) | One trial rule, offline states, project clock | 3 Nov 2026 | New |
+| 11 | The free trial and offline states (grouped) | One trial rule, offline states, project clock | 3 Nov 2026 | Written |
 | 12 | Check your Figma link is shared | Link check, share guide, tile warning | 4 and 13 Nov 2026 | Written |
 | 13 | Continue with Google | Google sign-in | 3 Jul 2026 | Written |
 | 14 | Faster pages (grouped) | Web optimisation, no full-page skeleton flashes, plans prefetched | Feb 2025, Feb to Mar 2026 | New |
