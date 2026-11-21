@@ -1,0 +1,1786 @@
+---
+version: 2026-11-21.1
+---
+# figmaApp commit history by month (1,744 commits, Aug 2023 to 17 Nov 2026), read via GitHub REST 21 Nov 2026
+
+- 2023-08: 5 commits
+- 2023-09: 53 commits
+- 2023-10: 41 commits
+- 2023-11: 3 commits
+- 2023-12: 29 commits
+- 2024-01: 46 commits
+- 2024-02: 40 commits
+- 2024-03: 36 commits
+- 2024-04: 85 commits
+- 2024-05: 54 commits
+- 2024-06: 37 commits
+- 2024-07: 12 commits
+- 2024-08: 13 commits
+- 2024-09: 24 commits
+- 2024-10: 1 commits
+- 2024-11: 5 commits
+- 2025-01: 85 commits
+- 2025-02: 66 commits
+- 2025-03: 20 commits
+- 2025-04: 2 commits
+- 2025-05: 4 commits
+- 2025-06: 3 commits
+- 2025-07: 4 commits
+- 2025-08: 14 commits
+- 2026-01: 188 commits
+- 2026-02: 216 commits
+- 2026-03: 80 commits
+- 2026-04: 103 commits
+- 2026-05: 6 commits
+- 2026-06: 225 commits
+- 2026-07: 24 commits
+- 2026-08: 3 commits
+- 2026-09: 2 commits
+- 2026-10: 167 commits
+- 2026-11: 48 commits
+
+## All commit subjects
+- 2026-11-14 | Klaviyo lifecycle hooks and email deep links (#356)
+- 2026-11-14 | FigmaFolio step 5 round 1: Clark's direction (design source) (#352)
+- 2026-11-14 | Site settings: stop the prototype link input collapsing to ~40px (#353)
+- 2026-11-13 | Merge pull request #354 from duaneharrison1/perf/handoff-early-redeem
+- 2026-11-13 | perf(handoff): start Aero sign-in while the app downloads; warm functions on the Login tab
+- 2026-11-13 | Klaviyo: only FigmaFolio sign-ups join the FigmaFolio email list (#349)
+- 2026-11-13 | FigmaFolio: email review and plan, homepage copy, A/B since 26 Oct (#351)
+- 2026-11-13 | FigmaFolio research, strategy and baseline (steps 2 to 4) (#350)
+- 2026-11-13 | FigmaFolio docs: Clark's design review, Klaviyo findings, repair status (#348)
+- 2026-11-13 | FigmaFolio: add first-time publishers to the Klaviyo creators list again (#347)
+- 2026-11-13 | Custom domains: backfill www for existing domains (#303) (#345)
+- 2026-11-13 | Custom domains: attach www as a redirect to the apex (#303) (#342)
+- 2026-11-13 | FigmaFolio: warn on dashboard tiles when a prototype is not shared; fix instruction notes (#304) (#344)
+- 2026-11-13 | FigmaFolio playbook: folder, decisions, repair list, product inventory (#343)
+- 2026-11-06 | Test page tabs keep the page gutter; delete dialogs use the new modal (#340)
+- 2026-11-06 | Tester recording in pieces, behind a flag (off by default) (#338)
+- 2026-11-06 | Follow-ups: Convert keeps the Figma link, insights quote links, overlay free drag (#337)
+- 2026-11-06 | Docs: decisions and TODO from 6 Nov (#336)
+- 2026-11-06 | Tests and Insights: decided design (#332)
+- 2026-11-06 | Convert with AI: better Figma prompt, link check, trial script (#335)
+- 2026-11-06 | Session review: one track, lanes, waveform peaks, label editing (#333)
+- 2026-11-06 | Sites: tabs, publish dialog, Analytics, new site page (#331)
+- 2026-11-06 | Tester: agreed design (copy, free-drag panel, stop card, quick ending) (#330)
+- 2026-11-06 | Plan: tester screen recording in pieces (docs only) (#329)
+- 2026-11-06 | TODO: design rounds and fixes from 6 Nov (#328)
+- 2026-11-06 | Stop the local network prompt on published sites (#327)
+- 2026-11-05 | Admin: adoption chart, what people complete, what people made; empty HTML sites split out (#326)
+- 2026-11-05 | Redeem screen: dot only, no logo; record Firestore price fix (#320)
+- 2026-11-05 | Merge pull request #319 from duaneharrison1/claude/aero-consistency-tester-pill
+- 2026-11-05 | Admin: drop A/B/D variants, show paid brand; preview shows the one screen; fix TW/JP Pro yearly fallback
+- 2026-11-05 | Aero: handoff screens on v3, recording pill in style guide, brand label on checkout
+- 2026-11-04 | Merge pull request #316 from duaneharrison1/perf/handoff-keepwarm-schedule
+- 2026-11-04 | perf(handoff): keepHandoffWarm scheduled ping every 5 minutes
+- 2026-11-04 | Merge pull request #315 from duaneharrison1/perf/handoff-min-instances-zero
+- 2026-11-04 | perf(handoff): set minInstances to 0 on mint/redeem now that warm-up pings ship
+- 2026-11-04 | Merge pull request #314 from duaneharrison1/perf/handoff-warmup-pings
+- 2026-11-04 | Site page preview: snapshot first, Try it live, freshness line and Refresh preview (#313)
+- 2026-11-04 | perf(handoff): warm mint/redeem functions from signup, onboarding modal and gate modal
+- 2026-11-04 | Sites list thumbnails: show a cached image that finished loading before onLoad was attached (#312)
+- 2026-11-04 | Figma site thumbnails from the live page; always-on width chip; no Reset (#311)
+- 2026-11-04 | Breakpoints: one row to start, Add breakpoint menu, Same as Desktop and Reset (#310)
+- 2026-11-04 | Aero site preview fix, and share guide without the copy-link step (#308)
+- 2026-11-04 | Figma link check for Figmafolio and Aero: convert design links, check sharing, share guide (#304) (#307)
+- 2026-11-03 | Merge pull request #306 from duaneharrison1/claude/expired-site-states
+- 2026-11-03 | Free plan clock counts from the project everywhere; close review findings
+- 2026-11-03 | One free plan rule, one set of words, and the trial clock starts on first publish
+- 2026-11-03 | Figmafolio card on the Aero card layout; keep Figmafolio's own visitor page
+- 2026-11-03 | Free plan ended: Aero owner bar, offline states, Figmafolio visitor page and tile
+- 2026-10-29 | Merge pull request #302 from duaneharrison1/claude/aero-tester-panel
+- 2026-10-29 | One tester panel in one-tab tests: draw it above the frame, drop the fallback card
+- 2026-10-29 | Merge pull request #301 from duaneharrison1/claude/admin-session-review
+- 2026-10-29 | Admin: read-only session review of another user's test in the new review UI
+- 2026-10-29 | Merge pull request #300 from duaneharrison1/claude/admin-owned-test-links
+- 2026-10-29 | Admin dashboard: fix single-test row click, link test source and Aero session review
+- 2026-10-27 | Merge pull request #294 from duaneharrison1/claude/aero-decisions-26oct
+- 2026-10-27 | Merge pull request #298 from duaneharrison1/claude/aero-site-one-page
+- 2026-10-27 | Merge master into claude/aero-site-one-page
+- 2026-10-27 | Merge pull request #297 from duaneharrison1/claude/aero-sites-drafts
+- 2026-10-27 | TODO: parked site-page upsell review and follow-ups
+- 2026-10-27 | Merge master into claude/aero-sites-drafts
+- 2026-10-27 | Merge pull request #295 from duaneharrison1/claude/aero-new-site-page
+- 2026-10-27 | Merge pull request #296 from duaneharrison1/claude/aero-createflow-finish-hotfix
+- 2026-10-27 | Site page as one page: sections instead of tabs, old tab URLs scroll to their section
+- 2026-10-27 | Drop the 7-day clear-up line until that job exists
+- 2026-10-27 | Restore build/ locale files changed by the local build
+- 2026-10-27 | Sites: drafts move to a folded Unfinished row, bigger site cards, no empty drafts
+- 2026-10-27 | Fix New site and New test flows never finishing
+- 2026-10-27 | New site page to v3 design; Sessions row checkboxes; prompt wording
+- 2026-10-27 | DECISIONS: new site heading and no subtitle
+- 2026-10-27 | Log 26 Oct decisions in DECISIONS.md
+- 2026-10-27 | Merge pull request #292 from duaneharrison1/claude/aero-transcripts-fix
+- 2026-10-27 | Merge pull request #293 from duaneharrison1/claude/aero-tester-ui-demo
+- 2026-10-27 | Show 'Nothing was said' when a transcript comes back empty
+- 2026-10-27 | Aero tester: demo-style overlay, no two-tab copy in one-tab tests, flat AeroSwitch on settings
+- 2026-10-27 | Give transcription functions a 540 second timeout so long sessions finish
+- 2026-10-27 | Merge pull request #291 from duaneharrison1/claude/aero-figma-connect
+- 2026-10-27 | Merge pull request #290 from duaneharrison1/claude/aero-one-tab-tests
+- 2026-10-27 | Aero Figma connect: paste link first, sharing hint, link check, embed URL clean-up
+- 2026-10-27 | Aero site tests: one tab, shared welcome and permission cards, tab-only picker
+- 2026-10-27 | Merge pull request #287 from duaneharrison1/claude/aero-v3-states
+- 2026-10-27 | Merge pull request #288 from duaneharrison1/claude/aero-test-page
+- 2026-10-26 | Merge master into claude/aero-test-page
+- 2026-10-26 | Merge pull request #289 from duaneharrison1/claude/aero-onboarding-v3
+- 2026-10-26 | Onboarding popup: one side-by-side design, upsell copy, zoomed loop, no small print
+- 2026-10-26 | Merge master into claude/aero-v3-states
+- 2026-10-26 | [wip] Merge origin/master into claude/aero-onboarding-v3
+- 2026-10-26 | Merge pull request #263 from duaneharrison1/claude/aero-fix-copy
+- 2026-10-26 | Merge pull request #262 from duaneharrison1/claude/aero-fix-legal-pages
+- 2026-10-26 | Merge pull request #286 from duaneharrison1/claude/aero-test-copy
+- 2026-10-26 | Merge origin/master (7a, #285) into claude/aero-v3-states; toasts use plain error text
+- 2026-10-26 | TODO: link the onboarding popup PR (#289)
+- 2026-10-26 | Onboarding popup: v3 look with the website's loop, steps and features
+- 2026-10-26 | Merge master into claude/aero-fix-copy
+- 2026-10-26 | Merge master into claude/aero-test-page
+- 2026-10-26 | Aero test page: tabs Sessions, Insights, Setup; Share folds into Setup
+- 2026-10-26 | Merge origin/master (#285 landed) into claude/aero-test-copy
+- 2026-10-26 | Merge pull request #285 from duaneharrison1/claude/aero-v3-rest
+- 2026-10-26 | Aero v3 phase 7b: one state panel for not found, no access, offline, error and empty
+- 2026-10-26 | Merge master into claude/aero-fix-legal-pages
+- 2026-10-26 | Merge master into claude/aero-fix-copy
+- 2026-10-26 | Merge master into claude/aero-fix-copy
+- 2026-10-26 | TODO: point the test copy items at #286
+- 2026-10-26 | Upload to this test: say "1 file", not "1 files"
+- 2026-10-26 | Merge origin/master (#282 landed) into claude/aero-test-copy
+- 2026-10-26 | Test this site makes a real copy, with Upload to this test
+- 2026-10-26 | Merge master (#282 demo parity) into the 7a branch
+- 2026-10-26 | Merge pull request #282 from duaneharrison1/claude/aero-v3-demo-parity
+- 2026-10-26 | Merge master into claude/aero-fix-legal-pages
+- 2026-10-26 | Merge pull request #283 from duaneharrison1/claude/aero-brand-updates
+- 2026-10-26 | Aero v3 phase 7a: /aero shows toasts apart from the confirm
+- 2026-10-26 | [merge] master (#283, #284) into demo parity
+- 2026-10-26 | Merge pull request #284 from duaneharrison1/claude/aero-v3-visitor
+- 2026-10-26 | Session review folds the sidebar to the icon rail (stopgap until the sidebar has a dark look)
+- 2026-10-26 | Log phase 7c in the Aero to-do list
+- 2026-10-26 | Aero v3: what visitors of published sites see (phase 7c)
+- 2026-10-26 | Log 26 Oct decisions: demo match, real test copies, sidebar fold, onboarding
+- 2026-10-26 | Aero v3 phase 7a: plan lists from PRICING-FACTS, rename can't save after Escape
+- 2026-10-26 | Demo parity: chevron crumbs, new sessions in the sidebar and test page, Test this site
+- 2026-10-26 | Merge master (#281 tester fixes) into the 7a branch
+- 2026-10-26 | Aero v3 phase 7a: drop duplicate icon keys, close the showcase CSS comment
+- 2026-10-26 | Merge pull request #281 from duaneharrison1/claude/aero-tester-fixes
+- 2026-10-26 | Preview as tester opens on the address the owner is signed in on
+- 2026-10-26 | Site tests: no tasks before the tab is shared, thank-you in the site's tab
+- 2026-10-26 | Aero v3 phase 7a: Settings, plans modal, feature gate, modals, toasts, rename in place
+- 2026-10-26 | Merge pull request #279 from duaneharrison1/claude/aero-v3-tester
+- 2026-10-26 | [merge] master (#278 timed quotes, #280 session review) into the tester branch
+- 2026-10-26 | Merge pull request #280 from duaneharrison1/claude/aero-v3-review
+- 2026-10-26 | Merge pull request #278 from duaneharrison1/claude/aero-v3-timed-findings
+- 2026-10-26 | [merge] master (Insights #277) into the tester branch
+- 2026-10-26 | Merge origin/master (#277) into claude/aero-v3-review
+- 2026-10-26 | Merge master into claude/aero-v3-timed-findings
+- 2026-10-26 | Merge pull request #277 from duaneharrison1/claude/aero-v3-insights-fix
+- 2026-10-26 | Owner previews stay out of Insights and numbering; one naming rule
+- 2026-10-26 | Review: seconds and #278 field names, Critical/Major/Minor, naming, one pager scheme
+- 2026-10-26 | [merge] master (phase 4 #275) into the tester branch
+- 2026-10-26 | Merge remote-tracking branch 'origin/master' into claude/aero-v3-review
+- 2026-10-26 | Session review: Watch, Read and dark review in the test page (v3 phase 5b, 5d UI, 5f)
+- 2026-10-26 | Aero v3 phase 6: tester flow parity
+- 2026-10-26 | Fix the aero-ut-theme.css merge: master's file plus the Insights block
+- 2026-10-26 | Insights: read critical/major/minor and high/medium/low, carry quote times
+- 2026-10-26 | Merge origin/master into claude/aero-v3-insights-fix
+- 2026-10-26 | Timed findings: each analysis quote gets the moment it was said
+- 2026-10-26 | Merge pull request #275 from duaneharrison1/claude/aero-v3-tests
+- 2026-10-26 | Insights built on the server, ranked by severity, never blank
+- 2026-10-26 | Merge pull request #265 from duaneharrison1/claude/node22-functions
+- 2026-10-26 | Merge pull request #264 from duaneharrison1/claude/aero-brand-system
+- 2026-10-26 | Log decisions: build parity now, severity words, Insights timing, dark mode; TODO dark mode
+- 2026-10-26 | Merge pull request #276 from duaneharrison1/claude/aero-previews-auto
+- 2026-10-26 | Log decisions: previews automatic, feature parity
+- 2026-10-26 | Preview snapshots on by default, filled in automatically
+- 2026-10-26 | Merge remote-tracking branch 'origin/master' into claude/aero-v3-tests
+- 2026-10-26 | Tests: activity reads "11 hours ago", New test site tile named and gated
+- 2026-10-26 | Merge pull request #273 from duaneharrison1/claude/aero-v3-create
+- 2026-10-26 | Merge pull request #274 from duaneharrison1/claude/aero-figma-previews
+- 2026-10-26 | TODO: Aero v3 phase 3b (#273) and phase 4 (#275), modal list
+- 2026-10-26 | Aero v3 phase 4: Tests, and New test is a page
+- 2026-10-26 | Preview snapshots: Figma previews from Figma's public link preview (oEmbed), no token
+- 2026-10-26 | Log decisions: create page, Figma public link previews
+- 2026-10-26 | Aero v3 phase 3b: New site is a page
+- 2026-10-26 | Merge pull request #272 from duaneharrison1/claude/aero-preview-snapshots
+- 2026-10-26 | Preview snapshots: manual GitHub workflow for status, on/off and backfill
+- 2026-10-26 | Aero v3 phase 3: Sites (#271)
+- 2026-10-26 | Preview snapshots: capture, store and colour-pick site and test previews
+- 2026-10-26 | TODO: Aero v3 rollout status (phases 1 to 3)
+- 2026-10-26 | Log decision: stored snapshot previews with image-based wash
+- 2026-10-26 | Aero v3 phase 2: app shell, Home and the token switch (#270)
+- 2026-10-26 | Lighten the favicon A and add @2x bitmaps (#269)
+- 2026-10-26 | Redraw the Aero favicon as a transparent A. (#268)
+- 2026-10-26 | Aero v3 phase 1: tokens, final glass button, sign-in pages, Aero icons (#267)
+- 2026-10-26 | Brand: log after-go-live requests
+- 2026-10-26 | TODO: new website live (#7, #266)
+- 2026-10-26 | Route /use-cases and /guides to the marketing site (#266)
+- 2026-10-26 | Brand: transcripts on every plan, go-live merge
+- 2026-10-25 | Brand: log go-live decision
+- 2026-10-25 | Brand: website round 9, final review fixes and glass compare
+- 2026-10-25 | Brand: log glass tuning feedback
+- 2026-10-25 | Brand: website design review (round 8)
+- 2026-10-25 | Brand: log feedback on the final glass
+- 2026-10-25 | Brand: log glass final and round 7 feedback
+- 2026-10-25 | Brand: website round 7 and single glass settings file
+- 2026-10-25 | Brand: log feedback on website round 6
+- 2026-10-25 | Brand: website round 6 and glass control panel
+- 2026-10-25 | Brand: log feedback on website round 5
+- 2026-10-25 | Brand: website round 5 (hero, glass, sections, prices)
+- 2026-10-25 | Brand: log feedback on website round 4
+- 2026-10-25 | Brand: website round 4 (homepage hero, site pages)
+- 2026-10-24 | [wip] Brand: proposition, competitor copy and pricing research
+- 2026-10-24 | [wip] Brand: 24 Oct homepage feedback
+- 2026-10-23 | [wip] Brand: homepage rework on round 5 A's structure
+- 2026-10-23 | [wip] Brand: homepage hero back to round 5 A's structure
+- 2026-10-23 | [wip] Brand: homepage round on the v3 UI
+- 2026-10-23 | [wip] TODO: Node 22 PR #265
+- 2026-10-23 | Run Firebase functions on Node 22 (Node 20 support ends 30 Oct)
+- 2026-10-23 | [wip] Brand: next phase decisions (website, rotating headline, hero)
+- 2026-10-23 | [wip] Brand: app UI round v3 (gradients, sidebar, review polish)
+- 2026-10-23 | [wip] Brand: Duane's answers to the 16 open questions
+- 2026-10-23 | [wip] Brand: decisions after the app UI v2 board
+- 2026-10-23 | [wip] Brand: app UI round v2 on A Studio (light and dark)
+- 2026-10-23 | [wip] Brand: decisions after the directions board, site and test model, review research
+- 2026-10-23 | [wip] Brand: directions board v2 (live app first, full-size shots, buttons in the app)
+- 2026-10-23 | [wip] Brand: UI directions stage (every screen in A to D, buttons, logo)
+- 2026-10-23 | Add docs/TODO.md, the Aero backlog
+- 2026-10-23 | Add the finished app UI round to docs/brand/app-ui
+- 2026-10-23 | Add how the Figma Embed API would work in Aero
+- 2026-10-23 | [wip] Snapshot of the app UI round in progress (tokens, components)
+- 2026-10-23 | Add cursor recording investigation; truth rule is 'be true to the app'
+- 2026-10-23 | Add Aero brand folder, decisions log and two-repo design system rules
+- 2026-10-22 | Fix Aero copy that claimed things the app doesn't do
+- 2026-10-22 | Make Aero privacy and terms pages public
+- 2026-10-22 | Merge pull request #261 from duaneharrison1/claude/aero-transcribe-dedupe
+- 2026-10-22 | Stop duplicate transcription + AI runs per session
+- 2026-10-21 | Merge pull request #260 from duaneharrison1/claude/aero-openrouter-switch
+- 2026-10-21 | Switch AI analysis from Requesty back to OpenRouter (GLM Flash + Qwen fallback)
+- 2026-10-21 | Merge pull request #259 from duaneharrison1/claude/aero-ut-recording-fix
+- 2026-10-21 | Fix Figma user tests: blank prototype, tester remounts, duplicate sessions
+- 2026-09-21 | Merge pull request #258 from duaneharrison1/claude/laughing-keller-rp0f3n
+- 2026-09-21 | Fix custom domain switch/remove: surface Vercel errors, add self-serve remove
+- 2026-08-08 | Merge pull request #257 from duaneharrison1/claude/aero-frontend-ui-polish-ydkg5y
+- 2026-08-08 | Polish Aero Sites UI: shared kebab menu, domain/empty-state spacing, sidebar cleanup
+- 2026-08-05 | Fix: Figma-embed Aero sites must use a random slug (#256)
+- 2026-07-21 | CLAUDE.md: drop the no-merge rule (workflow change: merging is now allowed)
+- 2026-07-21 | Domains API: authorize collaborators on shared sites (owner-or-sharedWith)
+- 2026-07-21 | Collaborator deploy/fork on shared sites via server signed-URL blob uploads
+- 2026-07-20 | Stage 4: admin plan override + share-all-sites controls
+- 2026-07-20 | Stage 3: isAdmin gating + sidebar Users nav item
+- 2026-07-20 | Stage 2: /users admin page inside AeroLayout
+- 2026-07-20 | Stage 1: extract shared user-detail read helper
+- 2026-07-16 | Forced test delivery instrumentation: shown/proceeded tracking, full reset coverage
+- 2026-07-16 | Figma-site tabs + custom domains; dark forced migration test (control vs aero)
+- 2026-07-16 | Add CLAUDE.md with codebase rules
+- 2026-07-15 | Standardise Aero design system: consolidate tokens, scope flat theme, rebuild showcase
+- 2026-07-03 | Merge pull request #255 from duaneharrison1/claude/admin-signin-method-indicator-dg8e8s
+- 2026-07-03 | Admin sign-in method indicator, signUpMethod stamp + backfill, denied-read banner
+- 2026-07-03 | Merge pull request #254 from duaneharrison1/claude/loving-bardeen-hg3jzh
+- 2026-07-03 | Branded auth action handler at /auth/action for Firebase email links
+- 2026-07-03 | Aero forgot-password flow and Figmafolio reset page cleanup
+- 2026-07-03 | Auth-page linking guard: Google button links instead of switching accounts
+- 2026-07-03 | Sign-in methods card: link/unlink Google and password on both settings surfaces
+- 2026-07-03 | Merge pull request #253 from duaneharrison1/claude/google-signin-dual-brand-investigation-8krz85
+- 2026-07-02 | Add Google sign-in to all auth surfaces, both brands
+- 2026-07-02 | Merge pull request #252 from duaneharrison1/claude/figmaapp-tier-security-ab-test-1rur4x
+- 2026-07-02 | A/B test integrity: entry-point-gated assignment, brand-split funnel
+- 2026-07-02 | Security hardening: rules lockdown, API auth, checkout clamps
+- 2026-07-02 | Fix Aero tier resolution: price-id membership instead of substring inference
+- 2026-06-26 | Merge pull request #251 from duaneharrison1/claude/aero-banner-polish-custom-domain-5pko8b
+- 2026-06-26 | Aero: banner polish, Site label upsell, custom domain feature
+- 2026-06-26 | Aero: stronger upsell banners, inline modal, ungate site name, wider pricing modal (#250)
+- 2026-06-26 | pricing copy: remove UT from Figmafolio, add HTML hosting, rebuild Aero modal (#249)
+- 2026-06-25 | perf(functions): warm mintHandoffCode to eliminate click-side handoff lag (#248)
+- 2026-06-25 | Replace "User Testing moved to Aero" page with Aero UT upsell card
+- 2026-06-25 | Merge pull request #247 from duaneharrison1/claude/peaceful-planck-11ujb0
+- 2026-06-25 | Aero-style Figmafolio create picker + From Figma sub-tree + mobile parity
+- 2026-06-24 | Merge pull request #246 from duaneharrison1/claude/jolly-thompson-sv66lc
+- 2026-06-24 | Extend Aero gate to mobile, add creation-source tracking, enable gate
+- 2026-06-24 | Merge pull request #245 from duaneharrison1/claude/ecstatic-goldberg-wsg7c5
+- 2026-06-24 | Add Aero AI-create gate to Figmafolio create entry (behind AERO_GATE_ENABLED)
+- 2026-06-24 | Merge pull request #244 from duaneharrison1/claude/friendly-faraday-pjn9cn
+- 2026-06-23 | Make inline 413 PAYLOAD_TOO_LARGE self-describe the signed-URL flow
+- 2026-06-23 | Merge pull request #243 from duaneharrison1/claude/blissful-fermat-tbx5py
+- 2026-06-23 | Add REST POST /api/create-user-test and put the UT agent prompt on curl
+- 2026-06-23 | Merge pull request #242 from duaneharrison1/claude/gallant-babbage-0jxz0m
+- 2026-06-23 | fix(createflow): standardize Sites agent prompt on direct curl
+- 2026-06-23 | fix(createflow): restore working Aero MCP deploy prompt (revert connector-first regression)
+- 2026-06-23 | Gate HTML serve path on trial expiry + brand-aware "Made with" badge
+- 2026-06-23 | feat(createflow): connector-first prompts, Airbnb-style Figma convert flow (#241)
+- 2026-06-22 | fix(handoff,signup): plugin-only first-project guard, redeem minInstances, drop AB-DEBUG
+- 2026-06-22 | diag(ab-debug): add temporary [AB-DEBUG] console logging for cohort, modal, and handoff timing (#240)
+- 2026-06-22 | perf(aero handoff): pre-warm mint/redeem functions on onboarding modal show
+- 2026-06-21 | Merge fix/redeem-blank-page: fix blank /redeem page on app.aeroapp.ai
+- 2026-06-21 | chore: update package-lock.json after npm install
+- 2026-06-21 | fix(/redeem): prevent blank screen on app.aeroapp.ai/redeem
+- 2026-06-21 | Merge pull request #239 from duaneharrison1/claude/aero-onboarding-login-handoff-s31uyk
+- 2026-06-21 | Aero onboarding: land Try Aero users already logged in via one-time-code handoff
+- 2026-06-21 | Admin: make A/B reset fully clear the funnel; persist brand tab in URL
+- 2026-06-21 | Admin A/B panel: modal total row, comparison cards, switch toggles (#238)
+- 2026-06-20 | A/B funnel: add Rung 1 engagement (returned-rate + avg days active)
+- 2026-06-20 | Admin A/B funnel: reset button + rate-based, honest readout
+- 2026-06-20 | A/B onboarding: admin on/off config, 50/50 split, preview route, clearer funnel
+- 2026-06-20 | Merge: Aero "Figmafolio is now Aero" onboarding modal (A/B/D experiment)
+- 2026-06-20 | Admin: cover the 4-way onboarding counters in resetAbTestCounter
+- 2026-06-20 | Admin + rollup: 4-way onboarding funnel per bucket
+- 2026-06-20 | Dashboard: trigger the Aero onboarding modal post-signup
+- 2026-06-20 | Onboarding modal: build A/B/D variants on the Aero Glass library
+- 2026-06-20 | Cohort: extend A/B split to 4 buckets + Aero onboarding tracking
+- 2026-06-20 | AeroSites: stamp brand:'aero' on duplicated HTML sites
+- 2026-06-20 | Admin: manage the stats-rollup exclusion list from the UI
+- 2026-06-20 | Signup: require non-empty name to enable submit (both Figmafolio forms)
+- 2026-06-20 | Admin list polish: Users BAN, avatar initials, branded count chips, smart dates
+- 2026-06-18 | Admin detail: show both brands, per-item brand icons, split headers, smart one-item click
+- 2026-06-18 | Admin: brand-scoped list/detail, shared rollup classification
+- 2026-06-18 | Rollup: brand by item, users under each brand they have items in
+- 2026-06-18 | Admin: agreed styling, show-excluded toggle, and clearer no-recording session links (#237)
+- 2026-06-18 | Rollup: count enabled tests / test-only drafts as tests, not leftover userTesting stubs on real sites (#236)
+- 2026-06-17 | Admin: rebuild around a per-user model with clickable BAN filters
+- 2026-06-17 | Deploy: stamp deployMethod on the site doc at deploy entry points
+- 2026-06-17 | Dashboard: stamp throttled lastActiveAt on dashboard open
+- 2026-06-17 | Rollup: compute per-user/per-brand fields for the per-user admin
+- 2026-06-17 | Admin: link UT sessions to the existing session video viewer
+- 2026-06-17 | Admin: add search + plan filters to the Sites and Users tables
+- 2026-06-17 | Admin: Generated URL shows the real, clickable site address
+- 2026-06-17 | Admin: Source column reads as brand + channel
+- 2026-06-17 | Admin: add Users rollup tab, read globalStats, fix trial counter
+- 2026-06-17 | Add nightly stats rollup function + server-side plan mapping
+- 2026-06-17 | FolioForm: correct type-switch modal copy
+- 2026-06-17 | FolioForm: regenerate slug to match content type on switch
+- 2026-06-17 | Merge branch 'claude/sleepy-curie-nhtwcv': agent deploys target a pre-assigned site id
+- 2026-06-17 | Site detail: inline (Notion-style) title editing
+- 2026-06-17 | Site detail: update-with-an-agent for live sites (id-targeted)
+- 2026-06-17 | Agent prompts target a pre-assigned site id; converge draft and agent-created site on one id
+- 2026-06-17 | createDraft: accept optional caller-supplied slug
+- 2026-06-17 | deployCore: create-at-given-id when an unused siteId is passed (brand:aero, live)
+- 2026-06-16 | Merge branch 'claude/finalize-hints-1781625429': finalize recipe in mint response and richer finalize errors
+- 2026-06-16 | deploy_site description: note the finalize body shape inline
+- 2026-06-16 | Finalize errors: state the full expected body shape with examples
+- 2026-06-16 | Mint response: include finalize recipe so agents get finalize right first try
+- 2026-06-16 | Merge branch 'claude/focused-hawking-crysrb': clarify agent deploy errors and docs
+- 2026-06-16 | User deploy prompts: hint at the large-site signed-URL flow up front
+- 2026-06-16 | deploy_site tool description: surface the size tiers and large-site flow clearly
+- 2026-06-16 | Finalize: require sizes upfront with a clear error instead of silent fallback
+- 2026-06-16 | Clarify hash field-name wording in mint docs and errors
+- 2026-06-16 | Fix FUNCTION_INVOCATION_FAILED on new deploy endpoints (bundle fflate)
+- 2026-06-16 | MCP deploy_site: support signed-URL flow for large sites
+- 2026-06-16 | Add finalize endpoint for signed-URL deploys (reuses version-doc write)
+- 2026-06-16 | Add signed-URL minting endpoint for agent direct-to-storage uploads
+- 2026-06-16 | Admin: server-side brand-filtered table query (requires brand backfill + composite index)
+- 2026-06-16 | Add idempotent dry-run-capable brand backfill Cloud Function
+- 2026-06-16 | A/B: provide explicit reset of stats/abtest counter to clean baseline
+- 2026-06-16 | Admin: exclude internal test accounts from metrics and tables
+- 2026-06-16 | Merge pull request #235 from duaneharrison1/piece/admin-ux-improvements-2025
+- 2026-06-16 | chore: bump esbuild to 0.28.1
+- 2026-06-16 | Admin: search by email (on Enter, across both brands)
+- 2026-06-16 | Aero Sites: add status filter tabs (All/Live/Draft) and search
+- 2026-06-16 | Admin: improve historical brand inference (draftMeta=aero, isDraft:false=figmafolio)
+- 2026-06-16 | Admin: label Aero portfolios as Sites
+- 2026-06-16 | Admin: consistent Aero Admin / Figmafolio Admin titles
+- 2026-06-16 | Admin: DD/MM/YYYY date format on both tables
+- 2026-06-16 | User testing: tasks optional, auto-complete on target, admin origin indicator
+- 2026-06-15 | Merge pull request #233 from duaneharrison1/claude/bold-bardeen-9ojwny
+- 2026-06-15 | Admin: fix Invalid Date and task-count display in plugin tests table
+- 2026-06-15 | Admin: real brand filtering of metrics and tables + plugin-origin attribution
+- 2026-06-15 | Admin brand-inference + plugin-origin helpers
+- 2026-06-15 | Stamp brand field on url docs at creation (aero/figmafolio)
+- 2026-06-15 | Build Figmafolio-to-Aero opt-in interstitial (shipped OFF behind flag)
+- 2026-06-15 | Analytics: Figma-site analytics tab + per-session metadata in sessions view
+- 2026-06-15 | Admin: host-aware brand view + switch, cohort funnel panel, plugin-test search
+- 2026-06-15 | A/B foundation: record signUpProduct + abCohort on both signup paths, abtest counters
+- 2026-06-15 | Heal agent-published drafts to live on list load
+- 2026-06-15 | Wire CreateFlow into Sites and Tests; remove legacy create surfaces
+- 2026-06-15 | Guided Build-it-with-AI Figma convert flow
+- 2026-06-15 | Shared CreateFlow modal (domain-agnostic, drafts, pick-and-proceed)
+- 2026-06-15 | Add real draft system for in-progress sites and tests
+- 2026-06-15 | Move AgentPublishModal to shared location
+- 2026-06-14 | Merge branch 'claude/serene-cray-x5p7y1': Aero source switching, viewport editor, New Test parity, tab gating
+- 2026-06-14 | Sites + User Testing: gate full tabs until item is set up (light)
+- 2026-06-14 | User Testing: New Test sources match New HTML flow (drop primary, add AI agent, conditional published site)
+- 2026-06-14 | Aero Sites: Figma create modal selects mode then routes to viewport setup
+- 2026-06-14 | Aero Sites: full Figmafolio viewport editor for Figma sites in Settings
+- 2026-06-14 | Aero Sites: lossless Figma/HTML source switching matching Figmafolio
+- 2026-06-13 | Merge branch 'claude/aero-friendly-auth-routes': Aero /login and /signup routes; /auth redirect on Aero domain
+- 2026-06-13 | Add Aero /login and /signup routes; redirect /auth to /login on Aero domain
+- 2026-06-13 | Cut aeroapp.ai apex over to Astro marketing site (#232)
+- 2026-06-13 | Add OG image + favicon root files to apex marketing rewrite
+- 2026-06-13 | Add Astro marketing-site rewrite on apex + reserve marketing slugs
+- 2026-06-13 | Merge pull request #231 from duaneharrison1/claude/trusting-mayer-ujc18b
+- 2026-06-13 | Restyle Figma link modal to option cards; add upload source to New Test
+- 2026-06-12 | Redesign New Test modal to the Aero glass standard
+- 2026-06-12 | Resolve deploy_site site_name to an existing site before creating one
+- 2026-06-12 | Point agents from deploy_site to create_user_test
+- 2026-06-12 | Add create_user_test and get_test_results MCP tools
+- 2026-06-12 | Stop loading the figmafolio Plausible snippet on aeroapp.ai
+- 2026-06-12 | Stamp versions with their publish source and show it in Versions
+- 2026-06-12 | Rename Deploy to Publish across Aero UI surfaces
+- 2026-06-12 | Remove Responsive and Iterate entries from the Aero sidebar
+- 2026-06-12 | Add three-path site creation panel with agent and Figma publish flows
+- 2026-06-12 | Add aeroapp.ai-only Plausible analytics snippet (#230)
+- 2026-06-12 | Fix deploy gate to diff the full push range, not just the head commit (#229)
+- 2026-06-12 | Fix deploy gate to diff the full push range, not just the head commit
+- 2026-06-12 | Polish user-testing session UI
+- 2026-06-12 | Keep the controller's Done button visible while the overlay is connected
+- 2026-06-12 | Key HTML-test sessions by the url doc id, not generatedUrl
+- 2026-06-12 | Anchor app-route path checks so site slugs cannot shadow into the SPA
+- 2026-06-12 | Rescue completed user-testing sessions whose media upload failed
+- 2026-06-12 | Enforce the user-testing active/draft status for HTML tests
+- 2026-06-12 | Fix user-testing tier inference: match real Stripe price ids, not substrings
+- 2026-06-12 | Replace ESM-only p-limit with inline concurrency limiter in deployCore
+- 2026-06-12 | Bundle fflate with the deploy serverless functions via includeFiles
+- 2026-06-12 | Merge branch 'claude/dreamy-maxwell-hkeup3': agent deploys via REST API, MCP server, and API tokens
+- 2026-06-11 | Add Streamable HTTP MCP server (/api/mcp) with deploy_site and list_sites
+- 2026-06-11 | Add API tokens section to Account settings with hash-only storage
+- 2026-06-11 | Add server-side deploy API for AI coding agents (POST /api/deploy-site)
+- 2026-06-11 | Reconcile Firestore and Storage rules against actual client usage
+- 2026-06-11 | Merge branch 'claude/adoring-ride-uusm2i': preserve query string in middleware rewrites to /api/site
+- 2026-06-11 | Preserve query string when middleware rewrites site traffic to /api/site
+- 2026-06-11 | Merge branch 'claude/compassionate-wright-xltmsm-legacy-upload': incremental snapshot uploads for the legacy tester and partial-recording recovery in stale-session cleanup
+- 2026-06-11 | Merge branch 'claude/compassionate-wright-xltmsm': HTML-prototype testing controller, ut-overlay bundle, site-backed test creation, and test-level version pinning
+- 2026-06-11 | Pin site-backed tests to a version with an explicit update affordance
+- 2026-06-11 | Upload cumulative recording snapshots during legacy test sessions
+- 2026-06-11 | Let User Testing projects use an existing HTML site as the prototype
+- 2026-06-11 | Add ut-overlay bundle: in-prototype task panel served as /ut-recorder/v1.js
+- 2026-06-11 | Add controller page for HTML-prototype user tests
+- 2026-06-11 | Merge branch 'claude/practical-brown-o1wk7l': signed test-session flow and ut-mode serving for no-iframe HTML user testing
+- 2026-06-11 | Add server-side test-session flow: signed ut tokens, /__ut_start entry and ut-mode serving
+- 2026-06-11 | Merge branch 'claude/nice-edison-x78hi8': environment metadata capture and display for user testing sessions
+- 2026-06-11 | Capture environment metadata at session start and show it on session detail
+- 2026-06-11 | Merge branch 'claude/zen-goodall-sz6vsn': custom-domain serving for HTML sites via Edge Config registry
+- 2026-06-11 | Serve HTML sites on custom domains via an Edge Config registry
+- 2026-06-11 | Merge branch 'claude/aero-site-detail-tabs': five-tab AeroSiteDetail with tier gating
+- 2026-06-11 | Merge branch 'claude/folio-password-cleanup': password hashing minimum, dead file removal, first-save visibility fix
+- 2026-06-11 | Keep the password section visible after a first save while protection is off
+- 2026-06-11 | Delete dead root-level src/FolioForm.js
+- 2026-06-11 | Require 6+ characters before saveDomain writes a password hash
+- 2026-06-11 | Add Settings tab: site name, password protection, favicon, danger zone
+- 2026-06-11 | Add Analytics tab rendering the shared Analytics component in a glass card
+- 2026-06-11 | Add Domain tab with an editable site address (slug rename)
+- 2026-06-11 | Add AeroFeatureGate, the reusable tier gate for Aero glass pages
+- 2026-06-11 | Restructure AeroSiteDetail into a tabbed shell with Overview and Versions tabs
+- 2026-06-11 | Merge branch 'claude/serene-ptolemy-q8l0b8': align analytics date ranges and surface breakdown failures
+- 2026-06-11 | Fix analytics panels empty while top-line shows data; add breakdown error visibility
+- 2026-06-11 | Merge branch 'claude/beautiful-einstein-q7y02w': serve-time Plausible injection for HTML sites and hostname-aware dashboard filter
+- 2026-06-11 | Inject Plausible analytics into served HTML sites and filter dashboard by hostname
+- 2026-06-11 | Merge branch 'claude/busy-rubin-w3ihoy': serve-time favicon injection for HTML sites
+- 2026-06-11 | Inject site favicon into served HTML at serve time
+- 2026-06-11 | Merge branch 'claude/vibrant-dirac-1el555': server-side password gate for HTML sites and plaintext password removal
+- 2026-06-11 | Block enabling password protection when no hash exists
+- 2026-06-10 | Enforce site passwords server-side and stop writing plaintext passwords
+- 2026-06-10 | Merge branch 'claude/vercel-token-proxy-w8b6mk': move Vercel domain API behind authenticated proxy
+- 2026-06-10 | Move Vercel domain API calls behind an authenticated serverless proxy
+- 2026-06-10 | Merge branch 'claude/gallant-shannon-a9fdrd': FormHtml version history and in-tab version view
+- 2026-06-10 | Port Aero version history and in-tab version view to FormHtml
+- 2026-06-10 | Merge branch 'claude/wizardly-bardeen-pexzst': liquid-glass tester panels
+- 2026-06-10 | Liquid-glass surface recipe for UT tester-view panels
+- 2026-06-10 | Tasks 1-3: site titles/rename, duplicate loading states, brand-matched toasts
+- 2026-06-10 | Merge branch 'claude/dreamy-ritchie-6nx5ar': Duplicate on dashboard/Aero/UT surfaces, Aero site Delete
+- 2026-06-10 | Add Duplicate to dashboard cards, Aero site cards, and UT rows; add Aero site Delete
+- 2026-06-10 | Harden version discard/publish and portal the history kebab menu
+- 2026-06-10 | Add version page, history restyle, sizes field, and fork helper
+- 2026-06-10 | Merge branch 'claude/upbeat-wozniak-vxpnsv': figmafolio.com site routing + dropzone copy
+- 2026-06-10 | Remove .zip mention from drag-active dropzone copy
+- 2026-06-10 | Clarify HTML upload dropzone copy in FormHtml and AeroSiteDetail
+- 2026-06-10 | Route *.figmafolio.com subdomains to /api/site, mirroring aeroapp.ai
+- 2026-06-09 | Make buildSiteUrl html subdomain brand-aware
+- 2026-06-09 | Route view-site links by content type via shared buildSiteUrl helper
+- 2026-06-09 | Merge: content-type switch friction modal
+- 2026-06-09 | Add friction modal for content type switch on projects with content
+- 2026-06-09 | Fix Figma-convert helper links and Site address Save button spacing
+- 2026-06-09 | Merge branch 'claude/blissful-volta-dsmaw5': HTML site content type for Figmafolio
+- 2026-06-09 | Hide Free-domain heading for HTML sites
+- 2026-06-09 | Hide read-only free-domain line for HTML sites
+- 2026-06-09 | Add editable site address for HTML sites in Domain tab
+- 2026-06-09 | Add HTML site content type to Figmafolio project settings
+- 2026-06-09 | Merge pull request #227 from duaneharrison1/claude/exciting-bardeen-7mbxlj
+- 2026-06-09 | Generate friendly two-word slugs for new Aero sites
+- 2026-06-08 | Restructure Sites into master-detail (list + per-site page)
+- 2026-06-08 | Fix blank /sites on cold load: add /sites to App route gate
+- 2026-06-08 | Merge branch 'claude/zen-euler-fMTVH': rebuild AeroSites on native components with cold-load guard
+- 2026-06-08 | Rebuild AeroSites on native Aero components with cold-load guard
+- 2026-06-08 | Merge branch 'claude/practical-rubin-Dba9m': serve SPA shell for apex app routes on direct load
+- 2026-06-08 | Serve SPA shell for apex app routes on direct load
+- 2026-06-08 | Merge branch 'claude/charming-faraday-rGAjR': lowercase AeroSites HTML slugs
+- 2026-06-08 | Generate AeroSites HTML site slugs in lowercase
+- 2026-06-07 | Merge store-once HTML site upload and version deploy (Stage 1 Step A)
+- 2026-06-07 | Add store-once HTML site upload and version deploy (Stage 1 Step A)
+- 2026-06-07 | Force aeroapp.ai subdomain requests to /api/site via Edge Middleware
+- 2026-06-07 | Merge branch 'claude/epic-tesla-blU9D': fix site serving composite index and ACME bypass
+- 2026-06-07 | Fix site serving: drop composite index, bypass ACME challenge
+- 2026-06-06 | Merge HTML site serving layer (api/site.js + subdomain rewrite)
+- 2026-06-06 | Add HTML site serving layer via api/site.js and subdomain rewrite
+- 2026-06-06 | Merge pull request #226 from duaneharrison1/claude/quirky-pasteur-2ra4j
+- 2026-06-06 | Use getBaseUrl() for View site links instead of hardcoded figmafolio domain
+- 2026-05-12 | Merge pull request #225 from duaneharrison1/claude/fix-basic-plan-protection-J4QiZ
+- 2026-05-12 | Fix password protection gate for Basic plan
+- 2026-05-12 | fix(UserDashboard): don't stamp subscriptionStatus "expired" over active subs (#224)
+- 2026-05-07 | Merge pull request #223 from duaneharrison1/claude/fix-solo-price-ids-ZE6I1
+- 2026-05-07 | Add legacy REACT_APP_PRO price ID to PRO_PLANS
+- 2026-05-07 | Map regional Solo price IDs to 'solo' subscription type (#222)
+- 2026-04-24 | Restore SVG eye icons with display:block + overflow:visible inline styles
+- 2026-04-24 | Diagnostic: inline-style position on password wrap + eye button
+- 2026-04-24 | Diagnostic: replace eye SVG with emoji span
+- 2026-04-24 | Eye toggle: svg overflow: visible to prevent stroke clipping
+- 2026-04-24 | Merge branch 'claude/investigate-aeroauth-w7jBK'
+- 2026-04-24 | Remove overflow:hidden from .aero-inline-auth-card
+- 2026-04-24 | Merge branch 'claude/investigate-aeroauth-w7jBK'
+- 2026-04-24 | Eye toggle: hard-code stroke color instead of currentColor
+- 2026-04-24 | Merge branch 'claude/investigate-aeroauth-w7jBK'
+- 2026-04-24 | UTPreviewResults: empty-state card + grey page bg; harden eye-toggle stacking
+- 2026-04-24 | Merge branch 'claude/investigate-aeroauth-w7jBK'
+- 2026-04-24 | Align UTPreviewResults topbar to content column; add password eye toggle
+- 2026-04-24 | Merge branch 'claude/investigate-aeroauth-w7jBK'
+- 2026-04-24 | Align UTPreviewResults to the Aero design system
+- 2026-04-23 | Merge branch 'claude/investigate-aeroauth-w7jBK'
+- 2026-04-23 | Align AeroAuth and UTPluginAuth to aero-ut-theme design system
+- 2026-04-23 | Merge branch 'claude/align-ut-url-handling'
+- 2026-04-23 | Move UT prototype URL transform to save time; add default scaling fallback
+- 2026-04-23 | Merge branch 'claude/fix-ut-width-and-x-icon'
+- 2026-04-23 | Drop 760px cap on session detail content; scope setup task-row X icon
+- 2026-04-23 | Merge branch 'claude/fix-top-themes-render-FmWHq'
+- 2026-04-23 | Fix six Aero UT bugs: theme crash, icon clip, scaling, width jump, target field, draft gate
+- 2026-04-23 | Merge branch 'claude/fix-modal-css-namespace'
+- 2026-04-23 | Namespace UT modal CSS under .ut-modal-root to beat aero-components.css
+- 2026-04-23 | Merge branch 'claude/fix-modal-rendering-VHWpx'
+- 2026-04-23 | Render UTDeleteModal via portal so backdrop covers viewport
+- 2026-04-23 | Enlarge task-row remove icon in UTCreateTestModal
+- 2026-04-23 | Render UTCreateTestModal via portal so backdrop covers viewport
+- 2026-04-21 | Merge branch 'claude/ut-main-scrollbar-gutter'
+- 2026-04-21 | Reserve scrollbar gutter on .ut-main
+- 2026-04-21 | Merge branch 'claude/settings-spacer-scrollbar-fix-b3b5'
+- 2026-04-21 | Fix settings spacer width and reserve scrollbar gutter
+- 2026-04-21 | Merge branch 'claude/fix-feedback-page-layout-7ReEV'
+- 2026-04-21 | Add right spacer column to settings layout for visual balance
+- 2026-04-21 | Merge branch 'claude/fix-feedback-page-layout-7ReEV'
+- 2026-04-21 | Remove unused displayName variable
+- 2026-04-21 | Restructure Account page inside AeroLayout
+- 2026-04-21 | Merge branch 'claude/aero-sidebar-monogram-spacing'
+- 2026-04-21 | Add breathing room below toggle when sidebar is collapsed
+- 2026-04-21 | Merge branch 'claude/aero-sidebar-collapsed-order'
+- 2026-04-21 | Sidebar: show toggle above monogram when collapsed
+- 2026-04-21 | Merge branch 'claude/aero-kebab-toggle-fixes'
+- 2026-04-21 | Lighten kebab; move sidebar toggle back to top row
+- 2026-04-21 | Merge branch 'claude/aero-kebab-chevron-text'
+- 2026-04-21 | Use text glyphs for kebab and sidebar chevron; move toggle to footer
+- 2026-04-20 | Merge branch 'claude/aero-icon-sizes'
+- 2026-04-20 | Size up kebab and sidebar chevron icons
+- 2026-04-20 | Merge branch 'claude/aero-icon-fixes'
+- 2026-04-20 | Fix icon buttons hidden under .aero-btn glass sheen overlay
+- 2026-04-20 | Merge branch 'claude/aero-ut-grid-feedback-fix'
+- 2026-04-20 | Cap test grid at 3 cols; portal feedback FAB to body
+- 2026-04-20 | Merge branch 'claude/aero-ut-layout-fixes'
+- 2026-04-20 | Fix Aero UT layout: width, scrollbar gutter, menu icon, feedback FAB
+- 2026-04-20 | Merge branch 'claude/aero-ut-visual-alignment-x7b2q'
+- 2026-04-20 | Align Aero UT pages to design mockup (phases 2, 3, 5)
+- 2026-04-20 | Merge branch 'claude/feedback-modal-portal'
+- 2026-04-20 | Render FeedbackModal via portal to escape sidebar stacking context
+- 2026-04-20 | Merge branch 'claude/fix-feedback-page-layout-7ReEV'
+- 2026-04-20 | Replace /feedback page with FeedbackModal triggered from sidebar
+- 2026-04-20 | Merge branch 'claude/fix-feedback-page-layout-7ReEV'
+- 2026-04-19 | Fix feedback page layout: restore title padding and pull iframe up into mask
+- 2026-04-19 | Merge pull request #221 from duaneharrison1/claude/fix-feedback-scrollbar-a9TMN
+- 2026-04-19 | Fix feedback page layout: scrollbar, whitespace, width, mask
+- 2026-04-19 | Merge pull request #220 from duaneharrison1/claude/update-feedback-iframe-GnQI0
+- 2026-04-19 | Update feedback iframe src URL
+- 2026-04-19 | Merge pull request #219 from duaneharrison1/claude/update-feedback-iframe-GnQI0
+- 2026-04-19 | Update feedback iframe src URL
+- 2026-04-19 | Fix Notion embed URL on feedback page (#218)
+- 2026-04-19 | Add Send Feedback page with Notion iframe (#217)
+- 2026-04-18 | Merge branch 'claude/aero-ut-performance-polish-4QBcH' into master
+- 2026-04-18 | Aero UT performance + polish: instant tab switching, snappier sidebar, flat main content
+- 2026-04-18 | Merge Aero UT visual reskin (flat theme across UT + Account)
+- 2026-04-18 | chore: sync package-lock.json
+- 2026-04-18 | Aero UT visual reskin: unified flat theme across UT + Account
+- 2026-04-18 | Merge Aero UT redesign Phase 2 (dashboard donuts, project panel, task validation, account sub-nav)
+- 2026-04-18 | Aero UT redesign Phase 2: dashboard donuts, project panel, task validation, account sub-nav
+- 2026-04-18 | Merge Aero UT redesign Phase 1 (slate-blue accent + sidebar fixes)
+- 2026-04-18 | Aero UT redesign Phase 1: slate-blue accent + sidebar fixes
+- 2026-04-18 | Merge branch 'claude/fix-auth-panel-height-tAl3S' into master
+- 2026-04-18 | Fix auth page panels not stretching to full viewport height
+- 2026-04-18 | Fix Aero styling leaking onto Figmafolio auth and dropdown (#216)
+- 2026-04-18 | Remove User Testing from Figmafolio, redirect to Aero (#215)
+- 2026-04-18 | Add mobile-user-testing route with Aero redirect
+- 2026-04-18 | Replace User Testing tab with Aero redirect in FolioForm
+- 2026-04-17 | Merge pull request #214 from duaneharrison1/claude/fix-cf-fallback-unlimited-tier-EOHUN
+- 2026-04-17 | Fix Cloud Function fallback URLs and isUnlimitedTier threshold
+- 2026-04-17 | Merge pull request #213 from duaneharrison1/claude/aero-app-investigation-2UDal
+- 2026-04-17 | Standardise Aero button fills to aero-lt / d-aero-lt
+- 2026-04-16 | Merge pull request #212 from duaneharrison1/claude/fix-page-title-flash-bckDe
+- 2026-04-16 | Set tab title by hostname to stop Figmafolio flash on Aero
+- 2026-04-16 | Merge pull request #211 from duaneharrison1/claude/audit-aero-launch-B7KHK
+- 2026-04-16 | Enforce Aero session limits and tag signup product
+- 2026-04-08 | Merge pull request #210 from duaneharrison1/claude/migrate-to-requesty-dMn9Z
+- 2026-04-08 | chore: migrate LLM gateway from OpenRouter to Requesty
+- 2026-04-05 | Merge pull request #209 from duaneharrison1/claude/unify-preview-dashboard-kAuIV
+- 2026-04-04 | Fix 16 CSS leaks where FormUserTesting.css overrides preview styling
+- 2026-04-04 | Merge pull request #208 from duaneharrison1/claude/fix-video-player-styling-3L1MI
+- 2026-04-04 | Unify UT preview pages with authenticated Aero styling
+- 2026-04-04 | Merge pull request #207 from duaneharrison1/claude/fix-ut-claiming-css-6h3uq
+- 2026-04-04 | Fix UT auth CSS issues and unify preview pages with Aero design system
+- 2026-04-03 | Merge pull request #206 from duaneharrison1/claude/aero-testing-claiming-flow-MCSty
+- 2026-04-03 | Remove unused i18n/currentLanguage after redirect change
+- 2026-04-03 | Fix Aero UT claiming flow: password field, loading state, redirect, favicon
+- 2026-03-13 | Merge pull request #205 from duaneharrison1/claude/fix-pricing-modal-spinner-7CNgO
+- 2026-03-13 | Fix pricing modal spinner by prefetching plans data alongside pricing
+- 2026-03-13 | Merge pull request #204 from duaneharrison1/claude/optimize-aero-checkout-QlVTR
+- 2026-03-13 | Fix eslint no-unused-vars error for stripePromise side-effect import
+- 2026-03-13 | Optimize Figmafolio checkout: replace Firestore pattern with direct Cloud Function
+- 2026-03-13 | Merge pull request #203 from duaneharrison1/claude/prefetch-pricing-data-6KfyO
+- 2026-03-13 | Pre-fetch pricing data on Account page mount for instant modal open
+- 2026-03-12 | Merge pull request #202 from duaneharrison1/claude/rename-starter-to-solo-jhiTz
+- 2026-03-12 | Rename Starter to Solo and fix frozen modal after browser back
+- 2026-03-12 | Merge pull request #201 from duaneharrison1/claude/warm-up-cloud-function-t36SN
+- 2026-03-12 | Warm up checkout Cloud Function on Account page load to avoid cold starts
+- 2026-03-12 | Merge pull request #200 from duaneharrison1/claude/fix-checkout-session-bugs-iQS3U
+- 2026-03-12 | Fix checkout session: add error logging and per-button loading state
+- 2026-03-12 | Merge pull request #199 from duaneharrison1/claude/optimize-checkout-flow-5DpWD
+- 2026-03-12 | Optimize checkout flow with direct Cloud Function call
+- 2026-03-12 | Merge pull request #198 from duaneharrison1/claude/fix-billing-display-bug-HE2QD
+- 2026-03-12 | Fix billing display bug: check period end date before showing "Ending soon"
+- 2026-03-12 | Merge pull request #197 from duaneharrison1/claude/fix-account-date-comparison-vgVbG
+- 2026-03-12 | Add diagnostic logging to Account.js date comparison logic
+- 2026-03-12 | Merge pull request #196 from duaneharrison1/claude/remove-stripe-temp-function-VOVqd
+- 2026-03-12 | Remove temporary createAeroPortalConfig function and set real portal config ID
+- 2026-03-12 | Merge pull request #195 from duaneharrison1/claude/review-firebase-deployment-gWsrl
+- 2026-03-12 | Add temporary admin button to create Aero Portal Config
+- 2026-03-12 | Merge pull request #194 from duaneharrison1/claude/stripe-billing-ux-updates-E9lPc
+- 2026-03-12 | Add temporary createAeroPortalConfig Cloud Function, remove standalone script
+- 2026-03-12 | Update functions/package-lock.json after npm install
+- 2026-03-12 | Add Aero privacy/terms pages, Stripe portal config script, and wire portal config into Account.js
+- 2026-03-12 | Add reactivateSubscription Cloud Function, pre-fetch portal URL, and update canceling UX
+- 2026-03-12 | Merge pull request #193 from duaneharrison1/claude/fix-subscription-date-bug-WdyCs
+- 2026-03-12 | Update package-lock.json after dependency install
+- 2026-03-12 | Fix subscription date handling to robustly convert Firestore Timestamps
+- 2026-03-12 | Merge pull request #192 from duaneharrison1/claude/fix-account-subscription-display-5K4QN
+- 2026-03-12 | Fix Figmafolio Billing page subscription display to match Account.js fixes
+- 2026-03-12 | Fix Account page subscription display, add Aero pricing modal, email change, and page titles
+- 2026-03-12 | Merge pull request #191 from duaneharrison1/claude/fix-ai-insights-blank-AXjEd
+- 2026-03-12 | Fix AI Insights blank page and add Aero Account/Billing page
+- 2026-03-12 | Merge pull request #189 from duaneharrison1/claude/aero-user-testing-pages-PQa1v
+- 2026-03-12 | Remove unused stats variable from UTInsightsTab
+- 2026-03-12 | Merge pull request #190 from duaneharrison1/claude/fix-stripe-cancellation-sync-R0KWZ
+- 2026-03-12 | Add delete test project feature with Cloud Function cleanup
+- 2026-03-12 | Add portal return detection and cancellation feedback to Billing page
+- 2026-03-12 | Fix dashboard 0% completion and AI Insights tab not generating
+- 2026-03-12 | Fix Stripe cancellation events not syncing to Firestore
+- 2026-03-09 | Merge pull request #188 from duaneharrison1/claude/fix-session-status-insights-Ox084
+- 2026-03-09 | Fix AI insights never appearing after transcription completes
+- 2026-03-09 | Fix abandoned sessions staying as in_progress permanently
+- 2026-03-08 | Merge pull request #187 from duaneharrison1/claude/fix-stripe-past-due-bug-QBi0F
+- 2026-03-08 | Fix Stripe past_due subscribers losing access to published sites
+- 2026-03-07 | Merge pull request #186 from duaneharrison1/claude/fix-user-testing-bugs-JqFda
+- 2026-03-07 | Fix double-click guard, saving indicator, and session limit fallback
+- 2026-03-07 | Merge pull request #185 from duaneharrison1/claude/fix-testing-audio-recording-zr9Cd
+- 2026-03-07 | Fix eslint: remove unused deps from updateSession dependency array
+- 2026-03-07 | Fix testing session loss from race condition, silent failures, and missing retries
+- 2026-03-06 | Merge pull request #184 from duaneharrison1/claude/fix-testing-stats-DA7Hp
+- 2026-03-06 | Fix UT overview stats and browser tab title
+- 2026-03-06 | Merge pull request #183 from duaneharrison1/claude/style-testing-review-pages-NOO88
+- 2026-03-06 | Style UT session detail and video review pages with Aero design system
+- 2026-03-06 | Merge pull request #182 from duaneharrison1/claude/fix-aero-ut-dashboard-clBQ1
+- 2026-03-06 | Fix ESLint errors: remove unused UTDeleteModal import and destructured vars
+- 2026-03-06 | Fix Aero UT dashboard: full session detail parity, real-time updates, completion screen
+- 2026-03-06 | Merge pull request #181 from duaneharrison1/claude/fix-dashboard-preview-mode-wqrIw
+- 2026-03-06 | Fix dashboard test missing testing UI by setting isPreviewMode={true}
+- 2026-03-06 | Merge pull request #180 from duaneharrison1/claude/fix-ut-dashboard-sessions-1Rhuz
+- 2026-03-06 | Fix exhaustive-deps lint: add ownerId and project to callback deps
+- 2026-03-06 | Fix UT dashboard sessions not appearing by conditionally routing Firestore writes
+- 2026-03-06 | Merge pull request #179 from duaneharrison1/claude/bump-session-limits-Usmyu
+- 2026-03-06 | Bump all SESSION_LIMITS to 9999 for temporary testing
+- 2026-03-06 | Merge pull request #178 from duaneharrison1/claude/auto-claim-account-page-YeoBE
+- 2026-03-06 | Remove unused firebase import in UTLoginPage
+- 2026-03-06 | Add auto-claim on UTPreviewResults, Account page, and restyle to dashboard chrome
+- 2026-03-06 | Merge pull request #177 from duaneharrison1/claude/restyle-testing-pages-8tZyr
+- 2026-03-05 | Restyle UTPreviewResults and UTPluginAuth from dark to light Aero theme
+- 2026-03-05 | Merge pull request #176 from duaneharrison1/claude/admin-dashboard-portfolio-table-HGiwq
+- 2026-03-05 | Add Plugin User Testing (Aero) section to Admin Dashboard
+- 2026-03-05 | Merge pull request #175 from duaneharrison1/claude/setup-aero-testing-sq1x3
+- 2026-03-05 | Remove legacy Portfolio prototype source option from User Testing setup
+- 2026-03-04 | Merge pull request #174 from duaneharrison1/claude/investigate-pricing-env-vars-1Ksau
+- 2026-03-04 | Fix missing Solo plan IDs and typos in determineSubscriptionStatus()
+- 2026-03-01 | Merge pull request #173 from duaneharrison1/claude/fix-legacy-folio-crash-bshJB
+- 2026-03-01 | fix: wrap migrateToViewports in useMemo to prevent infinite render loop
+- 2026-02-28 | Merge pull request #172 from duaneharrison1/claude/finalize-aeroshowcase-v6-H1QQ3
+- 2026-02-28 | AeroShowcase v6: lock Hybrid style, propagate to all production components
+- 2026-02-25 | Merge pull request #171 from duaneharrison1/claude/aeroshowcase-refactor-3d8pd
+- 2026-02-25 | AeroShowcase v5: remove exploration grid, add Tinted/Flat styles, unify elements
+- 2026-02-25 | Merge pull request #170 from duaneharrison1/claude/fix-aeroshowcase-modal-HoeEe
+- 2026-02-25 | AeroShowcase v4: master style switch, unified elements, modal fixes
+- 2026-02-25 | Merge pull request #169 from duaneharrison1/claude/restore-glass-progress-bars-FdDIc
+- 2026-02-25 | Restore glass progress bars + add Real Glass style with SVG displacement filters
+- 2026-02-25 | Merge pull request #168 from duaneharrison1/claude/fix-aeroshowcase-styles-VTLAu
+- 2026-02-25 | AeroShowcase v2: simplify styles, fix glass, restore switches
+- 2026-02-25 | Merge pull request #167 from duaneharrison1/claude/aeroshowcase-caustic-fixes-6teME
+- 2026-02-25 | AeroShowcase: caustic engine fixes, Combined style, glass switches, modal improvements
+- 2026-02-25 | Merge pull request #166 from duaneharrison1/claude/update-aeroshowcase-glass-lv9Xd
+- 2026-02-25 | Fix ESLint no-useless-escape error in caustic engine regex
+- 2026-02-25 | Rewrite AeroShowcase as comprehensive glass design system showcase
+- 2026-02-25 | Merge pull request #165 from duaneharrison1/claude/update-aeroshowcase-glass-lv9Xd
+- 2026-02-25 | Replace AeroShowcase with glass mockups page via DOM injection
+- 2026-02-24 | Merge pull request #164 from duaneharrison1/claude/add-root-login-page-r1NrV
+- 2026-02-24 | Add AeroAuth inline login page at root for unauthenticated Aero users
+- 2026-02-24 | Merge pull request #163 from duaneharrison1/claude/add-style-d-toggle-eqh3h
+- 2026-02-24 | Merge pull request #162 from duaneharrison1/claude/aero-root-route-rJ9om
+- 2026-02-24 | chore: update package-lock.json and add build/ to .gitignore
+- 2026-02-24 | feat: add aero-glass-mockups.html with Style D toggle
+- 2026-02-24 | feat: render Aero dashboard at root route (/)
+- 2026-02-23 | Merge pull request #161 from duaneharrison1/claude/fix-aero-dashboard-layout-KYMfE
+- 2026-02-23 | chore: update package-lock.json after npm install
+- 2026-02-23 | fix: eliminate navigation loading flash and fix Responsive padding
+- 2026-02-23 | Merge pull request #160 from duaneharrison1/claude/fix-aero-dashboard-issues-dyG2e
+- 2026-02-23 | Remove stale build artifacts
+- 2026-02-23 | Fix Aero dashboard: logo casing, component alignment, navigation performance
+- 2026-02-23 | Merge pull request #159 from duaneharrison1/claude/fix-aero-sidebar-issues-Z1ApS
+- 2026-02-23 | chore: update build artifacts after aero sidebar fixes
+- 2026-02-23 | fix: aero sidebar — logo, mobile menu, nav styling, icons, responsive page
+- 2026-02-23 | Merge pull request #158 from duaneharrison1/claude/aero-multi-product-sidebar-Z4c1J
+- 2026-02-23 | fix: remove unused userName state from ResponsiveDashboard
+- 2026-02-23 | feat: transform sidebar into Aero multi-product navigation
+- 2026-02-23 | Merge pull request #157 from duaneharrison1/claude/update-sidebar-labels-4KdfB
+- 2026-02-23 | fix: update Responsive page title to "Responsive | Aero"
+- 2026-02-23 | Merge pull request #156 from duaneharrison1/claude/setup-aero-domain-dVVJ3
+- 2026-02-23 | Add aeroapp.ai domain support for Aero product line
+- 2026-02-19 | Merge pull request #155 from duaneharrison1/claude/fix-glassswitch-effects-cHEMt
+- 2026-02-19 | fix(GlassSwitch): connect track canvas to glass engine identically to GlassButton
+- 2026-02-19 | Merge pull request #154 from duaneharrison1/claude/fix-testing-path-mismatch-MtSO7
+- 2026-02-19 | Fix testing path mismatch: mirror dashboard tests to pluginUserTesting + external URL support
+- 2026-02-19 | Merge pull request #153 from duaneharrison1/claude/fix-aero-components-LZG2n
+- 2026-02-19 | Fix Aero UT component polish: glass engine for switches/nav/tabs, branding, modal
+- 2026-02-19 | Merge pull request #152 from duaneharrison1/claude/migrate-user-testing-aero-Q673T
+- 2026-02-19 | Migrate User Testing UI to Aero glass component system
+- 2026-02-19 | Merge pull request #151 from duaneharrison1/claude/aero-responsive-auth-alignment-mSpBN
+- 2026-02-19 | feat: align ResponsiveAuth with Aero dark glass design system
+- 2026-02-19 | Merge pull request #150 from duaneharrison1/claude/glassswitch-aero-dashboard-0VGrm
+- 2026-02-19 | feat: add GlassSwitch component and wire into UT dashboard
+- 2026-02-19 | Merge pull request #149 from duaneharrison1/claude/aero-glass-dashboard-reskin-8Zc4B
+- 2026-02-19 | feat: Aero glass reskin of /user-testing dashboard
+- 2026-02-19 | Merge pull request #148 from duaneharrison1/claude/aero-component-showcase-w82fj
+- 2026-02-19 | Apply Aero dark glass aesthetic to UT standalone pages
+- 2026-02-19 | Merge pull request #147 from duaneharrison1/claude/aero-caustic-button-emission-QHn6n
+- 2026-02-19 | Update build artifacts from caustic + button emission patch
+- 2026-02-19 | Caustic: smooth gradient fade-out at line ends, buttons emit data-color for cross-reflection
+- 2026-02-19 | Merge pull request #146 from duaneharrison1/claude/aero-v3-patch-fixes-dJLIE
+- 2026-02-19 | chore: update build artifacts after aero v3 patch fixes
+- 2026-02-19 | Fix: modal engine sources, glass switches, tag layout for caustic, input border
+- 2026-02-19 | Merge pull request #145 from duaneharrison1/claude/aero-glass-switches-tags-YbLVU
+- 2026-02-19 | Update build artifacts and package-lock after npm install + rebuild
+- 2026-02-19 | Button weight 500, GlassTag component, glass switches, sticky top bar
+- 2026-02-19 | Merge pull request #144 from duaneharrison1/claude/aero-modal-demos-usYW4
+- 2026-02-19 | Update package-lock.json
+- 2026-02-19 | Refactor modal demos: extract ModalInterior component, improve universal modal CSS
+- 2026-02-18 | Merge pull request #143 from duaneharrison1/claude/aero-inputs-progress-bars-KmMvo
+- 2026-02-18 | chore: update build artifacts after CSS changes
+- 2026-02-18 | Inputs: glassy with blur + always-visible sheen; Progress: tinted clear glass
+- 2026-02-18 | Merge pull request #142 from duaneharrison1/claude/aero-caustic-backgrounds-HH3GI
+- 2026-02-18 | Caustic: subtler corner-aware lines + showcase background orbs
+- 2026-02-18 | Merge pull request #141 from duaneharrison1/claude/aero-modals-progress-bars-sc9SB
+- 2026-02-18 | Update build artifacts after modals and progress bar patches
+- 2026-02-18 | Patch 3: Progress bars use tinted clear glass instead of opaque color
+- 2026-02-18 | Patch 1: Three separate modal demos (Light, Dark, Universal)
+- 2026-02-18 | Merge pull request #140 from duaneharrison1/claude/refine-aero-components-baQA3
+- 2026-02-18 | Update build artifacts after dark progress bar rgba fix
+- 2026-02-18 | Use rgba colors for dark section progress bars for glass translucency
+- 2026-02-18 | Merge pull request #139 from duaneharrison1/claude/refine-aero-components-YEqvH
+- 2026-02-18 | Update build artifacts after V3 refinement
+- 2026-02-18 | Phase 7: Verify and fix adaptive fills
+- 2026-02-18 | Phase 6: Single modal with background toggle
+- 2026-02-18 | Phase 5: Sticky compact top bar with glass segmented three-way toggle
+- 2026-02-18 | Phase 4: Progress bars match button glass treatment
+- 2026-02-18 | Phase 3: Rewrite GlassInput with engine and glass hover effect
+- 2026-02-18 | Phase 2: Create GlassTag component and separate tags from buttons
+- 2026-02-18 | Phase 1: Fix button font-weight — all fills inherit 500 from base
+- 2026-02-18 | Merge pull request #138 from duaneharrison1/claude/refine-aero-components-UQMTJ
+- 2026-02-18 | Update build output with Aero component refinements
+- 2026-02-18 | Phase 5: Glass modals, adaptive fills, and universal components
+- 2026-02-18 | Phase 4: Progress bars use glass engine with canvas rendering
+- 2026-02-18 | Phase 3: Redesign GlassInput as flat glass panel with subtle inset
+- 2026-02-18 | Phase 2: Unify button rendering with global mode toggle
+- 2026-02-18 | Phase 1: Align component sizing with Linear design system
+- 2026-02-18 | Merge pull request #137 from duaneharrison1/claude/aero-component-system-9y0W9
+- 2026-02-18 | Update build output with Aero component system changes
+- 2026-02-18 | Phase 3: Add AeroShowcase page at /aero route
+- 2026-02-18 | Phase 2: Add Aero glass component system
+- 2026-02-18 | Phase 1: Fix panel background to match Linear's production look
+- 2026-02-18 | Merge pull request #136 from duaneharrison1/claude/refine-glass-panel-Pz4Fo
+- 2026-02-18 | refine: Apple-style thin glass panel for User Testing layout
+- 2026-02-18 | Merge pull request #135 from duaneharrison1/claude/glass-panel-user-testing-9QfHu
+- 2026-02-18 | feat: add rounded glass panel treatment to User Testing main content area
+- 2026-02-17 | Merge pull request #134 from duaneharrison1/claude/aero-auth-restyle-1wYzG
+- 2026-02-17 | feat: Aero-styled auth pages — Linear design, standalone signup, optional testId
+- 2026-02-17 | Merge pull request #133 from duaneharrison1/claude/aero-brand-colors-fFIag
+- 2026-02-17 | feat: tester experience uses Aero violet accent, keeps large tester-friendly UI
+- 2026-02-17 | Merge pull request #132 from duaneharrison1/claude/centralize-aero-accent-color-GH2uW
+- 2026-02-17 | feat: centralized Aero accent token, improved section hierarchy with titles and descriptions
+- 2026-02-17 | Merge pull request #131 from duaneharrison1/claude/fix-sidebar-title-sizing-XVgZy
+- 2026-02-17 | fix: sticky sidebar, inline breadcrumb title (14px), sticky header within content
+- 2026-02-17 | Merge pull request #130 from duaneharrison1/claude/audit-linear-design-system-yULEj
+- 2026-02-17 | fix: comprehensive Linear design system audit — normalize all UT components
+- 2026-02-17 | Merge pull request #129 from duaneharrison1/claude/aero-linear-polish-round-2-Zsw1Q
+- 2026-02-17 | fix: Linear polish round 2 — sidebar collapse, max-width settings, flat rows dashboard, remove grey backgrounds and section dividers
+- 2026-02-17 | Merge pull request #128 from duaneharrison1/claude/fix-setup-tab-css-NudXQ
+- 2026-02-17 | fix: repair broken Setup tab CSS, audit against Linear light-mode patterns (sidebar, buttons, toggles, radius, headers)
+- 2026-02-17 | Merge pull request #127 from duaneharrison1/claude/fix-aero-setup-tab-Ayk1w
+- 2026-02-17 | Fix Aero Setup tab to use Linear.app component patterns
+- 2026-02-17 | Merge pull request #126 from duaneharrison1/claude/fix-aero-tab-pages-MvjgN
+- 2026-02-16 | Redesign Aero tab pages to match Linear UI/UX patterns
+- 2026-02-16 | Merge pull request #125 from duaneharrison1/claude/fix-testing-projects-filter-SlOAo
+- 2026-02-16 | Fix useTestingProjects filter to include FolioForm-enabled tests
+- 2026-02-16 | Merge pull request #124 from duaneharrison1/claude/fix-aero-layout-create-test-4BTCx
+- 2026-02-16 | Fix Aero layout to full-width Linear-style and add Create Test modal
+- 2026-02-16 | Merge pull request #123 from duaneharrison1/claude/rebrand-ut-plugin-aero-X5QY6
+- 2026-02-16 | Rebrand UT plugin pages to Aero Usertesting with Linear-inspired design system
+- 2026-02-11 | Merge pull request #122 from duaneharrison1/claude/remove-figmafolio-branding-9IOQc
+- 2026-02-11 | Remove Figmafolio branding from Responsive web pages — standalone as Responsive
+- 2026-02-11 | Merge pull request #121 from duaneharrison1/claude/fix-ut-page-titles-SufID
+- 2026-02-11 | Set document.title for UT route pages to replace default Figmafolio branding
+- 2026-02-11 | Merge pull request #120 from duaneharrison1/claude/fix-ut-auth-branding-dImdq
+- 2026-02-11 | Fix: Remove Figmafolio branding from ut-auth page (re-apply)
+- 2026-02-08 | Merge pull request #119 from duaneharrison1/claude/fix-responsive-auth-branding-EXeer
+- 2026-02-08 | Fix ResponsiveAuth branding, simplify redirect screen, fix login auth promise chain
+- 2026-02-08 | Merge pull request #118 from duaneharrison1/claude/fix-responsive-auth-wULfz
+- 2026-02-08 | Refactor ResponsiveAuth to use shared Auths.css and add auto-redirect
+- 2026-02-07 | Merge pull request #117 from duaneharrison1/claude/setup-firebase-auth-4URAb
+- 2026-02-07 | chore: update build artifacts after adding ResponsiveDashboard
+- 2026-02-07 | Add /responsive dashboard page with plan and usage display
+- 2026-02-06 | Merge pull request #116 from duaneharrison1/claude/fix-auth-session-validation-5DNsU
+- 2026-02-06 | chore: update build artifacts after ResponsiveAuth debug changes
+- 2026-02-06 | fix: add debug logging and resilient session param extraction to ResponsiveAuth
+- 2026-02-06 | Merge pull request #115 from duaneharrison1/claude/add-plugin-auth-page-yMMbL
+- 2026-02-06 | chore: update build artifacts after adding ResponsiveAuth page
+- 2026-02-06 | feat: add Responsive plugin auth page for Figma plugin authentication
+- 2026-02-05 | Merge pull request #114 from duaneharrison1/claude/style-ut-preview-pages-MYj7D
+- 2026-02-05 | style: match UT preview pages to main app styling
+- 2026-02-05 | Merge pull request #113 from duaneharrison1/claude/fix-transcription-video-player-ehs17
+- 2026-02-05 | fix: correct AssemblyAI parameter name and add preview video player page
+- 2026-02-05 | Merge pull request #112 from duaneharrison1/claude/fix-assemblyai-transcription-Qnvb4
+- 2026-02-05 | fix: resolve AssemblyAI 400 error and use real SessionDetail for preview
+- 2026-02-05 | Merge pull request #111 from duaneharrison1/claude/fix-ut-plugin-preview-LinJP
+- 2026-02-05 | fix: enable UT plugin preview transcription pipeline and add UX improvements
+- 2026-02-05 | Merge pull request #110 from duaneharrison1/claude/fix-ut-plugin-preview-9N6HV
+- 2026-02-05 | fix: resolve UT plugin preview AI insights and claiming flow issues
+- 2026-02-05 | Merge pull request #109 from duaneharrison1/claude/fix-ut-preview-issues-4aKSu
+- 2026-02-05 | fix: resolve UT preview issues - video config, tasks, styling
+- 2026-02-05 | Merge pull request #108 from duaneharrison1/claude/refactor-ut-preview-KAwiX
+- 2026-02-05 | fix: remove unused SessionDetail import
+- 2026-02-05 | refactor: reuse existing components for UT preview + add claiming flow
+- 2026-02-05 | Merge pull request #107 from duaneharrison1/claude/fix-ut-preview-pages-TJZlt
+- 2026-02-05 | fix: resolve multiple issues with UTPreviewTest and UTPreviewResults pages
+- 2026-02-04 | Merge pull request #106 from duaneharrison1/claude/add-preview-routes-9RHik
+- 2026-02-04 | feat: add User Testing preview routes and components for Figma plugin
+- 2026-02-04 | Merge pull request #105 from duaneharrison1/claude/fix-firestore-permissions-SPqyT
+- 2026-02-04 | fix: add Firestore security rules to allow anonymous test session creation
+- 2026-02-03 | Merge pull request #104 from duaneharrison1/claude/fix-folioform-tabs-billing-kxnZb
+- 2026-02-03 | fix: restore FolioForm tab navigation, fix billing plan name display
+- 2026-02-03 | Merge pull request #103 from duaneharrison1/claude/fix-billing-plan-mapping-QecpD
+- 2026-02-03 | fix: billing page plan name from subscription type, remove price ID mapping
+- 2026-02-03 | Merge pull request #102 from duaneharrison1/claude/fix-trial-analytics-gating-B2fXe
+- 2026-02-03 | fix: billing trial text, analytics tab visibility, analytics solo-only gating
+- 2026-02-03 | Merge pull request #101 from duaneharrison1/claude/fix-plugin-auth-page-pR5wM
+- 2026-02-03 | fix: restore illustration and fix scroll on plugin auth page
+- 2026-02-03 | Merge pull request #100 from duaneharrison1/claude/improve-performance-ux-5OPos
+- 2026-02-02 | feat: improve performance and UX with URL-based tabs and better skeletons
+- 2026-02-02 | Merge pull request #99 from duaneharrison1/claude/fix-user-testing-dashboard-OGseZ
+- 2026-02-02 | feat: add video+transcript demo view and optimize session detail page
+- 2026-02-02 | fix: remove unnecessary loading state from project view
+- 2026-02-02 | chore: update build artifacts
+- 2026-02-02 | fix: improve user testing dashboard performance with unified data fetching
+- 2026-02-02 | feat: integrate real TaskPanel component into demo experience
+- 2026-02-02 | fix: improve user testing demo and dashboard UX
+- 2026-02-02 | Merge pull request #98 from duaneharrison1/claude/revert-plugin-auth-layout-uS3dA
+- 2026-02-02 | chore: update build artifacts
+- 2026-02-02 | fix: revert plugin-auth copy to original while keeping new layout
+- 2026-02-02 | Merge pull request #97 from duaneharrison1/claude/user-testing-demo-dashboard-FoCMw
+- 2026-02-02 | chore: update build artifacts
+- 2026-02-02 | fix: remove unused variables to fix ESLint errors
+- 2026-02-02 | feat: add User Testing demo page and standalone dashboard
+- 2026-02-02 | Merge pull request #96 from duaneharrison1/claude/redesign-plugin-auth-page-vaB7q
+- 2026-02-02 | chore: update build artifacts for plugin-auth redesign
+- 2026-02-02 | feat: redesign plugin-auth page to mirror main signup page
+- 2026-02-02 | Merge pull request #95 from duaneharrison1/claude/fix-preview-url-flow-mDiqn
+- 2026-02-02 | fix: use encodeURIComponent in editUrl to fix "Invalid URL" error
+- 2026-02-02 | Merge pull request #94 from duaneharrison1/claude/fix-null-url-preview-pBJ3R
+- 2026-02-02 | fix: handle null URL in PreviewFromPlugin to prevent crash
+- 2026-02-02 | Merge pull request #92 from duaneharrison1/claude/fix-figma-viewport-breakpoints-iHZH5
+- 2026-02-02 | fix: support dynamic viewports array in PreviewFromPlugin
+- 2026-02-01 | Merge pull request #91 from duaneharrison1/claude/optimize-admin-dashboard-LeJdO
+- 2026-02-01 | fix: resolve ESLint no-loop-func warning in batch fetching
+- 2026-02-01 | perf: batch fetch portfolios for exact counts with progressive UI
+- 2026-02-01 | Merge pull request #90 from duaneharrison1/claude/fix-dashboard-performance-gYGse
+- 2026-02-01 | perf: use sample-based estimation for dashboard stats
+- 2026-02-01 | Merge pull request #89 from duaneharrison1/claude/update-admin-dashboard-hYSaH
+- 2026-02-01 | perf: use Firestore count() aggregation for dashboard stats
+- 2026-02-01 | perf: optimize fetchStats by extracting doc.data() once
+- 2026-02-01 | Merge pull request #88 from duaneharrison1/claude/add-dashboard-columns-ofzPR
+- 2026-02-01 | feat: add Source column and Plugin Portfolios stat to admin dashboard
+- 2026-02-01 | Merge pull request #87 from duaneharrison1/claude/add-chrome-screen-recording-OKY43
+- 2026-02-01 | fix: show browser-specific guidance for screen recording
+- 2026-02-01 | Merge pull request #86 from duaneharrison1/claude/browser-recording-instructions-hsPRy
+- 2026-02-01 | fix: show browser-specific instructions for screen recording
+- 2026-01-31 | Merge pull request #85 from duaneharrison1/claude/fix-screen-share-picker-ZhchI
+- 2026-01-31 | fix: improve video recording UX and auto-trigger AI analysis
+- 2026-01-31 | Merge pull request #84 from duaneharrison1/claude/add-video-recording-LTir1
+- 2026-01-31 | feat: add video/screen recording to user testing
+- 2026-01-31 | Merge pull request #83 from duaneharrison1/claude/implement-viewport-breakpoints-KOEvX
+- 2026-01-31 | fix: remove unused validateViewports import from MobileFormContent
+- 2026-01-31 | feat: update mobile form with viewport breakpoints UI
+- 2026-01-31 | fix: remove unused imports and variables for ESLint
+- 2026-01-31 | fix: handle plugin data format in viewport migration
+- 2026-01-31 | feat: implement configurable viewport breakpoints
+- 2026-01-31 | Merge pull request #82 from duaneharrison1/claude/fix-welcome-name-flash-rDX5m
+- 2026-01-31 | fix: prevent welcome screen name loading flash
+- 2026-01-31 | Merge pull request #81 from duaneharrison1/claude/fix-modal-bounce-menu-FDeRZ
+- 2026-01-31 | fix: remove welcome modal bounce and make session menu always visible
+- 2026-01-31 | Merge pull request #80 from duaneharrison1/claude/session-delete-polish-B4k2t
+- 2026-01-31 | fix: polish user testing mode and add session quick delete
+- 2026-01-31 | Merge pull request #79 from duaneharrison1/claude/fix-welcome-modal-flash-ONmui
+- 2026-01-31 | fix: eliminate welcome modal flash and background color inconsistency
+- 2026-01-31 | Merge pull request #78 from duaneharrison1/claude/fix-pricing-css-differences-dvU2c
+- 2026-01-31 | fix: sync pricing CSS and add auto-sync to deploy workflow
+- 2026-01-31 | Merge pull request #77 from duaneharrison1/claude/fix-testing-mode-flash-fPoSE
+- 2026-01-31 | fix: eliminate loading flash in User Testing mode
+- 2026-01-31 | Merge pull request #76 from duaneharrison1/claude/fix-pricing-modal-features-nAQiZ
+- 2026-01-31 | fix: show all features in pricing modal without truncation
+- 2026-01-31 | Merge pull request #75 from duaneharrison1/claude/ui-fixes-new-badge-Zoi02
+- 2026-01-31 | feat: UI fixes for pricing modal and navigation
+- 2026-01-31 | Merge pull request #74 from duaneharrison1/claude/add-plans-deploy-action-xsXSj
+- 2026-01-31 | feat: add GitHub Action for auto-deploying plans config
+- 2026-01-31 | Merge pull request #73 from duaneharrison1/claude/release-user-testing-2vg8x
+- 2026-01-31 | feat: release User Testing to all users and add to pricing table
+- 2026-01-30 | Merge pull request #72 from duaneharrison1/claude/figmafolio-testing-fixes-round-4-YEsak
+- 2026-01-30 | fix: remove unused variables to fix ESLint errors
+- 2026-01-30 | fix: address user testing follow-up issues round 4
+- 2026-01-30 | Merge pull request #71 from duaneharrison1/claude/figmafolio-testing-fixes-round-3-cwD9d
+- 2026-01-30 | fix: address user testing follow-up issues round 3
+- 2026-01-30 | Merge pull request #70 from duaneharrison1/claude/figmafolio-testing-fixes-round-2-gZOoV
+- 2026-01-30 | fix: address user testing follow-up issues round 2
+- 2026-01-30 | Merge pull request #69 from duaneharrison1/claude/fix-testing-feature-gate-5WZJX
+- 2026-01-30 | chore: update build output
+- 2026-01-30 | fix: implement user testing and feature gate follow-up fixes
+- 2026-01-30 | Merge pull request #68 from duaneharrison1/claude/refine-testing-feature-ux-KeAU0
+- 2026-01-30 | fix: resolve eslint errors from build
+- 2026-01-30 | fix: remove unused setHasChanges and saving state references
+- 2026-01-30 | feat: refine User Testing and Feature Gate UX
+- 2026-01-30 | Merge pull request #67 from duaneharrison1/claude/update-firebase-runtime-gWJjc
+- 2026-01-30 | fix: update Firebase Functions runtime from nodejs18 to nodejs20
+- 2026-01-30 | Merge pull request #66 from duaneharrison1/claude/update-firebase-nodejs-runtime-8Lvy4
+- 2026-01-30 | fix: update Firebase Functions Node.js runtime from 18 to 20
+- 2026-01-30 | Merge pull request #65 from duaneharrison1/claude/github-actions-firebase-deploy-KdL8y
+- 2026-01-30 | feat: add GitHub Actions workflow for Firebase Functions auto-deploy
+- 2026-01-30 | Merge pull request #64 from duaneharrison1/claude/feature-gates-testing-ux-O7tJ3
+- 2026-01-30 | fix: remove unused variables to fix ESLint errors
+- 2026-01-30 | Merge pull request #63 from duaneharrison1/claude/fix-session-counter-AJJM9
+- 2026-01-30 | feat: add FeatureGate component, User Testing UX improvements, and cross-session AI synthesis
+- 2026-01-30 | fix: increment session counter when user testing session completes
+- 2026-01-30 | Merge pull request #62 from duaneharrison1/claude/admin-dashboard-refinements-ZpjnS
+- 2026-01-30 | feat: refine Admin Dashboard with Plan column, User Testing column, and reordered columns
+- 2026-01-30 | Merge pull request #61 from duaneharrison1/claude/feature-gates-session-management-kPbhh
+- 2026-01-30 | feat: add feature gates and session management for User Testing and Analytics
+- 2026-01-30 | Merge pull request #60 from duaneharrison1/claude/firebase-shared-assets-T8Kcv
+- 2026-01-30 | Merge pull request #59 from duaneharrison1/claude/admin-dashboard-improvements-Zrwyq
+- 2026-01-30 | fix: resolve ESLint ref cleanup warning in useEffect
+- 2026-01-30 | feat: deploy shared CSS and icons to Firebase Hosting
+- 2026-01-30 | feat: improve Admin Dashboard with stats, performance, and UX enhancements
+- 2026-01-30 | Merge pull request #58 from duaneharrison1/claude/enhance-help-page-NbP9d
+- 2026-01-30 | fix: restore Need Help instructions to match images
+- 2026-01-30 | refactor: remove Quick Checklist and simplify Flow Starting Point note
+- 2026-01-30 | Merge pull request #57 from duaneharrison1/claude/enhance-help-page-NbP9d
+- 2026-01-30 | feat: enhance Need Help page with improved layout and features
+- 2026-01-30 | Merge pull request #56 from duaneharrison1/claude/ai-transcript-admin-dashboard-O8vf3
+- 2026-01-30 | feat: add AI transcript analysis and admin dashboard enhancements
+- 2026-01-30 | Merge pull request #55 from duaneharrison1/claude/fix-icon-import-path-ORukc
+- 2026-01-30 | feat: add plain SVG icon exports for landing page
+- 2026-01-30 | Merge pull request #54 from duaneharrison1/claude/setup-landing-page-assets-Rc0Lz
+- 2026-01-30 | feat: add workflow to trigger landing page rebuild when shared assets change
+- 2026-01-30 | Merge pull request #53 from duaneharrison1/claude/add-testing-transcription-N5h6n
+- 2026-01-30 | feat: implement automatic transcription with AssemblyAI (Phase 5)
+- 2026-01-30 | Merge pull request #52 from duaneharrison1/claude/add-audio-recording-7VfIq
+- 2026-01-30 | feat: implement audio recording and playback (Phase 4)
+- 2026-01-30 | Merge pull request #51 from duaneharrison1/claude/testing-results-dashboard-fjQPN
+- 2026-01-30 | chore: update build artifacts
+- 2026-01-30 | feat: implement user testing results dashboard (Phase 3)
+- 2026-01-29 | Merge pull request #50 from duaneharrison1/claude/user-testing-feature-ZE8oc
+- 2026-01-29 | fix: resolve ESLint errors in user testing components
+- 2026-01-29 | feat: implement user testing tester experience (Phase 2)
+- 2026-01-29 | Merge pull request #49 from duaneharrison1/revert-48-claude/fix-firestore-pricing-update-A7Dsj
+- 2026-01-29 | Revert "fix: update Firebase project ID and replace main pricing page"
+- 2026-01-29 | Merge pull request #48 from duaneharrison1/claude/fix-firestore-pricing-update-A7Dsj
+- 2026-01-29 | fix: update Firebase project ID and replace main pricing page
+- 2026-01-29 | Merge pull request #47 from duaneharrison1/claude/add-user-testing-feature-fdaWy
+- 2026-01-29 | feat: Add User Testing feature - Phase 1 (Designer Setup)
+- 2026-01-29 | Merge pull request #46 from duaneharrison1/claude/centralize-pricing-firestore-dyXK6
+- 2026-01-29 | chore: Remove serviceAccount.json from git tracking
+- 2026-01-29 | chore: Add serviceAccount.json to .gitignore
+- 2026-01-29 | feat: Centralize pricing data to Firestore
+- 2026-01-29 | Merge pull request #45 from duaneharrison1/claude/upgrade-modal-pricing-table-pSIIT
+- 2026-01-29 | refactor: Replace PaymentSelection card logic with PricingTable component
+- 2026-01-29 | Merge pull request #44 from duaneharrison1/claude/fix-pricing-trial-text-K7xUv
+- 2026-01-29 | feat: Add trialConsumed prop and fix current plan styling
+- 2026-01-29 | Merge pull request #43 from duaneharrison1/claude/add-pricing-modal-yq7uH
+- 2026-01-29 | feat: Add modal preview mode and polish PricingTable
+- 2026-01-29 | Merge pull request #42 from duaneharrison1/claude/update-pricing-table-design-HuvVo
+- 2026-01-29 | feat: Update PricingTable design to match landing page
+- 2026-01-29 | Merge pull request #41 from duaneharrison1/claude/seed-firestore-plans-7XYnk
+- 2026-01-29 | chore: Add service account key patterns to .gitignore and install firebase-admin
+- 2026-01-29 | Merge pull request #40 from duaneharrison1/claude/consolidate-pricing-data-h8FRu
+- 2026-01-29 | fix: Remove unused variables to fix ESLint errors
+- 2026-01-29 | feat: Add unified pricing system with Firestore integration
+- 2026-01-29 | Merge pull request #39 from duaneharrison1/claude/fix-header-grid-alignment-C9DgU
+- 2026-01-29 | fix: Align navbar responsive padding with FolioForm content grid
+- 2026-01-29 | Merge pull request #38 from duaneharrison1/claude/fix-layout-alignment-mgGG9
+- 2026-01-29 | fix: Align FolioForm content grid with navbar header
+- 2026-01-29 | Merge pull request #37 from duaneharrison1/claude/fix-analytics-dashboard-ZAAjt
+- 2026-01-29 | feat: Add clickable metrics, fix chart Y-axis, and mobile analytics
+- 2026-01-29 | Merge pull request #36 from duaneharrison1/claude/fix-analytics-dashboard-NQLVf
+- 2026-01-29 | fix: Comprehensive analytics dashboard improvements
+- 2026-01-28 | Merge pull request #35 from duaneharrison1/claude/style-analytics-dashboard-hjnMm
+- 2026-01-28 | fix: Remove unused variables to pass ESLint checks
+- 2026-01-28 | feat: Restyle analytics dashboard to match Plausible aesthetic
+- 2026-01-28 | Merge pull request #34 from duaneharrison1/claude/fix-plausible-overview-metric-xm5rx
+- 2026-01-28 | fix: Parse Plausible API v2 metrics array correctly for overview query
+- 2026-01-28 | Merge pull request #33 from duaneharrison1/claude/add-plausible-debug-logging-rcfVl
+- 2026-01-28 | feat: add debug logging to Plausible API endpoint
+- 2026-01-28 | Merge pull request #32 from duaneharrison1/claude/fix-analytics-dashboard-DQhEs
+- 2026-01-28 | chore: Update build artifacts
+- 2026-01-28 | fix: Redesign Analytics dashboard to match Plausible layout and fix empty data issue
+- 2026-01-28 | Merge pull request #31 from duaneharrison1/claude/add-plausible-tracking-EM8Cd
+- 2026-01-28 | feat: add Plausible analytics tracking to all pages
+- 2026-01-28 | Merge pull request #30 from duaneharrison1/claude/fix-or-filter-limit-uZClE
+- 2026-01-28 | fix: Correct Plausible API v2 query format - remove hostname filter, fix pagination
+- 2026-01-28 | Merge pull request #29 from duaneharrison1/claude/add-plausible-tracking-r63VU
+- 2026-01-28 | fix: Correct Plausible API v2 filter syntax for OR operator
+- 2026-01-28 | Merge pull request #28 from duaneharrison1/claude/comprehensive-claude-prompt-a7UpD
+- 2026-01-27 | fix: Remove unused Bold import from Analytics component
+- 2026-01-27 | feat: Add Portfolio Analytics feature with Plausible integration
+- 2026-01-27 | Merge pull request #27 from duaneharrison1/claude/fix-firebase-og-tags-Q3BVT
+- 2026-01-27 | fix: Use single FIREBASE_SERVICE_ACCOUNT env var to avoid newline issues
+- 2026-01-27 | Merge pull request #26 from duaneharrison1/claude/fix-og-firebase-auth-4HbNG
+- 2026-01-27 | debug: Add credential logging to diagnose Firebase auth failure
+- 2026-01-27 | Merge pull request #25 from duaneharrison1/claude/add-og-tags-previews-X8h3w
+- 2026-01-27 | fix: Use environment variables for Firebase credentials in OG function
+- 2026-01-27 | Merge pull request #24 from duaneharrison1/claude/fix-og-tags-9TLxt
+- 2026-01-27 | fix: Match OG function query with DynamicPage2 query pattern and add debug logging
+- 2026-01-27 | Merge pull request #23 from duaneharrison1/claude/add-social-media-links-wlsgk
+- 2026-01-27 | fix: Use embedded HTML template in OG function for reliable social previews
+- 2026-01-27 | Merge pull request #22 from duaneharrison1/claude/fix-social-sharing-jnVI3
+- 2026-01-27 | fix: Use valid Vercel route source patterns
+- 2026-01-27 | fix: Use readFileSync for JSON import in serverless function
+- 2026-01-27 | feat: Add OG meta tags for social media link previews
+- 2026-01-27 | Merge pull request #21 from duaneharrison1/claude/render-custom-domains-mp5kV
+- 2026-01-27 | perf: Optimize DynamicPage2.js with parallel queries and optimistic rendering
+- 2026-01-26 | Merge pull request #20 from duaneharrison1/claude/fix-skeleton-grid-layout-3SnaQ
+- 2026-01-26 | fix: Use Bootstrap grid for skeleton loading to display 3 columns
+- 2026-01-26 | Merge pull request #19 from duaneharrison1/claude/fix-modal-input-border-AKgp6
+- 2026-01-26 | fix: Remove double border on modal password inputs and shift modal up 10px
+- 2026-01-26 | Merge pull request #18 from duaneharrison1/claude/fix-dashboard-pluralization-p4QU8
+- 2026-01-26 | fix: Dashboard pluralization and footer positioning
+- 2026-01-26 | Merge pull request #17 from duaneharrison1/claude/fix-username-flicker-email-hJRnJ
+- 2026-01-26 | fix: Resolve username flicker, add Change Email button, improve modal styling
+- 2026-01-26 | Merge pull request #16 from duaneharrison1/claude/fix-folioform-skeleton-9o47B
+- 2026-01-26 | fix: FolioForm skeleton now matches actual layout
+- 2026-01-26 | Merge pull request #15 from duaneharrison1/claude/profile-header-cleanup-GX82Q
+- 2026-01-26 | feat: Profile header cleanup and account settings improvements
+- 2026-01-26 | Merge pull request #14 from duaneharrison1/claude/optimize-rendering-performance-NDmV1
+- 2026-01-26 | fix: Remove unused profile variable
+- 2026-01-26 | fix: Skeleton loading issues and optimize rendering
+- 2026-01-26 | Merge pull request #13 from duaneharrison1/claude/figmafolio-prototype-converter-oijUC
+- 2026-01-26 | perf: Improve loading performance with optimistic rendering and skeleton loaders
+- 2026-01-26 | Merge pull request #12 from duaneharrison1/claude/vercel-api-token-env-D4aNH
+- 2026-01-26 | fix: Replace hardcoded Vercel API tokens with environment variable
+- 2026-01-25 | Merge pull request #11 from duaneharrison1/claude/improve-figma-links-guidance-1ov2n
+- 2026-01-25 | Improve Figma Links tab with better guidance and inline warnings
+- 2026-01-25 | Merge pull request #10 from duaneharrison1/claude/figmafolio-saas-build-2jjd2
+- 2026-01-25 | Fix upgrade links to use correct domain and auto-open payment modal
+- 2026-01-24 | Merge pull request #9 from duaneharrison1/claude/improve-billing-subscription-MTBwP
+- 2026-01-24 | Update build artifacts
+- 2026-01-24 | Remove unused trialEndDate state variable
+- 2026-01-24 | Fix loading state bug and improve billing page design
+- 2026-01-24 | Merge pull request #8 from duaneharrison1/claude/improve-billing-subscription-GsZoK
+- 2026-01-24 | Update build artifacts
+- 2026-01-24 | Rebuild billing page with proper subscription state handling
+- 2026-01-24 | Merge pull request #7 from duaneharrison1/claude/fix-stripe-billing-bug-pzP7T
+- 2026-01-24 | Fix getInitials crash when email is null/undefined
+- 2026-01-24 | Merge pull request #6 from duaneharrison1/claude/resolve-merge-conflicts-LFaz9
+- 2026-01-24 | Add dynamic Stripe billing portal and improve navbar dropdown
+- 2026-01-24 | Merge pull request #5 from duaneharrison1/claude/fix-linting-warnings-rrHRo
+- 2026-01-24 | Fix webpack crypto polyfill and CSS autoprefixer warnings
+- 2026-01-23 | Fix all ESLint linting warnings for CI=true build
+- 2025-08-12 | fix navigate
+- 2025-08-12 | redirect logout
+- 2025-08-12 | remove https
+- 2025-08-12 | clg/domain
+- 2025-08-12 | try to resolve bug
+- 2025-08-12 | toggle css
+- 2025-08-12 | toogle
+- 2025-08-12 | ui plan
+- 2025-08-06 | app.figmafolio
+- 2025-08-05 | revert
+- 2025-08-05 | dynamicPage2 update
+- 2025-08-05 | dymamicPage2
+- 2025-08-05 | Merge branch 'master' of https://github.com/duaneharrison1/figmaApp
+- 2025-08-05 | fix redirect
+- 2025-07-29 | Merge pull request #3 from duaneharrison1/revert-2-feature/landing-section
+- 2025-07-29 | Revert "add section Why choose"
+- 2025-07-29 | Merge pull request #2 from duaneharrison1/feature/landing-section
+- 2025-07-29 | add section Why choose
+- 2025-06-07 | Update
+- 2025-06-06 | up
+- 2025-06-05 | up
+- 2025-05-31 | Update
+- 2025-05-27 | Update
+- 2025-05-17 | Merge branch 'master' of https://github.com/duaneharrison1/figmaApp
+- 2025-05-17 | twest
+- 2025-04-05 | Update
+- 2025-04-02 | Updates
+- 2025-03-22 | Paymentutil update
+- 2025-03-22 | Paymentutil update
+- 2025-03-22 | responsive best plan card
+- 2025-03-22 | responsive best plan card
+- 2025-03-22 | changed landing page toggle switch
+- 2025-03-22 | changed landing page toggle switch
+- 2025-03-22 | Price Updates
+- 2025-03-22 | Price Updates
+- 2025-03-22 | TEST
+- 2025-03-22 | TEST
+- 2025-03-22 | 123
+- 2025-03-22 | 123
+- 2025-03-22 | test
+- 2025-03-22 | test
+- 2025-03-22 | Update
+- 2025-03-22 | Update
+- 2025-03-22 | Updates
+- 2025-03-22 | Updates
+- 2025-03-20 | yes
+- 2025-03-20 | yes
+- 2025-02-16 | css edit
+- 2025-02-16 | css edit
+- 2025-02-16 | dsad
+- 2025-02-16 | dsad
+- 2025-02-16 | btn
+- 2025-02-16 | btn
+- 2025-02-16 | update
+- 2025-02-16 | update
+- 2025-02-16 | Button
+- 2025-02-16 | Button
+- 2025-02-05 | - UI Update
+- 2025-02-05 | - UI Update
+- 2025-02-05 | Fixed UI problems
+- 2025-02-05 | Fixed UI problems
+- 2025-02-03 | Optimization Testing - Removed Analytics
+- 2025-02-03 | Optimization Testing - Removed Analytics
+- 2025-02-02 | Update - test
+- 2025-02-02 | Update - test
+- 2025-02-02 | Update
+- 2025-02-02 | Update
+- 2025-02-02 | Web Optimization Update
+- 2025-02-02 | Web Optimization Update
+- 2025-02-02 | Web Optimization Test
+- 2025-02-02 | Web Optimization Test
+- 2025-02-02 | Web Optimization Improvement
+- 2025-02-02 | Web Optimization Improvement
+- 2025-02-02 | Web Optimization Test (To Be Reverted Right Away)
+- 2025-02-02 | Web Optimization Test (To Be Reverted Right Away)
+- 2025-02-02 | web optimization testing
+- 2025-02-02 | web optimization testing
+- 2025-02-02 | Web optimization test
+- 2025-02-02 | Web optimization test
+- 2025-02-02 | Web Optimization Test (Hosted the fonts locally)
+- 2025-02-02 | Web Optimization Test (Hosted the fonts locally)
+- 2025-02-02 | Website Optimization test
+- 2025-02-02 | Website Optimization test
+- 2025-02-02 | Web Optimization Test
+- 2025-02-02 | Web Optimization Test
+- 2025-02-02 | Revert Changes
+- 2025-02-02 | Revert Changes
+- 2025-02-02 | Test Web optimization
+- 2025-02-02 | Test Web optimization
+- 2025-02-02 | Update Web Optimization Test
+- 2025-02-02 | Update Web Optimization Test
+- 2025-02-02 | Web Optimization Test
+- 2025-02-02 | Web Optimization Test
+- 2025-02-02 | Cache Test
+- 2025-02-02 | Cache Test
+- 2025-02-02 | LCP OPTIMIZATION TEST
+- 2025-02-02 | LCP OPTIMIZATION TEST
+- 2025-02-02 | Optimization Test
+- 2025-02-02 | Optimization Test
+- 2025-02-02 | optimization - test
+- 2025-02-02 | optimization - test
+- 2025-02-01 | SEO Update
+- 2025-02-01 | SEO Update
+- 2025-02-01 | Meta tags update
+- 2025-02-01 | Meta tags update
+- 2025-02-01 | React-Helmet-Update
+- 2025-02-01 | React-Helmet-Update
+- 2025-02-01 | Added a canonical tag
+- 2025-02-01 | Added a canonical tag
+- 2025-02-01 | Index update FigmaFolio --> Figmafolio
+- 2025-02-01 | Index update FigmaFolio --> Figmafolio
+- 2025-02-01 | Index.html update
+- 2025-02-01 | Index.html update
+- 2025-01-31 | Updated meta description to make it more SEO friendly
+- 2025-01-31 | Updated meta description to make it more SEO friendly
+- 2025-01-31 | Updated Index.HTML
+- 2025-01-31 | Updated Index.HTML
+- 2025-01-31 | Added Title To index.html
+- 2025-01-31 | Added Title To index.html
+- 2025-01-31 | Testing index.html
+- 2025-01-31 | Testing index.html
+- 2025-01-31 | Update Landing Page
+- 2025-01-31 | Update Landing Page
+- 2025-01-31 | Update
+- 2025-01-31 | Update
+- 2025-01-31 | Updated Pricing For All Pages
+- 2025-01-31 | Updated Pricing For All Pages
+- 2025-01-31 | Update
+- 2025-01-31 | Update
+- 2025-01-31 | update
+- 2025-01-31 | update
+- 2025-01-31 | Update
+- 2025-01-31 | Update
+- 2025-01-31 | Update
+- 2025-01-31 | Update
+- 2025-01-31 | Update
+- 2025-01-31 | Update
+- 2025-01-31 | Updated userdashboard
+- 2025-01-31 | Updated userdashboard
+- 2025-01-31 | forgot to include these on the updates
+- 2025-01-31 | forgot to include these on the updates
+- 2025-01-31 | Forgot to include this on the update
+- 2025-01-31 | Forgot to include this on the update
+- 2025-01-31 | Updated the Modal
+- 2025-01-31 | Updated the Modal
+- 2025-01-31 | Translations Update
+- 2025-01-31 | Translations Update
+- 2025-01-31 | Language Test
+- 2025-01-31 | Language Test
+- 2025-01-31 | Update (Simple Fix To My Issue)
+- 2025-01-31 | Update (Simple Fix To My Issue)
+- 2025-01-31 | Test
+- 2025-01-31 | Test
+- 2025-01-31 | Updated Billing Page
+- 2025-01-31 | Updated Billing Page
+- 2025-01-30 | .
+- 2025-01-30 | .
+- 2025-01-30 | **Fix Previous Update**
+- 2025-01-30 | **Fix Previous Update**
+- 2025-01-30 | Updated Billing Page
+- 2025-01-30 | Updated Billing Page
+- 2025-01-30 | Comment Out
+- 2025-01-30 | Comment Out
+- 2025-01-30 | Fix
+- 2025-01-30 | Fix
+- 2025-01-30 | Fixed Error
+- 2025-01-30 | Fixed Error
+- 2025-01-30 | PRICE ID PER REGION UPDATE
+- 2025-01-30 | PRICE ID PER REGION UPDATE
+- 2025-01-30 | Updated Pricings
+- 2025-01-30 | Updated Pricings
+- 2025-01-28 | Reverted the changes made for testing (if its connected to vercel)
+- 2025-01-28 | Reverted the changes made for testing (if its connected to vercel)
+- 2025-01-28 | Test
+- 2025-01-28 | Test
+- 2025-01-28 | Test
+- 2025-01-28 | Test
+- 2025-01-27 | Test
+- 2025-01-27 | Test
+- 2025-01-26 | code clean up
+- 2025-01-17 | Update TestHtml.js
+- 2025-01-16 | Revert "Update TestHtml.js"
+- 2025-01-16 | Update TestHtml.js
+- 2025-01-16 | Update TestHtml.js
+- 2025-01-16 | Update TestHtml.js
+- 2025-01-16 | Update TestHtml.js
+- 2025-01-16 | Update TestHtml.js
+- 2025-01-16 | Update TestHtml.js
+- 2025-01-16 | Update TestHtml.js
+- 2025-01-14 | Update TestHtml.js
+- 2025-01-14 | Update TestHtml.js
+- 2025-01-14 | Update TestHtml.js
+- 2025-01-14 | Update TestHtml.js
+- 2025-01-09 | Revert "Update TestHtml.js"
+- 2025-01-09 | Update TestHtml.js
+- 2025-01-09 | Update TestHtml.js
+- 2025-01-09 | Update TestHtml.js
+- 2025-01-08 | added test app
+- 2024-11-18 | Update PaymentSelection.css
+- 2024-11-18 | Update PaymentSelection.css
+- 2024-11-18 | added assets
+- 2024-11-18 | update ui
+- 2024-11-13 | Update DynamicPage2.js
+- 2024-10-27 | added fromPllugin for isDraft
+- 2024-09-20 | fix trial period for yearly subscription
+- 2024-09-13 | Update PluginAuth.js
+- 2024-09-11 | Update SignupPage.js
+- 2024-09-11 | added auth and preview from plugin
+- 2024-09-04 | added testing for preview from plugin
+- 2024-09-03 | added saving active status for custom domain
+- 2024-09-03 | Update FolioForm.js
+- 2024-09-03 | Update DynamicPage2.js
+- 2024-09-03 | Update DynamicPage2.js
+- 2024-09-03 | Update DynamicPage2.js
+- 2024-09-03 | Update DynamicPage2.js
+- 2024-09-03 | Update DynamicPage2.js
+- 2024-09-03 | Revert "Update DynamicPage2.js"
+- 2024-09-03 | Update DynamicPage2.js
+- 2024-09-03 | Revert "Update DynamicPage2.js"
+- 2024-09-03 | Update DynamicPage2.js
+- 2024-09-03 | Update DynamicPage2.js
+- 2024-09-03 | Update DynamicPage2.js
+- 2024-09-03 | Update DynamicPage2.js
+- 2024-09-03 | Revert "Update DynamicPage2.js"
+- 2024-09-03 | Update DynamicPage2.js
+- 2024-09-03 | Revert "change query for getting custom domain"
+- 2024-09-03 | change query for getting custom domain
+- 2024-09-03 | added creation of custom Domain
+- 2024-08-21 | added background color to iframe
+- 2024-08-21 | made the color black when loading
+- 2024-08-14 | Update UserDashboard.js
+- 2024-08-12 | fix issue in saving domain
+- 2024-08-12 | Update DynamicPage2.js
+- 2024-08-12 | Update DynamicPage2.js
+- 2024-08-12 | fix issue with subscription
+- 2024-08-05 | fix ui
+- 2024-08-05 | fix
+- 2024-08-05 | update lite payment
+- 2024-08-03 | test deployment
+- 2024-08-03 | Update FormLabel.js
+- 2024-08-03 | wip-lite payment
+- 2024-07-31 | fix issue in login screen
+- 2024-07-29 | Update DynamicPage2.js
+- 2024-07-29 | Update DynamicPage2.js
+- 2024-07-29 | Fix iframe issue
+- 2024-07-29 | fix iframe issue
+- 2024-07-26 | added logs
+- 2024-07-24 | debug issue in custom domain
+- 2024-07-20 | fix issue in custom domain
+- 2024-07-03 | fix issue with password in custom domain
+- 2024-07-02 | fix issue with non responsive figma, added in mobile form
+- 2024-07-01 | Update FolioForm.js
+- 2024-07-01 | fix password view in custom domain
+- 2024-06-30 | Update .env
+- 2024-06-21 | fix issue in loading
+- 2024-06-17 | Update PaymentSelection.js
+- 2024-06-18 | Update PaymentSelection.js
+- 2024-06-17 | Update FormPassword.js
+- 2024-06-17 | Update MobileFormPassword.js
+- 2024-06-17 | Merge branch 'stagingv2'
+- 2024-06-14 | Update index.html
+- 2024-06-17 | added password protection in the pop up
+- 2024-06-17 | Update FormPassword.js
+- 2024-06-14 | bugfix password status change in desktop view
+- 2024-06-14 | Update index.html
+- 2024-06-14 | Update index.html
+- 2024-06-14 | remove metatags
+- 2024-06-13 | Revert "test React snap"
+- 2024-06-13 | test React snap
+- 2024-06-13 | Revert "Update DynamicPage.js"
+- 2024-06-13 | Update DynamicPage.js
+- 2024-06-12 | bugfix in saving password
+- 2024-06-11 | fix mobile form password
+- 2024-06-11 | Update DynamicPage.js
+- 2024-06-11 | fix mobile view of generated url password view and mobile of password form
+- 2024-06-11 | Update DynamicPage.js
+- 2024-06-11 | fix desktop view password
+- 2024-06-10 | Update UrlForm.css
+- 2024-06-10 | update ui
+- 2024-06-09 | wip- folio password
+- 2024-06-09 | Wip- mobile form password
+- 2024-06-07 | wip-password update
+- 2024-06-07 | Update ButtonClear.css
+- 2024-06-07 | Added change password and added modal for password in generated url
+- 2024-06-06 | WIP-update password
+- 2024-06-06 | wip- password update
+- 2024-06-05 | WIP- password
+- 2024-06-03 | Merge branch 'stagingv2'
+- 2024-06-03 | Update DynamicPage2.js
+- 2024-06-03 | added trailing to remove made with figmafolio label
+- 2024-05-27 | added border in favicon prev
+- 2024-05-27 | Update FolioForm.css
+- 2024-05-27 | update ui
+- 2024-05-27 | fix sign up page
+- 2024-05-24 | Merge branch 'stagingv2'
+- 2024-05-24 | fix preview page mobile view
+- 2024-05-24 | Merge branch 'stagingv2'
+- 2024-05-24 | update
+- 2024-05-23 | wip-trial after cancellation
+- 2024-05-23 | Update PaymentSelection.css
+- 2024-05-23 | Update PaymentSelection.css
+- 2024-05-23 | testing ui update in payment selection
+- 2024-05-23 | update payment modal ui
+- 2024-05-23 | added padding to the payment selection
+- 2024-05-23 | Update PaymentSelection.css
+- 2024-05-23 | added promotion code
+- 2024-05-22 | wip- payment modal
+- 2024-05-22 | added susbscription type in preview.
+- 2024-05-22 | WIP-fixing payment modal ui
+- 2024-05-22 | added susbscription type in preview.
+- 2024-05-21 | added trial days and update payment selection
+- 2024-05-21 | Update UserDashboard.js
+- 2024-05-21 | Update UserDashboard.js
+- 2024-05-21 | update ui for mobile form
+- 2024-05-20 | fix favicon and domain bug
+- 2024-05-20 | update folio form mobile view
+- 2024-05-18 | added navigation in mobile view
+- 2024-05-17 | update folioform for mobile view
+- 2024-05-17 | Merge branch 'stagingv2'
+- 2024-05-17 | Update CardView.css
+- 2024-05-17 | added mobile view forms
+- 2024-05-17 | update ui and font weight, added routes
+- 2024-05-17 | update font weight
+- 2024-05-16 | update ui
+- 2024-05-15 | update dashboard ui
+- 2024-05-14 | added preview page
+- 2024-05-14 | update billing page link
+- 2024-05-14 | update billing page link
+- 2024-05-14 | WIP-preview
+- 2024-05-10 | Update FormCustomDomain.js
+- 2024-05-10 | remove mobile condition
+- 2024-05-10 | added generated domain in ui
+- 2024-05-08 | WIP-desktop new form UI
+- 2024-05-08 | update background color of sign in/sign up page
+- 2024-05-08 | added mobile form instruction
+- 2024-05-07 | Merge branch 'feature/new-form-design' into stagingv2
+- 2024-05-07 | update english translation
+- 2024-05-07 | WIP-NEW FORM DESIGN
+- 2024-05-03 | update image in signup/signin page
+- 2024-05-02 | Added new image to landing page
+- 2024-04-30 | Added customize favicon
+- 2024-05-01 | Merge branch 'main' into feature/new-form-design
+- 2024-05-01 | Update DynamicPage2.js
+- 2024-05-01 | Update DynamicPage2.js
+- 2024-05-01 | Merge branch 'main' into feature/new-form-design
+- 2024-04-30 | Update DynamicPage2.js
+- 2024-04-30 | Update DynamicPage2.js
+- 2024-04-30 | Update DynamicPage.js
+- 2024-04-30 | Update DynamicPage.js
+- 2024-04-30 | Update DynamicPage.js
+- 2024-04-30 | added for testing
+- 2024-04-29 | Merge branch 'staging'
+- 2024-04-29 | added google analytics
+- 2024-04-29 | Merge branch 'staging'
+- 2024-04-29 | Added domain title
+- 2024-04-27 | fix favicon for custom domain and generated url
+- 2024-04-26 | Update DynamicPage.js
+- 2024-04-26 | Update DynamicPage.js
+- 2024-04-26 | added condition to remove favicon if theres none for active subscriber
+- 2024-04-26 | update from main
+- 2024-04-26 | Update DynamicPage2.js
+- 2024-04-26 | Update DynamicPage2.js
+- 2024-04-26 | added debugger to remove
+- 2024-04-26 | added debugger
+- 2024-04-26 | added favicon url for generated urls
+- 2024-04-26 | added debugger to remove
+- 2024-04-26 | fix issue of undefined faviconUrlFromFirebase
+- 2024-04-26 | added condition to remove favicon url if none is uploaded
+- 2024-04-26 | handle undefined imgurl and faviconimage
+- 2024-04-25 | fix deletion of folio
+- 2024-04-25 | fix adding of folio without favicon
+- 2024-04-25 | added favicon in forms
+- 2024-04-25 | added saving of favicon url
+- 2024-04-25 | update landing page ui
+- 2024-04-25 | Added favicon in dynamic page
+- 2024-04-25 | added delete favicon function
+- 2024-04-25 | added favicon url in delete modal props
+- 2024-04-25 | Added uploadFavicon function
+- 2024-04-25 | Merge branch 'staging'
+- 2024-04-25 | update fix in deleting domain
+- 2024-04-25 | Fix Deleting of domain
+- 2024-04-24 | added faviconUrl in usestate
+- 2024-04-24 | added logs to debug in prod
+- 2024-04-24 | added debugger
+- 2024-04-24 | Added favicon
+- 2024-04-24 | reload page after succesful update of email address
+- 2024-04-23 | Update Profile page, Added change email
+- 2024-04-22 | WIP - New form design
+- 2024-04-22 | remove most popular in pop up
+- 2024-04-22 | fix issue in dynamic page
+- 2024-04-22 | Create test.html
+- 2024-04-21 | update fontsize to 13px
+- 2024-04-20 | remove unnecessary height code
+- 2024-04-20 | Update height and padding
+- 2024-04-20 | Update vertical and horizontal padding
+- 2024-04-20 | Added hover for text-overlay
+- 2024-04-20 | Updated effect of mobile view to 768px
+- 2024-04-20 | Update made with figmafolio UI
+- 2024-04-19 | Update dynamic page made with figmafolio label
+- 2024-04-19 | Added language translation in privacy policy and terms and conditions pages
+- 2024-04-19 | fix japanese code from ja to jp
+- 2024-04-19 | Added language code for routes of privacy policy and terms and conditions
+- 2024-04-19 | Added translation for privacy policy and terms and conditions
+- 2024-04-18 | Fix Issue in url when clicking card
+- 2024-04-18 | fix issue in loading generated urls
+- 2024-04-17 | Merge branch 'URL-path-translation'
+- 2024-04-17 | Update language translation to url
+- 2024-04-16 | added chinese in supported language
+- 2024-04-16 | added chinese translation
+- 2024-04-15 | update translation
+- 2024-04-15 | fix button UI  in landing page
+- 2024-04-15 | remove extra o
+- 2024-04-15 | fix footer ui
+- 2024-04-15 | Update FormInstruction.js
+- 2024-04-15 | Update enter your password
+- 2024-04-15 | added spanish and german translation, update ui
+- 2024-04-07 | Added language translation in Preview page
+- 2024-04-07 | Update UrlForm and EditForm for language translation
+- 2024-04-07 | Created UpgradeAccountButton component
+- 2024-04-07 | added customDomainInstruction component
+- 2024-04-07 | added FormInstruction component in UrlForm
+- 2024-04-07 | FIx UI and Text of form instruction in edit page
+- 2024-04-05 | added remove made with in monthly
+- 2024-04-05 | added language translation
+- 2024-04-05 | added remove made with figmafolio label
+- 2024-04-05 | fix payment selection design
+- 2024-04-05 | remove feature text in subscription
+- 2024-04-05 | remove browser language
+- 2024-04-05 | update upgrade modal
+- 2024-03-31 | remove scrollbar in paid dynamic page
+- 2024-03-31 | remove scrollbar in dynamic view
+- 2024-03-28 | added condition to redirect to dashboard
+- 2024-03-28 | revert changes in user dashboard
+- 2024-03-28 | update when user click figmafolio label, go to dashboard
+- 2024-03-28 | added userAgent to detect device
+- 2024-03-28 | added library for mobileview
+- 2024-03-27 | code clean up
+- 2024-03-27 | fix subscription desc for regular user
+- 2024-03-26 | make label clickable and redirect to homepage
+- 2024-03-26 | make figmafolio hoverable
+- 2024-03-26 | update auth ui
+- 2024-03-25 | added past_due condition to restrict editing in dashboard
+- 2024-03-25 | update dynamic page to detect subscription
+- 2024-03-25 | added userId in creating folio
+- 2024-03-25 | added restriction for figma.com/file
+- 2024-03-21 | update landing page
+- 2024-03-20 | Update PaymentSelection.js
+- 2024-03-19 | update payment
+- 2024-03-19 | fix auth height
+- 2024-03-19 | Update Auths.css
+- 2024-03-19 | added text overlay
+- 2024-03-17 | update figmafolio header position
+- 2024-03-17 | remove favicon for now
+- 2024-03-13 | Auth page with favicon feature to fix
+- 2024-03-07 | Fix spamming of publish and draft button
+- 2024-03-07 | Update EditForm.js
+- 2024-03-05 | Update UserDashboard.js
+- 2024-03-04 | Added Subscription Type for user with 1 document
+- 2024-03-04 | code clean up
+- 2024-03-04 | Update Footer.css
+- 2024-03-01 | Update UserDashboard.js
+- 2024-03-01 | Update Footer.js
+- 2024-03-01 | Delete PrivacyPolicy.css
+- 2024-03-01 | updated terms and conditions and privacy policy
+- 2024-03-01 | added terms and privacy
+- 2024-02-28 | Update UserDashboard.js
+- 2024-02-27 | update ui in landing page
+- 2024-02-27 | Fix deleting of data
+- 2024-02-26 | added padding in instruction title
+- 2024-02-26 | fix delete feature
+- 2024-02-21 | code cleanup
+- 2024-02-21 | fix creation for subscribers
+- 2024-02-21 | Bugfix in create
+- 2024-02-20 | Change instructions section  position
+- 2024-02-20 | Fix layout
+- 2024-02-19 | update ui in navbar and admin dashboard
+- 2024-02-13 | Update AdminDashboard.js
+- 2024-02-13 | Update AdminDashboard.js
+- 2024-02-13 | Revert "Revert "remove profile reference""
+- 2024-02-12 | Revert "remove profile reference"
+- 2024-02-09 | remove profile reference
+- 2024-02-06 | Update DeleteModal.js
+- 2024-02-05 | Update App.js
+- 2024-02-04 | Update SignupPage.js
+- 2024-02-04 | fix subscriptionType checker
+- 2024-02-04 | fix duplicate checker
+- 2024-02-03 | Update DynamicPage2.js
+- 2024-02-03 | Update DynamicPage2.js
+- 2024-02-03 | Update App.js
+- 2024-02-03 | Update Preview.js
+- 2024-02-03 | refactor code
+- 2024-02-03 | Update App.js
+- 2024-02-03 | Update App.js
+- 2024-02-03 | Update App.js
+- 2024-02-03 | Update App.js
+- 2024-02-03 | Update App.js
+- 2024-02-03 | Update DynamicPage2.js
+- 2024-02-03 | Update DynamicPage2.js
+- 2024-02-03 | Update DynamicPage2.js
+- 2024-02-03 | Update DynamicPage2.js
+- 2024-02-02 | Update App.js
+- 2024-02-01 | Update UserDashboard.js
+- 2024-02-01 | update navbar
+- 2024-02-01 | update ui
+- 2024-02-01 | Update DynamicPage2.js
+- 2024-01-31 | Update index.js
+- 2024-01-31 | added analytics
+- 2024-01-31 | updated image
+- 2024-01-29 | Update App.js
+- 2024-01-29 | Update App.js
+- 2024-01-29 | Update App.js
+- 2024-01-29 | added new instruction
+- 2024-01-29 | added footer in dashboard
+- 2024-01-29 | fix footer support link
+- 2024-01-29 | Update EditForm.js
+- 2024-01-29 | remove dependency in cardview
+- 2024-01-29 | added privacy policy
+- 2024-01-29 | update app
+- 2024-01-27 | update navbar
+- 2024-01-27 | Update DynamicPage2.js
+- 2024-01-27 | Update UserDashboard.js
+- 2024-01-26 | update footer
+- 2024-01-25 | Update DynamicPage2.js
+- 2024-01-25 | Update DynamicPage2.js
+- 2024-01-25 | Update DynamicPage2.js
+- 2024-01-24 | added subtitle
+- 2024-01-24 | fix typo
+- 2024-01-24 | added assets
+- 2024-01-24 | update forms
+- 2024-01-21 | added validation in creating and updating figma url
+- 2024-01-16 | Update App.js
+- 2024-01-16 | added react helmet
+- 2024-01-16 | Update DynamicPage2.js
+- 2024-01-16 | fix favicon
+- 2024-01-15 | update
+- 2024-01-12 | remove console.log for testing
+- 2024-01-12 | Update DynamicPage.js
+- 2024-01-12 | Update DynamicPage2.js
+- 2024-01-12 | Update DynamicPage2.js
+- 2024-01-12 | Update DynamicPage2.js
+- 2024-01-12 | Update DynamicPage2.js
+- 2024-01-12 | testing issue in dynamic page
+- 2024-01-11 | update homepage
+- 2024-01-10 | Update AdminDashboard.js
+- 2024-01-10 | added tier on landing page
+- 2024-01-09 | Update Billing.js
+- 2024-01-09 | added unsubscribe button
+- 2024-01-09 | Update DynamicPage2.js
+- 2024-01-09 | added non-referrer
+- 2024-01-04 | Update App.js
+- 2024-01-04 | update change link to production
+- 2023-12-27 | added transfering-to-payment
+- 2023-12-26 | update mobile view
+- 2023-12-22 | Update AdminDashboard.js
+- 2023-12-22 | remove logs
+- 2023-12-22 | update
+- 2023-12-20 | update
+- 2023-12-19 | remove subheader
+- 2023-12-19 | Update .env
+- 2023-12-19 | Create .env
+- 2023-12-19 | Update App.js
+- 2023-12-19 | Update App.js
+- 2023-12-19 | Update App.js
+- 2023-12-19 | Update App.js
+- 2023-12-19 | Update App.js
+- 2023-12-19 | Update App.js
+- 2023-12-19 | Update App.js
+- 2023-12-19 | Update App.js
+- 2023-12-19 | Update App.js
+- 2023-12-19 | Update App.js
+- 2023-12-19 | Update App.js
+- 2023-12-19 | Update App.js
+- 2023-12-19 | Update App.js
+- 2023-12-19 | update
+- 2023-12-15 | Update App.js
+- 2023-12-15 | Update App.js
+- 2023-12-15 | Update App.js
+- 2023-12-15 | Update App.js
+- 2023-12-11 | Update Preview.js
+- 2023-12-07 | Update App.js
+- 2023-11-28 | added createdAt and updatedAt
+- 2023-11-02 | updare preview, show mobile or desktop if one url is missing
+- 2023-11-01 | Update DeleteModal.js
+- 2023-10-31 | Update DynamicPage.js
+- 2023-10-31 | Update DynamicPage.js
+- 2023-10-31 | update wordings
+- 2023-10-31 | Update UrlForm.js
+- 2023-10-28 | Update UrlForm.css
+- 2023-10-26 | allow only 1 entry of user email.
+- 2023-10-26 | update form
+- 2023-10-25 | Update index.html
+- 2023-10-24 | Update Preview.js
+- 2023-10-24 | Update Preview.js
+- 2023-10-23 | Update CardView.css
+- 2023-10-23 | Update Preview.js
+- 2023-10-20 | Update Preview.js
+- 2023-10-20 | update scaling type
+- 2023-10-18 | Update Preview.js
+- 2023-10-17 | Update Preview.js
+- 2023-10-16 | fix sign up page
+- 2023-10-13 | Update ButtonColored.css
+- 2023-10-13 | added scroll to guide 1
+- 2023-10-13 | update landing page button
+- 2023-10-12 | Update ButtonColored.css
+- 2023-10-12 | Update EditForm.js
+- 2023-10-12 | update color in dashboard, navbar and url
+- 2023-10-12 | Update LandingPage.css
+- 2023-10-12 | added roboto
+- 2023-10-12 | update color, fix button, fix landing page
+- 2023-10-12 | Update LandingPage.css
+- 2023-10-12 | fix landing page in desktop view
+- 2023-10-12 | update mobile view
+- 2023-10-10 | update landing page/ fix thumbnail
+- 2023-10-06 | fix top margin for dynamic page url
+- 2023-10-06 | Update
+- 2023-10-04 | make header in preview page stick to top
+- 2023-10-04 | updated preview page
+- 2023-10-03 | update navigation bar for landing page mobile and desktop
+- 2023-10-03 | Update LandingPage.css
+- 2023-10-03 | Update edit and new url form
+- 2023-10-02 | fix dasboard view
+- 2023-10-02 | fix ui in navbar
+- 2023-10-02 | Update LandingPage.css
+- 2023-10-02 | update UI
+- 2023-09-29 | added favicon
+- 2023-09-29 | Sept 29, 2023
+- 2023-09-29 | Update DynamicPage.js
+- 2023-09-29 | Update DynamicPage.js
+- 2023-09-29 | Update DynamicPage.js
+- 2023-09-28 | Update thumbnail for in dashboard/ fix preview pages/ fix dynamic url iframe
+- 2023-09-28 | update mobile view for landing page
+- 2023-09-28 | remove urlMetadata
+- 2023-09-28 | added url-metadata
+- 2023-09-28 | fix navbar UI
+- 2023-09-27 | Fix UI in Ulr Form
+- 2023-09-27 | added profile page/ fix ui , added mobiel view for auth pages
+- 2023-09-23 | Update UI
+- 2023-09-21 | added profile view, change password
+- 2023-09-21 | update saving of modified url
+- 2023-09-20 | Update SignupPage.js
+- 2023-09-20 | Added landing page and main auth
+- 2023-09-20 | Update: landing page/ bugfix in duplicate generated siteurl/ update dashboard
+- 2023-09-15 | code refactor preview.js
+- 2023-09-15 | updated preview and navbar
+- 2023-09-13 | WIP-change password
+- 2023-09-13 | fix ui
+- 2023-09-13 | update UI
+- 2023-09-12 | fix preview switch bg color
+- 2023-09-12 | fix navbar in preview js
+- 2023-09-12 | added draft
+- 2023-09-08 | fixing previewSwitch
+- 2023-09-08 | added fix for issue in preview
+- 2023-09-07 | Update Footer and navigation bar, added validation in authentication
+- 2023-09-05 | change url
+- 2023-09-05 | Create ForgotpasswordPage.css
+- 2023-09-05 | test
+- 2023-09-05 | update
+- 2023-09-05 | test
+- 2023-09-05 | update name
+- 2023-09-05 | update
+- 2023-09-05 | Create ForgotpasswordPage.js
+- 2023-09-05 | testing
+- 2023-09-05 | Update App.js
+- 2023-09-05 | Create MainAuth.js
+- 2023-09-05 | test
+- 2023-09-05 | Update App.js
+- 2023-09-05 | Rename and arrange components
+- 2023-09-05 | rename files
+- 2023-09-05 | fix UI
+- 2023-09-05 | UpdateUI
+- 2023-09-04 | Added preview for edit figmaurl
+- 2023-09-03 | Update SignUpPage.js
+- 2023-09-03 | Update SignUpPage.js
+- 2023-09-03 | added alerts
+- 2023-09-03 | Update LandingPage.js
+- 2023-09-03 | added alert and opening of generated url
+- 2023-09-03 | update UI and flow
+- 2023-08-31 | added checking if the user is loggedin
+- 2023-08-30 | Update Forms and dynamic url
+- 2023-08-28 | Update Ui for landing page, signin and login
+- 2023-08-25 | Create _redirects
+- 2023-08-25 | initial commit
