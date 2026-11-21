@@ -15,7 +15,6 @@ import PasswordMini from "./PasswordMini.astro";
 import DomainMini from "./DomainMini.astro";
 import FaviconMini from "./FaviconMini.astro";
 import SiteLinkMini from "./SiteLinkMini.astro";
-import LinkCheckMini from "./LinkCheckMini.astro";
 import PluginMini from "./PluginMini.astro";
 import { Image } from "astro:assets";
 import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
@@ -35,7 +34,7 @@ interface Props {
   image?: ImageMetadata;
   imageAlt?: string;
   /** "analytics" draws the Analytics screen mini instead of a picture. */
-  mini?: "analytics" | "password" | "domain" | "favicon" | "site-link-domain" | "link-check" | "plugin";
+  mini?: "analytics" | "password" | "domain" | "favicon" | "site-link-domain" | "plugin";
 }
 const { title, description, lede, plan, steps, cards, limits, faq, related, checked, image, imageAlt, mini } = Astro.props;
 ---
@@ -50,7 +49,6 @@ const { title, description, lede, plan, steps, cards, limits, faq, related, chec
     {mini === "domain" && <DomainMini slot="visual" />}
     {mini === "favicon" && <FaviconMini slot="visual" />}
     {mini === "plugin" && <PluginMini slot="visual" />}
-    {mini === "link-check" && <LinkCheckMini slot="visual" state="notViewable" />}
     {mini === "site-link-domain" && <SiteLinkMini slot="visual" address="yourname.com" />}
   </Hero>
 

@@ -29,6 +29,11 @@
       "source": "/blog/figmafolio-vs-figma-sites",
       "destination": "/figma-sites-alternative",
       "permanent": true
+    },
+    {
+      "source": "/features/link-check",
+      "destination": "/share-figma-prototype-anyone-can-open",
+      "permanent": true
     }
   ],
   "headers": [

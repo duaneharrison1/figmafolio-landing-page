@@ -2,6 +2,7 @@
 // SEO page 8. Figma facts: help.figma.com (UserTesting article and public link sharing article), read 21 Nov 2026. Figmafolio facts: docs/figmafolio/PRODUCT.md.
 import Layout from "@/layouts/Layout.astro";
 import ShareGuide from "@/components/kit/ShareGuide.astro";
+import LinkCheckMini from "@/components/kit/LinkCheckMini.astro";
 import Hero from "@/components/kit/Hero.astro";
 import Section from "@/components/kit/Section.astro";
 import Button from "@/components/kit/Button.astro";
@@ -75,6 +76,7 @@ const faq = [
   <Section>
     <h2 class="text-2xl font-semibold text-ff-ink mb-4">Check the link before you send it</h2>
     <p class="text-ff-muted">Figmafolio checks a prototype link as you paste it. If a stranger could not open it, you get a note and a share guide, before you send anything to a recruiter.</p>
+    <div class="mt-6 flex justify-center"><LinkCheckMini state="notViewable" /></div>
   </Section>
 
   <Section tone="surface">

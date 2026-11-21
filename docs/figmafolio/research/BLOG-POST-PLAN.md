@@ -3,7 +3,7 @@ version: 2026-11-21.2
 ---
 # Blog post plan: one post per feature worth a post, small changes grouped
 
-Decided 21 Nov 2026: no post for removing the label (a perk of paid plans, covered in the plans post and mentioned in the favicon and custom domain posts) and no post for six languages (the translation files exist, but the language switcher is commented out in the app, so nobody can pick one). 13 posts.
+Decided 21 Nov 2026 (and link check is not a feature page, it lives on the share page): no post for removing the label (a perk of paid plans, covered in the plans post and mentioned in the favicon and custom domain posts) and no post for six languages (the translation files exist, but the language switcher is commented out in the app, so nobody can pick one). 13 posts.
 
 Source: 1,744 figmaApp commits (Aug 2023 to 17 Nov 2026) and 336 merged PRs. Dates are the first commit or merge that shows the feature; each post is checked against the code before it is written. No Aero features.
 
