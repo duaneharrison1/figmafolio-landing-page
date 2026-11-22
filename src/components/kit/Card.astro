@@ -1,0 +1,25 @@
+---
+// Card for reasons, features and audiences. Optional `image` is an imported illustration from src/assets.
+import { Image } from "astro:assets";
+interface Props {
+  title?: string;
+  class?: string;
+  image?: ImageMetadata;
+  imageAlt?: string;
+  /** A small line icon on a soft square, for a card with no illustration. */
+  icon?: "refresh" | "plug" | "bars";
+}
+const { title, class: className, image, imageAlt = "", icon } = Astro.props;
+const icons = {
+  refresh: '<path d="M21 12a9 9 0 0 1-15.5 6.2M3 12A9 9 0 0 1 18.5 5.8"/><path d="M18.5 2v4h-4M5.5 22v-4h4"/>',
+  plug: '<path d="M9 2v5M15 2v5M6 7h12v4a6 6 0 0 1-12 0V7zM12 17v5"/>',
+  bars: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
+};
+---
+
+<div class:list={["h-full rounded-ff-xl border border-ff-border bg-ff-surface p-6 md:p-8 transition hover:shadow-ff-card", className]}>
+  {icon && <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-ff-lg bg-ff-brand-soft text-ff-brand-hover"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={icons[icon]} /></div>}
+  {image && <Image src={image} alt={imageAlt} width={220} class="mb-6 h-28 w-auto" />}
+  {title && <h3 class="text-xl font-bold text-ff-ink mb-2">{title}</h3>}
+  <div class="text-ff-muted leading-relaxed"><slot /></div>
+</div>

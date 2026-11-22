@@ -1,11 +1,12 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-import Container from "../../components/container.astro";
+import Hero from "@/components/kit/Hero.astro";
+import Section from "@/components/kit/Section.astro";
 
 // Generate a new path for every collection entry
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("blog");
+  const blogEntries = await getCollection("blog", ({ data }) => !data.draft);
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -15,51 +16,30 @@ export async function getStaticPaths() {
 // Get the entry directly from the prop on render
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+const formatDate = (d: Date) => d.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+const articleLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: entry.data.title,
+  description: entry.data.snippet,
+  datePublished: entry.data.publishDate.toISOString(),
+  author: { "@type": "Organization", name: "Figmafolio" },
+  publisher: { "@type": "Organization", name: "Figmafolio" },
+  mainEntityOfPage: new URL(Astro.url.pathname, Astro.site).toString(),
+};
 ---
 
-<Layout title={entry.data.title}>
-  <Container>
-    <!-- <div class="mx-auto max-w-3xl mt-14">
-      <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-        {entry.data.category}
-      </span>
-      <h1
-        class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
-        {entry.data.title}
-      </h1>
-      {
-        entry.data.snippet && (
-          <p class="text-xl text-slate-600 mt-2 mb-2">{entry.data.snippet}</p>
-        )
-      }
-      <div
-        class="flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap text-base">
-        <span class="text-gray-400">{entry.data.author}</span>
-        <span class="text-gray-400">•</span>
-        <time
-          class="text-gray-400"
-          datetime={entry.data.publishDate.toISOString()}>
-          {entry.data.publishDate.toDateString()}
-        </time>
-        <span class="text-gray-400 hidden md:block">•</span>
-        <div class="w-full md:w-auto flex flex-wrap gap-3">
-          {
-            entry.data.tags.map((tag) => (
-              <span class="text-sm text-gray-500">#{tag}</span>
-            ))
-          }
-        </div>
-      </div>
-    </div> -->
-    <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
+<Layout title={entry.data.title} description={entry.data.snippet}>
+  <Hero eyebrow={entry.data.category} title={entry.data.title} lede={entry.data.snippet ?? ""}>
+    <p class="text-sm text-ff-muted">
+      {entry.data.author} · <time datetime={entry.data.publishDate.toISOString()}>{formatDate(entry.data.publishDate)}</time>
+    </p>
+  </Hero>
+  <Section>
+    <div class="prose prose-lg max-w-none">
       <Content />
     </div>
-    <div class="text-center mt-8">
-      <a
-        href="/blog"
-        class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition">
-        ← Back to Blog
-      </a>
-    </div>
-  </Container>
+    <p class="mt-10"><a class="text-ff-brand-hover underline" href="/blog">Back to the blog</a></p>
+  </Section>
+  <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
 </Layout>

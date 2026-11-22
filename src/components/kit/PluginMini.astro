@@ -1,0 +1,37 @@
+---
+// Simplified picture of the Figmafolio plugin panel in Figma. Words copied from the live plugin (run 21 Nov 2026).
+// state: "ready" (viewports and Create Preview Link) or "noFlows" (the warning shown when a file has no flow starting point).
+interface Props { state?: "ready" | "noFlows"; }
+const { state = "ready" } = Astro.props;
+const rows = [
+  { name: "Mobile", range: "0px+", value: "Select starting point..." },
+  { name: "Desktop", range: "768px+", value: "None" },
+];
+---
+<figure class="w-full max-w-sm" aria-label="Example of the Figmafolio plugin panel">
+  <div class="rounded-ff-xl border border-ff-border bg-ff-bg p-5 shadow-ff-card">
+    <p class="flex items-center gap-2 text-base font-semibold text-ff-ink">
+      <span class="flex h-6 w-6 items-center justify-center rounded-ff-md bg-ff-brand text-xs text-ff-on-brand">F</span>
+      Figmafolio
+    </p>
+    <p class="mt-2 text-sm text-ff-muted">Create a shareable preview link from your Figma prototypes in seconds.</p>
+    {state === "noFlows" && (
+      <div class="mt-3 rounded-ff-md border border-ff-danger bg-ff-surface p-3">
+        <p class="text-sm font-semibold text-ff-ink">No prototype flows found</p>
+        <p class="mt-1 text-xs text-ff-muted">To create a preview, add a flow starting point: Select a frame → Prototype panel → "Add flow starting point"</p>
+      </div>
+    )}
+    <p class="mt-4 text-xs font-semibold uppercase tracking-wide text-ff-muted">Viewports</p>
+    <div class="mt-2 rounded-ff-md border border-ff-border">
+      {rows.map((r, i) => (
+        <div class:list={["p-3", i > 0 && "border-t border-ff-border"]}>
+          <p class="text-sm font-medium text-ff-ink">{r.name} <span class="ml-1 text-xs font-normal text-ff-muted">{r.range}</span></p>
+          <div class="mt-1.5 rounded-ff-md border border-ff-border px-3 py-1.5 text-sm text-ff-muted">{r.value}</div>
+        </div>
+      ))}
+      <p class="border-t border-ff-border bg-ff-surface px-3 py-2 text-center text-xs font-medium text-ff-brand-hover">+ Add Breakpoint</p>
+    </div>
+    <span class="mt-4 block rounded-ff-md bg-ff-brand px-4 py-2 text-center text-sm font-medium text-ff-on-brand">Create Preview Link</span>
+  </div>
+  <figcaption class="mt-2 text-center text-xs text-ff-muted">Simplified picture of the plugin panel.</figcaption>
+</figure>

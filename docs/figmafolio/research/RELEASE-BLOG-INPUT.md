@@ -1,0 +1,453 @@
+---
+version: 2026-11-21.1
+---
+# Raw input for the Figmafolio release blog
+
+Merged figmaApp PRs, newest 96, read with the GitHub REST API on 21 Nov 2026 (`gh api repos/duaneharrison1/figmaApp/pulls?state=closed`). Many are Aero-only. Candidates a Figmafolio customer would notice, to be checked against the code before any post says them:
+
+- #342 and #345 (13 Nov): custom domains get www redirected to the main address, backfilled for existing domains.
+- #307, #344, #308 (4 and 13 Nov): link check when a prototype is pasted, warning on site tiles when a prototype is not shared, share guide.
+- #310 (4 Nov): breakpoints row, Add breakpoint, Same as Desktop, Reset.
+- #311, #312, #313 (4 Nov): site thumbnails from the live page, preview snapshot first then Try it live.
+- #306 (3 Nov): free plan offline states and the project clock.
+- #327 (6 Nov): stop the local network prompt on published sites.
+- #331 (6 Nov): Sites tabs, publish dialog, Analytics, new site page.
+- #353 (14 Nov): site settings prototype link input no longer collapses.
+
+Only 96 PRs are visible; older history needs paging. Do not name Aero features.
+
+## All titles
+- 356 | 2026-11-14 | Klaviyo lifecycle hooks and email deep links
+- 354 | 2026-11-13 | perf(handoff): start Aero sign-in while the app downloads; warm functions on the Login tab
+- 353 | 2026-11-14 | Site settings: stop the prototype link input collapsing to ~40px
+- 352 | 2026-11-14 | FigmaFolio step 5 round 1: Clark's direction (design source)
+- 351 | 2026-11-13 | FigmaFolio: email review and plan, homepage copy, A/B since 26 Oct
+- 350 | 2026-11-13 | FigmaFolio research, strategy and baseline (steps 2 to 4)
+- 349 | 2026-11-13 | Klaviyo: only FigmaFolio sign-ups join the FigmaFolio email list
+- 348 | 2026-11-13 | FigmaFolio docs: Clark's design review, Klaviyo findings, repair status
+- 347 | 2026-11-13 | FigmaFolio: add first-time publishers to the Klaviyo creators list again
+- 345 | 2026-11-13 | Custom domains: backfill www for existing domains (#303)
+- 344 | 2026-11-13 | FigmaFolio: warn on tiles when a prototype is not shared; fix instruction notes (#304)
+- 343 | 2026-11-13 | FigmaFolio playbook: folder, decisions, repair list, product inventory
+- 342 | 2026-11-13 | Custom domains: attach www as a redirect to the apex (#303)
+- 340 | 2026-11-06 | Test page tabs keep the page gutter; delete dialogs use the new modal
+- 338 | 2026-11-06 | Tester recording in pieces, behind a flag (off by default)
+- 337 | 2026-11-06 | Follow-ups: Convert keeps the Figma link, insights quote links, overlay free drag
+- 336 | 2026-11-06 | Docs: decisions and TODO from 6 Nov
+- 335 | 2026-11-06 | Convert with AI: better Figma prompt, link check, trial script
+- 333 | 2026-11-06 | Session review: one track, lanes, waveform peaks, label editing
+- 332 | 2026-11-06 | Tests and Insights: decided design
+- 331 | 2026-11-06 | Sites: tabs, publish dialog, Analytics, new site page
+- 330 | 2026-11-06 | Tester: agreed design (copy, free-drag panel, stop card, quick ending)
+- 329 | 2026-11-06 | Plan: tester screen recording in pieces (docs only)
+- 328 | 2026-11-06 | TODO: design rounds and fixes from 6 Nov
+- 327 | 2026-11-06 | Stop the local network prompt on published sites
+- 326 | 2026-11-05 | Admin: adoption chart, what people complete, what people made
+- 320 | 2026-11-05 | Redeem screen: dot only, no logo
+- 319 | 2026-11-05 | Aero handoff screens, recording pill, paid brand in admin, Pro price fix
+- 316 | 2026-11-04 | perf(handoff): keepHandoffWarm scheduled ping every 5 minutes
+- 315 | 2026-11-04 | perf(handoff): set minInstances to 0 on mint/redeem
+- 314 | 2026-11-04 | perf(handoff): warm mint/redeem functions so min instances can go to 0
+- 313 | 2026-11-04 | Site page preview: snapshot first, Try it live, Refresh preview
+- 312 | 2026-11-04 | Sites list thumbnails: show a cached image that loaded before onLoad
+- 311 | 2026-11-04 | Figma site thumbnails from the live page; always-on width chip; no Reset
+- 310 | 2026-11-04 | Breakpoints: one row to start, Add breakpoint menu, Same as Desktop and Reset
+- 308 | 2026-11-04 | Aero site preview fix, and share guide without the copy-link step
+- 307 | 2026-11-04 | Figma link check for Figmafolio and Aero: convert design links, check sharing, share guide (#304)
+- 306 | 2026-11-03 | Free plan: offline states, one rule everywhere, the project clock
+- 302 | 2026-10-29 | Tester panel: one panel above the site in one-tab tests
+- 301 | 2026-10-29 | Admin: read-only session review of another user's test (new review UI)
+- 300 | 2026-10-29 | Admin dashboard: fix single-test row click, test source and Aero session links
+- 298 | 2026-10-27 | Site page as one page
+- 297 | 2026-10-27 | Sites: Unfinished row for drafts, bigger site cards, no empty drafts
+- 296 | 2026-10-27 | Hotfix: New site and New test flows can't finish
+- 295 | 2026-10-27 | New site page to the v3 design, Sessions row checkboxes
+- 294 | 2026-10-27 | Log 26 Oct decisions
+- 293 | 2026-10-27 | Aero tester: demo-style overlay, one-tab copy fix, flat switches
+- 292 | 2026-10-27 | Fix transcripts stuck on longer or silent sessions
+- 291 | 2026-10-27 | Aero: paste Figma link first, link check, embed URL repair
+- 290 | 2026-10-27 | Aero site tests: one tab, one permission step
+- 289 | 2026-10-26 | Onboarding popup: v3 look with the website's loop, steps and features
+- 288 | 2026-10-27 | Aero test page: Sessions, Insights, Setup tabs; Share folds into Setup
+- 287 | 2026-10-27 | Aero v3 phase 7b: not found, no access, offline, error and empty states
+- 286 | 2026-10-26 | Test this site makes a real copy, with Upload to this test
+- 285 | 2026-10-26 | Aero v3 phase 7a: Settings, plans modal, feature gate, modals, toasts, rename in place
+- 284 | 2026-10-26 | Aero v3: what visitors of published sites see (phase 7c)
+- 283 | 2026-10-26 | Decision log: 26 Oct (docs only)
+- 282 | 2026-10-26 | Aero: match the product demo (crumbs, new sessions, Test this site)
+- 281 | 2026-10-26 | Site tests: no tasks before the tab is shared, thank-you in the site's tab
+- 280 | 2026-10-26 | Session review: Watch, Read and dark review (v3 phase 5b, 5d UI, 5f)
+- 279 | 2026-10-26 | Aero v3 phase 6: tester flow (names, Preview as tester, movable panel)
+- 278 | 2026-10-26 | Aero phase 5c: timed findings (quote times on the server)
+- 277 | 2026-10-26 | Aero v3 phase 5a: make Insights true
+- 276 | 2026-10-26 | Preview snapshots: on by default and filled in automatically
+- 275 | 2026-10-26 | Aero v3 phase 4: Tests, and New test is a page
+- 274 | 2026-10-26 | Preview snapshots: Figma previews from Figma's public link preview, no token
+- 273 | 2026-10-26 | Aero v3 phase 3b: New site is a page
+- 272 | 2026-10-26 | Preview snapshots for sites and tests (off by default)
+- 271 | 2026-10-26 | Aero v3 phase 3: Sites
+- 270 | 2026-10-26 | Aero v3 phase 2: app shell, Home and the token switch
+- 269 | 2026-10-26 | Lighten the Aero favicon A and add @2x bitmaps
+- 268 | 2026-10-26 | Redraw the Aero favicon as a transparent A.
+- 267 | 2026-10-26 | Aero v3 phase 1: tokens, final glass button and sign-in pages
+- 266 | 2026-10-26 | Route /use-cases and /guides to the marketing site
+- 265 | 2026-10-26 | Run Firebase functions on Node 22
+- 264 | 2026-10-26 | Aero brand folder, decisions log and design system rules (docs only)
+- 263 | 2026-10-26 | Aero: fix pricing, demo, sign-in and share copy
+- 262 | 2026-10-26 | Aero: make privacy and terms pages public
+- 261 | 2026-10-22 | Stop duplicate transcription and AI runs per session
+- 260 | 2026-10-21 | Switch AI analysis back to OpenRouter (GLM Flash, Qwen fallback)
+- 259 | 2026-10-21 | Fix Figma user tests: blank prototype, remounts, duplicate sessions
+- 258 | 2026-09-21 | Fix custom domain switch/remove: surface Vercel errors, add self-serve remove
+- 257 | 2026-08-08 | Polish Aero Sites UI: shared kebab menu, domain/empty-state spacing, sidebar cleanup
+- 256 | 2026-08-05 | Fix: Figma-embed Aero sites must use a random slug
+- 255 | 2026-07-03 | Admin sign-in method indicator, signUpMethod stamp + backfill, denied-read banner
+- 254 | 2026-07-03 | Auth UX: sign-in methods linking, Aero password reset, branded action handler
+- 253 | 2026-07-03 | Add Google sign-in to all auth surfaces, both brands
+- 252 | 2026-07-02 | Tier resolution fix, security hardening, A/B test integrity
+- 251 | 2026-06-26 | Aero: banner polish, Site label upsell, custom domain feature
+- 250 | 2026-06-26 | Aero: stronger upsell banners, inline upgrade modal, ungate site name, wider pricing modal
+- 249 | 2026-06-26 | pricing copy: remove UT from Figmafolio, add HTML hosting, rebuild Aero modal
+- 248 | 2026-06-25 | perf(functions): warm mintHandoffCode to eliminate click-side handoff lag
+- 247 | 2026-06-25 | Aero-style Figmafolio create picker + From Figma sub-tree + mobile parity
+- 246 | 2026-06-24 | Extend Aero gate to mobile, add creation-source tracking, enable gate
+- 245 | 2026-06-24 | Add Aero AI-create gate to Figmafolio create entry (behind AERO_GATE_ENABLED)
+- 244 | 2026-06-24 | Make inline 413 PAYLOAD_TOO_LARGE self-describe the signed-URL flow
+
+## Full list: all 336 merged PRs, Jul 2025 to 14 Nov 2026 (REST, 21 Nov)
+- 356 | 2026-11-14 | Klaviyo lifecycle hooks and email deep links
+- 354 | 2026-11-13 | perf(handoff): start Aero sign-in while the app downloads; warm functions on the Login tab
+- 353 | 2026-11-14 | Site settings: stop the prototype link input collapsing to ~40px
+- 352 | 2026-11-14 | FigmaFolio step 5 round 1: Clark's direction (design source)
+- 351 | 2026-11-13 | FigmaFolio: email review and plan, homepage copy, A/B since 26 Oct
+- 350 | 2026-11-13 | FigmaFolio research, strategy and baseline (steps 2 to 4)
+- 349 | 2026-11-13 | Klaviyo: only FigmaFolio sign-ups join the FigmaFolio email list
+- 348 | 2026-11-13 | FigmaFolio docs: Clark's design review, Klaviyo findings, repair status
+- 347 | 2026-11-13 | FigmaFolio: add first-time publishers to the Klaviyo creators list again
+- 345 | 2026-11-13 | Custom domains: backfill www for existing domains (#303)
+- 344 | 2026-11-13 | FigmaFolio: warn on tiles when a prototype is not shared; fix instruction notes (#304)
+- 343 | 2026-11-13 | FigmaFolio playbook: folder, decisions, repair list, product inventory
+- 342 | 2026-11-13 | Custom domains: attach www as a redirect to the apex (#303)
+- 340 | 2026-11-06 | Test page tabs keep the page gutter; delete dialogs use the new modal
+- 338 | 2026-11-06 | Tester recording in pieces, behind a flag (off by default)
+- 337 | 2026-11-06 | Follow-ups: Convert keeps the Figma link, insights quote links, overlay free drag
+- 336 | 2026-11-06 | Docs: decisions and TODO from 6 Nov
+- 335 | 2026-11-06 | Convert with AI: better Figma prompt, link check, trial script
+- 333 | 2026-11-06 | Session review: one track, lanes, waveform peaks, label editing
+- 332 | 2026-11-06 | Tests and Insights: decided design
+- 331 | 2026-11-06 | Sites: tabs, publish dialog, Analytics, new site page
+- 330 | 2026-11-06 | Tester: agreed design (copy, free-drag panel, stop card, quick ending)
+- 329 | 2026-11-06 | Plan: tester screen recording in pieces (docs only)
+- 328 | 2026-11-06 | TODO: design rounds and fixes from 6 Nov
+- 327 | 2026-11-06 | Stop the local network prompt on published sites
+- 326 | 2026-11-05 | Admin: adoption chart, what people complete, what people made
+- 320 | 2026-11-05 | Redeem screen: dot only, no logo
+- 319 | 2026-11-05 | Aero handoff screens, recording pill, paid brand in admin, Pro price fix
+- 316 | 2026-11-04 | perf(handoff): keepHandoffWarm scheduled ping every 5 minutes
+- 315 | 2026-11-04 | perf(handoff): set minInstances to 0 on mint/redeem
+- 314 | 2026-11-04 | perf(handoff): warm mint/redeem functions so min instances can go to 0
+- 313 | 2026-11-04 | Site page preview: snapshot first, Try it live, Refresh preview
+- 312 | 2026-11-04 | Sites list thumbnails: show a cached image that loaded before onLoad
+- 311 | 2026-11-04 | Figma site thumbnails from the live page; always-on width chip; no Reset
+- 310 | 2026-11-04 | Breakpoints: one row to start, Add breakpoint menu, Same as Desktop and Reset
+- 308 | 2026-11-04 | Aero site preview fix, and share guide without the copy-link step
+- 307 | 2026-11-04 | Figma link check for Figmafolio and Aero: convert design links, check sharing, share guide (#304)
+- 306 | 2026-11-03 | Free plan: offline states, one rule everywhere, the project clock
+- 302 | 2026-10-29 | Tester panel: one panel above the site in one-tab tests
+- 301 | 2026-10-29 | Admin: read-only session review of another user's test (new review UI)
+- 300 | 2026-10-29 | Admin dashboard: fix single-test row click, test source and Aero session links
+- 298 | 2026-10-27 | Site page as one page
+- 297 | 2026-10-27 | Sites: Unfinished row for drafts, bigger site cards, no empty drafts
+- 296 | 2026-10-27 | Hotfix: New site and New test flows can't finish
+- 295 | 2026-10-27 | New site page to the v3 design, Sessions row checkboxes
+- 294 | 2026-10-27 | Log 26 Oct decisions
+- 293 | 2026-10-27 | Aero tester: demo-style overlay, one-tab copy fix, flat switches
+- 292 | 2026-10-27 | Fix transcripts stuck on longer or silent sessions
+- 291 | 2026-10-27 | Aero: paste Figma link first, link check, embed URL repair
+- 290 | 2026-10-27 | Aero site tests: one tab, one permission step
+- 289 | 2026-10-26 | Onboarding popup: v3 look with the website's loop, steps and features
+- 288 | 2026-10-27 | Aero test page: Sessions, Insights, Setup tabs; Share folds into Setup
+- 287 | 2026-10-27 | Aero v3 phase 7b: not found, no access, offline, error and empty states
+- 286 | 2026-10-26 | Test this site makes a real copy, with Upload to this test
+- 285 | 2026-10-26 | Aero v3 phase 7a: Settings, plans modal, feature gate, modals, toasts, rename in place
+- 284 | 2026-10-26 | Aero v3: what visitors of published sites see (phase 7c)
+- 283 | 2026-10-26 | Decision log: 26 Oct (docs only)
+- 282 | 2026-10-26 | Aero: match the product demo (crumbs, new sessions, Test this site)
+- 281 | 2026-10-26 | Site tests: no tasks before the tab is shared, thank-you in the site's tab
+- 280 | 2026-10-26 | Session review: Watch, Read and dark review (v3 phase 5b, 5d UI, 5f)
+- 279 | 2026-10-26 | Aero v3 phase 6: tester flow (names, Preview as tester, movable panel)
+- 278 | 2026-10-26 | Aero phase 5c: timed findings (quote times on the server)
+- 277 | 2026-10-26 | Aero v3 phase 5a: make Insights true
+- 276 | 2026-10-26 | Preview snapshots: on by default and filled in automatically
+- 275 | 2026-10-26 | Aero v3 phase 4: Tests, and New test is a page
+- 274 | 2026-10-26 | Preview snapshots: Figma previews from Figma's public link preview, no token
+- 273 | 2026-10-26 | Aero v3 phase 3b: New site is a page
+- 272 | 2026-10-26 | Preview snapshots for sites and tests (off by default)
+- 271 | 2026-10-26 | Aero v3 phase 3: Sites
+- 270 | 2026-10-26 | Aero v3 phase 2: app shell, Home and the token switch
+- 269 | 2026-10-26 | Lighten the Aero favicon A and add @2x bitmaps
+- 268 | 2026-10-26 | Redraw the Aero favicon as a transparent A.
+- 267 | 2026-10-26 | Aero v3 phase 1: tokens, final glass button and sign-in pages
+- 266 | 2026-10-26 | Route /use-cases and /guides to the marketing site
+- 265 | 2026-10-26 | Run Firebase functions on Node 22
+- 264 | 2026-10-26 | Aero brand folder, decisions log and design system rules (docs only)
+- 263 | 2026-10-26 | Aero: fix pricing, demo, sign-in and share copy
+- 262 | 2026-10-26 | Aero: make privacy and terms pages public
+- 261 | 2026-10-22 | Stop duplicate transcription and AI runs per session
+- 260 | 2026-10-21 | Switch AI analysis back to OpenRouter (GLM Flash, Qwen fallback)
+- 259 | 2026-10-21 | Fix Figma user tests: blank prototype, remounts, duplicate sessions
+- 258 | 2026-09-21 | Fix custom domain switch/remove: surface Vercel errors, add self-serve remove
+- 257 | 2026-08-08 | Polish Aero Sites UI: shared kebab menu, domain/empty-state spacing, sidebar cleanup
+- 256 | 2026-08-05 | Fix: Figma-embed Aero sites must use a random slug
+- 255 | 2026-07-03 | Admin sign-in method indicator, signUpMethod stamp + backfill, denied-read banner
+- 254 | 2026-07-03 | Auth UX: sign-in methods linking, Aero password reset, branded action handler
+- 253 | 2026-07-03 | Add Google sign-in to all auth surfaces, both brands
+- 252 | 2026-07-02 | Tier resolution fix, security hardening, A/B test integrity
+- 251 | 2026-06-26 | Aero: banner polish, Site label upsell, custom domain feature
+- 250 | 2026-06-26 | Aero: stronger upsell banners, inline upgrade modal, ungate site name, wider pricing modal
+- 249 | 2026-06-26 | pricing copy: remove UT from Figmafolio, add HTML hosting, rebuild Aero modal
+- 248 | 2026-06-25 | perf(functions): warm mintHandoffCode to eliminate click-side handoff lag
+- 247 | 2026-06-25 | Aero-style Figmafolio create picker + From Figma sub-tree + mobile parity
+- 246 | 2026-06-24 | Extend Aero gate to mobile, add creation-source tracking, enable gate
+- 245 | 2026-06-24 | Add Aero AI-create gate to Figmafolio create entry (behind AERO_GATE_ENABLED)
+- 244 | 2026-06-24 | Make inline 413 PAYLOAD_TOO_LARGE self-describe the signed-URL flow
+- 243 | 2026-06-23 | Add REST POST /api/create-user-test and put the UT agent prompt on curl
+- 242 | 2026-06-23 | fix(createflow): standardize Sites agent prompt on direct curl
+- 241 | 2026-06-23 | feat(createflow): connector-first prompts, Airbnb-style Figma convert flow
+- 240 | 2026-06-22 | diag(ab-debug): temporary [AB-DEBUG] console logging for cohort, modal, and handoff timing
+- 239 | 2026-06-21 | Aero onboarding: land Try Aero users already logged in via one-time-code handoff
+- 238 | 2026-06-21 | Admin A/B panel: modal total row, comparison cards, switch toggles
+- 237 | 2026-06-18 | Admin: agreed styling, show-excluded toggle, and clearer no-recording session links
+- 236 | 2026-06-18 | Rollup: count enabled tests / test-only drafts as tests, not leftover userTesting stubs on real sites
+- 235 | 2026-06-16 | Admin UX improvements: dates, titles, labels, brand inference, Sites tabs, email search
+- 234 | 2026-06-16 | User testing: tasks optional, auto-complete on target, admin origin indicator
+- 233 | 2026-06-15 | Make the admin brand split real (brand field, inference, filtering, plugin-test display fixes)
+- 232 | 2026-06-13 | Cut aeroapp.ai apex over to Astro marketing site
+- 231 | 2026-06-13 | Restyle Figma link modal to option cards; add upload source to New Test
+- 230 | 2026-06-12 | Add aeroapp.ai-only Plausible analytics snippet
+- 229 | 2026-06-12 | Fix deploy gate to diff the full push range, not just the head commit
+- 228 | 2026-06-10 | Tasks 1-3: site titles/rename, duplicate loading states, brand-matched toasts
+- 227 | 2026-06-09 | Generate friendly two-word slugs for new Aero sites
+- 226 | 2026-06-06 | Use getBaseUrl() for View site links instead of hardcoded figmafolio domain
+- 225 | 2026-05-12 | Fix password protection gate for Basic plan
+- 224 | 2026-05-12 | fix(UserDashboard): guard trial-expired write against active subscriptions
+- 223 | 2026-05-07 | Add legacy REACT_APP_PRO price ID to PRO_PLANS
+- 222 | 2026-05-07 | Map regional Solo price IDs to 'solo' subscription type
+- 221 | 2026-04-19 | Fix feedback page layout: scrollbar, whitespace, width, mask
+- 220 | 2026-04-19 | Update feedback iframe src URL
+- 219 | 2026-04-19 | Update feedback iframe src URL
+- 218 | 2026-04-19 | Fix Notion embed URL on feedback page
+- 217 | 2026-04-19 | Add Send Feedback page with Notion iframe
+- 216 | 2026-04-18 | Fix Aero styling leaking onto Figmafolio
+- 215 | 2026-04-18 | Remove User Testing from Figmafolio, redirect to Aero
+- 214 | 2026-04-17 | Fix checkout redirect URLs and update unlimited tier threshold
+- 213 | 2026-04-17 | Update GlassButton fill colors from aero to aero-lt
+- 212 | 2026-04-16 | Fix page title flash for non-Figmafolio domains
+- 211 | 2026-04-16 | Update user testing session limits and track signup product
+- 210 | 2026-04-08 | Switch API endpoint from OpenRouter to Requesty
+- 209 | 2026-04-05 | Refactor preview layout styling and remove card-like UI elements
+- 208 | 2026-04-04 | Refactor preview session views to use shared SessionVideoPlayer component
+- 207 | 2026-04-04 | Refactor preview pages to use PreviewLayout component
+- 206 | 2026-04-03 | Add Aero branding to UT pages and improve auth navigation
+- 205 | 2026-03-13 | Prefetch plans data to improve modal load performance
+- 204 | 2026-03-13 | Refactor payment flow to use Cloud Functions directly
+- 203 | 2026-03-13 | Prefetch pricing data to improve AeroPricingModal load time
+- 202 | 2026-03-12 | Fix pricing modal checkout state on browser back navigation
+- 201 | 2026-03-12 | Remove minInstances and add checkout function warm-up
+- 200 | 2026-03-12 | Improve checkout error handling and per-plan loading states
+- 199 | 2026-03-12 | Replace indirect Stripe checkout with direct Cloud Function
+- 198 | 2026-03-12 | Clean up debug logs and improve subscription state logic
+- 197 | 2026-03-12 | Add diagnostic logging to Account subscription state logic
+- 196 | 2026-03-12 | Remove temporary portal config creation function and set production ID
+- 195 | 2026-03-12 | Add temporary admin portal config creation utility
+- 194 | 2026-03-12 | Add subscription reactivation and portal URL pre-fetching
+- 193 | 2026-03-12 | Refactor date conversion logic to handle multiple timestamp formats
+- 192 | 2026-03-12 | Add AeroPricingModal component and email change functionality
+- 191 | 2026-03-12 | Fix AI Insights blank page and add Aero Account/Billing page
+- 190 | 2026-03-12 | Add subscription lifecycle management and portal return feedback
+- 189 | 2026-03-12 | Add project deletion and synthesis auto-trigger for user testing
+- 188 | 2026-03-09 | Fix abandoned sessions staying as in_progress permanently
+- 187 | 2026-03-08 | Include past_due subscriptions in active subscription checks
+- 186 | 2026-03-07 | Prevent double-click submission and improve session completion UX
+- 185 | 2026-03-07 | Improve session creation and persistence reliability
+- 184 | 2026-03-06 | Set dynamic browser tab titles for User Testing pages
+- 183 | 2026-03-06 | Refactor user testing session detail page with Aero design system
+- 182 | 2026-03-06 | Redesign UT session detail page with AI insights and real-time updates
+- 181 | 2026-03-06 | Force preview mode enabled for UT preview test component
+- 180 | 2026-03-06 | Improve error logging and fix preview mode session handling
+- 179 | 2026-03-06 | Increase session limits to 9999 for all user tiers
+- 178 | 2026-03-06 | Add Account page and refactor User Testing project claiming
+- 177 | 2026-03-06 | Migrate UTPreview and Auth UI from dark glass to light Aero theme
+- 176 | 2026-03-05 | Add plugin user testing dashboard section to admin panel
+- 175 | 2026-03-05 | Remove portfolio prototype option and simplify prototype type handling
+- 174 | 2026-03-04 | Fix typos and expand BASIC_PLANS configuration
+- 173 | 2026-03-01 | Memoize viewport migration to prevent unnecessary recalculations
+- 172 | 2026-02-28 | Consolidate to Hybrid Glass as default design system
+- 171 | 2026-02-25 | AeroShowcase v5: remove exploration grid, add Tinted/Flat styles, unify elements
+- 170 | 2026-02-25 | Implement unified glass button system with master style switching
+- 169 | 2026-02-25 | Add Real Glass button and progress bar styles with SVG displacement
+- 168 | 2026-02-25 | Refactor glass button styles and remove combined engine mode
+- 167 | 2026-02-25 | Add Glass Combined button style and glass switch component
+- 166 | 2026-02-25 | Rewrite AeroShowcase as comprehensive glass design system showcase
+- 165 | 2026-02-25 | Refactor AeroShowcase to inject styles and scripts dynamically
+- 164 | 2026-02-24 | Add inline authentication UI for Aero domain
+- 163 | 2026-02-24 | Add Aero Glass button mockups and style exploration
+- 162 | 2026-02-24 | Add Aero domain support with root path routing to User Testing
+- 161 | 2026-02-23 | Optimize Suspense boundaries to prevent full-page skeleton flashes
+- 160 | 2026-02-23 | Clean up build artifacts and refactor layout components
+- 159 | 2026-02-23 | Refactor user testing navigation and dashboard layouts
+- 158 | 2026-02-23 | Merge Responsive Dashboard into unified Aero multi-product UI
+- 157 | 2026-02-23 | Update page title in ResponsiveDashboard
+- 156 | 2026-02-23 | Add multi-brand support for Aero domain
+- 155 | 2026-02-19 | Enhance GlassSwitch with glass sheen effect and improved styling
+- 154 | 2026-02-19 | Support URL-type prototypes and sync dashboard tests to plugin
+- 153 | 2026-02-19 | Integrate glass engine into User Testing sidebar & tab navigation
+- 152 | 2026-02-19 | Refactor tab navigation to pill-style segmented control
+- 151 | 2026-02-19 | feat: align ResponsiveAuth with Aero dark glass design system
+- 150 | 2026-02-19 | Add GlassSwitch component for toggle controls
+- 149 | 2026-02-19 | Refactor User Testing UI to use GlassButton and GlassTag components
+- 148 | 2026-02-19 | Apply Aero Dark Glass theme to UT Preview and Auth pages
+- 147 | 2026-02-19 | Enhance caustic effect with fading gradients and button color emission
+- 146 | 2026-02-19 | Enhance AeroShowcase UI with status indicators and improved styling
+- 145 | 2026-02-19 | Add dark variant styling for segment control component
+- 144 | 2026-02-19 | Refactor modal demos to reduce duplication with ModalInterior component
+- 143 | 2026-02-18 | Enhance Aero input glass morphism styling with improved visibility
+- 142 | 2026-02-18 | Refactor caustic glass effect and add colored gradient backgrounds
+- 141 | 2026-02-18 | Refactor modal demos and improve progress bar styling
+- 140 | 2026-02-18 | Add transparency to progress bar colors in AeroShowcase
+- 139 | 2026-02-18 | Refactor AeroShowcase: Add GlassTag component and improve layout
+- 138 | 2026-02-18 | Refine Aero component styling and add render mode toggle
+- 137 | 2026-02-18 | Add Aero glass morphism component library and showcase
+- 136 | 2026-02-18 | refine: Apple-style thin glass panel for User Testing layout
+- 135 | 2026-02-18 | Refactor UserTesting layout with glassmorphism design
+- 134 | 2026-02-17 | feat: Aero-styled auth pages — Linear design, standalone signup, optional testId
+- 133 | 2026-02-17 | feat: tester experience uses Aero violet accent, keeps large tester-friendly UI
+- 132 | 2026-02-17 | Refine User Testing UI typography and spacing
+- 131 | 2026-02-17 | fix: sticky sidebar, inline breadcrumb title (14px), sticky header within content
+- 130 | 2026-02-17 | Refine design system with updated colors, spacing, and component styles
+- 129 | 2026-02-17 | Refine User Testing UI: sidebar, spacing, and component styling
+- 128 | 2026-02-17 | fix: repair broken Setup tab CSS, audit against Linear light-mode patterns (sidebar, buttons, toggles, radius, headers)
+- 127 | 2026-02-17 | Refactor User Testing setup UI to Linear.app design patterns
+- 126 | 2026-02-17 | Redesign Aero tab pages to match Linear UI/UX patterns
+- 125 | 2026-02-16 | Update testing project filtering logic to use enabled flag
+- 124 | 2026-02-16 | Fix Aero layout to full-width Linear-style and add Create Test modal
+- 123 | 2026-02-16 | Introduce Aero Design System and rebrand User Testing UI
+- 122 | 2026-02-11 | Remove Figmafolio branding from Responsive web pages — standalone as Responsive
+- 121 | 2026-02-11 | Set document.title for UT route pages to replace default Figmafolio b…
+- 120 | 2026-02-11 | Fix: Remove Figmafolio branding from ut-auth page (re-apply)
+- 119 | 2026-02-08 | Fix ResponsiveAuth branding, simplify redirect screen, fix login auth…
+- 118 | 2026-02-08 | Refactor ResponsiveAuth to use shared Auths.css and add auto-redirect
+- 117 | 2026-02-07 | Add /responsive dashboard page with plan and usage display
+- 116 | 2026-02-06 | Claude/fix auth session validation 5 d ns u
+- 115 | 2026-02-06 | Claude/add plugin auth page y m mb l
+- 114 | 2026-02-05 | style: match UT preview pages to main app styling
+- 113 | 2026-02-05 | fix: correct AssemblyAI parameter name and add preview video player page
+- 112 | 2026-02-05 | fix: resolve AssemblyAI 400 error and use real SessionDetail for preview
+- 111 | 2026-02-05 | fix: enable UT plugin preview transcription pipeline and add UX impro…
+- 110 | 2026-02-05 | fix: resolve UT plugin preview AI insights and claiming flow issues
+- 109 | 2026-02-05 | fix: resolve UT preview issues - video config, tasks, styling
+- 108 | 2026-02-05 | refactor: reuse existing components for UT preview + add claiming flow
+- 107 | 2026-02-05 | fix: resolve multiple issues with UTPreviewTest and UTPreviewResults …
+- 106 | 2026-02-04 | feat: add User Testing preview routes and components for Figma plugin
+- 105 | 2026-02-04 | fix: add Firestore security rules to allow anonymous test session cre…
+- 104 | 2026-02-03 | fix: restore FolioForm tab navigation, fix billing plan name display
+- 103 | 2026-02-03 | fix: billing page plan name from subscription type, remove price ID m…
+- 102 | 2026-02-03 | fix: billing trial text, analytics tab visibility, analytics solo-onl…
+- 101 | 2026-02-03 | fix: restore illustration and fix scroll on plugin auth page
+- 100 | 2026-02-03 | Rebuild assets and improve loading skeletons for User Testing
+- 99 | 2026-02-02 | fix: improve user testing demo and dashboard UX
+- 98 | 2026-02-02 | Claude/revert plugin auth layout u s3d a
+- 97 | 2026-02-02 | feat: add User Testing demo page and standalone dashboard
+- 96 | 2026-02-02 | Claude/redesign plugin auth page va b7q
+- 95 | 2026-02-02 | fix: use encodeURIComponent in editUrl to fix "Invalid URL" error
+- 94 | 2026-02-02 | fix: handle null URL in PreviewFromPlugin to prevent crash
+- 92 | 2026-02-02 | fix: support dynamic viewports array in PreviewFromPlugin
+- 91 | 2026-02-01 | perf: batch fetch portfolios for exact counts with progressive UI
+- 90 | 2026-02-01 | perf: use sample-based estimation for dashboard stats
+- 89 | 2026-02-01 | Claude/update admin dashboard h y sa h
+- 88 | 2026-02-01 | feat: add Source column and Plugin Portfolios stat to admin dashboard
+- 87 | 2026-02-01 | fix: show browser-specific guidance for screen recording
+- 86 | 2026-02-01 | fix: show browser-specific instructions for screen recording
+- 85 | 2026-01-31 | fix: improve video recording UX and auto-trigger AI analysis
+- 84 | 2026-01-31 | feat: add video/screen recording to user testing
+- 83 | 2026-01-31 | feat: implement configurable viewport breakpoints
+- 82 | 2026-01-31 | fix: prevent welcome screen name loading flash
+- 81 | 2026-01-31 | fix: remove welcome modal bounce and make session menu always visible
+- 80 | 2026-01-31 | fix: polish user testing mode and add session quick delete
+- 79 | 2026-01-31 | fix: eliminate welcome modal flash and background color inconsistency
+- 78 | 2026-01-31 | fix: sync pricing CSS and add auto-sync to deploy workflow
+- 77 | 2026-01-31 | fix: eliminate loading flash in User Testing mode
+- 76 | 2026-01-31 | fix: show all features in pricing modal without truncation
+- 75 | 2026-01-31 | feat: UI fixes for pricing modal and navigation
+- 74 | 2026-01-31 | feat: add GitHub Action for auto-deploying plans config
+- 73 | 2026-01-31 | feat: release User Testing to all users and add to pricing table
+- 72 | 2026-01-30 | fix: address user testing follow-up issues round 4
+- 71 | 2026-01-30 | fix: address user testing follow-up issues round 3
+- 70 | 2026-01-30 | fix: address user testing follow-up issues round 2
+- 69 | 2026-01-30 | Claude/fix testing feature gate 5 wzjx
+- 68 | 2026-01-30 | feat: refine User Testing and Feature Gate UX
+- 67 | 2026-01-30 | fix: update Firebase Functions runtime from nodejs18 to nodejs20
+- 66 | 2026-01-30 | fix: update Firebase Functions Node.js runtime from 18 to 20
+- 65 | 2026-01-30 | feat: add GitHub Actions workflow for Firebase Functions auto-deploy
+- 64 | 2026-01-30 | feat: add FeatureGate component, User Testing UX improvements, and cr…
+- 63 | 2026-01-30 | fix: increment session counter when user testing session completes
+- 62 | 2026-01-30 | feat: refine Admin Dashboard with Plan column, User Testing column, a…
+- 61 | 2026-01-30 | feat: add feature gates and session management for User Testing and A…
+- 60 | 2026-01-30 | feat: deploy shared CSS and icons to Firebase Hosting
+- 59 | 2026-01-30 | feat: improve Admin Dashboard with stats, performance, and UX enhance…
+- 58 | 2026-01-30 | Claude/enhance help page nb p9d
+- 57 | 2026-01-30 | feat: enhance Need Help page with improved layout and features
+- 56 | 2026-01-30 | feat: add AI transcript analysis and admin dashboard enhancements
+- 55 | 2026-01-30 | feat: add plain SVG icon exports for landing page
+- 54 | 2026-01-30 | feat: add workflow to trigger landing page rebuild when shared assets…
+- 53 | 2026-01-30 | feat: implement automatic transcription with AssemblyAI (Phase 5)
+- 52 | 2026-01-30 | feat: implement audio recording and playback (Phase 4)
+- 51 | 2026-01-30 | Claude/testing results dashboard fj qpn
+- 50 | 2026-01-29 | feat: implement user testing tester experience (Phase 2)
+- 49 | 2026-01-29 | Revert "fix: update Firebase project ID and replace main pricing page"
+- 48 | 2026-01-29 | fix: update Firebase project ID and replace main pricing page
+- 47 | 2026-01-29 | feat: Add User Testing feature - Phase 1 (Designer Setup)
+- 46 | 2026-01-29 | Claude/centralize pricing firestore dy xk6
+- 45 | 2026-01-29 | refactor: Replace PaymentSelection card logic with PricingTable compo…
+- 44 | 2026-01-29 | feat: Add trialConsumed prop and fix current plan styling
+- 43 | 2026-01-29 | feat: Add modal preview mode and polish PricingTable
+- 42 | 2026-01-29 | feat: Update PricingTable design to match landing page
+- 41 | 2026-01-29 | chore: Add service account key patterns to .gitignore and install fir…
+- 40 | 2026-01-29 | feat: Add unified pricing system with Firestore integration
+- 39 | 2026-01-29 | fix: Align navbar responsive padding with FolioForm content grid
+- 38 | 2026-01-29 | fix: Align FolioForm content grid with navbar header
+- 37 | 2026-01-29 | feat: Add clickable metrics, fix chart Y-axis, and mobile analytics
+- 36 | 2026-01-29 | fix: Comprehensive analytics dashboard improvements
+- 35 | 2026-01-28 | feat: Restyle analytics dashboard to match Plausible aesthetic
+- 34 | 2026-01-28 | fix: Parse Plausible API v2 metrics array correctly for overview query
+- 33 | 2026-01-28 | feat: add debug logging to Plausible API endpoint
+- 32 | 2026-01-28 | Claude/fix analytics dashboard d qh es
+- 31 | 2026-01-28 | feat: add Plausible analytics tracking to all pages
+- 30 | 2026-01-28 | fix: Correct Plausible API v2 query format - remove hostname filter, …
+- 29 | 2026-01-28 | fix: Correct Plausible API v2 filter syntax for OR operator
+- 28 | 2026-01-28 | feat: Add Portfolio Analytics feature with Plausible integration
+- 27 | 2026-01-27 | fix: Use single FIREBASE_SERVICE_ACCOUNT env var to avoid newline issues
+- 26 | 2026-01-27 | debug: Add credential logging to diagnose Firebase auth failure
+- 25 | 2026-01-27 | fix: Use environment variables for Firebase credentials in OG function
+- 24 | 2026-01-27 | fix: Match OG function query with DynamicPage2 query pattern and add …
+- 23 | 2026-01-27 | fix: Use embedded HTML template in OG function for reliable social pr…
+- 22 | 2026-01-27 | feat: Add OG meta tags for social media link previews
+- 21 | 2026-01-27 | perf: Optimize DynamicPage2.js with parallel queries and optimistic r…
+- 20 | 2026-01-26 | fix: Use Bootstrap grid for skeleton loading to display 3 columns
+- 19 | 2026-01-26 | fix: Remove double border on modal password inputs and shift modal up…
+- 18 | 2026-01-26 | fix: Dashboard pluralization and footer positioning
+- 17 | 2026-01-26 | fix: Resolve username flicker, add Change Email button, improve modal…
+- 16 | 2026-01-26 | fix: FolioForm skeleton now matches actual layout
+- 15 | 2026-01-26 | feat: Profile header cleanup and account settings improvements
+- 14 | 2026-01-26 | fix: Skeleton loading issues and optimize rendering
+- 13 | 2026-01-26 | perf: Improve loading performance with optimistic rendering and skele…
+- 12 | 2026-01-26 | fix: Replace hardcoded Vercel API tokens with environment variable
+- 11 | 2026-01-25 | Improve Figma Links tab with better guidance and inline warnings
+- 10 | 2026-01-25 | Fix upgrade links to use correct domain and auto-open payment modal
+- 9 | 2026-01-24 | Fix loading state bug and improve billing page design
+- 8 | 2026-01-24 | Claude/improve billing subscription gs zo k
+- 7 | 2026-01-24 | Fix getInitials crash when email is null/undefined
+- 6 | 2026-01-24 | Add dynamic Stripe billing portal and improve navbar dropdown
+- 5 | 2026-01-24 | Fix all ESLint linting warnings for CI=true build
+- 3 | 2025-07-29 | Revert "add section Why choose"
+- 2 | 2025-07-29 | add section Why choose

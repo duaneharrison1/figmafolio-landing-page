@@ -1,0 +1,143 @@
+---
+// SEO comparison page. Figmafolio facts: docs/figmafolio/PRODUCT.md. Framer facts: framer.com/pricing, read 21 Nov 2026.
+// "Not stated" wherever their page is silent (TONE_OF_VOICE.md search page rules 3 to 5).
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/kit/Hero.astro";
+import Section from "@/components/kit/Section.astro";
+import Button from "@/components/kit/Button.astro";
+import Card from "@/components/kit/Card.astro";
+import ComparisonTable from "@/components/kit/ComparisonTable.astro";
+import Faq from "@/components/kit/Faq.astro";
+import LastChecked from "@/components/kit/LastChecked.astro";
+import PriceLine from "@/components/kit/PriceLine.astro";
+import Cta from "@/components/kit/Cta.astro";
+import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
+
+const sources = [{ label: "Framer pricing (framer.com)", url: "https://www.framer.com/pricing" }];
+
+const faq = [
+  {
+    "q": "What is the difference between Figmafolio and Framer?",
+    "a": "Framer is a website builder. Figmafolio publishes a Figma prototype as it is, with a link you can share."
+  },
+  {
+    "q": "Is Figmafolio a replacement for Framer?",
+    "a": "Only for sharing a prototype as a site. Figmafolio does not build real web pages, export code or offer a CMS."
+  },
+  {
+    "q": "Does Framer have a free plan?",
+    "a": "Yes. Framer's pricing page lists a free plan on a Framer domain and says it is ideal for non-commercial use. A custom domain needs a paid plan."
+  },
+  {
+    "q": "Is Figmafolio free?",
+    "a": "Free for 7 days, then from $3 a month. After 7 days your site goes offline until you choose a plan."
+  }
+];
+---
+
+<Layout
+  title="Framer alternative"
+  description="Figmafolio vs Framer: one puts a Figma prototype online as a shareable site, the other is a website builder with a free plan. Prices and limits compared."
+>
+  <Hero
+    eyebrow="Framer alternative"
+    title="A simpler alternative to Framer"
+    lede="Framer is a website builder with a free plan and paid plans from $10 a month. Figmafolio does one smaller job: it puts the Figma prototype you already have online, with a link to share. Free for 7 days, then from $3 a month."
+  >
+    <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
+    <Button href="/figma-prototype-to-website" variant="secondary">How Figmafolio works</Button>
+  </Hero>
+
+  <Section width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Figmafolio and Framer side by side</h2>
+    <ComparisonTable
+      highlight={0}
+      caption="Figmafolio compared with Framer"
+      columns={["Figmafolio", "Framer"]}
+      rows={[
+  {
+    "label": "What it is",
+    "cells": [
+      "A live site that publishes your Figma prototype as it is",
+      "A website builder with CMS collections and AI credits"
+    ]
+  },
+  {
+    "label": "Real web pages you can edit",
+    "cells": [
+      "No",
+      "Yes"
+    ]
+  },
+  {
+    "label": "Free plan or trial",
+    "cells": [
+      "7-day free trial on the plan you pick, with every feature in it (15 days if you pay yearly). No free plan after, the site goes offline until you pick one",
+      "A free plan on a Framer domain, described as ideal for non-commercial use"
+    ]
+  },
+  {
+    "label": "Price",
+    "cells": [
+      "Free for 7 days, then from $3 a month",
+      "Free, then $10 or $30 a month, or custom"
+    ]
+  },
+  {
+    "label": "Custom domain",
+    "cells": [
+      "Solo and Pro plans",
+      "Paid plans"
+    ]
+  },
+  {
+    "label": "Analytics",
+    "cells": [
+      "Solo and Pro plans",
+      "30 days of history on Basic, 90 days on Pro"
+    ]
+  },
+  {
+    "label": "Password protection",
+    "cells": [
+      "Every paid plan",
+      null
+    ]
+  },
+  {
+    "label": "Figma import",
+    "cells": [
+      "Takes a Figma prototype link",
+      null
+    ]
+  }
+]}
+      sources={sources}
+    />
+    <p class="mt-4 text-sm text-ff-muted">Prices and plans change. Check Framer's own pricing page for today's terms.</p>
+  </Section>
+
+  <Section tone="surface" width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Where each is the better choice</h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      <Card title="Choose Figmafolio when">You already have a Figma prototype and want a link for a recruiter or client today, with the prototype's own interactions, or a password for client work.</Card>
+      <Card title="Choose Framer when">You want to build real web pages, use a CMS, or start on a free plan and grow.</Card>
+    </div>
+  </Section>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Questions</h2>
+    <Faq items={faq} />
+  </Section>
+
+  <Section tone="surface">
+    <PriceLine footnote={false} />
+    <p class="mt-2 text-sm text-ff-muted">{PRICE_FOOTNOTE} See <a class="text-ff-brand-hover underline" href="/pricing">pricing</a> for each plan.</p>
+    <p class="mt-2 text-sm text-ff-muted">Related: <a class="text-ff-brand-hover underline" href="/figma-sites-alternative">Figma Sites alternative</a>, <a class="text-ff-brand-hover underline" href="/is-figmafolio-free">Is Figmafolio free?</a></p>
+    <div class="mt-4"><LastChecked date="2026-11-21" /></div>
+  </Section>
+
+  <Section width="wide">
+    <Cta />
+  </Section>
+</Layout>

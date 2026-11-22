@@ -1,0 +1,37 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/kit/Hero.astro";
+import Section from "@/components/kit/Section.astro";
+import Card from "@/components/kit/Card.astro";
+import Cta from "@/components/kit/Cta.astro";
+import responsive from "@/assets/publish_as_responsive_landing.png";
+import password from "@/assets/password_protection_landing.png";
+import favicon from "@/assets/custom_favicon_landing.png";
+import domain from "@/assets/landing_custom_domain.png";
+import sites from "@/assets/multiple_project_landing.png";
+const features = [
+  { href: "/features/responsive-design", title: "Desktop and mobile on one link", text: "Add a prototype for each. The site picks one by screen size.", plans: "Every plan", image: responsive },
+  { href: "/features/live-updates", title: "Edits show without republishing", text: "The site embeds the live prototype, so a Figma change shows on it.", plans: "Every plan", icon: "refresh" },
+  { href: "/features/figma-plugin", title: "The Figma plugin", text: "Pick a starting point for each screen size and create a preview link from Figma.", plans: "Preview link. An account adds more", icon: "plug" },
+  { href: "/features/password-protection", title: "Password protection", text: "Lock a site for client work or an NDA.", plans: "Basic, Solo and Pro", image: password },
+  { href: "/features/custom-favicon", title: "Custom favicon", text: "Your own icon in the browser tab.", plans: "Basic, Solo and Pro", image: favicon },
+  { href: "/features/custom-domain", title: "Custom domain", text: "Open your prototype at yourname.com.", plans: "Solo and Pro", image: domain },
+  { href: "/features/analytics", title: "Analytics", text: "Visitors, visits, pageviews, bounce rate and visit duration.", plans: "Solo and Pro", icon: "bars" },
+];
+---
+<Layout title="Features" description="What Figmafolio does with a Figma prototype: one link for desktop and mobile, live updates, the plugin, password, favicon, custom domain and analytics.">
+  <Hero title="Features" lede="What Figmafolio does with your Figma prototype, and which plan has it." />
+  <Section width="wide">
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {features.map((f) => (
+        <a href={f.href} class="block h-full">
+          <Card title={f.title} image={f.image} icon={f.icon}>
+            {f.text}
+            <span class="mt-4 block w-fit rounded-ff-pill bg-ff-brand-soft px-3 py-1 text-sm font-medium text-ff-brand-hover">{f.plans}</span>
+          </Card>
+        </a>
+      ))}
+    </div>
+  </Section>
+  <Section width="wide"><Cta /></Section>
+</Layout>

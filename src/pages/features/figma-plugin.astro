@@ -1,0 +1,28 @@
+---
+import FeaturePage from "@/components/kit/FeaturePage.astro";
+---
+<FeaturePage
+  mini="plugin"
+  title="The Figma plugin"
+  description="Make a shareable preview link from your Figma prototype without leaving Figma. Pick a starting point for each screen size and create the link."
+  lede="Run the Figmafolio plugin in your design file, pick where each screen size starts, and create a shareable preview link."
+  plan="The plugin makes a preview link. For a custom domain and more, create an account."
+  steps={[
+    { title: "Run the plugin in your design file", text: "Open Figmafolio from your plugins. It finds the prototype flows in the file." },
+    { title: "Pick a starting point for each viewport", text: "Mobile starts at 0px and Desktop at 768px. Choose the flow each one should show, or press Add Breakpoint for more sizes." },
+    { title: "Create the preview link", text: "Press Create Preview Link and share the link you get." },
+  ]}
+  cards={[
+    { title: "One link for every screen", text: "Each viewport points to its own flow, so phones and desktops see the right design." },
+    { title: "Flows found for you", text: "The plugin reads the flow starting points already set in your Figma file." },
+    { title: "Stays in Figma", text: "You make the link from the design file, so there is nothing to export." },
+  ]}
+  limits="The plugin needs at least one flow starting point. Without one it shows No prototype flows found."
+  faq={[
+    { q: "What does 'No prototype flows found' mean?", a: "The file has no flow starting point. Select a frame, open the Prototype panel and choose Add flow starting point." },
+    { q: "Can I change which file the link comes from?", a: "Yes. The plugin has a Change file link option." },
+    { q: "Where do I get a custom domain?", a: "The plugin points you to create an account for a custom domain and more. See the custom domain page for the plans." },
+  ]}
+  related={[{ href: "/features/responsive-design", label: "Desktop and mobile on one link" }, { href: "/features/custom-domain", label: "Custom domain" }]}
+  checked="2026-11-21"
+/>

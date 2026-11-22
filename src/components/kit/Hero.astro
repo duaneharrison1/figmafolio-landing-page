@@ -1,0 +1,26 @@
+---
+// Page hero. One H1, a short answer under it, actions in the default slot.
+// Optional `visual` slot puts a picture beside the text (stacks under it on a phone).
+// Optional `plans` shows which plans have the feature, as a chip under the answer.
+interface Props {
+  title: string;
+  lede: string;
+  eyebrow?: string;
+  plans?: string;
+}
+const { title, lede, eyebrow, plans } = Astro.props;
+const hasVisual = Astro.slots.has("visual");
+---
+
+<header class="bg-gradient-to-b from-ff-brand-tint to-ff-bg border-b border-ff-border">
+  <div class:list={["mx-auto px-5 py-16 md:py-24", "max-w-ff-container", hasVisual && "grid items-center gap-12 md:grid-cols-2"]}>
+    <div class:list={[!hasVisual && "mx-auto max-w-3xl text-center"]}>
+      {eyebrow && <p class="text-sm font-semibold uppercase tracking-wide text-ff-brand-hover mb-4">{eyebrow}</p>}
+      <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.08] text-ff-ink">{title}</h1>
+      <p class="mt-6 text-lg md:text-xl text-ff-muted">{lede}</p>
+      {plans && <p class="mt-6 inline-block rounded-ff-pill bg-ff-brand-soft px-4 py-1.5 text-sm font-medium text-ff-brand-hover">{plans}</p>}
+      <div class:list={["mt-8 flex flex-wrap gap-3", !hasVisual && "justify-center"]}><slot /></div>
+    </div>
+    {hasVisual && <div class="flex justify-center md:justify-end"><slot name="visual" /></div>}
+  </div>
+</header>

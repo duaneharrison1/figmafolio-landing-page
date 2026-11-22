@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 title: "Figmafolio vs Figma Sites: Which is better for portfolios?"
 snippet: "So sánh chi tiết Figmafolio và Figma Sites để chọn giải pháp portfolio phù hợp nhất cho bạn."
 image:

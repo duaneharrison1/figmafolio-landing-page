@@ -1,0 +1,25 @@
+---
+// Simplified picture of which plan has what. Feature wording and the yes/no per plan are from
+// figmaApp src/hooks/usePlans.js. No prices here on purpose (prices differ by country).
+const plans = ["Basic", "Solo", "Pro"];
+const rows: [string, boolean[]][] = [
+  ["Password protection option", [true, true, true]],
+  ["Customize Favicon", [true, true, true]],
+  ["Connect your existing custom domains", [false, true, true]],
+  ["Analytics", [false, true, true]],
+];
+---
+<figure class="w-full max-w-md" aria-label="Which plans have which features">
+  <div class="overflow-hidden rounded-ff-xl border border-ff-border bg-ff-bg shadow-ff-card">
+    <div class="grid grid-cols-[1fr_3.5rem_3.5rem_3.5rem] bg-ff-surface px-4 py-2.5 text-xs font-semibold text-ff-ink">
+      <span></span>{plans.map((p) => <span class="text-center">{p}</span>)}
+    </div>
+    {rows.map(([label, has]) => (
+      <div class="grid grid-cols-[1fr_3.5rem_3.5rem_3.5rem] items-center border-t border-ff-border px-4 py-2.5 text-sm text-ff-ink">
+        <span>{label}</span>
+        {has.map((y) => <span class:list={["text-center font-semibold", y ? "text-ff-brand-hover" : "text-ff-muted"]} aria-label={y ? "Included" : "Not included"}>{y ? "✓" : "–"}</span>)}
+      </div>
+    ))}
+  </div>
+  <figcaption class="mt-2 text-center text-xs text-ff-muted">Simplified picture. The 7-day trial and prices are on the pricing page.</figcaption>
+</figure>

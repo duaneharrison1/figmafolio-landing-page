@@ -1,0 +1,15 @@
+---
+// "Last checked" note. Pass an ISO date (2026-11-21); it prints "21 November 2026".
+interface Props {
+  date: string;
+}
+const { date } = Astro.props;
+const text = new Date(date + "T00:00:00Z").toLocaleDateString("en-GB", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+  timeZone: "UTC",
+});
+---
+
+<p class="text-sm text-ff-muted">Last checked <time datetime={date}>{text}</time>.</p>

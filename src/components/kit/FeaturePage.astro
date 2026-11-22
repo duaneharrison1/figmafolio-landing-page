@@ -1,0 +1,83 @@
+---
+// One layout for every /features/* page. Facts: docs/figmafolio/PRODUCT.md only.
+import Layout from "@/layouts/Layout.astro";
+import Hero from "./Hero.astro";
+import Section from "./Section.astro";
+import Button from "./Button.astro";
+import Card from "./Card.astro";
+import Steps from "./Steps.astro";
+import Faq from "./Faq.astro";
+import LastChecked from "./LastChecked.astro";
+import PriceLine from "./PriceLine.astro";
+import Cta from "./Cta.astro";
+import AnalyticsMini from "./AnalyticsMini.astro";
+import PasswordMini from "./PasswordMini.astro";
+import DomainMini from "./DomainMini.astro";
+import FaviconMini from "./FaviconMini.astro";
+import SiteLinkMini from "./SiteLinkMini.astro";
+import PluginMini from "./PluginMini.astro";
+import { Image } from "astro:assets";
+import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
+
+interface Props {
+  title: string;
+  description: string;
+  lede: string;
+  plan: string; // which plans have it, from PRODUCT.md
+  steps: { title: string; text: string; mini?: string }[];
+  cards: { title: string; text: string }[];
+  limits: string; // what it does not do
+  faq: { q: string; a: string }[];
+  related: { href: string; label: string }[];
+  checked: string;
+  /** A picture from src/assets (imported). */
+  image?: ImageMetadata;
+  imageAlt?: string;
+  /** "analytics" draws the Analytics screen mini instead of a picture. */
+  mini?: "analytics" | "password" | "domain" | "favicon" | "site-link-domain" | "plugin";
+}
+const { title, description, lede, plan, steps, cards, limits, faq, related, checked, image, imageAlt, mini } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <Hero eyebrow="Feature" title={title} lede={lede} plans={plan}>
+    <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
+    <Button href="/pricing" variant="secondary">See plans</Button>
+    {image && <Image slot="visual" src={image} alt={imageAlt ?? ""} width={420} class="h-auto w-full max-w-sm" />}
+    {mini === "analytics" && <AnalyticsMini slot="visual" />}
+    {mini === "password" && <PasswordMini slot="visual" />}
+    {mini === "domain" && <DomainMini slot="visual" />}
+    {mini === "favicon" && <FaviconMini slot="visual" />}
+    {mini === "plugin" && <PluginMini slot="visual" />}
+    {mini === "site-link-domain" && <SiteLinkMini slot="visual" address="yourname.com" />}
+  </Hero>
+
+  <Section tone="surface" width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-8">How it works</h2>
+    <Steps items={steps} />
+  </Section>
+
+  <Section width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">What you get</h2>
+    <div class="grid gap-6 md:grid-cols-3">
+      {cards.map((c) => <Card title={c.title}>{c.text}</Card>)}
+    </div>
+  </Section>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Questions</h2>
+    <Faq items={limits ? [...faq, { q: "Anything to know first?", a: limits }] : faq} />
+  </Section>
+
+  <Section tone="surface">
+    <PriceLine footnote={false} />
+    <p class="mt-2 text-sm text-ff-muted">{PRICE_FOOTNOTE}</p>
+    <p class="mt-2 text-sm text-ff-muted">
+      Related:
+      {related.map((r, i) => (<>{i > 0 && ", "}<a class="text-ff-brand-hover underline" href={r.href}>{r.label}</a></>))}.
+    </p>
+    <div class="mt-4"><LastChecked date={checked} /></div>
+  </Section>
+
+  <Section width="wide"><Cta /></Section>
+</Layout>

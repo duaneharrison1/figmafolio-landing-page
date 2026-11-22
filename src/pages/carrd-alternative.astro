@@ -1,0 +1,87 @@
+---
+// SEO comparison page. Figmafolio facts: docs/figmafolio/PRODUCT.md. Carrd facts: carrd.com and carrd.com/pro, read 21 Nov 2026.
+// "Not stated" wherever their page is silent (TONE_OF_VOICE.md search page rules 3 to 5).
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/kit/Hero.astro";
+import Section from "@/components/kit/Section.astro";
+import Button from "@/components/kit/Button.astro";
+import Card from "@/components/kit/Card.astro";
+import ComparisonTable from "@/components/kit/ComparisonTable.astro";
+import Faq from "@/components/kit/Faq.astro";
+import LastChecked from "@/components/kit/LastChecked.astro";
+import PriceLine from "@/components/kit/PriceLine.astro";
+import Cta from "@/components/kit/Cta.astro";
+import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
+
+const sources = [
+  { label: "Carrd (carrd.com)", url: "https://carrd.com/" },
+  { label: "Carrd Pro plans (carrd.com/pro)", url: "https://carrd.com/pro" },
+];
+
+const faq = [
+  { q: "What is the difference between Figmafolio and Carrd?", a: "Carrd builds simple one-page sites. Figmafolio puts a Figma prototype online as it is, with a link you can share." },
+  { q: "Can Carrd show a Figma prototype?", a: "Carrd's pages do not mention Figma. Check Carrd's own help before relying on it." },
+  { q: "Is Carrd cheaper?", a: "Its Pro plans start at $9 a year for 3 sites, billed yearly, so for a simple page it usually is. Figmafolio is free for 7 days, then from $3 a month." },
+  { q: "Is Figmafolio free?", a: "Free for 7 days, then from $3 a month. After 7 days your site goes offline until you choose a plan." },
+];
+---
+
+<Layout
+  title="Carrd alternative"
+  description="Figmafolio vs Carrd: put a Figma prototype online as a shareable site, or build a simple one-page site. Prices and limits side by side."
+>
+  <Hero
+    eyebrow="Carrd alternative"
+    title="An alternative to Carrd for a Figma prototype"
+    lede="Carrd builds simple, responsive one-page sites and is cheap. Figmafolio does one narrower job: it puts the Figma prototype you already have online. Free for 7 days, then from $3 a month."
+  >
+    <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
+    <Button href="/figma-prototype-to-website" variant="secondary">How Figmafolio works</Button>
+  </Hero>
+
+  <Section width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Figmafolio and Carrd side by side</h2>
+    <ComparisonTable
+      highlight={0}
+      caption="Figmafolio compared with Carrd"
+      columns={["Figmafolio", "Carrd"]}
+      rows={[
+        { label: "What it is", cells: ["A live site that publishes your Figma prototype as it is", "A platform for building simple, responsive one-page sites"] },
+        { label: "Figma", cells: ["Takes a Figma prototype link", "Not stated"] },
+        { label: "Real web pages you can edit", cells: ["No", "Yes, one-page sites"] },
+        { label: "Free plan or trial", cells: ["7-day free trial on the plan you pick, with every feature in it (15 days if you pay yearly). No free plan after, the site goes offline until you pick one", "A free plan with up to three sites per account"] },
+        { label: "Price", cells: ["Free for 7 days, then from $3 a month", "Pro plans from $9 a year for 3 sites, billed yearly"] },
+        { label: "Custom domain", cells: ["Solo and Pro plans", "Pro Standard and Pro Plus. Not stated for Pro Lite"] },
+        { label: "Password protection", cells: ["Every paid plan", "Pro Plus. Not stated for the other plans"] },
+        { label: "Analytics", cells: ["Solo and Pro plans", "Pro Standard and Pro Plus. Not stated for Pro Lite"] },
+        { label: "Remove the maker's badge", cells: ["Every paid plan", "Every Pro plan"] },
+      ]}
+      sources={sources}
+    />
+    <p class="mt-4 text-sm text-ff-muted">Prices and plans change. Check Carrd's own pricing page for today's terms.</p>
+  </Section>
+
+  <Section tone="surface" width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Where each is the better choice</h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      <Card title="Choose Figmafolio when">You already have a Figma prototype and want a link for a recruiter or client today, with the prototype's own interactions, or a password for client work on any paid plan.</Card>
+      <Card title="Choose Carrd when">You want a simple one-page site you build and edit yourself, a free plan, or the lowest yearly price.</Card>
+    </div>
+  </Section>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Questions</h2>
+    <Faq items={faq} />
+  </Section>
+
+  <Section tone="surface">
+    <PriceLine footnote={false} />
+    <p class="mt-2 text-sm text-ff-muted">{PRICE_FOOTNOTE} See <a class="text-ff-brand-hover underline" href="/pricing">pricing</a> for each plan.</p>
+    <p class="mt-2 text-sm text-ff-muted">Related: <a class="text-ff-brand-hover underline" href="/siter-alternative">Siter alternative</a>, <a class="text-ff-brand-hover underline" href="/figma-sites-alternative">Figma Sites alternative</a></p>
+    <div class="mt-4"><LastChecked date="2026-11-21" /></div>
+  </Section>
+
+  <Section width="wide">
+    <Cta />
+  </Section>
+</Layout>

@@ -1,0 +1,64 @@
+---
+// Numbered steps. Keep to what Figmafolio really does (docs/figmafolio/PRODUCT.md).
+// A step may carry a `mini`: a simplified picture of that screen, shown beside it.
+import PublishMini from "./PublishMini.astro";
+import PlansMini from "./PlansMini.astro";
+import SiteLinkMini from "./SiteLinkMini.astro";
+import PeriodMini from "./PeriodMini.astro";
+import BreakpointMini from "./BreakpointMini.astro";
+import PasswordMini from "./PasswordMini.astro";
+import DomainMini from "./DomainMini.astro";
+import FaviconMini from "./FaviconMini.astro";
+import AnalyticsMini from "./AnalyticsMini.astro";
+import LinkCheckMini from "./LinkCheckMini.astro";
+import PluginMini from "./PluginMini.astro";
+
+export type StepMini = "publish" | "publish-desktop" | "publish-phone" | "plans" | "site-link" | "site-link-domain" | "period" | "breakpoint" | "password" | "domain" | "favicon" | "analytics" | "password-compact" | "favicon-panel" | "favicon-tab" | "analytics-totals" | "link-ok" | "link-fail" | "plugin" | "plugin-empty";
+interface Props {
+  items: { title: string; text: string; mini?: StepMini }[];
+}
+const { items } = Astro.props;
+const hasMini = items.some((i) => i.mini);
+---
+
+<ol class="space-y-10">
+  {
+    items.map((item, i) => (
+      <li class:list={[hasMini && item.mini && "md:grid md:grid-cols-2 md:items-center md:gap-10"]}>
+        <div class="flex gap-4">
+          <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-ff-pill bg-ff-brand-soft font-semibold text-ff-brand-hover">
+            {i + 1}
+          </span>
+          <div>
+            <h3 class="font-semibold text-ff-ink">{item.title}</h3>
+            <p class="mt-1 text-ff-muted">{item.text}</p>
+          </div>
+        </div>
+        {item.mini && (
+          <div class="mt-4 flex justify-center md:mt-0 md:justify-end">
+            {item.mini === "publish" && <PublishMini />}
+            {item.mini === "publish-desktop" && <PublishMini focus="desktop" showPublish={false} />}
+            {item.mini === "publish-phone" && <PublishMini focus="phone" showPublish={false} />}
+            {item.mini === "plans" && <PlansMini />}
+            {item.mini === "plugin" && <PluginMini />}
+            {item.mini === "plugin-empty" && <PluginMini state="noFlows" />}
+            {item.mini === "link-ok" && <LinkCheckMini state="viewable" />}
+            {item.mini === "link-fail" && <LinkCheckMini state="notViewable" />}
+            {item.mini === "site-link" && <SiteLinkMini />}
+            {item.mini === "site-link-domain" && <SiteLinkMini address="yourname.com" />}
+            {item.mini === "period" && <PeriodMini />}
+            {item.mini === "breakpoint" && <BreakpointMini />}
+            {item.mini === "password" && <PasswordMini />}
+            {item.mini === "domain" && <DomainMini />}
+            {item.mini === "favicon" && <FaviconMini />}
+            {item.mini === "analytics" && <AnalyticsMini />}
+            {item.mini === "analytics-totals" && <AnalyticsMini part="totals" />}
+            {item.mini === "password-compact" && <PasswordMini compact />}
+            {item.mini === "favicon-panel" && <FaviconMini part="panel" />}
+            {item.mini === "favicon-tab" && <FaviconMini part="tab" />}
+          </div>
+        )}
+      </li>
+    ))
+  }
+</ol>

@@ -1,0 +1,94 @@
+---
+// SEO page 2. Facts: docs/figmafolio/PRODUCT.md. Words: docs/figmafolio/TONE_OF_VOICE.md.
+// Built only from kit parts and tokens (npm run check:style).
+import Layout from "@/layouts/Layout.astro";
+import DomainMini from "@/components/kit/DomainMini.astro";
+import Hero from "@/components/kit/Hero.astro";
+import Section from "@/components/kit/Section.astro";
+import Button from "@/components/kit/Button.astro";
+import Card from "@/components/kit/Card.astro";
+import Steps from "@/components/kit/Steps.astro";
+import Faq from "@/components/kit/Faq.astro";
+import LastChecked from "@/components/kit/LastChecked.astro";
+import PriceLine from "@/components/kit/PriceLine.astro";
+import Cta from "@/components/kit/Cta.astro";
+import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
+
+const faq = [
+  {
+    q: "Which plans include a custom domain?",
+    a: "Solo and Pro. The Basic plan and the 7-day trial use a figmafolio.com address.",
+  },
+  {
+    q: "Is my portfolio real web pages?",
+    a: "Figmafolio publishes your Figma prototype as it is. Your domain points to that site, so visitors see your prototype at your address.",
+  },
+  {
+    q: "Will my own domain help me rank on Google?",
+    a: "Figmafolio does not promise this. Treat your domain as a cleaner link to send, not as an SEO tool.",
+  },
+  {
+    q: "Can I put a password on it?",
+    a: "Yes, on every paid plan. This helps with client work and NDA projects.",
+  },
+  {
+    q: "Do changes in Figma show on my domain?",
+    a: "Yes. The site embeds the live prototype, so changes made in Figma show without publishing again.",
+  },
+  {
+    q: "Is it free?",
+    a: "Free for 7 days, then from $3 a month. A custom domain needs the Solo or Pro plan.",
+  },
+];
+---
+
+<Layout
+  title="Figma portfolio on your own domain"
+  description="Put your Figma prototype portfolio on your own domain, like yourname.com. Custom domains are on the Solo and Pro plans. Free for 7 days to try."
+>
+  <Hero
+    eyebrow="Figma portfolio on your own domain"
+    title="Put your Figma portfolio on your own domain"
+    lede="Publish your Figma prototype with Figmafolio, then point your own domain at it so recruiters see yourname.com. Custom domains are on the Solo and Pro plans."
+  >
+    <Button href={APP_SIGNUP_URL}>Get started</Button>
+    <Button href="/pricing" variant="secondary">See plans</Button>
+    <DomainMini slot="visual" />
+  </Hero>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">How it works</h2>
+    <Steps
+      items={[
+        { title: "Publish your prototype", text: "Paste your Figma prototype link into Figmafolio and your site is live on a figmafolio.com address.", mini: "publish" },
+        { title: "Choose the Solo or Pro plan", text: "A custom domain is not on the trial or the Basic plan.", mini: "plans" },
+        { title: "Connect your domain", text: "Add your domain to the site in Figmafolio. Your prototype then opens at your own address.", mini: "domain" },
+      ]}
+    />
+  </Section>
+
+  <Section tone="surface" width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">What you get</h2>
+    <div class="grid gap-6 md:grid-cols-3">
+      <Card title="A link that is yours">Send yourname.com in an application instead of a tool's address.</Card>
+      <Card title="Desktop and mobile on one link">Add a prototype for each. The site picks one by screen size.</Card>
+      <Card title="Changes show without republishing">The site embeds the live prototype, so an edit in Figma is on your domain.</Card>
+    </div>
+  </Section>
+
+  <Section tone="surface">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Questions</h2>
+    <Faq items={faq} />
+  </Section>
+
+  <Section>
+    <PriceLine footnote={false} />
+    <p class="mt-2 text-sm text-ff-muted">{PRICE_FOOTNOTE} See <a class="text-ff-brand-hover underline" href="/pricing">pricing</a> for each plan.</p>
+    <p class="mt-2 text-sm text-ff-muted">Related: <a class="text-ff-brand-hover underline" href="/figma-prototype-to-website">Figma prototype to website</a>.</p>
+    <div class="mt-4"><LastChecked date="2026-11-21" /></div>
+  </Section>
+
+  <Section width="wide">
+    <Cta />
+  </Section>
+</Layout>

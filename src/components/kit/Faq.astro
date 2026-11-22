@@ -1,0 +1,31 @@
+---
+// FAQ with matching FAQPage structured data. Answers are plain text so the markup equals what people read.
+interface Props {
+  items: { q: string; a: string }[];
+}
+const { items } = Astro.props;
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: items.map((i) => ({
+    "@type": "Question",
+    name: i.q,
+    acceptedAnswer: { "@type": "Answer", text: i.a },
+  })),
+};
+---
+
+<div class="space-y-4">
+  {
+    items.map((item) => (
+      <details class="group rounded-ff-xl border border-ff-border bg-ff-surface p-5 md:p-6 transition hover:shadow-ff-card">
+        <summary class="cursor-pointer list-none font-semibold text-lg text-ff-ink flex items-center justify-between gap-4">
+          {item.q}
+          <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-ff-pill bg-ff-brand-soft text-ff-brand-hover transition group-open:rotate-45" aria-hidden="true">+</span>
+        </summary>
+        <p class="mt-4 text-ff-muted leading-relaxed">{item.a}</p>
+      </details>
+    ))
+  }
+</div>
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

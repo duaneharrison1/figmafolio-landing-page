@@ -4,9 +4,10 @@ import Features from "../components/features.astro";
 import Hero from "../components/hero.astro";
 import Logos from "../components/logos.astro";
 import Layout from "../layouts/Layout.astro";
+import { PH_ALTERNATES } from "@/data/locales";
 ---
 
-<Layout title="">
+<Layout alternates={PH_ALTERNATES} title="" description="Paste a Figma prototype link and get a live website in a few clicks. Custom domain, password protection and analytics. Free for 7 days.">
   <Container>
     <Hero />
     <Features />
@@ -41,7 +42,7 @@ import Layout from "../layouts/Layout.astro";
             </span>
           </summary>
           <div class="mt-4 text-slate-700 text-base leading-relaxed text-left">
-            Figmafolio uses Figma's prototype embed feature to display your designs as a live, interactive website. All your animations, transitions, and interactions are preserved exactly as you designed them. Just paste your Figma prototype link, and we handle the rest—no coding or exporting required. Your site publishes instantly and updates automatically when you make changes in Figma.
+            Figmafolio uses Figma's prototype embed feature to display your designs as a live, interactive website. All your animations, transitions, and interactions are preserved exactly as you designed them. Just paste your Figma prototype link, and we handle the rest. No coding or exporting required. Your site publishes instantly and updates automatically when you make changes in Figma.
           </div>
         </details>
         <details
@@ -67,7 +68,7 @@ import Layout from "../layouts/Layout.astro";
             </span>
           </summary>
           <div class="mt-4 text-slate-700 text-base leading-relaxed text-left">
-            No coding required at all. Figmafolio is designed for designers who want to publish their work without touching any code. Simply create your portfolio in Figma, paste your prototype link into Figmafolio, and you're live. Everything else—hosting, responsiveness, and publishing—is handled automatically.
+            No coding required at all. Figmafolio is designed for designers who want to publish their work without touching any code. Simply create your portfolio in Figma, paste your prototype link into Figmafolio, and you're live. Hosting, responsiveness and publishing are handled automatically.
           </div>
         </details>
         <details

@@ -1,0 +1,159 @@
+---
+// Country page for the Philippines: a normal Figmafolio page in light Taglish, with the local price.
+// Facts: docs/figmafolio/PRODUCT.md (By plan) and the live price record (src/data/regional-prices.ts).
+// Words: docs/figmafolio/TONE_OF_VOICE.md, "Local pages". The Filipino lines were drafted by Claude and
+// MUST be read by a native speaker before this page goes live (see DECISIONS.md, 22 Nov 2026).
+// Billing is in US dollars everywhere, so no peso amount appears: none is true.
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/kit/Hero.astro";
+import Section from "@/components/kit/Section.astro";
+import Button from "@/components/kit/Button.astro";
+import Card from "@/components/kit/Card.astro";
+import ComparisonTable from "@/components/kit/ComparisonTable.astro";
+import PlanCard from "@/components/kit/PlanCard.astro";
+import Steps from "@/components/kit/Steps.astro";
+import Faq from "@/components/kit/Faq.astro";
+import LastChecked from "@/components/kit/LastChecked.astro";
+import Cta from "@/components/kit/Cta.astro";
+import { Image } from "astro:assets";
+import responsive from "@/assets/publish_as_responsive_landing.png";
+import domain from "@/assets/landing_custom_domain.png";
+import favicon from "@/assets/custom_favicon_landing.png";
+import password from "@/assets/password_protection_landing.png";
+import sites from "@/assets/multiple_project_landing.png";
+import { APP_SIGNUP_URL } from "@/data/plans";
+import { PH_ALTERNATES } from "@/data/locales";
+import { getRegionalPrices, usd } from "@/data/regional-prices";
+
+const prices = await getRegionalPrices();
+const ph = prices.tiers.PH;
+const lowest = usd(ph.basic.monthly);
+
+const description = `Gawing live website ang Figma prototype mo. Libre ang unang 7 days, tapos from ${lowest} a month. Para sa freelancers at students.`;
+
+const faq = [
+  {
+    q: "Magkano ang Figmafolio?",
+    a: `Libre ang unang 7 days. Pagkatapos, ang Basic ay ${usd(ph.basic.monthly)} a month, ang Solo ay ${usd(ph.solo.monthly)}, at ang Pro ay ${usd(ph.pro.monthly)}. Mas mura kapag yearly ang bayad.`,
+  },
+  {
+    q: "Puwede bang magbayad in pesos?",
+    a: "Hindi. Sa US dollars ang billing. Ang card issuer mo ang nagko-convert, at may mga bangko na may maliit na conversion fee.",
+  },
+  {
+    q: "Ano ang mangyayari pagkatapos ng 7 days?",
+    a: "Mag-o-offline ang site para sa visitors hanggang pumili ka ng plan. Nagsisimula ang 7 days sa unang site mo, o sa sign-up kung wala ka pang site.",
+  },
+  {
+    q: "Anong plan ang kailangan ko para sa sarili kong domain?",
+    a: "Solo o Pro. Ang Basic ay para sa isang site na walang Figmafolio label.",
+  },
+  {
+    q: "Magbabago ba ang presyo?",
+    a: "Puwede. Ang presyo sa checkout ang final.",
+  },
+];
+---
+
+<Layout alternates={PH_ALTERNATES} title="Figma portfolio website sa Pilipinas" description={description}>
+  <Hero
+    eyebrow="Figmafolio sa Pilipinas"
+    title="Paste your link. Live na ang portfolio mo."
+    lede={`Gawing live website ang Figma prototype mo, walang coding. Libre ang unang 7 days, tapos from ${lowest} a month lang.`}
+  >
+    <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
+    <Button href="#presyo" variant="secondary">See the plans</Button>
+    <Image slot="visual" src={responsive} alt="A Figma prototype shown on desktop and phone as a live website" width={520} class="h-auto w-full max-w-md" />
+  </Hero>
+
+  <Section width="wide" tone="surface">
+    <div class="mx-auto max-w-ff-measure text-center">
+      <h2>Bakit Figmafolio?</h2>
+      <p class="mt-3 text-lg text-ff-muted">Walang coding. Mag-update ka sa Figma, update na rin ang site.</p>
+    </div>
+    <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <Card title="Custom domain" image={domain}>Sariling domain mo, like yourname.com. Available sa Solo at Pro.</Card>
+      <Card title="One link para sa lahat ng screen" image={responsive}>Isang link para sa desktop at mobile. Ang site na ang pipili ayon sa laki ng screen.</Card>
+      <Card title="Custom favicon" image={favicon}>Sariling icon mo sa browser tab, para mukhang pro ang site.</Card>
+      <Card title="Password protection" image={password}>I-lock ang client work o NDA project gamit ang password.</Card>
+      <Card title="Maraming site, isang account" image={sites}>1 site sa Basic, 3 sa Solo, at walang limit sa Pro.</Card>
+      <Card title="Analytics" icon="bars">Alamin kung sino ang nagbubukas ng site mo, saan sila galing, at ano ang gamit nila. Solo at Pro.</Card>
+    </div>
+  </Section>
+
+  <Section width="wide" id="presyo">
+    <div class="mx-auto max-w-ff-measure text-center">
+      <h2>Sulit na presyo</h2>
+      <p class="mt-3 text-lg text-ff-muted">Isang presyo kada plan, sa US dollars. Libre ang unang 7 days, at puwede mong subukan lahat ng features ng plan na pipiliin mo.</p>
+    </div>
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      <PlanCard
+        name="Basic"
+        price={usd(ph.basic.monthly)}
+        blurb="Para sa isang site na walang Figmafolio label."
+        points={["1 site", "Password protection", "Custom favicon", "Walang Figmafolio label"]}
+      />
+      <PlanCard
+        name="Solo"
+        price={usd(ph.solo.monthly)}
+        blurb="Hanggang 3 sites, may custom domain at analytics."
+        points={["3 sites", "Custom domain", "Analytics", "Lahat ng nasa Basic"]}
+      />
+      <PlanCard
+        name="Pro"
+        price={usd(ph.pro.monthly)}
+        blurb="Walang limit sa sites, kasama ang lahat ng features."
+        points={["Walang limit sa sites", "Custom domain", "Analytics", "Lahat ng nasa Basic"]}
+      />
+    </div>
+    <div class="mt-10">
+      <ComparisonTable
+        caption="Ano ang kasama sa free trial"
+        columns={["Basic", "Solo", "Pro"]}
+        rows={[
+          { label: "7-day free trial", cells: ["Yes", "Yes", "Yes"] },
+          { label: "Custom domain", cells: ["No", "Yes", "Yes"] },
+          { label: "Analytics", cells: ["No", "Yes", "Yes"] },
+        ]}
+      />
+    </div>
+    <p class="mx-auto mt-8 max-w-ff-measure text-center text-sm text-ff-muted">
+      Sa US dollars ang billing, kaya ang card issuer mo ang nagko-convert. Mas mura kapag yearly. Ang presyo sa checkout ang final.
+    </p>
+  </Section>
+
+  <Section width="wide" tone="surface">
+    <div class="mx-auto max-w-ff-measure text-center"><h2>Paano gumagana</h2></div>
+    <div class="mx-auto mt-12 max-w-4xl">
+      <Steps
+        items={[
+          { title: "I-paste ang Figma prototype link mo", text: "Kopyahin ang link ng prototype at i-paste sa Figmafolio.", mini: "publish" },
+          { title: "Piliin ang plan", text: "Magsimula sa libreng 7 days. Puwede kang mag-upgrade kahit kailan." },
+          { title: "I-share ang link", text: "Ilagay ang link sa CV, sa profile, o ipadala sa client.", mini: "site-link" },
+        ]}
+      />
+    </div>
+    <p class="mx-auto mt-10 max-w-ff-measure text-center text-ff-muted">
+      Gusto ng mas detalyado? Basahin kung paano <a class="text-ff-brand-hover underline" href="/figma-prototype-to-website">gawing website ang Figma prototype</a>, o kung paano gamitin ang <a class="text-ff-brand-hover underline" href="/figma-portfolio-own-domain">sarili mong domain</a>.
+    </p>
+  </Section>
+
+  <Section width="wide">
+    <div class="mx-auto max-w-ff-measure text-center"><h2>Para kanino ito?</h2></div>
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      <Card title="Freelancers">Isang link para sa client mo abroad. May password kung kailangan.</Card>
+      <Card title="Students">I-post online ang case study mo at ilagay ang link sa CV.</Card>
+      <Card title="Job applications">Ilagay ang link sa applications at profile mo. Bubukas sa browser, walang i-install.</Card>
+    </div>
+  </Section>
+
+  <Section tone="surface">
+    <h2 class="mb-8 text-center">Mga tanong</h2>
+    <Faq items={faq} />
+  </Section>
+
+  <Section width="wide">
+    <Cta title="Subukan nang libre sa 7 days" text="I-paste ang link mo at i-share na." label="Start the 7-day trial" price={false} />
+    <div class="mt-6 text-center"><LastChecked date={prices.checkedOn} /></div>
+  </Section>
+</Layout>

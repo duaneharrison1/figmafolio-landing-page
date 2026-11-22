@@ -1,0 +1,86 @@
+---
+// SEO page 7. Facts: docs/figmafolio/PRODUCT.md (Making a site; What Figmafolio does not do).
+import Layout from "@/layouts/Layout.astro";
+import { Image } from "astro:assets";
+import img from "@/assets/publish_as_responsive_landing.png";
+import Hero from "@/components/kit/Hero.astro";
+import Section from "@/components/kit/Section.astro";
+import Button from "@/components/kit/Button.astro";
+import Card from "@/components/kit/Card.astro";
+import Steps from "@/components/kit/Steps.astro";
+import Faq from "@/components/kit/Faq.astro";
+import LastChecked from "@/components/kit/LastChecked.astro";
+import PriceLine from "@/components/kit/PriceLine.astro";
+import Cta from "@/components/kit/Cta.astro";
+import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
+
+const faq = [
+  {
+    q: "Does the site resize itself to fit a phone?",
+    a: "No. It does not adapt a single design. It shows your desktop prototype and, if you add one, your mobile prototype, and picks between them by screen size.",
+  },
+  {
+    q: "Do I need a mobile prototype?",
+    a: "No. Without one, visitors on every screen see the desktop prototype.",
+  },
+  {
+    q: "Can I choose where the switch happens?",
+    a: "Yes. The breakpoint is set for each site in the Viewport editor.",
+  },
+  {
+    q: "Is it one link?",
+    a: "Yes. You send one address and the site picks the prototype.",
+  },
+  {
+    q: "Is Figmafolio free?",
+    a: "Free for 7 days, then from $3 a month.",
+  },
+];
+---
+
+<Layout
+  title="One link for desktop and mobile Figma prototypes"
+  description="Publish a desktop and a mobile Figma prototype on one link. The site picks by screen size, and you choose the switch point."
+>
+  <Hero
+    eyebrow="Desktop and mobile on one link"
+    title="One link for your desktop and mobile Figma prototypes"
+    lede="Add a prototype for desktop and one for mobile. Figmafolio shows the right one by screen size, on a single address you can send to anyone."
+  >
+    <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
+    <Button href="/figma-prototype-to-website" variant="secondary">How Figmafolio works</Button>
+    <Image slot="visual" src={img} alt="The same site on a laptop, tablet and phone" width={420} class="h-auto w-full max-w-sm" />
+  </Hero>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">How it works</h2>
+    <Steps
+      items={[
+        { title: "Paste your desktop prototype link", text: "This is the prototype visitors see on larger screens.", mini: "publish-desktop" },
+        { title: "Add a mobile prototype link", text: "This is the prototype visitors see on phones.", mini: "publish-phone" },
+        { title: "Set the switch point", text: "The breakpoint is chosen per site in the Viewport editor.", mini: "breakpoint" },
+      ]}
+    />
+  </Section>
+
+  <Section tone="surface">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-4">The right design for each screen</h2>
+    <p class="text-ff-muted">You design each prototype in Figma, and Figmafolio shows the one that fits the visitor's screen size.</p>
+  </Section>
+
+  <Section tone="surface">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Questions</h2>
+    <Faq items={faq} />
+  </Section>
+
+  <Section tone="surface">
+    <PriceLine footnote={false} />
+    <p class="mt-2 text-sm text-ff-muted">{PRICE_FOOTNOTE} See <a class="text-ff-brand-hover underline" href="/pricing">pricing</a> for each plan.</p>
+    <p class="mt-2 text-sm text-ff-muted">Related: <a class="text-ff-brand-hover underline" href="/figma-prototype-to-website">Figma prototype to website</a>.</p>
+    <div class="mt-4"><LastChecked date="2026-11-21" /></div>
+  </Section>
+
+  <Section width="wide">
+    <Cta />
+  </Section>
+</Layout>

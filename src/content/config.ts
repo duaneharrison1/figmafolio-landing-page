@@ -12,7 +12,7 @@ const blogCollection = defineCollection({
       alt: z.string(),
     }),
     publishDate: z.string().transform(str => new Date(str)),
-    author: z.string().default('FigmaFolio'),
+    author: z.string().default('Figmafolio'),
     category: z.string(),
     tags: z.array(z.string()),
   }),

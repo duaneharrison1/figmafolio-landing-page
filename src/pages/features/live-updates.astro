@@ -1,0 +1,26 @@
+---
+import FeaturePage from "@/components/kit/FeaturePage.astro";
+---
+<FeaturePage
+  title="Edits show without republishing"
+  description="Your Figmafolio site embeds the live Figma prototype, so a change in Figma shows on the site without publishing again."
+  lede="Change the prototype in Figma and your site shows the change. There is no second publish."
+  plan="Every plan, including the 7-day trial."
+  steps={[
+    { title: "Publish your prototype once", text: "Paste your Figma prototype link into Figmafolio and your site is live.", mini: "publish" },
+    { title: "Keep working in Figma", text: "Edit the design and update the prototype in Figma as you normally would." },
+    { title: "Open your site", text: "The site embeds the live prototype, so it shows the current version.", mini: "site-link" },
+  ]}
+  cards={[
+    { title: "One publish", text: "Fix a typo or swap a screen in Figma without touching Figmafolio." },
+    { title: "The same address", text: "Your link and custom domain stay the same, so the link you sent still works." },
+    { title: "Figma's own prototype", text: "The site shows Figma's prototype in a frame, so interactions and transitions are Figma's." },
+  ]}
+  limits="The site shows what Figma shows. If the prototype stops being shared with everyone, visitors will see a Figma error. Figmafolio checks the link when you paste it and warns you."
+  faq={[
+    { q: "Do I need to publish again after an edit?", a: "No. The site embeds the live prototype." },
+    { q: "Is the trial different?", a: "No. This works the same on the trial and on every plan." },
+  ]}
+  related={[{ href: "/share-figma-prototype-anyone-can-open", label: "Share a Figma prototype so anyone can open it" }, { href: "/figma-prototype-to-website", label: "Figma prototype to website" }]}
+  checked="2026-11-21"
+/>

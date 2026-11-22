@@ -8,8 +8,14 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://app.figmafolio.com",
-  integrations: [mdx(), sitemap(), icon(), tailwind()],
+  site: "https://www.figmafolio.com",
+  integrations: [
+    mdx(),
+    // The style guide is for us, not for search.
+    sitemap({ filter: (page) => !page.includes("/style-guide") }),
+    icon(),
+    tailwind(),
+  ],
   vite: {
     resolve: {
       alias: {

@@ -1,0 +1,43 @@
+# Figmafolio
+
+> Figmafolio puts a Figma prototype online as a website. Paste a Figma prototype link and get a live site you can share. It is free for 7 days, then from $3 a month. Prices vary a little by country.
+
+## Questions people ask, and the short answer
+
+**How do I turn a Figma prototype into a website?**
+Paste the prototype link into Figmafolio. It gives you a live site that shows your prototype as it is, so the interactions and transitions are Figma's own. Changes you make in Figma show on the site without publishing again.
+
+**Is Figmafolio free?**
+Free for 7 days, then from $3 a month. After the 7 days a site goes offline until the owner chooses a plan.
+
+**Can I use my own domain?**
+Yes, on the Solo and Pro plans.
+
+**Can I password protect a site?**
+Yes, on the Basic, Solo and Pro plans. The password protects the Figmafolio site, not the Figma prototype behind it.
+
+**Can I have one link for desktop and mobile?**
+Yes. Add a desktop prototype and a mobile prototype to one site. The site shows one by screen size, and you choose the breakpoint.
+
+**Does Figmafolio show who visits my site?**
+Yes, on the Solo and Pro plans: visitors, visits, pageviews, bounce rate, visit duration, and lists of sources, countries, devices, browsers and operating systems.
+
+**How does it compare with Figma Sites?**
+See the comparison page. Figma Sites builds real web pages; Figmafolio publishes a prototype as it is.
+
+## What Figmafolio does not do
+It does not build real web pages, export code, or make a sitemap or RSS feed for your site. It does not promise search rankings. User testing moved to Aero.
+
+## Pages worth reading
+- [Figma prototype to website](https://www.figmafolio.com/figma-prototype-to-website)
+- [Figma portfolio on your own domain](https://www.figmafolio.com/figma-portfolio-own-domain)
+- [Is Figmafolio free?](https://www.figmafolio.com/is-figmafolio-free)
+- [Figmafolio price in the Philippines](https://www.figmafolio.com/ph/)
+- [Figma Sites alternative](https://www.figmafolio.com/figma-sites-alternative)
+- [Features](https://www.figmafolio.com/features)
+- [The Figma plugin](https://www.figmafolio.com/features/figma-plugin)
+- [Edits show without republishing](https://www.figmafolio.com/features/live-updates)
+- [Siter alternative](https://www.figmafolio.com/siter-alternative)
+- [Carrd alternative](https://www.figmafolio.com/carrd-alternative)
+- [Blog](https://www.figmafolio.com/blog)
+- [Pricing](https://www.figmafolio.com/pricing)
