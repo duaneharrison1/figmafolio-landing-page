@@ -12,6 +12,7 @@ import ComparisonTable from "@/components/kit/ComparisonTable.astro";
 import LastChecked from "@/components/kit/LastChecked.astro";
 import PriceLine from "@/components/kit/PriceLine.astro";
 import Cta from "@/components/kit/Cta.astro";
+import PlanCard from "@/components/kit/PlanCard.astro";
 
 // Token names only: the swatches read the live value, so this page never holds a colour.
 const colours = [
@@ -61,7 +62,18 @@ const colours = [
 
   <Section>
     <h2 class="text-2xl font-semibold text-ff-ink mb-6">Card</h2>
-    <Card title="Example card">Cards hold one idea each. Example text only.</Card>
+    <div class="grid gap-6 md:grid-cols-3">
+      <Card title="Plain card">Cards hold one idea each. Example text only.</Card>
+      <Card title="Card with icon" icon="bars">Use an icon: refresh, plug or bars.</Card>
+      <Card title="Card with picture">Pass an image to show a home page illustration above the text.</Card>
+    </div>
+  </Section>
+
+  <Section tone="surface" width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Plan card</h2>
+    <div class="grid gap-6 md:grid-cols-3">
+      <PlanCard name="Example plan" price="$0.00" blurb="Example text. Real prices come from the price record." points={["Example point one", "Example point two"]} />
+    </div>
   </Section>
 
   <Section tone="surface">
@@ -75,11 +87,13 @@ const colours = [
   <Section width="wide">
     <h2 class="text-2xl font-semibold text-ff-ink mb-6">Comparison table</h2>
     <ComparisonTable
-      caption="Example comparison"
+      caption="Example comparison (highlight tints the page's own column; Yes prints a tick, No a dash)"
+      highlight={0}
       columns={["Figmafolio", "Example tool"]}
       rows={[
         { label: "Custom domain", cells: ["Yes, on paid plans", "Not stated"] },
         { label: "Price", cells: ["From $3 a month", null] },
+        { label: "Free plan", cells: ["No", "Yes"] },
       ]}
       sources={[{ label: "Example source", url: "https://example.com/" }]}
     />
