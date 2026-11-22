@@ -14,7 +14,7 @@ tags: ["figmafolio", "figma sites", "portfolio", "comparison"]
 <!-- Hero -->
 <div class="text-center max-w-2xl mx-auto mt-10 mb-8">
   <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Figmafolio vs Figma Sites</h1>
-  <p class="text-gray-600 mb-6">Figmafolio and Figma Sites both let you turn your Figma designs into web experiences—but they’re built for different needs. Here’s a side-by-side look to help you choose.</p>
+  <p class="text-gray-600 mb-6">Figmafolio and Figma Sites both let you turn your Figma designs into web experiences, but they’re built for different needs. Here’s a side-by-side look to help you choose.</p>
   <a href="#" id="blog-start-link" class="inline-block bg-[#4d9f70] text-white px-6 py-3 rounded-full font-semibold text-lg shadow hover:bg-[#388e5c] transition underline">Start for Free</a>
 </div>
 
@@ -162,7 +162,7 @@ tags: ["figmafolio", "figma sites", "portfolio", "comparison"]
         </svg>
       </div>
       <div class="font-bold text-xl mb-2">For client work</div>
-      <div class="text-gray-600 text-base">Figmafolio’s password protection lets you share work privately with clients—not available on Figma Sites.</div>
+      <div class="text-gray-600 text-base">Figmafolio’s password protection lets you share work privately with clients. Not available on Figma Sites.</div>
     </div>
   </div>
 </div>
