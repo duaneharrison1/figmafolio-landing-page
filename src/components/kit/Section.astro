@@ -1,5 +1,6 @@
 ---
-// Page section wrapper. width: "measure" for reading text, "wide" for grids and tables.
+// Page band. width: "measure" for reading text (centred), "wide" for grids and tables.
+// Headings inside a band are styled here so every page matches (docs/figmafolio/SEO_PAGE_STYLE.md).
 interface Props {
   width?: "measure" | "wide";
   tone?: "plain" | "surface";
@@ -9,9 +10,14 @@ interface Props {
 const { width = "measure", tone = "plain", id, class: className } = Astro.props;
 ---
 
-<section id={id} class:list={[tone === "surface" && "bg-ff-surface", "py-12 md:py-16", className]}>
+<section id={id} class:list={[tone === "surface" && "bg-ff-surface", "py-16 md:py-24", className]}>
   <div class="mx-auto max-w-ff-container px-5">
-    <div class:list={[width === "measure" && "max-w-ff-measure"]}>
+    <div
+      class:list={[
+        width === "measure" && "mx-auto max-w-ff-measure",
+        "[&_h2]:text-3xl md:[&_h2]:text-4xl [&_h2]:font-bold [&_h2]:tracking-tight [&_h2]:text-ff-ink [&_h2]:leading-tight",
+      ]}
+    >
       <slot />
     </div>
   </div>

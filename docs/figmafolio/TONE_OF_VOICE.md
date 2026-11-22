@@ -1,6 +1,6 @@
 ---
 figmafolio-sync: figmaApp docs/figmafolio is the source. Copy this file unchanged to figmafolio-landing-page/docs/figmafolio/.
-version: 2026-11-21.1
+version: 2026-11-22.1
 ---
 
 # FigmaFolio tone of voice
@@ -67,14 +67,15 @@ These apply to every page written to be found on Google or by an AI assistant.
 
 ## Local pages (country pages such as /ph/)
 
-Decided 21 Nov. A page written for one country may bend the tone rules above where the local reader expects it. Everything else still applies: plain words, short sentences, true and sourced claims, no hype.
+Decided 21 and 22 Nov. A page written for one country is a normal Figmafolio page in the local reader's voice. It follows the rules above except where this section says otherwise. Plain words, short sentences, true and sourced claims and no hype still apply.
 
-1. **English first.** Headlines, buttons, labels and all facts stay in plain English. Designers in the Philippines read English at work (Friends of Figma PH, UXPH and the Globe freelancing guide are all plain English).
-2. **At most one light local touch per page**, in a body line or an FAQ line. Never in a headline, button, error or price. Example: "sulit" (worth it) next to a price line, as Globe does.
-3. **A native speaker reads every local word before it ships.** Until then it is marked in the page's code comment.
-4. **Money is written as the buyer sees it.** Figmafolio bills in US dollars everywhere, so a local page shows US dollars and says so. Never show a local-currency amount that checkout does not charge. Never convert by hand.
-5. **Price comparisons come from the price record**, read when the site builds (`src/data/regional-prices.ts`). "Half the US price" is only written when every monthly price is exactly half.
-6. **Same facts as the main site.** A local page never says something the main site does not.
+1. **Light local language is wanted.** Write the way big local brands do (Globe, Lazada, Jollibee): mostly English with short local words and phrases mixed in, in headlines and body. For the Philippines that is light Taglish ("Live na ang portfolio mo", "sulit", "lang"). A few words per section, never whole pages of Filipino.
+2. **English stays English** in buttons, plan names, feature names, prices, legal lines and anything a person must act on. Designers read English at work.
+3. **A native speaker reads every local line before it ships.** Until then the page's code comment says so. Claude's drafts are not enough.
+4. **Advertise as normal.** Same features, same order and same layout as the main site, in the local voice, with the local price. Do not compare with other countries' prices.
+5. **Money is written as billed.** Figmafolio bills in US dollars everywhere, so a local page shows US dollars and says so. Never show a local-currency amount that checkout does not charge. Never convert by hand.
+6. **Prices come from the price record**, read when the site builds (`src/data/regional-prices.ts`), never typed into a page.
+7. **Same facts as the main site.** A local page never says something the main site does not.
 
 ## Lines Duane likes (reuse)
 

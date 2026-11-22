@@ -1,32 +1,61 @@
 ---
 // Comparison table. A cell that is null prints "Not stated": never guess a competitor's detail
 // (TONE_OF_VOICE.md, search page rules). Source links go in `sources` under the table.
+// "Yes" prints a tick and "No" a dash (the words stay for screen readers). `highlight` tints the
+// column the page is about (0 is the first column after the labels).
 interface Props {
   columns: string[];
   rows: { label: string; cells: (string | null)[] }[];
   sources?: { label: string; url: string }[];
   caption?: string;
+  highlight?: number;
 }
-const { columns, rows, sources = [], caption } = Astro.props;
+const { columns, rows, sources = [], caption, highlight } = Astro.props;
+const kind = (c: string | null) => (c === null ? "none" : /^yes$/i.test(c.trim()) ? "yes" : /^no$/i.test(c.trim()) ? "no" : "text");
+const iconColumn = columns.map((_, i) => rows.every((r) => ["yes", "no"].includes(kind(r.cells[i] ?? null))));
+const tint = (i: number) => highlight === i && "bg-ff-brand-tint";
 ---
 
-<div class="overflow-x-auto rounded-ff-lg border border-ff-border">
-  <table class="w-full min-w-[32rem] text-left text-sm">
+<div class="overflow-x-auto rounded-ff-xl border border-ff-border bg-ff-bg shadow-ff-card">
+  <table class="w-full min-w-[32rem] text-left">
     {caption && <caption class="sr-only">{caption}</caption>}
-    <thead class="bg-ff-surface text-ff-ink">
-      <tr>
-        <th scope="col" class="p-3 font-semibold"><span class="sr-only">Feature</span></th>
-        {columns.map((c) => <th scope="col" class="p-3 font-semibold">{c}</th>)}
+    <thead>
+      <tr class="border-b border-ff-border">
+        <th scope="col" class="p-4 md:p-5"><span class="sr-only">Feature</span></th>
+        {
+          columns.map((c, i) => (
+            <th scope="col" class:list={["p-4 md:p-5 font-bold text-ff-ink", iconColumn[i] && "text-center", tint(i), highlight === i && "text-ff-brand-hover"]}>
+              {c}
+            </th>
+          ))
+        }
       </tr>
     </thead>
     <tbody class="divide-y divide-ff-border">
       {
         rows.map((row) => (
           <tr>
-            <th scope="row" class="p-3 font-medium text-ff-ink">{row.label}</th>
-            {row.cells.map((cell) => (
-              <td class:list={["p-3", cell === null ? "text-ff-muted italic" : "text-ff-ink"]}>
-                {cell ?? "Not stated"}
+            <th scope="row" class="p-4 md:p-5 font-medium text-ff-ink">{row.label}</th>
+            {row.cells.map((cell, i) => (
+              <td class:list={["p-4 md:p-5", iconColumn[i] && "text-center", tint(i), kind(cell) === "none" ? "text-ff-muted italic" : "text-ff-ink"]}>
+                {kind(cell) === "yes" && (
+                  <>
+                    <span class="inline-flex h-7 w-7 items-center justify-center rounded-ff-pill bg-ff-brand-soft text-ff-brand-hover" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 8.5l3.2 3.2L13 4.8" />
+                      </svg>
+                    </span>
+                    <span class="sr-only">Yes</span>
+                  </>
+                )}
+                {kind(cell) === "no" && (
+                  <>
+                    <span class="text-ff-muted" aria-hidden="true">&ndash;</span>
+                    <span class="sr-only">No</span>
+                  </>
+                )}
+                {kind(cell) === "none" && "Not stated"}
+                {kind(cell) === "text" && cell}
               </td>
             ))}
           </tr>
@@ -37,7 +66,7 @@ const { columns, rows, sources = [], caption } = Astro.props;
 </div>
 {
   sources.length > 0 && (
-    <p class="mt-3 text-sm text-ff-muted">
+    <p class="mt-4 text-sm text-ff-muted">
       Sources:{" "}
       {sources.map((s, i) => (
         <>

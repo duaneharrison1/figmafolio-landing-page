@@ -1,6 +1,6 @@
 ---
 figmafolio-sync: figmaApp docs/figmafolio is the source. Copy this file unchanged to figmafolio-landing-page/docs/figmafolio/.
-version: 2026-11-21.2
+version: 2026-11-22.1
 ---
 
 # FigmaFolio decisions
@@ -8,7 +8,9 @@ version: 2026-11-21.2
 What Duane decided, newest first. Add a line whenever he decides something. Never delete a line: strike it through and say what replaced it.
 
 ## 21 Nov 2026: country pages and admin
-- Country pages (/ph/ first) lead with the local price. Taglish is allowed in small doses on local pages only: English body, at most one light local touch per page, checked by a native speaker. Written into TONE_OF_VOICE.md ("Local pages") so these pages are an exception, not a breach.
+- Country pages (/ph/ first) are normal Figmafolio pages in the local voice: light Taglish in headlines and body, English for buttons, plan names and prices, one local price, features as usual. Not a price comparison. A native speaker must read the lines before they ship. Written into TONE_OF_VOICE.md ("Local pages").
+- ~~Country pages lead with "half the US price".~~ Replaced 22 Nov: advertise as normal in the local voice, mention the price.
+- SEO pages must look like the home page: see SEO_PAGE_STYLE.md (big headings, icon tables, cards with illustrations, centred bands).
 - Figmafolio bills in US dollars everywhere, so no peso amounts. The Philippines tier is half the US monthly price (read from the live record).
 - Admin: make it faster and more modern, in Aero's flat style (ut-theme). Plan: tabs shell first, then source capture, Website, Search, funnel. Nothing built yet.
 
