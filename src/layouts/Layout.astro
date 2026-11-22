@@ -138,5 +138,20 @@ const jsonLd = [
         content-visibility: auto;
       }
     </style>
+    <script is:inline>
+      // Tell the app which page a sign-up link was clicked on (?from=/page), so the admin's
+      // Acquisition tab can show which pages bring sign-ups. Path only, nothing personal.
+      document.addEventListener("click", function (e) {
+        var a = e.target && e.target.closest ? e.target.closest("a[href]") : null;
+        if (!a) return;
+        try {
+          var u = new URL(a.href, location.href);
+          if (u.hostname === "app.figmafolio.com" && !u.searchParams.has("from")) {
+            u.searchParams.set("from", location.pathname.slice(0, 60));
+            a.href = u.toString();
+          }
+        } catch (err) {}
+      }, true);
+    </script>
   </body>
 </html>
