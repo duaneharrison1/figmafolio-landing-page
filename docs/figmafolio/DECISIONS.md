@@ -1,11 +1,16 @@
 ---
 figmafolio-sync: figmaApp docs/figmafolio is the source. Copy this file unchanged to figmafolio-landing-page/docs/figmafolio/.
-version: 2026-11-21.1
+version: 2026-11-21.2
 ---
 
 # FigmaFolio decisions
 
 What Duane decided, newest first. Add a line whenever he decides something. Never delete a line: strike it through and say what replaced it.
+
+## 21 Nov 2026: country pages and admin
+- Country pages (/ph/ first) lead with the local price. Taglish is allowed in small doses on local pages only: English body, at most one light local touch per page, checked by a native speaker. Written into TONE_OF_VOICE.md ("Local pages") so these pages are an exception, not a breach.
+- Figmafolio bills in US dollars everywhere, so no peso amounts. The Philippines tier is half the US monthly price (read from the live record).
+- Admin: make it faster and more modern, in Aero's flat style (ut-theme). Plan: tabs shell first, then source capture, Website, Search, funnel. Nothing built yet.
 
 ## 20 Nov 2026: SEO programme (FigmaFolio only)
 - Run the heybooking SEO playbook for FigmaFolio's marketing site (figmafolio-landing-page). Aero gets the same process later; nothing for Aero now.

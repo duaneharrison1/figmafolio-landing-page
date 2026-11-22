@@ -4,9 +4,10 @@ import Features from "../components/features.astro";
 import Hero from "../components/hero.astro";
 import Logos from "../components/logos.astro";
 import Layout from "../layouts/Layout.astro";
+import { PH_ALTERNATES } from "@/data/locales";
 ---
 
-<Layout title="" description="Paste a Figma prototype link and get a live website in a few clicks. Custom domain, password protection and analytics. Free for 7 days.">
+<Layout alternates={PH_ALTERNATES} title="" description="Paste a Figma prototype link and get a live website in a few clicks. Custom domain, password protection and analytics. Free for 7 days.">
   <Container>
     <Hero />
     <Features />

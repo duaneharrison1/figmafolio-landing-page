@@ -7,12 +7,15 @@ interface Props {
   text?: string;
   label?: string;
   href?: string;
+  /** Set false on a page that states its own price (the country pages). */
+  price?: boolean;
 }
 const {
   title = "Put your Figma prototype online",
   text = "Publish from Figma and get a link you can share.",
   label = "Get started",
   href = APP_SIGNUP_URL,
+  price = true,
 } = Astro.props;
 ---
 
@@ -20,5 +23,5 @@ const {
   <h2 class="text-2xl font-semibold text-ff-ink">{title}</h2>
   <p class="mt-2 text-ff-muted">{text}</p>
   <div class="mt-5"><Button href={href}>{label}</Button></div>
-  <div class="mt-4"><PriceLine /></div>
+  {price && <div class="mt-4"><PriceLine /></div>}
 </div>

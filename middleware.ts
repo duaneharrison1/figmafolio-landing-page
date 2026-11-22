@@ -13,8 +13,8 @@ export default function middleware(request: Request) {
     return;
   }
 
-  // Prefix matches (blog, features)
-  const landingPagePrefixes = ["/blog", "/features"];
+  // Prefix matches (blog, features, country pages)
+  const landingPagePrefixes = ["/blog", "/features", "/ph"];
   for (const prefix of landingPagePrefixes) {
     if (pathname === prefix || pathname.startsWith(prefix + "/")) {
       return;

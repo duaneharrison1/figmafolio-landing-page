@@ -1,6 +1,6 @@
 ---
 figmafolio-sync: figmaApp docs/figmafolio is the source. Copy this file unchanged to figmafolio-landing-page/docs/figmafolio/.
-version: 2026-11-20.1
+version: 2026-11-21.1
 ---
 
 # FigmaFolio tone of voice
@@ -64,6 +64,17 @@ These apply to every page written to be found on Google or by an AI assistant.
 8. **Links.** Link to the pricing page rather than quoting a price in running text. Link to the matching feature page and one related task page.
 9. **FigmaFolio only.** Do not sell user testing here. It lives in Aero. One footer link, nothing in the body.
 10. **Descriptions** are written by hand per page, under 155 characters, plain, no "Discover" or "Unlock".
+
+## Local pages (country pages such as /ph/)
+
+Decided 21 Nov. A page written for one country may bend the tone rules above where the local reader expects it. Everything else still applies: plain words, short sentences, true and sourced claims, no hype.
+
+1. **English first.** Headlines, buttons, labels and all facts stay in plain English. Designers in the Philippines read English at work (Friends of Figma PH, UXPH and the Globe freelancing guide are all plain English).
+2. **At most one light local touch per page**, in a body line or an FAQ line. Never in a headline, button, error or price. Example: "sulit" (worth it) next to a price line, as Globe does.
+3. **A native speaker reads every local word before it ships.** Until then it is marked in the page's code comment.
+4. **Money is written as the buyer sees it.** Figmafolio bills in US dollars everywhere, so a local page shows US dollars and says so. Never show a local-currency amount that checkout does not charge. Never convert by hand.
+5. **Price comparisons come from the price record**, read when the site builds (`src/data/regional-prices.ts`). "Half the US price" is only written when every monthly price is exactly half.
+6. **Same facts as the main site.** A local page never says something the main site does not.
 
 ## Lines Duane likes (reuse)
 

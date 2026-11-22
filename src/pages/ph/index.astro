@@ -1,0 +1,139 @@
+---
+// Country page for the Philippines. Facts: docs/figmafolio/PRODUCT.md (By plan) and the live price record
+// (src/data/regional-prices.ts). Words: docs/figmafolio/TONE_OF_VOICE.md, "Local pages" section.
+// Billing is in US dollars everywhere, so no peso amount appears: none is true.
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/kit/Hero.astro";
+import Section from "@/components/kit/Section.astro";
+import Button from "@/components/kit/Button.astro";
+import Card from "@/components/kit/Card.astro";
+import ComparisonTable from "@/components/kit/ComparisonTable.astro";
+import Faq from "@/components/kit/Faq.astro";
+import LastChecked from "@/components/kit/LastChecked.astro";
+import Cta from "@/components/kit/Cta.astro";
+import { APP_SIGNUP_URL } from "@/data/plans";
+import { PH_ALTERNATES } from "@/data/locales";
+import { getRegionalPrices, dollars, usd } from "@/data/regional-prices";
+
+const prices = await getRegionalPrices();
+const ph = prices.tiers.PH;
+const us = prices.tiers.US;
+const keys = ["basic", "solo", "pro"] as const;
+const isHalf = keys.every((k) => Math.abs(dollars(ph[k].monthly) * 2 - dollars(us[k].monthly)) < 0.01);
+const compare = isHalf ? "half the US price" : "less than the US price";
+
+const names: Record<string, string> = { PH: "Philippines", MY: "Malaysia", CN: "China", AR: "Argentina", BR: "Brazil" };
+const others = (prices.countries.PH ?? ["MY", "CN", "AR", "BR"]).filter((c) => c !== "PH").map((c) => names[c] ?? c);
+const othersText = others.length > 1 ? others.slice(0, -1).join(", ") + " and " + others[others.length - 1] : others.join("");
+
+const lowest = usd(ph.basic.monthly);
+const description = `Figmafolio costs ${compare} in the Philippines: free for 7 days, then from ${lowest} a month. Put your Figma prototype online with a link.`;
+
+const faq = [
+  {
+    q: "How much does Figmafolio cost in the Philippines?",
+    a: `Free for 7 days, then Basic is ${usd(ph.basic.monthly)} a month, Solo is ${usd(ph.solo.monthly)} and Pro is ${usd(ph.pro.monthly)}. Yearly billing costs less.`,
+  },
+  {
+    q: "Can I pay in pesos?",
+    a: "No. Figmafolio bills in US dollars. Your card issuer converts the amount, and some banks add a small fee for that.",
+  },
+  {
+    q: "Why is it cheaper than in the US?",
+    a: `Figmafolio sets the price by the buyer's country. In the Philippines the monthly prices are ${compare}.`,
+  },
+  {
+    q: "What happens after the 7 days?",
+    a: "Your site goes offline for visitors until you choose a plan. The 7 days count from your first site, or from sign-up if you have not made one yet.",
+  },
+  {
+    q: "Which plan do I need for my own domain?",
+    a: "Solo or Pro. Basic keeps one site online with the Figmafolio label removed.",
+  },
+  {
+    q: "Will the price change?",
+    a: "It can. The price you see at checkout is the one that counts.",
+  },
+];
+---
+
+<Layout alternates={PH_ALTERNATES} title="Figmafolio price in the Philippines" description={description}>
+  <Hero
+    eyebrow="Figmafolio in the Philippines"
+    title={`Figmafolio is ${compare} in the Philippines`}
+    lede={`Put your Figma prototype online with a link you can send to clients and recruiters. Free for 7 days, then from ${lowest} a month.`}
+  >
+    <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
+    <Button href="/pricing" variant="secondary">See all plans</Button>
+  </Hero>
+
+  <Section width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-3">Prices in the Philippines</h2>
+    <p class="text-ff-muted mb-6">
+      Monthly prices are {compare}. Sulit for a site that stays online. All prices are in US dollars.
+    </p>
+    <ComparisonTable
+      caption="Figmafolio plan prices, Philippines and US"
+      columns={["Philippines", "US"]}
+      rows={[
+        { label: "Basic, per month", cells: [usd(ph.basic.monthly), usd(us.basic.monthly)] },
+        { label: "Solo, per month", cells: [usd(ph.solo.monthly), usd(us.solo.monthly)] },
+        { label: "Pro, per month", cells: [usd(ph.pro.monthly), usd(us.pro.monthly)] },
+        { label: "Basic, per year", cells: [usd(ph.basic.yearlyTotal), usd(us.basic.yearlyTotal)] },
+        { label: "Solo, per year", cells: [usd(ph.solo.yearlyTotal), usd(us.solo.yearlyTotal)] },
+        { label: "Pro, per year", cells: [usd(ph.pro.yearlyTotal), usd(us.pro.yearlyTotal)] },
+      ]}
+    />
+    <p class="mt-4 text-sm text-ff-muted">
+      {othersText && <>The same prices apply in {othersText}. </>}Prices were read from our own price records on the date below. The price at checkout is the one that counts.
+    </p>
+  </Section>
+
+  <Section width="wide" tone="surface">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">What each plan includes</h2>
+    <ComparisonTable
+      caption="Figmafolio plans"
+      columns={["Trial (7 days)", "Basic", "Solo", "Pro"]}
+      rows={[
+        { label: "Sites", cells: ["1", "1", "3", "No limit"] },
+        { label: "Site stays online after 7 days", cells: ["No", "Yes", "Yes", "Yes"] },
+        { label: "Password protection", cells: ["No", "Yes", "Yes", "Yes"] },
+        { label: "Custom favicon", cells: ["No", "Yes", "Yes", "Yes"] },
+        { label: "Custom domain", cells: ["No", "No", "Yes", "Yes"] },
+        { label: "Analytics (visitors, places, sources)", cells: ["No", "No", "Yes", "Yes"] },
+        { label: "\"Made with Figmafolio\" label removed", cells: ["No", "Yes", "Yes", "Yes"] },
+      ]}
+    />
+  </Section>
+
+  <Section width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Who it suits</h2>
+    <div class="grid gap-5 md:grid-cols-3">
+      <Card title="Freelancers">
+        Send a client abroad one link to your prototype. Put client work behind a password on any paid plan.
+      </Card>
+      <Card title="Students">
+        Put a case study online and add the link to your CV. Changes you make in Figma show on the site.
+      </Card>
+      <Card title="Job applications">
+        Paste one link into your applications and your profile. Recruiters open it in the browser, with nothing to install.
+      </Card>
+    </div>
+    <p class="mt-6 text-ff-muted">
+      New to this? Read how to <a class="text-ff-brand-hover underline" href="/figma-prototype-to-website">turn a Figma prototype into a website</a>, or how to use <a class="text-ff-brand-hover underline" href="/figma-portfolio-own-domain">your own domain</a>.
+    </p>
+  </Section>
+
+  <Section tone="surface">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Questions</h2>
+    <Faq items={faq} />
+  </Section>
+
+  <Section width="wide">
+    <Cta title="Try it free for 7 days" text="Publish from Figma and get a link you can share." label="Start the 7-day trial" price={false} />
+    <p class="mt-4 text-sm text-ff-muted text-center">
+      Free for 7 days, then from {lowest} a month in the Philippines. Prices for other countries are on the <a class="text-ff-brand-hover underline" href="/is-figmafolio-free">free trial page</a>.
+    </p>
+    <div class="mt-4 text-center"><LastChecked date={prices.checkedOn} /></div>
+  </Section>
+</Layout>

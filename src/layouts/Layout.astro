@@ -12,6 +12,8 @@ export interface Props {
   description?: string;
   /** Keep a page out of search (the style guide, drafts). */
   noindex?: boolean;
+  /** Matching pages for other regions (hreflang). List every page in the set, this one included. */
+  alternates?: { hreflang: string; path: string }[];
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
@@ -21,7 +23,7 @@ const resolvedImageWithDomain = new URL(
   Astro.site
 ).toString();
 
-const { title, description, noindex } = Astro.props;
+const { title, description, noindex, alternates = [] } = Astro.props;
 const defaultDescription = "Figmafolio: Convert Figma Designs to Websites Instantly";
 
 const makeTitle = title
@@ -109,6 +111,7 @@ const jsonLd = [
         },
       }}
     />
+    {alternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={new URL(a.path, Astro.site).toString()} />)}
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <slot name="head" />
     <script
