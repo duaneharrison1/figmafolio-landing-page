@@ -1,0 +1,109 @@
+---
+// Search page for "portfolio in figma". Facts: docs/figmafolio/PRODUCT.md. Words: docs/figmafolio/TONE_OF_VOICE.md.
+// The sharing step points to the sourced guide rather than restating Figma's menus.
+import Layout from "@/layouts/Layout.astro";
+import { Image } from "astro:assets";
+import img from "@/assets/multiple_project_landing.png";
+import Hero from "@/components/kit/Hero.astro";
+import Section from "@/components/kit/Section.astro";
+import Button from "@/components/kit/Button.astro";
+import Card from "@/components/kit/Card.astro";
+import Steps from "@/components/kit/Steps.astro";
+import Faq from "@/components/kit/Faq.astro";
+import LastChecked from "@/components/kit/LastChecked.astro";
+import PriceLine from "@/components/kit/PriceLine.astro";
+import Cta from "@/components/kit/Cta.astro";
+import Answer from "@/components/kit/Answer.astro";
+import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
+
+const faq = [
+  {
+    q: "Can I make a portfolio in Figma?",
+    a: "Yes. Design it as a Figma prototype, set it so anyone with the link can view it, then paste the link into Figmafolio for a live site address you can send to recruiters.",
+  },
+  {
+    q: "Do I need to code?",
+    a: "No. Figmafolio shows your prototype as it is in Figma, so there is nothing to build or export.",
+  },
+  {
+    q: "Will my portfolio work on a phone?",
+    a: "Yes, if you add a mobile prototype as well as a desktop one. The site picks the right one by screen size, on one link.",
+  },
+  {
+    q: "Can I use my own domain?",
+    a: "Yes, on the Solo and Pro plans, so you can send yourname.com instead of a tool's address.",
+  },
+  {
+    q: "Will my portfolio rank on Google?",
+    a: "Do not count on it. Figmafolio shows your prototype in a frame, so search engines see a frame, not your pages. It suits a link you send to people. For pages that search engines read, use a site builder.",
+  },
+  {
+    q: "Is it free?",
+    a: "Free for 7 days, then from $3 a month. After 7 days your site goes offline until you choose a plan.",
+  },
+];
+---
+
+<Layout
+  title="Make a portfolio in Figma and put it online"
+  description="Design your portfolio as a Figma prototype, then publish it as a live site to send to recruiters. Free for 7 days, then from $3 a month."
+>
+  <Hero
+    eyebrow="Portfolio in Figma"
+    title="Make a portfolio in Figma and put it online"
+    lede="Design the portfolio you already know how to make. Figmafolio turns the prototype link into a live address."
+  >
+    <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
+    <Button href="/how-it-works" variant="secondary">See how it works</Button>
+    <Image slot="visual" src={img} alt="A library of published prototype sites" width={420} class="h-auto w-full max-w-sm" />
+  </Hero>
+
+  <Answer
+    question="Can I make a portfolio in Figma?"
+    answer="Yes. Design your portfolio as a Figma prototype, set it so anyone with the link can view it, then paste the link into Figmafolio. You get a live site address to send to recruiters and clients. Free for 7 days, then from $3 a month."
+    href="/free-figma-portfolio-website"
+    linkText="What the free trial includes"
+  />
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">From Figma file to live portfolio</h2>
+    <Steps
+      items={[
+        { title: "Design it as a prototype", text: "Build your case studies and connect the screens, so the prototype plays the way you want people to see it." },
+        { title: "Let anyone open it", text: "Set the prototype to anyone with the link. If a recruiter cannot open it, this setting is usually why. The share guide shows where to change it.", mini: "link-ok" },
+        { title: "Paste it into Figmafolio", text: "Figmafolio checks the link as you paste it, then gives you a live site address to send.", mini: "publish" },
+      ]}
+    />
+    <p class="mt-6 text-ff-muted">Stuck on sharing? <a class="text-ff-brand-hover underline" href="/share-figma-prototype-anyone-can-open">Share a Figma prototype so anyone can open it</a>.</p>
+  </Section>
+
+  <Section tone="surface" width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">What you can add</h2>
+    <div class="grid gap-6 md:grid-cols-3">
+      <Card title="Desktop and mobile on one link">Add a prototype for each. The site picks one by screen size.</Card>
+      <Card title="Your own domain">Send yourname.com on the Solo and Pro plans.</Card>
+      <Card title="A password for private work">Lock a site for client or NDA projects on any paid plan.</Card>
+    </div>
+  </Section>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-4">What it is not</h2>
+    <p class="text-ff-muted">A Figmafolio site is your Figma prototype shown in a frame. It is not a set of web pages, and it does not convert your design to code. That is fine for a link you send to people. If you want pages that search engines read, a site builder is the better fit: see <a class="text-ff-brand-hover underline" href="/figma-sites-alternative">Figmafolio and Figma Sites</a>.</p>
+  </Section>
+
+  <Section tone="surface">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Questions</h2>
+    <Faq items={faq} />
+  </Section>
+
+  <Section>
+    <PriceLine footnote={false} />
+    <p class="mt-2 text-sm text-ff-muted">{PRICE_FOOTNOTE} See <a class="text-ff-brand-hover underline" href="/pricing">pricing</a> for each plan.</p>
+    <p class="mt-2 text-sm text-ff-muted">Related: <a class="text-ff-brand-hover underline" href="/figma-portfolio-own-domain">Figma portfolio on your own domain</a>, <a class="text-ff-brand-hover underline" href="/password-protected-portfolio">Password protected portfolio</a>.</p>
+    <div class="mt-4"><LastChecked date="2026-11-22" /></div>
+  </Section>
+
+  <Section width="wide">
+    <Cta />
+  </Section>
+</Layout>

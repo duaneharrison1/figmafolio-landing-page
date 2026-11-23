@@ -10,6 +10,7 @@ import Faq from "@/components/kit/Faq.astro";
 import LastChecked from "@/components/kit/LastChecked.astro";
 import PriceLine from "@/components/kit/PriceLine.astro";
 import Cta from "@/components/kit/Cta.astro";
+import Answer from "@/components/kit/Answer.astro";
 import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
 
 const faq = [
@@ -52,6 +53,13 @@ const faq = [
     <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
     <Button href="/pricing" variant="secondary">See pricing</Button>
   </Hero>
+
+  <Answer
+    question="Is Figmafolio free to use?"
+    answer="Free for 7 days, then from $3 a month. The 7 days are a trial, not a permanent free plan. After they end, your site goes offline for visitors until you choose a plan."
+    href="/pricing"
+    linkText="See the plans and what each includes"
+  />
 
   <Section width="wide">
     <h2 class="text-2xl font-semibold text-ff-ink mb-6">What each plan includes</h2>

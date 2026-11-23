@@ -13,6 +13,7 @@ import Faq from "@/components/kit/Faq.astro";
 import LastChecked from "@/components/kit/LastChecked.astro";
 import PriceLine from "@/components/kit/PriceLine.astro";
 import Cta from "@/components/kit/Cta.astro";
+import Answer from "@/components/kit/Answer.astro";
 import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
 
 const faq = [
@@ -23,6 +24,10 @@ const faq = [
   {
     q: "Do changes in Figma show on the site?",
     a: "Yes. The site embeds the live prototype, so changes made in Figma show without publishing again.",
+  },
+  {
+    q: "How do I turn a Figma design system into a live marketing site?",
+    a: "Figmafolio does not build a marketing site from a design system. It publishes a Figma prototype as a live site. Build your marketing pages as a prototype and paste the link. If you need real coded pages, a site builder is the better fit: see the comparison with Figma Sites.",
   },
   {
     q: "Can I use a different prototype on phones?",
@@ -61,6 +66,13 @@ const faq = [
     <Image slot="visual" src={img} alt="A library of published prototype sites" width={420} class="h-auto w-full max-w-sm" />
   </Hero>
 
+  <Answer
+    question="Can a designer turn a Figma prototype into a website?"
+    answer="Yes, as a live site address. Paste a Figma prototype link into Figmafolio and the site shows your prototype with its interactions, ready to send. It does not convert the design into HTML and CSS, so it is not a coded website."
+    href="/figma-sites-alternative"
+    linkText="Need real web pages? Compare with Figma Sites"
+  />
+
   <Section>
     <h2 class="text-2xl font-semibold text-ff-ink mb-6">How to publish a prototype</h2>
     <Steps
@@ -89,7 +101,7 @@ const faq = [
   <Section>
     <PriceLine footnote={false} />
     <p class="mt-2 text-sm text-ff-muted">{PRICE_FOOTNOTE} See <a class="text-ff-brand-hover underline" href="/pricing">pricing</a> for each plan.</p>
-    <div class="mt-4"><LastChecked date="2026-11-21" /></div>
+    <div class="mt-4"><LastChecked date="2026-11-22" /></div>
   </Section>
 
   <Section width="wide">
