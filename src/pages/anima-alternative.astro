@@ -1,0 +1,113 @@
+---
+// SEO comparison page. Figmafolio facts: docs/figmafolio/PRODUCT.md. Anima facts: its own docs and pricing page, read 22 Nov 2026.
+// "Not stated" wherever their page is silent (TONE_OF_VOICE.md search page rules 3 to 5). No Anima prices are quoted except the one its page states.
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/kit/Hero.astro";
+import Section from "@/components/kit/Section.astro";
+import Button from "@/components/kit/Button.astro";
+import Card from "@/components/kit/Card.astro";
+import ComparisonTable from "@/components/kit/ComparisonTable.astro";
+import Faq from "@/components/kit/Faq.astro";
+import LastChecked from "@/components/kit/LastChecked.astro";
+import PriceLine from "@/components/kit/PriceLine.astro";
+import Cta from "@/components/kit/Cta.astro";
+import Answer from "@/components/kit/Answer.astro";
+import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
+
+const sources = [
+  { label: "Anima plans and pricing", url: "https://www.animaapp.com/pricing" },
+  { label: "Publish (Anima docs)", url: "https://docs.animaapp.com/docs/publish" },
+  { label: "Custom domains (Anima docs)", url: "https://docs.animaapp.com/docs/copy-of-custom-domain" },
+  { label: "Anima docs summary (docs.animaapp.com/llms.txt)", url: "https://docs.animaapp.com/llms.txt" },
+];
+
+const faq = [
+  {
+    q: "What is the difference between Figmafolio and Anima?",
+    a: "Anima turns Figma designs into code and can publish the result as a site. Figmafolio does not convert anything: it puts your Figma prototype online as it is, with a link you can share.",
+  },
+  {
+    q: "Is Figmafolio a replacement for Anima?",
+    a: "Only if you wanted a live link to a prototype. Figmafolio does not export code, so it cannot replace Anima for handing work to developers.",
+  },
+  {
+    q: "Does Anima have a free plan?",
+    a: "Yes. Its pricing page lists a free plan with five Figma imports or website clones, five code generations in the Figma plugin and five AI chat messages. Its docs say free projects publish to an Anima address, and custom domains start at the Starter plan.",
+  },
+  {
+    q: "Can I use both?",
+    a: "Yes. Some people use Anima when a developer needs the code, and Figmafolio when a client only needs to click through the prototype.",
+  },
+  {
+    q: "Is Figmafolio free?",
+    a: "Free for 7 days, then from $3 a month. After 7 days your site goes offline until you choose a plan.",
+  },
+];
+---
+
+<Layout
+  title="Anima alternative"
+  description="Figmafolio vs Anima: Anima converts Figma designs to code, Figmafolio puts your Figma prototype online as it is. What each does, side by side."
+>
+  <Hero
+    eyebrow="Anima alternative"
+    title="A simpler alternative to Anima"
+    lede="Anima turns a Figma design into code. Figmafolio does a smaller job: it puts the prototype you already have online, exactly as you built it, with a link to share. Free for 7 days, then from $3 a month."
+  >
+    <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
+    <Button href="/figma-prototype-to-website" variant="secondary">How Figmafolio works</Button>
+  </Hero>
+
+  <Answer
+    question="Is Figmafolio an alternative to Anima?"
+    answer="For one job, yes: getting a Figma prototype online for someone to click through. Anima converts a design into code you can edit and host. Figmafolio keeps the prototype as it is, in Figma's own player, and gives it a site address and a password if you want one. It does not export code."
+  />
+
+  <Section width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Figmafolio and Anima side by side</h2>
+    <ComparisonTable
+      highlight={0}
+      caption="Figmafolio compared with Anima"
+      columns={["Figmafolio", "Anima"]}
+      rows={[
+        { label: "What it is", cells: ["A live site that shows your Figma prototype as it is", "A tool that turns Figma designs into code and can publish them"] },
+        { label: "Code you can edit", cells: ["No", "Yes"] },
+        { label: "Free plan or trial", cells: ["7-day free trial on the plan you pick, then the site goes offline until you choose a plan", "A free plan with five of each: Figma imports, code generations and chat messages"] },
+        { label: "Price", cells: ["Free for 7 days, then from $3 a month", "Not stated for Starter and Pro on its pricing page"] },
+        { label: "Custom domain", cells: ["Solo and Pro plans", "Starter plan and above"] },
+        { label: "Password protection", cells: ["Basic, Solo and Pro plans", null] },
+        { label: "Figma prototype interactions", cells: ["Figma's own", "Rebuilt in code"] },
+      ]}
+      sources={sources}
+    />
+    <p class="mt-4 text-sm text-ff-muted">Plans change. Check Anima's own pages for today's terms. "Not stated" means the page did not say.</p>
+  </Section>
+
+  <Section tone="surface" width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Which one to use</h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      <Card title="Anima when">A developer needs the design as code, or you want to turn it into a site you can edit afterwards.</Card>
+      <Card title="Figmafolio when">A client, recruiter or tester only needs to click through the prototype, on an address that is yours, with a password if it is private.</Card>
+    </div>
+  </Section>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-4">More than two options</h2>
+    <p class="text-ff-muted">Figma's own link is a third way, and it costs nothing to try. <a class="text-ff-brand-hover underline" href="/share-interactive-figma-prototype-with-clients">See all three side by side</a>.</p>
+  </Section>
+
+  <Section tone="surface">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Questions</h2>
+    <Faq items={faq} />
+  </Section>
+
+  <Section>
+    <PriceLine footnote={false} />
+    <p class="mt-2 text-sm text-ff-muted">{PRICE_FOOTNOTE} See <a class="text-ff-brand-hover underline" href="/pricing">pricing</a> for each plan.</p>
+    <div class="mt-4"><LastChecked date="2026-11-22" /></div>
+  </Section>
+
+  <Section width="wide">
+    <Cta />
+  </Section>
+</Layout>

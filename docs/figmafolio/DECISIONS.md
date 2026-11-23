@@ -1,6 +1,6 @@
 ---
 figmafolio-sync: figmaApp docs/figmafolio is the source. Copy this file unchanged to figmafolio-landing-page/docs/figmafolio/.
-version: 2026-11-22.1
+version: 2026-11-22.2
 ---
 
 # FigmaFolio decisions
@@ -62,3 +62,19 @@ What Duane decided, newest first. Add a line whenever he decides something. Neve
 - 2 Nov: the stale "trial" status on paying users is a real issue on its own (GitHub #303).
 - 26 Oct: the FigmaFolio to Aero onboarding popup is one design for everyone (PR #289); the forced migration A/B test runs since 16 Jul.
 - 18 Apr: User Testing moved to Aero. FigmaFolio shows a link to Aero instead.
+
+## 22 Nov 2026: answer pages
+- Pages are built from real Search Console queries, not only from research. Each opens with a short answer box (question, then a 40 to 60 word plain answer) under the heading. Reusable kit part: `Answer.astro`.
+- Research on AI answers (22 Nov): Google says short answer blocks, chunking, special schema and llms.txt are not required; the evidence on AI citation is mixed. Keep the box because it is cheap and helps readers, but do not expect it to rank a page by itself. Original facts and ranking in normal search matter more. Watch Search Console's generative AI report.
+- Non-brand queries get their own pages: password protected portfolio, make a portfolio in Figma, share an interactive prototype with clients (Figmafolio vs Figma's own link vs Anima). Other tools are described only from their own pages, with "Not stated" where unsourced and a last-checked date; no competitor prices quoted.
+- Not built for Figmafolio: "figma prototype testing" and "figma user testing". They belong to Aero.
+- Found 22 Nov: `middleware.ts` is an allowlist and sends every other path to the app. New pages must be added to it; `scripts/check-middleware.mjs` now fails the build if one is missing. Trailing-slash URLs (our canonical form) were also redirected to the app until PR #28.
+
+## 22 Nov 2026: admin
+- Search Console: no separate Google Cloud project needed. Clark does not need to sign off on admin changes. The committed Firebase admin key stays while the repo is private.
+- The first 7 days are described as "free trial on the plan you pick, with every feature in it". The app locks analytics for Free and Basic, so the no-card free week does not unlock everything.
+- `/ph/` copy was read through by Claude and left live; a Filipino speaker's read is still a good extra check.
+
+## 22 Nov 2026: usage tab
+- Duane asked for a Usage tab like heybooking's Product insights. Built as `usageEvents` in Firestore, written by the server only, so no rules change.
+- Search tab stays. Duane is happy to reuse heybooking's Google service account for Search Console (read-only, one property each).
