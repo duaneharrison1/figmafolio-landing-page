@@ -4,6 +4,7 @@
 import Layout from "@/layouts/Layout.astro";
 import DomainMini from "@/components/kit/DomainMini.astro";
 import Hero from "@/components/kit/Hero.astro";
+import Answer from "@/components/kit/Answer.astro";
 import Section from "@/components/kit/Section.astro";
 import Button from "@/components/kit/Button.astro";
 import Card from "@/components/kit/Card.astro";
@@ -55,6 +56,11 @@ const faq = [
     <Button href="/pricing" variant="secondary">See plans</Button>
     <DomainMini slot="visual" />
   </Hero>
+
+  <Answer
+    question="Can I put my Figma portfolio on my own domain?"
+    answer="Yes. Publish your Figma prototype with Figmafolio, then point your own domain at the site, so visitors see yourname.com. Custom domains are on the Solo and Pro plans. The Basic plan and the 7-day trial use a figmafolio.com address."
+  />
 
   <Section>
     <h2 class="text-2xl font-semibold text-ff-ink mb-6">How it works</h2>

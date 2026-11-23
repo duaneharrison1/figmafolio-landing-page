@@ -3,6 +3,7 @@
 // "Not stated" wherever their page is silent (TONE_OF_VOICE.md search page rules 3 to 5).
 import Layout from "@/layouts/Layout.astro";
 import Hero from "@/components/kit/Hero.astro";
+import Answer from "@/components/kit/Answer.astro";
 import Section from "@/components/kit/Section.astro";
 import Button from "@/components/kit/Button.astro";
 import Card from "@/components/kit/Card.astro";
@@ -47,6 +48,11 @@ const faq = [
     <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
     <Button href="/figma-prototype-to-website" variant="secondary">How Figmafolio works</Button>
   </Hero>
+
+  <Answer
+    question="Is Figmafolio an alternative to Siter?"
+    answer="Only for one job. Siter is a full website builder with a visual editor, AI builder, CMS and a Figma plugin that imports frames. Figmafolio puts the Figma prototype you already have online, as it is. Free for 7 days, then from $3 a month."
+  />
 
   <Section width="wide">
     <h2 class="text-2xl font-semibold text-ff-ink mb-6">Figmafolio and Siter side by side</h2>
