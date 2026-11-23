@@ -4,8 +4,9 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/check-style.mjs && astro build",
+    "build": "node scripts/check-style.mjs && node scripts/check-middleware.mjs && astro build",
     "check:style": "node scripts/check-style.mjs",
+    "check:middleware": "node scripts/check-middleware.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

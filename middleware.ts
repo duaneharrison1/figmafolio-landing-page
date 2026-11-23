@@ -4,10 +4,12 @@ export const config = {
 
 export default function middleware(request: Request) {
   const url = new URL(request.url);
-  const pathname = url.pathname;
+  // Treat "/how-it-works/" the same as "/how-it-works". Our canonical tags and
+  // sitemap use the trailing-slash form, so it must stay on this site.
+  const pathname = url.pathname.length > 1 ? url.pathname.replace(/\/+$/, "") : url.pathname;
 
   // Paths that should NOT redirect (stay on landing page)
-  const landingPagePaths = ["/", "/about", "/contact", "/pricing", "/how-it-works", "/style-guide", "/figma-prototype-to-website", "/figma-portfolio-own-domain", "/is-figmafolio-free", "/free-figma-portfolio-website", "/figma-sites-alternative", "/password-protect-figma-prototype", "/figma-prototype-desktop-and-mobile-one-link", "/share-figma-prototype-anyone-can-open", "/siter-alternative", "/framer-alternative", "/uxfolio-alternative", "/carrd-alternative"];
+  const landingPagePaths = ["/", "/about", "/contact", "/pricing", "/how-it-works", "/style-guide", "/figma-prototype-to-website", "/figma-portfolio-own-domain", "/is-figmafolio-free", "/free-figma-portfolio-website", "/figma-sites-alternative", "/password-protect-figma-prototype", "/figma-prototype-desktop-and-mobile-one-link", "/share-figma-prototype-anyone-can-open", "/siter-alternative", "/framer-alternative", "/uxfolio-alternative", "/carrd-alternative", "/password-protected-portfolio", "/figma-portfolio", "/share-interactive-figma-prototype-with-clients"];
 
   if (landingPagePaths.includes(pathname)) {
     return;
