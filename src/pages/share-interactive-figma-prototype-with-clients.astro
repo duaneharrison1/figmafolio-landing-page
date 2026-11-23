@@ -1,0 +1,119 @@
+---
+// Search page for "best paid plugins for exporting interactive prototypes to share with clients" (Search Console, 22 Nov 2026).
+// Figmafolio facts: docs/figmafolio/PRODUCT.md. Figma and Anima facts: their own pages, read 22 Nov 2026 (sources below).
+// A cell is null where the tool's own page does not say ("Not stated"). No prices for other tools are quoted.
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/kit/Hero.astro";
+import Section from "@/components/kit/Section.astro";
+import Button from "@/components/kit/Button.astro";
+import Card from "@/components/kit/Card.astro";
+import ComparisonTable from "@/components/kit/ComparisonTable.astro";
+import Faq from "@/components/kit/Faq.astro";
+import LastChecked from "@/components/kit/LastChecked.astro";
+import PriceLine from "@/components/kit/PriceLine.astro";
+import Cta from "@/components/kit/Cta.astro";
+import Answer from "@/components/kit/Answer.astro";
+import { APP_SIGNUP_URL, PRICE_FOOTNOTE } from "@/data/plans";
+
+const sources = [
+  { label: "Manage public link sharing and open sessions (Figma Help Center)", url: "https://help.figma.com/hc/en-us/articles/5726756336791-Manage-public-link-sharing-and-open-sessions" },
+  { label: "Add password protection to files and prototypes (Figma Help Center)", url: "https://help.figma.com/hc/en-us/articles/5726720100247-Add-password-protection-to-files-and-prototypes" },
+  { label: "Export Figma to HTML (Anima)", url: "https://www.animaapp.com/lp/export-figma-html" },
+  { label: "Anima plans and pricing", url: "https://www.animaapp.com/pricing" },
+  { label: "Anima product and plan summary (animaapp.com/llms.txt)", url: "https://www.animaapp.com/llms.txt" },
+];
+
+const faq = [
+  {
+    q: "What is the best plugin for exporting an interactive Figma prototype to share with clients?",
+    a: "It depends on what you want to send. A code plugin such as Anima turns the design into HTML and CSS. Figma's own share link needs no extra tool. Figmafolio puts the prototype itself on a site address, so there is nothing to export.",
+  },
+  {
+    q: "Do clients need a Figma account to open my prototype?",
+    a: "Not if the prototype is set to anyone with the link. Figma's help page says that with public link access, anyone with the link can view it. Set it to Can view, so they cannot change it.",
+  },
+  {
+    q: "Can I put a password on it?",
+    a: "Figma lists password protection on its Professional, Education, Organization, Government and Enterprise plans. Figmafolio adds a password to the site you send, on the Basic, Solo and Pro plans.",
+  },
+  {
+    q: "Does Figmafolio export code?",
+    a: "No. Figmafolio shows your Figma prototype in a frame, so the interactions are Figma's own. If you need code, a plugin such as Anima is the better fit.",
+  },
+  {
+    q: "Is Figmafolio a plugin?",
+    a: "It has a Figma plugin that makes a preview link from your file. For a custom domain and the paid features, you create an account.",
+  },
+  {
+    q: "Is Anima free?",
+    a: "Anima lists a free plan with limits and paid plans per seat. Its pages do not say clearly which plan includes full code export, so check its pricing page for today's terms.",
+  },
+];
+---
+
+<Layout
+  title="Share an interactive Figma prototype with clients"
+  description="Three ways to send clients an interactive Figma prototype: Figma's own link, a code export plugin like Anima, or a Figmafolio site. What each does."
+>
+  <Hero
+    eyebrow="Share with clients"
+    title="Share an interactive Figma prototype with clients"
+    lede="Three ways to do it, and when each one fits. Pick by what the client needs to open, not by the longest feature list."
+  >
+    <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
+    <Button href="/figma-prototype-to-website" variant="secondary">How Figmafolio works</Button>
+  </Hero>
+
+  <Answer
+    question="What is the best way to export an interactive Figma prototype to share with clients?"
+    answer="It depends on what you want to send. Figma's own share link is free to use and needs no extra tool. A code plugin such as Anima turns the design into HTML and CSS you can host. Figmafolio puts the prototype itself on a site address, with a password if you want one, and nothing to export."
+  />
+
+  <Section width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">The three ways, side by side</h2>
+    <ComparisonTable
+      highlight={0}
+      caption="Ways to share an interactive Figma prototype with a client"
+      columns={["Figmafolio", "Figma's own link", "Anima (code export)"]}
+      rows={[
+        { label: "What the client gets", cells: ["A live site that shows your prototype as it is", "A link to the prototype in Figma", "HTML and CSS code (also React and Vue), and live prototype hosting"] },
+        { label: "Interactions", cells: ["Figma's own", "Figma's own", "Rebuilt in code"] },
+        { label: "Your own domain", cells: ["Solo and Pro plans", "No", "Paid plans"] },
+        { label: "Password for the viewer", cells: ["Basic, Solo and Pro plans", "Some paid Figma plans", null] },
+        { label: "Code you can edit", cells: ["No", "No", "Yes"] },
+      ]}
+      sources={sources}
+    />
+    <p class="mt-4 text-sm text-ff-muted">Plans change, so check each tool's own pages for today's terms. "Not stated" means the page did not say.</p>
+  </Section>
+
+  <Section tone="surface" width="wide">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Where each is the better choice</h2>
+    <div class="grid gap-6 md:grid-cols-3">
+      <Card title="Figma's own link when">The client is happy to open Figma's viewer, and you want nothing extra to set up.</Card>
+      <Card title="Anima when">You need real code: HTML pages, or a start for developers. It rebuilds the design, so it is for a different job than showing a prototype.</Card>
+      <Card title="Figmafolio when">You want to send an address that is yours, with the prototype exactly as you built it, a password for client work and a mobile prototype on the same link.</Card>
+    </div>
+  </Section>
+
+  <Section>
+    <h2 class="text-2xl font-semibold text-ff-ink mb-4">Before you send anything</h2>
+    <p class="text-ff-muted">Check that a stranger can open the link. If a client cannot, the sharing setting is usually why. See <a class="text-ff-brand-hover underline" href="/share-figma-prototype-anyone-can-open">how to share a Figma prototype so anyone can open it</a>. Want to lock it? See <a class="text-ff-brand-hover underline" href="/password-protected-portfolio">password protection</a>.</p>
+  </Section>
+
+  <Section tone="surface">
+    <h2 class="text-2xl font-semibold text-ff-ink mb-6">Questions</h2>
+    <Faq items={faq} />
+  </Section>
+
+  <Section>
+    <PriceLine footnote={false} />
+    <p class="mt-2 text-sm text-ff-muted">{PRICE_FOOTNOTE} See <a class="text-ff-brand-hover underline" href="/pricing">pricing</a> for each plan.</p>
+    <p class="mt-2 text-sm text-ff-muted">Related: <a class="text-ff-brand-hover underline" href="/figma-prototype-to-website">Figma prototype to website</a>, <a class="text-ff-brand-hover underline" href="/features/figma-plugin">The Figma plugin</a>.</p>
+    <div class="mt-4"><LastChecked date="2026-11-22" /></div>
+  </Section>
+
+  <Section width="wide">
+    <Cta />
+  </Section>
+</Layout>
