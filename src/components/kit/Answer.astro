@@ -1,0 +1,24 @@
+---
+// "Short answer" box. Goes straight under the Hero on a page written for a question people type
+// into Google or ask an AI assistant. It names the question and answers it in about 40 to 60 words,
+// plain text, so a search engine or assistant can lift it as it stands (see TONE_OF_VOICE.md,
+// "Search page rules": the answer comes first). Tokens only.
+interface Props {
+  question: string;
+  answer: string;
+  href?: string;
+  linkText?: string;
+}
+const { question, answer, href, linkText } = Astro.props;
+---
+
+<section class="py-10 md:py-14">
+  <div class="mx-auto max-w-ff-container px-5">
+    <div class="mx-auto max-w-ff-measure rounded-ff-xl border border-ff-border bg-ff-brand-soft p-6 md:p-8">
+      <p class="text-sm font-semibold uppercase tracking-wide text-ff-brand-hover">Short answer</p>
+      <h2 class="mt-2 text-xl md:text-2xl font-semibold text-ff-ink">{question}</h2>
+      <p class="mt-3 text-lg text-ff-ink leading-relaxed">{answer}</p>
+      {href && linkText && <p class="mt-4"><a class="font-semibold text-ff-brand-hover underline" href={href}>{linkText}</a></p>}
+    </div>
+  </div>
+</section>
