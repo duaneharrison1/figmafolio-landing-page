@@ -3,6 +3,7 @@
 // "Free" is written honestly: Figmafolio has a 7-day trial, not a permanent free plan (DECISIONS.md).
 import Layout from "@/layouts/Layout.astro";
 import Hero from "@/components/kit/Hero.astro";
+import Answer from "@/components/kit/Answer.astro";
 import Section from "@/components/kit/Section.astro";
 import Button from "@/components/kit/Button.astro";
 import Card from "@/components/kit/Card.astro";
@@ -49,6 +50,11 @@ const faq = [
     <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
     <Button href="/pricing" variant="secondary">See pricing</Button>
   </Hero>
+
+  <Answer
+    question="Can I make a Figma portfolio website for free?"
+    answer="You can try it free for 7 days. Paste your Figma prototype link, get a live site and send it. After 7 days the site goes offline until you choose a plan, from $3 a month. There is no permanent free plan."
+  />
 
   <Section>
     <h2 class="text-2xl font-semibold text-ff-ink mb-6">Try it in three steps</h2>

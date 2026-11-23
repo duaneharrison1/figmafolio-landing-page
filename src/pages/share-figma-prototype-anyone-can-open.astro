@@ -4,6 +4,7 @@ import Layout from "@/layouts/Layout.astro";
 import ShareGuide from "@/components/kit/ShareGuide.astro";
 import LinkCheckMini from "@/components/kit/LinkCheckMini.astro";
 import Hero from "@/components/kit/Hero.astro";
+import Answer from "@/components/kit/Answer.astro";
 import Section from "@/components/kit/Section.astro";
 import Button from "@/components/kit/Button.astro";
 import Card from "@/components/kit/Card.astro";
@@ -50,6 +51,11 @@ const faq = [
     <Button href={APP_SIGNUP_URL}>Start the 7-day trial</Button>
     <Button href="/figma-prototype-to-website" variant="secondary">Put it on a live site</Button>
   </Hero>
+
+  <Answer
+    question="How do I share a Figma prototype so anyone can open it?"
+    answer="In Figma, open Present, select Share prototype, set the access to Anyone and the permission to Can view. If you cannot choose Anyone, ask your organization admin, since admins manage public link sharing. A recruiter who cannot open your link usually hits this setting."
+  />
 
   <Section width="wide">
     <h2 class="text-2xl font-semibold text-ff-ink mb-2 text-center">See it step by step</h2>

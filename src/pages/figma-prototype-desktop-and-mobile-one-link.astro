@@ -4,6 +4,7 @@ import Layout from "@/layouts/Layout.astro";
 import { Image } from "astro:assets";
 import img from "@/assets/publish_as_responsive_landing.png";
 import Hero from "@/components/kit/Hero.astro";
+import Answer from "@/components/kit/Answer.astro";
 import Section from "@/components/kit/Section.astro";
 import Button from "@/components/kit/Button.astro";
 import Card from "@/components/kit/Card.astro";
@@ -51,6 +52,11 @@ const faq = [
     <Button href="/figma-prototype-to-website" variant="secondary">How Figmafolio works</Button>
     <Image slot="visual" src={img} alt="The same site on a laptop, tablet and phone" width={420} class="h-auto w-full max-w-sm" />
   </Hero>
+
+  <Answer
+    question="Can one link show a desktop and a mobile Figma prototype?"
+    answer="Yes. Add a desktop prototype and, if you want one, a mobile prototype. Figmafolio picks between them by screen size on a single address. It does not adapt one design for you, and you set the switch point in the Viewport editor."
+  />
 
   <Section>
     <h2 class="text-2xl font-semibold text-ff-ink mb-6">How it works</h2>
